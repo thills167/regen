@@ -1,0 +1,7 @@
+<map id="regen::ShaderInputMat" name="regen::ShaderInputMat">
+<area shape="rect" id="node5" href="$classregen_1_1ShaderInputMat3.html" title="Provides 3x3 matrix input to shader programs." alt="" coords="5,304,165,331"/>
+<area shape="rect" id="node6" href="$classregen_1_1ShaderInputMat4.html" title="Provides 4x4 matrix input to shader programs." alt="" coords="190,304,351,331"/>
+<area shape="rect" id="node2" href="$classregen_1_1ShaderInputf.html" title="Provides float input to shader programs." alt="" coords="109,155,244,181"/>
+<area shape="rect" id="node3" href="$classregen_1_1ShaderInput.html" title="Provides input to shader programs." alt="" coords="111,80,243,107"/>
+<area shape="rect" id="node4" href="$classregen_1_1VertexAttribute.html" title="Shader input with individual values per vertex." alt="" coords="103,5,251,32"/>
+</map>

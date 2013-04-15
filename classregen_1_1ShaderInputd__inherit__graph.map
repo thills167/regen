@@ -1,0 +1,8 @@
+<map id="regen::ShaderInputd" name="regen::ShaderInputd">
+<area shape="rect" id="node4" href="$classregen_1_1ShaderInput1d.html" title="Provides 1D double input to shader programs." alt="" coords="5,229,152,256"/>
+<area shape="rect" id="node5" href="$classregen_1_1ShaderInput2d.html" title="Provides 2D double input to shader programs." alt="" coords="176,229,323,256"/>
+<area shape="rect" id="node6" href="$classregen_1_1ShaderInput3d.html" title="Provides 3D double input to shader programs." alt="" coords="347,229,493,256"/>
+<area shape="rect" id="node7" href="$classregen_1_1ShaderInput4d.html" title="Provides 4D double input to shader programs." alt="" coords="517,229,664,256"/>
+<area shape="rect" id="node2" href="$classregen_1_1ShaderInput.html" title="Provides input to shader programs." alt="" coords="269,80,400,107"/>
+<area shape="rect" id="node3" href="$classregen_1_1VertexAttribute.html" title="Shader input with individual values per vertex." alt="" coords="260,5,408,32"/>
+</map>

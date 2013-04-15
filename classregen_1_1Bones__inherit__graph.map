@@ -1,0 +1,5 @@
+<map id="regen::Bones" name="regen::Bones">
+<area shape="rect" id="node2" href="$classregen_1_1State.html" title="Base class for states." alt="" coords="5,80,99,107"/>
+<area shape="rect" id="node3" href="$classregen_1_1EventObject.html" title="Allows to integrate events into subclasses." alt="" coords="50,5,184,32"/>
+<area shape="rect" id="node4" href="$classregen_1_1Animation.html" title="Abstract base class for animations." alt="" coords="123,80,243,107"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="regen::CameraManipulator" name="regen::CameraManipulator">
+<area shape="rect" id="node4" href="$classregen_1_1LookAtCameraManipulator.html" title="Camera manipulator that looks at a given position." alt="" coords="5,229,221,256"/>
+<area shape="rect" id="node2" href="$classregen_1_1Animation.html" title="Abstract base class for animations." alt="" coords="53,80,173,107"/>
+<area shape="rect" id="node3" href="$classregen_1_1EventObject.html" title="Allows to integrate events into subclasses." alt="" coords="46,5,180,32"/>
+</map>

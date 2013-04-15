@@ -1,0 +1,10 @@
+<map id="regen::SkyScattering" name="regen::SkyScattering">
+<area shape="rect" id="node2" href="$classregen_1_1SkyBox.html" title="A special Box that is not translated by camera movement." alt="" coords="138,379,245,405"/>
+<area shape="rect" id="node3" href="$classregen_1_1Box.html" title="Three&#45;dimensional solid object bounded by six square faces, facets or sides, with three meeting at ea..." alt="" coords="19,304,104,331"/>
+<area shape="rect" id="node4" href="$classregen_1_1Mesh.html" title="A collection of vertices, edges and faces that defines the shape of an object in 3D space..." alt="" coords="23,229,117,256"/>
+<area shape="rect" id="node5" href="$classregen_1_1ShaderInputState.html" title="Container State for shader input data." alt="" coords="5,155,168,181"/>
+<area shape="rect" id="node6" href="$classregen_1_1State.html" title="Base class for states." alt="" coords="84,80,177,107"/>
+<area shape="rect" id="node7" href="$classregen_1_1EventObject.html" title="Allows to integrate events into subclasses." alt="" coords="117,5,251,32"/>
+<area shape="rect" id="node9" href="$classregen_1_1Animation.html" title="Abstract base class for animations." alt="" coords="200,155,320,181"/>
+<area shape="rect" id="node8" href="$classregen_1_1HasShader.html" title="can be used to mix in a shader." alt="" coords="129,304,255,331"/>
+</map>

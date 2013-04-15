@@ -1,0 +1,5 @@
+<map id="regen::ShaderInput3i" name="regen::ShaderInput3i">
+<area shape="rect" id="node2" href="$classregen_1_1ShaderInputi.html" title="Provides int input to shader programs." alt="" coords="11,155,145,181"/>
+<area shape="rect" id="node3" href="$classregen_1_1ShaderInput.html" title="Provides input to shader programs." alt="" coords="13,80,144,107"/>
+<area shape="rect" id="node4" href="$classregen_1_1VertexAttribute.html" title="Shader input with individual values per vertex." alt="" coords="4,5,152,32"/>
+</map>

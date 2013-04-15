@@ -1,0 +1,6 @@
+<map id="regen::AmbientOcclusion" name="regen::AmbientOcclusion">
+<area shape="rect" id="node2" href="$classregen_1_1FilterSequence.html" title="Filters input texture by applying a sequence of filters to the input." alt="" coords="63,155,211,181"/>
+<area shape="rect" id="node3" href="$classregen_1_1State.html" title="Base class for states." alt="" coords="25,80,119,107"/>
+<area shape="rect" id="node4" href="$classregen_1_1EventObject.html" title="Allows to integrate events into subclasses." alt="" coords="5,5,139,32"/>
+<area shape="rect" id="node5" href="$classregen_1_1Resizable.html" title="interface for resizable objects." alt="" coords="143,80,263,107"/>
+</map>

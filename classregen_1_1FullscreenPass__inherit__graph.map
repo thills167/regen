@@ -1,0 +1,9 @@
+<map id="regen::FullscreenPass" name="regen::FullscreenPass">
+<area shape="rect" id="node5" href="$classregen_1_1DepthOfField.html" title="Depth&#45;of&#45;Field implementation." alt="" coords="5,229,144,256"/>
+<area shape="rect" id="node6" href="$classregen_1_1DistanceFog.html" title="Fog with distance attenuation." alt="" coords="168,229,303,256"/>
+<area shape="rect" id="node7" href="$classregen_1_1Filter.html" title="Apply a filter on input Texture." alt="" coords="328,229,419,256"/>
+<area shape="rect" id="node8" href="$classregen_1_1Tonemap.html" title="Implements a tonemap operation." alt="" coords="443,229,559,256"/>
+<area shape="rect" id="node2" href="$classregen_1_1State.html" title="Base class for states." alt="" coords="191,80,284,107"/>
+<area shape="rect" id="node3" href="$classregen_1_1EventObject.html" title="Allows to integrate events into subclasses." alt="" coords="170,5,304,32"/>
+<area shape="rect" id="node4" href="$classregen_1_1HasShader.html" title="can be used to mix in a shader." alt="" coords="309,80,435,107"/>
+</map>

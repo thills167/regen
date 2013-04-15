@@ -1,0 +1,7 @@
+<map id="regen::CubeMapDepthTexture" name="regen::CubeMapDepthTexture">
+<area shape="rect" id="node2" href="$classregen_1_1TextureCube.html" title="Texture with exactly 6 distinct sets of 2D images, all of the same size." alt="" coords="35,304,172,331"/>
+<area shape="rect" id="node3" href="$classregen_1_1Texture2D.html" title="Images in this texture all are 2&#45;dimensional." alt="" coords="43,229,165,256"/>
+<area shape="rect" id="node4" href="$classregen_1_1Texture.html" title="A OpenGL Object that contains one or more images that all have the same image format." alt="" coords="51,155,157,181"/>
+<area shape="rect" id="node5" href="$classregen_1_1RectBufferObject.html" title="A 2D rectangular buffer." alt="" coords="23,80,185,107"/>
+<area shape="rect" id="node6" href="$classregen_1_1BufferObject.html" title="Base class for buffer objects." alt="" coords="37,5,171,32"/>
+</map>

@@ -1,0 +1,12 @@
+<map id="regen::Texture2D" name="regen::Texture2D">
+<area shape="rect" id="node5" href="$classregen_1_1DepthTexture2D.html" title="Texture with depth format." alt="" coords="743,5,902,32"/>
+<area shape="rect" id="node7" href="$classregen_1_1Texture2DMultisample.html" title="The image in this texture (only one image. No mipmapping) is 2&#45;dimensional." alt="" coords="726,56,919,83"/>
+<area shape="rect" id="node8" href="$classregen_1_1TextureCube.html" title="Texture with exactly 6 distinct sets of 2D images, all of the same size." alt="" coords="754,107,891,133"/>
+<area shape="rect" id="node10" href="$classregen_1_1TextureRectangle.html" title="The image in this texture (only one image. No mipmapping) is 2&#45;dimensional." alt="" coords="740,157,905,184"/>
+<area shape="rect" id="node11" href="$classregen_1_1VideoTexture.html" title="A texture that displays a video." alt="" coords="753,208,892,235"/>
+<area shape="rect" id="node2" href="$classregen_1_1Texture.html" title="A OpenGL Object that contains one or more images that all have the same image format." alt="" coords="400,107,507,133"/>
+<area shape="rect" id="node3" href="$classregen_1_1RectBufferObject.html" title="A 2D rectangular buffer." alt="" coords="189,107,352,133"/>
+<area shape="rect" id="node4" href="$classregen_1_1BufferObject.html" title="Base class for buffer objects." alt="" coords="6,107,141,133"/>
+<area shape="rect" id="node6" href="$classregen_1_1DepthTexture2DMultisample.html" title="The image in this texture (only one image. No mipmapping) is 2&#45;dimensional." alt="" coords="969,5,1197,32"/>
+<area shape="rect" id="node9" href="$classregen_1_1CubeMapDepthTexture.html" title="Texture with exactly 6 distinct sets of 2D images, all of the same size." alt="" coords="984,107,1181,133"/>
+</map>

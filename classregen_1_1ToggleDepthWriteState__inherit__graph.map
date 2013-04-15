@@ -1,0 +1,5 @@
+<map id="regen::ToggleDepthWriteState" name="regen::ToggleDepthWriteState">
+<area shape="rect" id="node2" href="$classregen_1_1ServerSideState.html" title="Base class for &#39;atomic&#39; states." alt="" coords="25,155,183,181"/>
+<area shape="rect" id="node3" href="$classregen_1_1State.html" title="Base class for states." alt="" coords="57,80,151,107"/>
+<area shape="rect" id="node4" href="$classregen_1_1EventObject.html" title="Allows to integrate events into subclasses." alt="" coords="37,5,171,32"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="regen::DepthState" name="regen::DepthState">
+<area shape="rect" id="node2" href="$classregen_1_1ServerSideState.html" title="Base class for &#39;atomic&#39; states." alt="" coords="5,155,163,181"/>
+<area shape="rect" id="node3" href="$classregen_1_1State.html" title="Base class for states." alt="" coords="37,80,131,107"/>
+<area shape="rect" id="node4" href="$classregen_1_1EventObject.html" title="Allows to integrate events into subclasses." alt="" coords="17,5,151,32"/>
+</map>

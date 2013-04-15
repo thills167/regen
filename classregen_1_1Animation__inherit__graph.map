@@ -1,0 +1,18 @@
+<map id="regen::Animation" name="regen::Animation">
+<area shape="rect" id="node3" href="$classregen_1_1Bones.html" title="Provides bone matrices." alt="" coords="396,5,495,32"/>
+<area shape="rect" id="node4" href="$classregen_1_1CameraManipulator.html" title="Manipulates the view matrix of a Camera." alt="" coords="358,56,533,83"/>
+<area shape="rect" id="node6" href="$classregen_1_1Light.html" title="A light emitting point in space." alt="" coords="400,107,491,133"/>
+<area shape="rect" id="node7" href="$classregen_1_1MeshAnimation.html" title="Animates vertex attributes." alt="" coords="369,157,521,184"/>
+<area shape="rect" id="node8" href="$classregen_1_1NodeAnimation.html" title="A skeletal animation." alt="" coords="370,208,521,235"/>
+<area shape="rect" id="node9" href="$classregen_1_1Particles.html" title="Point sprite particle system." alt="" coords="389,259,502,285"/>
+<area shape="rect" id="node13" href="$classregen_1_1PickingGeom.html" title="Implements geometry picking." alt="" coords="375,309,515,336"/>
+<area shape="rect" id="node14" href="$classregen_1_1ShadowMap.html" title="Implements shadow mapping for directional,spot and point Light&#39;s." alt="" coords="378,360,513,387"/>
+<area shape="rect" id="node15" href="$classregen_1_1SkyScattering.html" title="Sky with atmospheric scattering." alt="" coords="373,411,517,437"/>
+<area shape="rect" id="node16" href="$classregen_1_1TextureUpdater.html" title="Simple framework for updating Texture&#39;s using a sequence of TextureUpdateroperation&#39;s." alt="" coords="369,461,521,488"/>
+<area shape="rect" id="node17" href="$classregen_1_1VideoTexture.html" title="A texture that displays a video." alt="" coords="376,512,515,539"/>
+<area shape="rect" id="node2" href="$classregen_1_1EventObject.html" title="Allows to integrate events into subclasses." alt="" coords="6,259,141,285"/>
+<area shape="rect" id="node5" href="$classregen_1_1LookAtCameraManipulator.html" title="Camera manipulator that looks at a given position." alt="" coords="581,56,797,83"/>
+<area shape="rect" id="node10" href="$classregen_1_1ParticleCloud.html" title="A cloud particle emitter." alt="" coords="619,259,759,285"/>
+<area shape="rect" id="node11" href="$classregen_1_1ParticleRain.html" title="Rain streak particles emitted from a cloud." alt="" coords="848,233,981,260"/>
+<area shape="rect" id="node12" href="$classregen_1_1ParticleSnow.html" title="Snow flake particles emitted from a cloud." alt="" coords="845,284,984,311"/>
+</map>

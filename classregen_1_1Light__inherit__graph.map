@@ -1,0 +1,6 @@
+<map id="regen::Light" name="regen::Light">
+<area shape="rect" id="node2" href="$classregen_1_1ShaderInputState.html" title="Container State for shader input data." alt="" coords="5,155,168,181"/>
+<area shape="rect" id="node3" href="$classregen_1_1State.html" title="Base class for states." alt="" coords="80,80,173,107"/>
+<area shape="rect" id="node4" href="$classregen_1_1EventObject.html" title="Allows to integrate events into subclasses." alt="" coords="111,5,245,32"/>
+<area shape="rect" id="node5" href="$classregen_1_1Animation.html" title="Abstract base class for animations." alt="" coords="192,155,312,181"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="regen::TextureRectangle" name="regen::TextureRectangle">
+<area shape="rect" id="node2" href="$classregen_1_1Texture2D.html" title="Images in this texture all are 2&#45;dimensional." alt="" coords="25,229,148,256"/>
+<area shape="rect" id="node3" href="$classregen_1_1Texture.html" title="A OpenGL Object that contains one or more images that all have the same image format." alt="" coords="33,155,140,181"/>
+<area shape="rect" id="node4" href="$classregen_1_1RectBufferObject.html" title="A 2D rectangular buffer." alt="" coords="5,80,168,107"/>
+<area shape="rect" id="node5" href="$classregen_1_1BufferObject.html" title="Base class for buffer objects." alt="" coords="19,5,153,32"/>
+</map>
