@@ -37,7 +37,6 @@ var classregen_1_1RenderState =
     [ "activeTexture", "classregen_1_1RenderState.html#a9afd24d24709dc310a8c760e268eef9f", null ],
     [ "arrayBuffer", "classregen_1_1RenderState.html#a176e4f111ec9fa277aa2109632dd4365", null ],
     [ "atomicCounterBufferRange", "classregen_1_1RenderState.html#abde6aa77dd76ea7e71a1ee18137dd6ba", null ],
-    [ "attributeDivisor", "classregen_1_1RenderState.html#ac187da654a6474dbe1899be683692627", null ],
     [ "beginTransformFeedback", "classregen_1_1RenderState.html#ae8cfc4be856297e7e143b474333200c6", null ],
     [ "blendColor", "classregen_1_1RenderState.html#a7dfa61d9d8c7b026b79e01c13c1a5a81", null ],
     [ "blendEquation", "classregen_1_1RenderState.html#a2bd0b81b0774792285e0824069388518", null ],
@@ -84,5 +83,6 @@ var classregen_1_1RenderState =
     [ "textures", "classregen_1_1RenderState.html#a4201b8a000ff86cb7d450a7759254ae1", null ],
     [ "toggles", "classregen_1_1RenderState.html#af8cee4d00bb07255442edf4b8e21ee00", null ],
     [ "uniformBufferRange", "classregen_1_1RenderState.html#afc22f1eeca9ef57da057bedd9815a8d0", null ],
+    [ "vao", "classregen_1_1RenderState.html#a73e834401ef729cc4241d695c2e2386e", null ],
     [ "viewport", "classregen_1_1RenderState.html#a4c1109412639d010fe9843bfb5848499", null ]
 ];

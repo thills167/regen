@@ -6,7 +6,7 @@ var searchData=
   ['defines_5f',['defines_',['../structregen_1_1ShaderState_1_1Config.html#a5f125d0c2ff27c248c79bb2fd60309c8',1,'regen::ShaderState::Config']]],
   ['depthformat',['depthFormat',['../structregen_1_1ShadowMap_1_1Config.html#aaf466b17c32505bda58cdf9b60f31f37',1,'regen::ShadowMap::Config']]],
   ['depthtype',['depthType',['../structregen_1_1ShadowMap_1_1Config.html#af57c10b14c500cfe5a7d2d10786ff279',1,'regen::ShadowMap::Config']]],
-  ['drawbuffers_5f',['drawBuffers_',['../structregen_1_1FrameBufferObject_1_1Screen.html#a4e06b0ff6b29a6e0de852045206880b6',1,'regen::FrameBufferObject::Screen']]],
+  ['drawbuffer_5f',['drawBuffer_',['../structregen_1_1FrameBufferObject_1_1Screen.html#ab8e441220b2c36d241f1ff8f9ba92989',1,'regen::FrameBufferObject::Screen']]],
   ['dt',['dt',['../classregen_1_1Application_1_1MouseMotionEvent.html#aab3468650cdaf5b992dc57a5a4fd8d8c',1,'regen::Application::MouseMotionEvent']]],
   ['dx',['dx',['../classregen_1_1Application_1_1MouseMotionEvent.html#a6b062d8dd0dba4fc38ff92043873b61b',1,'regen::Application::MouseMotionEvent']]],
   ['dy',['dy',['../classregen_1_1Application_1_1MouseMotionEvent.html#a6e81266b66bbafecc52f08ef69c869f8',1,'regen::Application::MouseMotionEvent']]]

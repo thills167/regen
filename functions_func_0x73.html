@@ -28,9 +28,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="icon-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">regen
-   &#160;<span id="projectnumber">..</span>
+   &#160;<span id="projectnumber">0.1.0</span>
    </div>
   </td>
  </tr>
@@ -310,6 +311,9 @@ $(document).ready(function(){initNavTree('functions_func_0x73.html','');});
 <li>set_depthType()
 : <a class="el" href="classregen_1_1ShadowMap.html#ae086214b55e81aee6e326e9ee9846a0a">regen::ShadowMap</a>
 </li>
+<li>set_direction()
+: <a class="el" href="classregen_1_1EgoCameraManipulator.html#a99f4eada88dbb0a265b249309286eeba">regen::EgoCameraManipulator</a>
+</li>
 <li>set_distanceModel()
 : <a class="el" href="classregen_1_1AudioSystem.html#a0932f900a4f82461ce47a56ee405ac85">regen::AudioSystem</a>
 </li>
@@ -483,6 +487,9 @@ $(document).ready(function(){initNavTree('functions_func_0x73.html','');});
 <li>set_modelMat()
 : <a class="el" href="classregen_1_1ModelTransformation.html#a0cfea4ca1305301fd7fde050d882cfcf">regen::ModelTransformation</a>
 </li>
+<li>set_moveAmount()
+: <a class="el" href="classregen_1_1EgoCameraManipulator.html#a71567c7326445f0e42c668a9a8be1144">regen::EgoCameraManipulator</a>
+</li>
 <li>set_name()
 : <a class="el" href="classregen_1_1VertexAttribute.html#a358c76fbec19283b0d6385c446a81de9">regen::VertexAttribute</a>
 , <a class="el" href="classregen_1_1TextureState.html#a5ac09b3e327937eb956369285466918b">regen::TextureState</a>
@@ -526,7 +533,8 @@ $(document).ready(function(){initNavTree('functions_func_0x73.html','');});
 , <a class="el" href="classregen_1_1FilterSequence.html#a98f38d6108abd1ab2400404104707bc1">regen::FilterSequence</a>
 </li>
 <li>set_position()
-: <a class="el" href="classregen_1_1AudioSource.html#adc8de7d309aa1369eb6a9f108b0ed824">regen::AudioSource</a>
+: <a class="el" href="classregen_1_1EgoCameraManipulator.html#a6ad76bd654ca3be03fb96e5b25204077">regen::EgoCameraManipulator</a>
+, <a class="el" href="classregen_1_1AudioSource.html#adc8de7d309aa1369eb6a9f108b0ed824">regen::AudioSource</a>
 </li>
 <li>set_precisin()
 : <a class="el" href="classregen_1_1Logger.html#a2f97b8993ae61e956ef7d0bbf0a34904">regen::Logger</a>
@@ -666,6 +674,9 @@ $(document).ready(function(){initNavTree('functions_func_0x73.html','');});
 <li>set_value()
 : <a class="el" href="classregen_1_1TextureMappedText.html#af41839275b068d8af2abd0f93fe28cb4">regen::TextureMappedText</a>
 , <a class="el" href="classregen_1_1Stack.html#a72f4d45f0e9b169e90f8afb37c22f62e">regen::Stack&lt; T &gt;</a>
+</li>
+<li>set_vao()
+: <a class="el" href="classregen_1_1VAOState.html#a3904552c8f2ad0ace9f2935d6cd3b973">regen::VAOState</a>
 </li>
 <li>set_velocity()
 : <a class="el" href="classregen_1_1AudioSource.html#afb4d44ec0b841c6d1ca2ce3b34afd5ea">regen::AudioSource</a>
@@ -814,6 +825,7 @@ $(document).ready(function(){initNavTree('functions_func_0x73.html','');});
 </li>
 <li>setShadowFiltering()
 : <a class="el" href="classregen_1_1LightPass.html#a2af88685149ba7d41708eced1eb7b7b3">regen::LightPass</a>
+, <a class="el" href="classregen_1_1VolumetricFog.html#a5ab82474c4e5d05f7936ad745b5dc3da">regen::VolumetricFog</a>
 </li>
 <li>setShadowLayer()
 : <a class="el" href="classregen_1_1LightPass.html#a30c20e7c2bcd380518b62225b21fa079">regen::LightPass</a>
@@ -831,7 +843,7 @@ $(document).ready(function(){initNavTree('functions_func_0x73.html','');});
 : <a class="el" href="classregen_1_1SkyScattering.html#a0bf7c428798e74eb8bbbd58407dce10b">regen::SkyScattering</a>
 </li>
 <li>setTexture()
-: <a class="el" href="classregen_1_1Shader.html#a796ccb70edf05df0a77ab9bad186abef">regen::Shader</a>
+: <a class="el" href="classregen_1_1Shader.html#a0a2f7df30f33f27dabe12e9ec1923af7">regen::Shader</a>
 </li>
 <li>setTickRange()
 : <a class="el" href="classregen_1_1NodeAnimation.html#a50ccd54bddbe7285f383912eef2d16a9">regen::NodeAnimation</a>
@@ -841,28 +853,28 @@ $(document).ready(function(){initNavTree('functions_func_0x73.html','');});
 : <a class="el" href="classregen_1_1Shader.html#a26c8f51eb967cf37f7b6fcc87fe85873">regen::Shader</a>
 </li>
 <li>setTranslation()
-: <a class="el" href="structregen_1_1Mat4f.html#a2bfa188da4a198a49fd1f2a59935ffe0">regen::Mat4f</a>
-, <a class="el" href="classregen_1_1ModelTransformation.html#a614ef2f43a868bc5b4ae5ef063a2f558">regen::ModelTransformation</a>
+: <a class="el" href="classregen_1_1ModelTransformation.html#a614ef2f43a868bc5b4ae5ef063a2f558">regen::ModelTransformation</a>
+, <a class="el" href="structregen_1_1Mat4f.html#a2bfa188da4a198a49fd1f2a59935ffe0">regen::Mat4f</a>
 </li>
 <li>setUniformData()
-: <a class="el" href="classregen_1_1ShaderInput4ui.html#a7a7305af8fd6eca5e4eec53e9818dd7d">regen::ShaderInput4ui</a>
+: <a class="el" href="classregen_1_1ShaderInput3ui.html#a7e01813ada4d373c744ead1544d405d0">regen::ShaderInput3ui</a>
 , <a class="el" href="classregen_1_1ShaderInput1f.html#a249751258ce4963635f5458c448a4917">regen::ShaderInput1f</a>
 , <a class="el" href="classregen_1_1ShaderInput2f.html#a3eb00ffc8269155c4e4e9f66b20c31b7">regen::ShaderInput2f</a>
-, <a class="el" href="classregen_1_1ShaderInput3f.html#a28ccf5ff7c4b22c59da6230e4a723835">regen::ShaderInput3f</a>
-, <a class="el" href="classregen_1_1ShaderInputMat4.html#af6d9911d622cd76548cb243fc985fca7">regen::ShaderInputMat4</a>
+, <a class="el" href="classregen_1_1ShaderInput4f.html#aa9c4070e3c0e3d600b237aaddf0d455f">regen::ShaderInput4f</a>
 , <a class="el" href="classregen_1_1ShaderInput1d.html#a71e28ea1b840513e5e0b42c6d0b39e55">regen::ShaderInput1d</a>
+, <a class="el" href="classregen_1_1ShaderInput2d.html#a5859016bd7acac61d4d813a7a9396c34">regen::ShaderInput2d</a>
 , <a class="el" href="classregen_1_1ShaderInput3d.html#a5b51ff7820a4eb181d6b52bd6f3b8dce">regen::ShaderInput3d</a>
 , <a class="el" href="classregen_1_1ShaderInput4d.html#a965060ad2b14742debc7e9c64ec79639">regen::ShaderInput4d</a>
 , <a class="el" href="classregen_1_1ShaderInput1i.html#aa92dbbeeda02cdf41ddeb7347952a81b">regen::ShaderInput1i</a>
 , <a class="el" href="classregen_1_1ShaderInput2i.html#a2397dd66f37123942dbd606f94191486">regen::ShaderInput2i</a>
-, <a class="el" href="classregen_1_1ShaderInput3i.html#aa96efefba21fb414ff4b5c5659c3880a">regen::ShaderInput3i</a>
-, <a class="el" href="classregen_1_1ShaderInput2ui.html#a64879ebc067b70ccd4e2cef4f774ed56">regen::ShaderInput2ui</a>
-, <a class="el" href="classregen_1_1ShaderInput1ui.html#a93f09a8c08dc8c40942dae1678886897">regen::ShaderInput1ui</a>
-, <a class="el" href="classregen_1_1ShaderInput3ui.html#a7e01813ada4d373c744ead1544d405d0">regen::ShaderInput3ui</a>
 , <a class="el" href="classregen_1_1ShaderInput4i.html#a0cb3e81ad603d7d37fac843d9e2958d3">regen::ShaderInput4i</a>
+, <a class="el" href="classregen_1_1ShaderInput1ui.html#a93f09a8c08dc8c40942dae1678886897">regen::ShaderInput1ui</a>
+, <a class="el" href="classregen_1_1ShaderInput2ui.html#a64879ebc067b70ccd4e2cef4f774ed56">regen::ShaderInput2ui</a>
+, <a class="el" href="classregen_1_1ShaderInput4ui.html#a7a7305af8fd6eca5e4eec53e9818dd7d">regen::ShaderInput4ui</a>
 , <a class="el" href="classregen_1_1ShaderInputMat3.html#a304a4d14566ef40f1cb2e6e2052f4166">regen::ShaderInputMat3</a>
-, <a class="el" href="classregen_1_1ShaderInput2d.html#a5859016bd7acac61d4d813a7a9396c34">regen::ShaderInput2d</a>
-, <a class="el" href="classregen_1_1ShaderInput4f.html#aa9c4070e3c0e3d600b237aaddf0d455f">regen::ShaderInput4f</a>
+, <a class="el" href="classregen_1_1ShaderInputMat4.html#af6d9911d622cd76548cb243fc985fca7">regen::ShaderInputMat4</a>
+, <a class="el" href="classregen_1_1ShaderInput3i.html#aa96efefba21fb414ff4b5c5659c3880a">regen::ShaderInput3i</a>
+, <a class="el" href="classregen_1_1ShaderInput3f.html#a28ccf5ff7c4b22c59da6230e4a723835">regen::ShaderInput3f</a>
 </li>
 <li>setUniformDataUntyped()
 : <a class="el" href="classregen_1_1ShaderInput.html#ade52a5fad1fa24fe950a04db160963e7">regen::ShaderInput</a>
@@ -886,8 +898,8 @@ $(document).ready(function(){initNavTree('functions_func_0x73.html','');});
 : <a class="el" href="classregen_1_1SkyScattering.html#a522c7a20f7eb8280e0da8a57fdbaa551">regen::SkyScattering</a>
 </li>
 <li>setVersion()
-: <a class="el" href="structregen_1_1ShaderState_1_1Config.html#a411e035709aa6abf6d97e5b49c366032">regen::ShaderState::Config</a>
-, <a class="el" href="classregen_1_1ShaderConfigurer.html#a71d754b3fa7b4f245091e80e1fe2e6da">regen::ShaderConfigurer</a>
+: <a class="el" href="classregen_1_1ShaderConfigurer.html#a71d754b3fa7b4f245091e80e1fe2e6da">regen::ShaderConfigurer</a>
+, <a class="el" href="structregen_1_1ShaderState_1_1Config.html#a411e035709aa6abf6d97e5b49c366032">regen::ShaderState::Config</a>
 </li>
 <li>setVertex16f()
 : <a class="el" href="classregen_1_1VertexAttribute.html#a6b326cf29c54fbce45f91cd5eddb11f7">regen::VertexAttribute</a>
@@ -947,17 +959,22 @@ $(document).ready(function(){initNavTree('functions_func_0x73.html','');});
 : <a class="el" href="classregen_1_1VertexAttribute.html#a3bf5fbfe0ed8ac6ca093dd0edbe741a2">regen::VertexAttribute</a>
 </li>
 <li>shader()
+: <a class="el" href="classregen_1_1ShaderState.html#acf6463aa5c8f0d0e4ba4a4276beb0301">regen::ShaderState</a>
+</li>
+<li>Shader()
+: <a class="el" href="classregen_1_1Shader.html#a46f85d81ebf2aac53fcb06dadba7d6c9">regen::Shader</a>
+</li>
+<li>shader()
 : <a class="el" href="classregen_1_1TextureUpdateOperation.html#a12558128f8f6f153bb89497f1beaff3c">regen::TextureUpdateOperation</a>
 </li>
 <li>Shader()
-: <a class="el" href="classregen_1_1Shader.html#a085d770e67ab7703cc3bbcb6f9adaac3">regen::Shader</a>
+: <a class="el" href="classregen_1_1Shader.html#ab2857c9c6b40f2fbfc4184092e07dab2">regen::Shader</a>
 </li>
 <li>shader()
 : <a class="el" href="classregen_1_1RenderState.html#aae032afccf090b5f1dbd852fae41e9db">regen::RenderState</a>
-, <a class="el" href="classregen_1_1ShaderState.html#acf6463aa5c8f0d0e4ba4a4276beb0301">regen::ShaderState</a>
 </li>
 <li>Shader()
-: <a class="el" href="classregen_1_1Shader.html#ab2857c9c6b40f2fbfc4184092e07dab2">regen::Shader</a>
+: <a class="el" href="classregen_1_1Shader.html#a085d770e67ab7703cc3bbcb6f9adaac3">regen::Shader</a>
 </li>
 <li>ShaderAttributeLocation()
 : <a class="el" href="structregen_1_1ShaderAttributeLocation.html#ab4f6baa955e13650ebe3fa4f47c28288">regen::ShaderAttributeLocation</a>
@@ -1058,11 +1075,11 @@ $(document).ready(function(){initNavTree('functions_func_0x73.html','');});
 <li>shaderKey()
 : <a class="el" href="classregen_1_1HasShader.html#aa82a21cf779df2a17237ddac6e7a17ef">regen::HasShader</a>
 </li>
-<li>shaderState()
-: <a class="el" href="classregen_1_1HasShader.html#af3b20eb0d0b83effd5be1a7ad747f5c9">regen::HasShader</a>
-</li>
 <li>ShaderState()
 : <a class="el" href="classregen_1_1ShaderState.html#afa3004998bc7ed3d3a42d0c835892ea7">regen::ShaderState</a>
+</li>
+<li>shaderState()
+: <a class="el" href="classregen_1_1HasShader.html#af3b20eb0d0b83effd5be1a7ad747f5c9">regen::HasShader</a>
 </li>
 <li>shaderStorageBufferRange()
 : <a class="el" href="classregen_1_1RenderState.html#a83174be432110a4a28e82fb46c995ff1">regen::RenderState</a>
@@ -1100,6 +1117,12 @@ $(document).ready(function(){initNavTree('functions_func_0x73.html','');});
 <li>shadowNear()
 : <a class="el" href="classregen_1_1ShadowMap.html#a43f2d6483f8c8fd5c790ba27d4444e55">regen::ShadowMap</a>
 </li>
+<li>shadowSampleStep()
+: <a class="el" href="classregen_1_1VolumetricFog.html#ab9e87f301d50786700240cb0a83d0aea">regen::VolumetricFog</a>
+</li>
+<li>shadowSampleThreshold()
+: <a class="el" href="classregen_1_1VolumetricFog.html#ab0d2b52168f6a3637fd8e9c567ae89d5">regen::VolumetricFog</a>
+</li>
 <li>shadowSize()
 : <a class="el" href="classregen_1_1ShadowMap.html#a272977e2cdc65abfe0b6ccf11fd99cf3">regen::ShadowMap</a>
 </li>
@@ -1107,8 +1130,8 @@ $(document).ready(function(){initNavTree('functions_func_0x73.html','');});
 : <a class="el" href="classregen_1_1Material.html#a3949c10937d3aba17fe112a44e9999df">regen::Material</a>
 </li>
 <li>size()
-: <a class="el" href="classregen_1_1VertexAttribute.html#a76e75bd3ba926a3f74b8bdc2ebc2b1cd">regen::VertexAttribute</a>
-, <a class="el" href="classregen_1_1FreeTypeFont.html#ab25b215e80c1023a9a5aac8760ff210c">regen::FreeTypeFont</a>
+: <a class="el" href="classregen_1_1FreeTypeFont.html#ab25b215e80c1023a9a5aac8760ff210c">regen::FreeTypeFont</a>
+, <a class="el" href="classregen_1_1VertexAttribute.html#a76e75bd3ba926a3f74b8bdc2ebc2b1cd">regen::VertexAttribute</a>
 , <a class="el" href="classregen_1_1AudioBuffer.html#a5cf30cc1b96b86c91956d2d2689b12a1">regen::AudioBuffer</a>
 </li>
 <li>SkyScattering()
@@ -1121,8 +1144,8 @@ $(document).ready(function(){initNavTree('functions_func_0x73.html','');});
 : <a class="el" href="classregen_1_1AudioSource.html#a2a750e2276d877d790f1a912c6fc4e3b">regen::AudioSource</a>
 </li>
 <li>specular()
-: <a class="el" href="classregen_1_1Material.html#ae37a914496c5e554658b34147763391c">regen::Material</a>
-, <a class="el" href="classregen_1_1Light.html#a7ae634b06a9113a1e5303e59b653c925">regen::Light</a>
+: <a class="el" href="classregen_1_1Light.html#a7ae634b06a9113a1e5303e59b653c925">regen::Light</a>
+, <a class="el" href="classregen_1_1Material.html#ae37a914496c5e554658b34147763391c">regen::Material</a>
 </li>
 <li>speedOfSound()
 : <a class="el" href="classregen_1_1AudioSystem.html#a4b1dc5fe70a214d9b12db89d635d836f">regen::AudioSystem</a>
@@ -1154,15 +1177,15 @@ $(document).ready(function(){initNavTree('functions_func_0x73.html','');});
 <li>stamp()
 : <a class="el" href="classregen_1_1VertexAttribute.html#a09b2efaab9d34fd50a25e38563dc4105">regen::VertexAttribute</a>
 </li>
-<li>StampedValue()
-: <a class="el" href="structregen_1_1StampedValue.html#a2f23d2da10bd988c549769b24e5dbb70">regen::StampedValue&lt; T &gt;</a>
-</li>
 <li>startAnimation()
 : <a class="el" href="classregen_1_1Animation.html#a5e42f1e3474b8c2d9a48e0f27d1e6825">regen::Animation</a>
 </li>
+<li>startConfig()
+: <a class="el" href="classregen_1_1Texture.html#a5a970023da52d6f4a1ceb0e479208c84">regen::Texture</a>
+</li>
 <li>state()
-: <a class="el" href="classregen_1_1StateNode.html#a8731d2543481b9fc6d3fb3a916844c09">regen::StateNode</a>
-, <a class="el" href="classregen_1_1AudioSource.html#a357b6a619645cd269abdaaffa53e0f05">regen::AudioSource</a>
+: <a class="el" href="classregen_1_1AudioSource.html#a357b6a619645cd269abdaaffa53e0f05">regen::AudioSource</a>
+, <a class="el" href="classregen_1_1StateNode.html#a8731d2543481b9fc6d3fb3a916844c09">regen::StateNode</a>
 </li>
 <li>stateID()
 : <a class="el" href="classregen_1_1TextureState.html#a0a67e55029322393e7f2249c900bd60f">regen::TextureState</a>
@@ -1188,13 +1211,31 @@ $(document).ready(function(){initNavTree('functions_func_0x73.html','');});
 <li>stencilTexture()
 : <a class="el" href="classregen_1_1FrameBufferObject.html#a0751f36fce440f1a69f96895df1324cc">regen::FrameBufferObject</a>
 </li>
+<li>step()
+: <a class="el" href="classregen_1_1EgoCameraManipulator.html#afc18dbbc07b685d9302a5e226ee02070">regen::EgoCameraManipulator</a>
+</li>
+<li>stepBackward()
+: <a class="el" href="classregen_1_1EgoCameraManipulator.html#ad5d7c0d3df76931fd15bf9b5a515ccd9">regen::EgoCameraManipulator</a>
+</li>
+<li>stepForward()
+: <a class="el" href="classregen_1_1EgoCameraManipulator.html#a6327f989e7356d7159f03091ce58d032">regen::EgoCameraManipulator</a>
+</li>
+<li>stepLeft()
+: <a class="el" href="classregen_1_1EgoCameraManipulator.html#a74d2f29bbe8cc31d38e88eaaac7446c2">regen::EgoCameraManipulator</a>
+</li>
+<li>stepRight()
+: <a class="el" href="classregen_1_1EgoCameraManipulator.html#af3f4a01ba4241e9fb87c65aa52e2e9da">regen::EgoCameraManipulator</a>
+</li>
 <li>stop()
 : <a class="el" href="classregen_1_1Demuxer.html#afdfecdc8083e3a5ac53c867582ff2b16">regen::Demuxer</a>
-, <a class="el" href="classregen_1_1VideoTexture.html#a84fa46e60a81b56ac60f935f3a8bf5d9">regen::VideoTexture</a>
 , <a class="el" href="classregen_1_1AudioSource.html#ab3449cc8a764c0d15e9453d52610475e">regen::AudioSource</a>
+, <a class="el" href="classregen_1_1VideoTexture.html#a84fa46e60a81b56ac60f935f3a8bf5d9">regen::VideoTexture</a>
 </li>
 <li>stopAnimation()
 : <a class="el" href="classregen_1_1Animation.html#a0de8514303e0146cb61b4b5838f832ed">regen::Animation</a>
+</li>
+<li>stopConfig()
+: <a class="el" href="classregen_1_1Texture.html#a6ff839342cbd28274df7317e6abdb64d">regen::Texture</a>
 </li>
 <li>storage()
 : <a class="el" href="classregen_1_1RenderBufferObject.html#add022259f03e6d25d4dce0c9c94fe49f">regen::RenderBufferObject</a>
@@ -1206,11 +1247,11 @@ $(document).ready(function(){initNavTree('functions_func_0x73.html','');});
 : <a class="el" href="classregen_1_1ParticleRain.html#af4dd56c2b1fd8b78987662e5eca096c4">regen::ParticleRain</a>
 </li>
 <li>stream()
-: <a class="el" href="classregen_1_1FileLogger.html#a98d729df46184b7c7b8f66476c49231d">regen::FileLogger</a>
-, <a class="el" href="classregen_1_1CerrLogger.html#a4dc092b7f70155688efa9d00e29d802e">regen::CerrLogger</a>
-, <a class="el" href="classregen_1_1VideoStream.html#a612ff5756968de90b9afbe7d83cd414c">regen::VideoStream</a>
+: <a class="el" href="classregen_1_1CerrLogger.html#a4dc092b7f70155688efa9d00e29d802e">regen::CerrLogger</a>
 , <a class="el" href="classregen_1_1CoutLogger.html#a6649d61f3fa0bf6280514b4fa257dcf6">regen::CoutLogger</a>
 , <a class="el" href="classregen_1_1Logger.html#ae323ce071f102200bced002dc23828c2">regen::Logger</a>
+, <a class="el" href="classregen_1_1FileLogger.html#a98d729df46184b7c7b8f66476c49231d">regen::FileLogger</a>
+, <a class="el" href="classregen_1_1VideoStream.html#a612ff5756968de90b9afbe7d83cd414c">regen::VideoStream</a>
 </li>
 <li>stride()
 : <a class="el" href="classregen_1_1VertexAttribute.html#a37b7d196f35cfbabd813e7ebadb3372f">regen::VertexAttribute</a>
@@ -1227,7 +1268,7 @@ $(document).ready(function(){initNavTree('functions_func_0x73.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Apr 15 2013 21:08:07 for regen by
+    <li class="footer">Generated on Wed Apr 24 2013 00:41:47 for regen by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

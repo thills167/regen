@@ -1,7 +1,6 @@
 var hierarchy =
 [
     [ "regen::IndexedValueStack< GLboolean >", "classregen_1_1IndexedValueStack.html", null ],
-    [ "regen::IndexedValueStack< GLuint >", "classregen_1_1IndexedValueStack.html", null ],
     [ "regen::IndexedValueStack< regen::BufferRange >", "classregen_1_1IndexedValueStack.html", null ],
     [ "regen::IndexedValueStack< regen::TextureBind >", "classregen_1_1IndexedValueStack.html", null ],
     [ "regen::IndexedValueStack< regen::Vec2 >", "classregen_1_1IndexedValueStack.html", null ],
@@ -50,6 +49,7 @@ var hierarchy =
     [ "regen::ref_ptr< regen::TextureBufferObject >", "classregen_1_1ref__ptr.html", null ],
     [ "regen::ref_ptr< regen::TextureCube >", "classregen_1_1ref__ptr.html", null ],
     [ "regen::ref_ptr< regen::TextureState >", "classregen_1_1ref__ptr.html", null ],
+    [ "regen::ref_ptr< regen::VAOState >", "classregen_1_1ref__ptr.html", null ],
     [ "regen::ref_ptr< regen::VertexArrayObject >", "classregen_1_1ref__ptr.html", null ],
     [ "regen::ref_ptr< regen::VertexAttribute >", "classregen_1_1ref__ptr.html", null ],
     [ "regen::ref_ptr< regen::VertexBufferObject >", "classregen_1_1ref__ptr.html", null ],
@@ -105,6 +105,7 @@ var hierarchy =
     [ "regen::EventData", "classregen_1_1EventData.html", [
       [ "regen::Application::ButtonEvent", "classregen_1_1Application_1_1ButtonEvent.html", null ],
       [ "regen::Application::KeyEvent", "classregen_1_1Application_1_1KeyEvent.html", null ],
+      [ "regen::Application::MouseLeaveEvent", "classregen_1_1Application_1_1MouseLeaveEvent.html", null ],
       [ "regen::Application::MouseMotionEvent", "classregen_1_1Application_1_1MouseMotionEvent.html", null ],
       [ "regen::PickingGeom::PickEvent", "classregen_1_1PickingGeom_1_1PickEvent.html", null ]
     ] ],
@@ -113,6 +114,7 @@ var hierarchy =
       [ "regen::Animation", "classregen_1_1Animation.html", [
         [ "regen::Bones", "classregen_1_1Bones.html", null ],
         [ "regen::CameraManipulator", "classregen_1_1CameraManipulator.html", [
+          [ "regen::EgoCameraManipulator", "classregen_1_1EgoCameraManipulator.html", null ],
           [ "regen::LookAtCameraManipulator", "classregen_1_1LookAtCameraManipulator.html", null ]
         ] ],
         [ "regen::Light", "classregen_1_1Light.html", null ],
@@ -204,6 +206,7 @@ var hierarchy =
         [ "regen::TextureSetBufferIndex", "classregen_1_1TextureSetBufferIndex.html", null ],
         [ "regen::TextureState", "classregen_1_1TextureState.html", null ],
         [ "regen::TextureUpdateOperation", "classregen_1_1TextureUpdateOperation.html", null ],
+        [ "regen::VAOState", "classregen_1_1VAOState.html", null ],
         [ "regen::VolumetricFog", "classregen_1_1VolumetricFog.html", null ]
       ] ]
     ] ],
@@ -263,7 +266,6 @@ var hierarchy =
     [ "regen::SphereSprite::Config", "structregen_1_1SphereSprite_1_1Config.html", null ],
     [ "regen::Stack< T >", "classregen_1_1Stack.html", null ],
     [ "regen::Stack< T >::Node", "classregen_1_1Stack_1_1Node.html", null ],
-    [ "regen::StampedValue< T >", "structregen_1_1StampedValue.html", null ],
     [ "regen::StateNode", "classregen_1_1StateNode.html", [
       [ "regen::RootNode", "classregen_1_1RootNode.html", null ]
     ] ],
@@ -349,15 +351,6 @@ var hierarchy =
     [ "regen::Stack< regen::Vec2 >", "classregen_1_1Stack.html", null ],
     [ "regen::Stack< regen::Vec3 >", "classregen_1_1Stack.html", null ],
     [ "regen::Stack< regen::Vec4 >", "classregen_1_1Stack.html", null ],
-    [ "regen::Stack< StampedValue< GLboolean > >", "classregen_1_1Stack.html", null ],
-    [ "regen::Stack< StampedValue< GLuint > >", "classregen_1_1Stack.html", null ],
-    [ "regen::Stack< StampedValue< regen::BufferRange > >", "classregen_1_1Stack.html", null ],
-    [ "regen::Stack< StampedValue< regen::TextureBind > >", "classregen_1_1Stack.html", null ],
-    [ "regen::Stack< StampedValue< regen::Vec2 > >", "classregen_1_1Stack.html", null ],
-    [ "regen::Stack< StampedValue< regen::Vec4 > >", "classregen_1_1Stack.html", null ],
-    [ "regen::Stack< StampedValue< ValueType > >", "classregen_1_1Stack.html", null ],
-    [ "regen::Stack< StampedValue< Vec2< GLdouble > > >", "classregen_1_1Stack.html", null ],
-    [ "regen::Stack< StampedValue< Vec4< GLuint > > >", "classregen_1_1Stack.html", null ],
     [ "regen::Stack< ValueType >", "classregen_1_1Stack.html", null ],
     [ "regen::Stack< Vec4< GLuint > >", "classregen_1_1Stack.html", null ],
     [ "regen::StateStack< ParameterStackAtomic< GLenum >, GLenum, void(*)(GLenum, GLenum)>", "classregen_1_1StateStack.html", null ],

@@ -8,6 +8,6 @@ var classregen_1_1StateStack =
     [ "push", "classregen_1_1StateStack.html#afafdcf8b440a60192b6dcd72aec19df7", null ],
     [ "unlock", "classregen_1_1StateStack.html#a958bfb1eef0e9cb2f367d96da9401b79", null ],
     [ "value", "classregen_1_1StateStack.html#a18e0a366c767268a9aa1c902736fd8e2", null ],
-    [ "applyEmpty", "classregen_1_1StateStack.html#a91a9c22cd01d6b2b596e315678720697", null ],
-    [ "applyFilled", "classregen_1_1StateStack.html#a0eee45817263f1b96288077960c6ec08", null ]
+    [ "applyFilled", "classregen_1_1StateStack.html#a0eee45817263f1b96288077960c6ec08", null ],
+    [ "applyInit", "classregen_1_1StateStack.html#ac9d5db25aaa47447b79639fda53d2306", null ]
 ];

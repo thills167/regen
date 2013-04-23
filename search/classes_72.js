@@ -44,6 +44,7 @@ var searchData=
   ['ref_5fptr_3c_20regen_3a_3atexturebufferobject_20_3e',['ref_ptr&lt; regen::TextureBufferObject &gt;',['../classregen_1_1ref__ptr.html',1,'regen']]],
   ['ref_5fptr_3c_20regen_3a_3atexturecube_20_3e',['ref_ptr&lt; regen::TextureCube &gt;',['../classregen_1_1ref__ptr.html',1,'regen']]],
   ['ref_5fptr_3c_20regen_3a_3atexturestate_20_3e',['ref_ptr&lt; regen::TextureState &gt;',['../classregen_1_1ref__ptr.html',1,'regen']]],
+  ['ref_5fptr_3c_20regen_3a_3avaostate_20_3e',['ref_ptr&lt; regen::VAOState &gt;',['../classregen_1_1ref__ptr.html',1,'regen']]],
   ['ref_5fptr_3c_20regen_3a_3avertexarrayobject_20_3e',['ref_ptr&lt; regen::VertexArrayObject &gt;',['../classregen_1_1ref__ptr.html',1,'regen']]],
   ['ref_5fptr_3c_20regen_3a_3avertexattribute_20_3e',['ref_ptr&lt; regen::VertexAttribute &gt;',['../classregen_1_1ref__ptr.html',1,'regen']]],
   ['ref_5fptr_3c_20regen_3a_3avertexbufferobject_20_3e',['ref_ptr&lt; regen::VertexBufferObject &gt;',['../classregen_1_1ref__ptr.html',1,'regen']]],

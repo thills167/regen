@@ -28,9 +28,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="icon-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">regen
-   &#160;<span id="projectnumber">..</span>
+   &#160;<span id="projectnumber">0.1.0</span>
    </div>
   </td>
  </tr>
@@ -316,7 +317,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p>Implements shadow mapping for directional,spot and point <a class="el" href="classregen_1_1Light.html" title="A light emitting point in space.">Light</a>'s. </p>
 <p>Parallel-Split-Shadow-Mapping (PSSM) is used for directional lights. Omnidirectional shadow mapping is done using a depth cubemap.</p>
 <dl class="section see"><dt>See Also</dt><dd><a href="http://http.developer.nvidia.com/GPUGems3/gpugems3_ch10.html">http://http.developer.nvidia.com/GPUGems3/gpugems3_ch10.html</a> </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>support transparent shadows...<ul>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd><p class="startdd">transparent shadows...</p>
+<ul>
 <li>Colored Stochastic Shadow Maps (CSSM) -use stochastic transparency then ?</li>
 <li>deep shadow maps<ul>
 <li>deep opacity map @ grass hopper <a href="http://prideout.net/blog/?p=69">http://prideout.net/blog/?p=69</a></li>
@@ -328,6 +330,11 @@ Additional Inherited Members</h2></td></tr>
 </li>
 <li>render SM with different alpha thresholds</li>
 <li>sample accumulated alpha color from light perspective </li>
+</ul>
+<p class="enddd">drop cube map shadows for point lights and replace it with algorithm with less render passes...</p>
+<ul>
+<li>paper: 'Practical Implementation of Dual Parabloid Shadow Maps' (2 passes)</li>
+<li>paper: 'Dual Sphere-Unfolding Method for Single Pass Omni-directional Shadow Mapping' (single pass) </li>
 </ul>
 </dd></dl>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
@@ -996,7 +1003,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>regen</b></li><li class="navelem"><a class="el" href="classregen_1_1ShadowMap.html">ShadowMap</a></li>
-    <li class="footer">Generated on Mon Apr 15 2013 21:08:06 for regen by
+    <li class="footer">Generated on Wed Apr 24 2013 00:41:47 for regen by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

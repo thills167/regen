@@ -8,7 +8,6 @@ var searchData=
   ['spherecount',['sphereCount',['../structregen_1_1SphereSprite_1_1Config.html#a4b24ab270ea04386d43e8c08049e98e2',1,'regen::SphereSprite::Config']]],
   ['splitweight',['splitWeight',['../structregen_1_1ShadowMap_1_1Config.html#a63d4746a4c1878d1f5593400d89a4525',1,'regen::ShadowMap::Config']]],
   ['spot',['spot',['../structregen_1_1SkyScattering_1_1PlanetProperties.html#a2e7fa8ae46cce9bdaee7dc8912d91f02',1,'regen::SkyScattering::PlanetProperties']]],
-  ['stamp',['stamp',['../structregen_1_1StampedValue.html#a27abe7eb773f85aeb6c24ab49301ab87',1,'regen::StampedValue']]],
   ['start',['start',['../structregen_1_1VBOBlock.html#a87f0fc8ba947a5d106f5fe603558d9f6',1,'regen::VBOBlock']]],
   ['state',['state',['../classregen_1_1PickingGeom_1_1PickEvent.html#a6135e2f0306f03be12180fd114f781e0',1,'regen::PickingGeom::PickEvent']]]
 ];

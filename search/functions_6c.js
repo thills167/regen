@@ -38,5 +38,9 @@ var searchData=
   ['lookatcameramanipulator',['LookAtCameraManipulator',['../classregen_1_1LookAtCameraManipulator.html#a717eec658a14d61675c8138bed4c3ea2',1,'regen::LookAtCameraManipulator']]],
   ['lookatinverse',['lookAtInverse',['../structregen_1_1Mat4f.html#a40b894717e698d0a92751ef13de2f9f2',1,'regen::Mat4f']]],
   ['lookatmatrix',['lookAtMatrix',['../structregen_1_1Mat4f.html#ac5a0c6ec09bc82680d5bc2c8f9e815f1',1,'regen::Mat4f']]],
+  ['lookdown',['lookDown',['../classregen_1_1EgoCameraManipulator.html#aeb9f9f458f5dc3a6eaa235c8b7ee1b05',1,'regen::EgoCameraManipulator']]],
+  ['lookleft',['lookLeft',['../classregen_1_1EgoCameraManipulator.html#ab817f8e2b9aec8c29e4b58c87b2b3c84',1,'regen::EgoCameraManipulator']]],
+  ['lookright',['lookRight',['../classregen_1_1EgoCameraManipulator.html#ae9f62ee6322caf9192edd821cf543a22',1,'regen::EgoCameraManipulator']]],
+  ['lookup',['lookUp',['../classregen_1_1EgoCameraManipulator.html#a27873dc012a0143cb01f83400dff016b',1,'regen::EgoCameraManipulator']]],
   ['looping',['looping',['../classregen_1_1AudioSource.html#a2aaa1f91c6a3c2a7ab32664e814d6c94',1,'regen::AudioSource']]]
 ];

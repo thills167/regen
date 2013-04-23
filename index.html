@@ -28,9 +28,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="icon-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">regen
-   &#160;<span id="projectnumber">..</span>
+   &#160;<span id="projectnumber">0.1.0</span>
    </div>
   </td>
  </tr>
@@ -100,72 +101,86 @@ $(document).ready(function(){initNavTree('index.html','');});
 <div class="title">regen </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>regen &ndash; Realtime Graphics Engine &ndash; is a portable OpenGL library written in C++. The purpose of this library is to help creating real-time rendering software.</p>
-<p>You need a graphics card supporting the OpenGL 3.3 API. Some features from the 4.0 API are also supported but optional for backwards compatibility. The engine is tested with NVIDIA and ATI drivers and on the Arch Linux and Ubuntu 11.10 (ATI dropped support for my notebook graphics adapter so i had to use an old Ubuntu version). Other Unix based Operating-Systems should work from the scratch. Windows support might require some work to be done but should be generally possible too because the engine was written with portability in mind.</p>
+<div class="textblock"><p>regen &ndash; Real-time Graphics Engine &ndash; is a portable OpenGL library written in C++. The purpose of this library is to help creating real-time rendering software.</p>
+<p>A graphics card supporting the OpenGL 3.3 API is required for regen. Some features from the 4.0 API are also supported but optional for backwards compatibility. The engine is tested with NVIDIA and ATI drivers and on the Arch Linux and Ubuntu 11.10 (ATI dropped support for my notebook graphics adapter so i had to use an old Ubuntu version). Other Unix based Operating-Systems should work from the scratch. Windows 8 with latest ATI drivers was also tested. You will find some special notes for compiling the engine under Win in this document.</p>
+<h1>Download</h1>
+<p>Clone the code from <a href="https://github.com/daniel86/regen">github</a>. The master branch contains the most up to date source code. For each release you will find a custom branch.</p>
 <h1>Compiling</h1>
-<p>regen builds with CMake. Just clone the code from <a href="https://github.com/daniel86/regen">github</a> and run <code>cmake .</code> in the root directory. You can pass a set of arguments to <code>cmake</code> to toggle some features on or off. Following you can find a list of those arguments:</p>
+<p>regen builds with <a href="http://www.cmake.org/">CMake</a>. Run <code>cmake .</code> in the root directory to generate files needed for compiling. On Unix systems CMake will generate Makefile's with usual targets. Running <code>make</code> invokes the compiler and linker and if <code>make</code> was successfull a static engine library <code>libregen.a</code> was created in the root directory. On Windows CMake generates Visual Studio files, just open them and compile from the IDE.</p>
+<p>regen defines following build targets: </p>
+<table class="doxtable">
+<tr>
+<th>Target </th><th>Description</th></tr>
+<tr>
+<td>all </td><td>Compile and link the engine. </td></tr>
+<tr>
+<td>install </td><td>Install engine. </td></tr>
+<tr>
+<td>doc </td><td>Generate doxygen documentation. </td></tr>
+</table>
+<p>CMake supports some default parameters for compiler and build path setup, consider the CMake documentations for those arguments. Following you can find a list of <code>cmake</code> arguments with special handling in the CMake build files:</p>
 <table class="doxtable">
 <tr>
 <th>Argument </th><th>Default </th><th>Description</th></tr>
 <tr>
-<td>-DBUILD_TESTS </td><td>0 </td><td>Compile test application </td></tr>
+<td>-DCMAKE_BUILD_TYPE </td><td>Release </td><td>One of Release or Debug. With Debug mode the engine is compiled with additional debugging symbols. </td></tr>
 <tr>
-<td>-DBUILD_VIDEO_PLAYER </td><td>0 </td><td>Compile video player application </td></tr>
+<td>-DBUILD_TESTS </td><td>0 </td><td>If set to 1 the test applications will be compiled by all target </td></tr>
 <tr>
-<td>-DBUILD_TEXTURE_UPDATER </td><td>0 </td><td>Compile texture updater application </td></tr>
+<td>-DBUILD_VIDEO_PLAYER </td><td>0 </td><td>If set to 1 the video player application will be compiled by all target </td></tr>
+<tr>
+<td>-DBUILD_TEXTURE_UPDATER </td><td>0 </td><td>If set to 1 the texture updater application will be compiled by all target </td></tr>
+<tr>
+<td>-DBoost_DIR </td><td>- </td><td>Base path for Boost library. You should set this on Windows. </td></tr>
+<tr>
+<td>-DASSIMP_DIR </td><td>- </td><td>Base path for Assimp library. You should set this on Windows. </td></tr>
+<tr>
+<td>-DFREETYPE_DIR </td><td>- </td><td>Base path for Freetype library. You should set this on Windows. </td></tr>
+<tr>
+<td>-DDEVIL_DIR </td><td>- </td><td>Base path for DevIL library. You should set this on Windows. </td></tr>
+<tr>
+<td>-DFFMPEG_DIR </td><td>- </td><td>Base path for FFmpeg library. You should set this on Windows. </td></tr>
+<tr>
+<td>-DALUT_DIR </td><td>- </td><td>Base path for ALut library. You should set this on Windows. </td></tr>
 </table>
-<p>CMake should complain about any missing dependencies. On Unix Makefiles should be generated after running <code>cmake</code> and you should be able to run <code>make</code> in the root directory to build <code>libregen</code>. On Windows visual studio project files are generated. You can open those files with visual studio and compile the library from the GUI of visual studio.</p>
 <h1>Feature List</h1>
 <p>Here you find a brief list of supported features in this library.</p>
 <ul>
-<li>3D audio using OpenAL</li>
-<li>Video/Audio streaming using ffmpeg</li>
-<li>Image loading using DevIL</li>
-<li>Noise textures using libnoise</li>
-<li>Font loading using FreeType<ul>
-<li>displayed using texture mapped text</li>
-</ul>
-</li>
-<li>Shader pre-processing<ul>
+<li><code>Portability</code>: Tested with Windows8, Ubuntu11.10 and ArchLinux</li>
+<li><code>Augmented GLSL</code>:<ul>
 <li>input modification (constant, uniform, attribute, instanced attribute)</li>
 <li>support for 'include' and 'for' directive</li>
 </ul>
 </li>
-<li>Assimp model loading<ul>
-<li>bone animation loading</li>
-</ul>
-</li>
-<li>Particle engine using transform feedback</li>
-<li>Dynamic sky scattering</li>
-<li>Instancing<ul>
-<li>using instanced attributes</li>
-<li>instanced bone animation using bone TBO</li>
-</ul>
-</li>
-<li>GPU mesh animation using transform feedback</li>
-<li>Deferred and Direct shading</li>
-<li>Ambient Occlusion</li>
-<li>Volumetric fog</li>
-<li>Simple raycasting volume renderer</li>
-<li>Geometry picking</li>
+<li><code>Render State</code>: encapsulates GL states and avoids redundant state switches.</li>
+<li><code>Audio/Video</code>: Streaming from file resources, 3D Sound</li>
+<li><code>Image loading</code>: Support for common image formats (png, jpg, hdr, ...)</li>
+<li><code>Text rendering</code>: Loading of Freetype fonts, rendering with texture mapped text</li>
+<li><code>Model loading</code>: Support for common model formats (3ds, ply, obj, ...), support for bone animations</li>
+<li><code>Shading</code>: Deferred and Direct shading is supported</li>
+<li><code>Picking</code>: Supports to distinguish between instances</li>
+<li><code>Scene post processing</code>: FXAA, Ambient Occlusion, Volumetric Fog, Tonemap ...</li>
+<li><code>Sky Rendering</code>: Dynamic sky with realistic scattering</li>
+<li><code>Particles</code>: Simple implementations of smoke,rain,snow particles</li>
+<li><code>Volume Rendering</code>: Simple raycasting volume renderer</li>
 </ul>
 <h1>Dependency List</h1>
 <p>Following you can find a list of libraries that must be installed in order to compile regen.</p>
 <ul>
-<li>OpenGL &gt;=3.3</li>
-<li>OpenAL Soft &gt;=1.1</li>
-<li>Boost</li>
-<li>assimp</li>
-<li>DevIL</li>
-<li>FreeType</li>
-<li>libav</li>
+<li><a href="http://www.opengl.org/">OpenGL</a> &gt;=3.3</li>
+<li><a href="http://kcat.strangesoft.net/openal.html">OpenAL Soft</a> &gt;=1.1</li>
+<li><a href="http://assimp.sourceforge.net/">Assimp</a> &gt;= 2.0</li>
+<li><a href="http://openil.sourceforge.net/">DevIL</a> &gt;= 1.4.0</li>
+<li><a href="http://www.freetype.org/">FreeType</a> &gt;= 2.4.0</li>
+<li><a href="http://www.boost.org/">Boost</a></li>
+<li><a href="http://www.ffmpeg.org/">FFmpeg</a></li>
 </ul>
 <p>In order to compile the test applications you will also need to install the following list of libraries:</p>
 <ul>
-<li>Qt &gt;=4.0 (QtCore, QtGui, QtOpenGL)</li>
+<li><a href="http://qt-project.org/">Qt</a> &gt;=4.0 (QtCore, QtGui, QtOpenGL)</li>
 </ul>
 <h1>Documentation</h1>
-<p>The documentation is hosted at <a href="http://daniel86.github.com/regen/">github</a></p>
+<p>The documentation is hosted using the <a href="http://daniel86.github.com/regen/">gh-pages branch</a></p>
 <h1>Contact</h1>
 <p><a href="#" onclick="location.href='mai'+'lto:'+'dan'+'ie'+'l@o'+'rg'+'izm'+'.n'+'et'; return false;">danie<span style="display: none;">.nosp@m.</span>l@or<span style="display: none;">.nosp@m.</span>gizm.<span style="display: none;">.nosp@m.</span>net</a> </p>
 </div></div><!-- contents -->
@@ -173,7 +188,7 @@ $(document).ready(function(){initNavTree('index.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Apr 15 2013 21:08:06 for regen by
+    <li class="footer">Generated on Wed Apr 24 2013 00:41:47 for regen by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

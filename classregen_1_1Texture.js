@@ -32,6 +32,8 @@ var classregen_1_1Texture =
     [ "set_wrappingV", "classregen_1_1Texture.html#a40db385b88cbecf12aef0e9b293cca39", null ],
     [ "set_wrappingW", "classregen_1_1Texture.html#af3441e9acd38a8375eb2d7a8fc4aa369", null ],
     [ "setupMipmaps", "classregen_1_1Texture.html#a936fad2ef0b606136bec67897d7b7813", null ],
+    [ "startConfig", "classregen_1_1Texture.html#a5a970023da52d6f4a1ceb0e479208c84", null ],
+    [ "stopConfig", "classregen_1_1Texture.html#a6ff839342cbd28274df7317e6abdb64d", null ],
     [ "targetType", "classregen_1_1Texture.html#ad680e6bdd1a45b94d0bf70c053f79545", null ],
     [ "texelSizeX", "classregen_1_1Texture.html#a2631ce0d9025601c8fbc7739ea2d00d8", null ],
     [ "texelSizeY", "classregen_1_1Texture.html#afa07a4cf9dc9bc229a607e209b7beda7", null ],

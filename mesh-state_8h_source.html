@@ -28,9 +28,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="icon-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">regen
-   &#160;<span id="projectnumber">..</span>
+   &#160;<span id="projectnumber">0.1.0</span>
    </div>
   </td>
  </tr>
@@ -134,43 +135,44 @@ $(document).ready(function(){initNavTree('mesh-state_8h_source.html','');});
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  GLuint <a class="code" href="classregen_1_1Mesh.html#a96631a74371395c8a8e973a8f2c84ffd">numIndices</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  GLuint <a class="code" href="classregen_1_1Mesh.html#ab46f10eec4abf65d5dbac207c13aabf6">maxIndex</a>();</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;VertexAttribute&gt;</a>&amp; <a class="code" href="classregen_1_1Mesh.html#ae2ff8f61f24806dbbef44165e388dc03">indices</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInput&gt;</a> <a class="code" href="classregen_1_1Mesh.html#a3a5c77cd18eba0dade38d63838b65d4b">positions</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInput&gt;</a> <a class="code" href="classregen_1_1Mesh.html#afac00eccfc9399b6b34fdf9675e135cf">normals</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInput&gt;</a> <a class="code" href="classregen_1_1Mesh.html#aba125f5d597406c0bdca96ab8b452815">colors</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;FeedbackState&gt;</a>&amp; <a class="code" href="classregen_1_1Mesh.html#a1d97515c680acf496dda7a33f5910d89">feedbackState</a>();</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1Mesh.html#a2fd03d3172562434a217ff9227f2701a">draw</a>(GLuint <a class="code" href="classregen_1_1ShaderInputState.html#a1755f40ae5dc2a2ea79fe931ff1f494b">numInstances</a>);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="comment">// override</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classregen_1_1Mesh.html#aa27b68e2660d89b76943c7fb5f505172">enable</a>(<a class="code" href="classregen_1_1RenderState.html" title="Handles server-side GL states.">RenderState</a>*);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  GLenum primitive_;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  GLuint numIndices_;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  GLuint maxIndex_;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;VertexAttribute&gt;</a> indices_;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  GLenum feedbackPrimitive_;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;FeedbackState&gt;</a> feedbackState_;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  GLuint feedbackCount_;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  void (<a class="code" href="classregen_1_1Mesh.html" title="A collection of vertices, edges and faces that defines the shape of an object in 3D space...">Mesh</a>::*draw_)(GLuint <a class="code" href="classregen_1_1ShaderInputState.html#a1755f40ae5dc2a2ea79fe931ff1f494b">numInstances</a>);</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="keywordtype">void</span> drawArrays(GLuint numInstances);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keywordtype">void</span> drawElements(GLuint numInstances);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;};</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __MESH_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  GLuint <a class="code" href="classregen_1_1Mesh.html#a72092184cc15c75f0d4152fbbcae5f99">indexBuffer</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInput&gt;</a> <a class="code" href="classregen_1_1Mesh.html#a3a5c77cd18eba0dade38d63838b65d4b">positions</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInput&gt;</a> <a class="code" href="classregen_1_1Mesh.html#afac00eccfc9399b6b34fdf9675e135cf">normals</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInput&gt;</a> <a class="code" href="classregen_1_1Mesh.html#aba125f5d597406c0bdca96ab8b452815">colors</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;FeedbackState&gt;</a>&amp; <a class="code" href="classregen_1_1Mesh.html#a1d97515c680acf496dda7a33f5910d89">feedbackState</a>();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1Mesh.html#a2fd03d3172562434a217ff9227f2701a">draw</a>(GLuint <a class="code" href="classregen_1_1ShaderInputState.html#a1755f40ae5dc2a2ea79fe931ff1f494b">numInstances</a>);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="comment">// override</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classregen_1_1Mesh.html#aa27b68e2660d89b76943c7fb5f505172">enable</a>(<a class="code" href="classregen_1_1RenderState.html" title="Handles server-side GL states.">RenderState</a>*);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  GLenum primitive_;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  GLuint numIndices_;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  GLuint maxIndex_;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;VertexAttribute&gt;</a> indices_;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  GLenum feedbackPrimitive_;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;FeedbackState&gt;</a> feedbackState_;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  GLuint feedbackCount_;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  void (<a class="code" href="classregen_1_1Mesh.html" title="A collection of vertices, edges and faces that defines the shape of an object in 3D space...">Mesh</a>::*draw_)(GLuint <a class="code" href="classregen_1_1ShaderInputState.html#a1755f40ae5dc2a2ea79fe931ff1f494b">numInstances</a>);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keywordtype">void</span> drawArrays(GLuint numInstances);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keywordtype">void</span> drawElements(GLuint numInstances);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;};</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __MESH_H_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_be5d73e8a924451a757c1ade24a760ff.html">meshes</a></li><li class="navelem"><b>mesh-state.h</b></li>
-    <li class="footer">Generated on Mon Apr 15 2013 21:08:06 for regen by
+    <li class="footer">Generated on Wed Apr 24 2013 00:41:46 for regen by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

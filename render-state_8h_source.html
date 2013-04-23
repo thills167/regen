@@ -28,9 +28,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="icon-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">regen
-   &#160;<span id="projectnumber">..</span>
+   &#160;<span id="projectnumber">0.1.0</span>
    </div>
   </td>
  </tr>
@@ -246,38 +247,37 @@ $(document).ready(function(){initNavTree('render-state_8h_source.html','');});
 <div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;  { <span class="keywordflow">return</span> copyReadBuffer_; }</div>
 <div class="line"><a name="l00379"></a><span class="lineno"><a class="code" href="classregen_1_1RenderState.html#ac734ba979cd7ed85d02b0b22410a1dbc">  379</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="classregen_1_1ParameterStackAtomic.html">ParameterStackAtomic&lt;GLuint&gt;</a>&amp; copyWriteBuffer()</div>
 <div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;  { <span class="keywordflow">return</span> copyWriteBuffer_; }</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;</div>
-<div class="line"><a name="l00385"></a><span class="lineno"><a class="code" href="classregen_1_1RenderState.html#afc22f1eeca9ef57da057bedd9815a8d0">  385</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="classregen_1_1IndexedValueStack.html" title="State stack with indexed apply function.">IndexedValueStack&lt;BufferRange&gt;</a>&amp; uniformBufferRange()</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;  { <span class="keywordflow">return</span> uniformBufferRange_; }</div>
-<div class="line"><a name="l00390"></a><span class="lineno"><a class="code" href="classregen_1_1RenderState.html#aed8fd16f8eb890dc1a4d3fe0a38b4789">  390</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="classregen_1_1IndexedValueStack.html" title="State stack with indexed apply function.">IndexedValueStack&lt;BufferRange&gt;</a>&amp; feedbackBufferRange()</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;  { <span class="keywordflow">return</span> feedbackBufferRange_; }</div>
-<div class="line"><a name="l00395"></a><span class="lineno"><a class="code" href="classregen_1_1RenderState.html#abde6aa77dd76ea7e71a1ee18137dd6ba">  395</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="classregen_1_1IndexedValueStack.html" title="State stack with indexed apply function.">IndexedValueStack&lt;BufferRange&gt;</a>&amp; atomicCounterBufferRange()</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;  { <span class="keywordflow">return</span> atomicCounterBufferRange_; }</div>
-<div class="line"><a name="l00400"></a><span class="lineno"><a class="code" href="classregen_1_1RenderState.html#a83174be432110a4a28e82fb46c995ff1">  400</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="classregen_1_1IndexedValueStack.html" title="State stack with indexed apply function.">IndexedValueStack&lt;BufferRange&gt;</a>&amp; shaderStorageBufferRange()</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;  { <span class="keywordflow">return</span> shaderStorageBufferRange_; }</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;</div>
-<div class="line"><a name="l00406"></a><span class="lineno"><a class="code" href="classregen_1_1RenderState.html#ab213ede354776e34d04d55d3bd5e506c">  406</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="classregen_1_1ParameterStackAtomic.html">ParameterStackAtomic&lt;GLuint&gt;</a>&amp; readFrameBuffer()</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;  { <span class="keywordflow">return</span> readFrameBuffer_; }</div>
-<div class="line"><a name="l00411"></a><span class="lineno"><a class="code" href="classregen_1_1RenderState.html#a7a96045993995187395f88ddadecf6cc">  411</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="classregen_1_1ParameterStackAtomic.html">ParameterStackAtomic&lt;GLuint&gt;</a>&amp; drawFrameBuffer()</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;  { <span class="keywordflow">return</span> drawFrameBuffer_; }</div>
-<div class="line"><a name="l00416"></a><span class="lineno"><a class="code" href="classregen_1_1RenderState.html#a4c1109412639d010fe9843bfb5848499">  416</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="classregen_1_1ValueStack.html" title="State stack with single argument apply function.">ValueStack&lt;Viewport&gt;</a>&amp; viewport()</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;  { <span class="keywordflow">return</span> viewport_; }</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;</div>
-<div class="line"><a name="l00422"></a><span class="lineno"><a class="code" href="classregen_1_1RenderState.html#a4201b8a000ff86cb7d450a7759254ae1">  422</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="classregen_1_1IndexedValueStack.html" title="State stack with indexed apply function.">IndexedValueStack&lt;TextureBind&gt;</a>&amp; textures()</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;  { <span class="keywordflow">return</span> textures_; }</div>
-<div class="line"><a name="l00427"></a><span class="lineno"><a class="code" href="classregen_1_1RenderState.html#a9afd24d24709dc310a8c760e268eef9f">  427</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="classregen_1_1ValueStackAtomic.html">ValueStackAtomic&lt;GLenum&gt;</a>&amp; activeTexture()</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;  { <span class="keywordflow">return</span> activeTexture_; }</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;</div>
-<div class="line"><a name="l00433"></a><span class="lineno"><a class="code" href="classregen_1_1RenderState.html#a253c15640535c9628e78f79d8ba4427c">  433</a></span>&#160;  <span class="keyword">inline</span> GLuint reserveTextureChannel()</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;  { <span class="keywordflow">return</span> min(textureCounter_++,maxTextureUnits_-1); }</div>
-<div class="line"><a name="l00438"></a><span class="lineno"><a class="code" href="classregen_1_1RenderState.html#a88840c936627e046a09ef263b36d3aaa">  438</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> releaseTextureChannel()</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;  { --textureCounter_; }</div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;</div>
-<div class="line"><a name="l00444"></a><span class="lineno"><a class="code" href="classregen_1_1RenderState.html#aae032afccf090b5f1dbd852fae41e9db">  444</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="classregen_1_1ValueStackAtomic.html">ValueStackAtomic&lt;GLuint&gt;</a>&amp; shader()</div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;  { <span class="keywordflow">return</span> shader_; }</div>
+<div class="line"><a name="l00385"></a><span class="lineno"><a class="code" href="classregen_1_1RenderState.html#a73e834401ef729cc4241d695c2e2386e">  385</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="classregen_1_1ValueStackAtomic.html">ValueStackAtomic&lt;GLuint&gt;</a>&amp; vao()</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;  { <span class="keywordflow">return</span> vao_; }</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;</div>
+<div class="line"><a name="l00391"></a><span class="lineno"><a class="code" href="classregen_1_1RenderState.html#afc22f1eeca9ef57da057bedd9815a8d0">  391</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="classregen_1_1IndexedValueStack.html" title="State stack with indexed apply function.">IndexedValueStack&lt;BufferRange&gt;</a>&amp; uniformBufferRange()</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;  { <span class="keywordflow">return</span> uniformBufferRange_; }</div>
+<div class="line"><a name="l00396"></a><span class="lineno"><a class="code" href="classregen_1_1RenderState.html#aed8fd16f8eb890dc1a4d3fe0a38b4789">  396</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="classregen_1_1IndexedValueStack.html" title="State stack with indexed apply function.">IndexedValueStack&lt;BufferRange&gt;</a>&amp; feedbackBufferRange()</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;  { <span class="keywordflow">return</span> feedbackBufferRange_; }</div>
+<div class="line"><a name="l00401"></a><span class="lineno"><a class="code" href="classregen_1_1RenderState.html#abde6aa77dd76ea7e71a1ee18137dd6ba">  401</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="classregen_1_1IndexedValueStack.html" title="State stack with indexed apply function.">IndexedValueStack&lt;BufferRange&gt;</a>&amp; atomicCounterBufferRange()</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;  { <span class="keywordflow">return</span> atomicCounterBufferRange_; }</div>
+<div class="line"><a name="l00406"></a><span class="lineno"><a class="code" href="classregen_1_1RenderState.html#a83174be432110a4a28e82fb46c995ff1">  406</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="classregen_1_1IndexedValueStack.html" title="State stack with indexed apply function.">IndexedValueStack&lt;BufferRange&gt;</a>&amp; shaderStorageBufferRange()</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;  { <span class="keywordflow">return</span> shaderStorageBufferRange_; }</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;</div>
+<div class="line"><a name="l00412"></a><span class="lineno"><a class="code" href="classregen_1_1RenderState.html#ab213ede354776e34d04d55d3bd5e506c">  412</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="classregen_1_1ParameterStackAtomic.html">ParameterStackAtomic&lt;GLuint&gt;</a>&amp; readFrameBuffer()</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;  { <span class="keywordflow">return</span> readFrameBuffer_; }</div>
+<div class="line"><a name="l00417"></a><span class="lineno"><a class="code" href="classregen_1_1RenderState.html#a7a96045993995187395f88ddadecf6cc">  417</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="classregen_1_1ParameterStackAtomic.html">ParameterStackAtomic&lt;GLuint&gt;</a>&amp; drawFrameBuffer()</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;  { <span class="keywordflow">return</span> drawFrameBuffer_; }</div>
+<div class="line"><a name="l00422"></a><span class="lineno"><a class="code" href="classregen_1_1RenderState.html#a4c1109412639d010fe9843bfb5848499">  422</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="classregen_1_1ValueStack.html" title="State stack with single argument apply function.">ValueStack&lt;Viewport&gt;</a>&amp; viewport()</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;  { <span class="keywordflow">return</span> viewport_; }</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;</div>
+<div class="line"><a name="l00428"></a><span class="lineno"><a class="code" href="classregen_1_1RenderState.html#a4201b8a000ff86cb7d450a7759254ae1">  428</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="classregen_1_1IndexedValueStack.html" title="State stack with indexed apply function.">IndexedValueStack&lt;TextureBind&gt;</a>&amp; textures()</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;  { <span class="keywordflow">return</span> textures_; }</div>
+<div class="line"><a name="l00433"></a><span class="lineno"><a class="code" href="classregen_1_1RenderState.html#a9afd24d24709dc310a8c760e268eef9f">  433</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="classregen_1_1ValueStackAtomic.html">ValueStackAtomic&lt;GLenum&gt;</a>&amp; activeTexture()</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;  { <span class="keywordflow">return</span> activeTexture_; }</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;</div>
+<div class="line"><a name="l00439"></a><span class="lineno"><a class="code" href="classregen_1_1RenderState.html#a253c15640535c9628e78f79d8ba4427c">  439</a></span>&#160;  <span class="keyword">inline</span> GLuint reserveTextureChannel()</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;  { <span class="keywordflow">return</span> min(textureCounter_++,maxTextureUnits_-1); }</div>
+<div class="line"><a name="l00444"></a><span class="lineno"><a class="code" href="classregen_1_1RenderState.html#a88840c936627e046a09ef263b36d3aaa">  444</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> releaseTextureChannel()</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;  { --textureCounter_; }</div>
 <div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;</div>
-<div class="line"><a name="l00450"></a><span class="lineno"><a class="code" href="classregen_1_1RenderState.html#ac187da654a6474dbe1899be683692627">  450</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="classregen_1_1IndexedValueStack.html">IndexedValueStack&lt;GLuint&gt;</a>&amp; attributeDivisor()</div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;  { <span class="keywordflow">return</span> attributeDivisor_; }</div>
+<div class="line"><a name="l00450"></a><span class="lineno"><a class="code" href="classregen_1_1RenderState.html#aae032afccf090b5f1dbd852fae41e9db">  450</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="classregen_1_1ValueStackAtomic.html">ValueStackAtomic&lt;GLuint&gt;</a>&amp; shader()</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;  { <span class="keywordflow">return</span> shader_; }</div>
 <div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;</div>
 <div class="line"><a name="l00460"></a><span class="lineno"><a class="code" href="classregen_1_1RenderState.html#ae359fb7197bf6820f761a9cdd7821ef5">  460</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="classregen_1_1IndexedValueStack.html" title="State stack with indexed apply function.">IndexedValueStack&lt;Scissor&gt;</a>&amp; scissor()</div>
 <div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;  { <span class="keywordflow">return</span> scissor_; }</div>
@@ -364,71 +364,70 @@ $(document).ready(function(){initNavTree('render-state_8h_source.html','');});
 <div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;  <a class="code" href="classregen_1_1ParameterStackAtomic.html">ParameterStackAtomic&lt;GLuint&gt;</a> textureBuffer_;</div>
 <div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;  <a class="code" href="classregen_1_1ParameterStackAtomic.html">ParameterStackAtomic&lt;GLuint&gt;</a> copyReadBuffer_;</div>
 <div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;  <a class="code" href="classregen_1_1ParameterStackAtomic.html">ParameterStackAtomic&lt;GLuint&gt;</a> copyWriteBuffer_;</div>
-<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;</div>
-<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;  <a class="code" href="classregen_1_1IndexedValueStack.html" title="State stack with indexed apply function.">IndexedValueStack&lt;BufferRange&gt;</a> uniformBufferRange_;</div>
-<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;  <a class="code" href="classregen_1_1IndexedValueStack.html" title="State stack with indexed apply function.">IndexedValueStack&lt;BufferRange&gt;</a> feedbackBufferRange_;</div>
-<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;  <a class="code" href="classregen_1_1IndexedValueStack.html" title="State stack with indexed apply function.">IndexedValueStack&lt;BufferRange&gt;</a> atomicCounterBufferRange_;</div>
-<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;  <a class="code" href="classregen_1_1IndexedValueStack.html" title="State stack with indexed apply function.">IndexedValueStack&lt;BufferRange&gt;</a> shaderStorageBufferRange_;</div>
-<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;</div>
-<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;  <a class="code" href="classregen_1_1ParameterStackAtomic.html">ParameterStackAtomic&lt;GLuint&gt;</a> readFrameBuffer_;</div>
-<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;  <a class="code" href="classregen_1_1ParameterStackAtomic.html">ParameterStackAtomic&lt;GLuint&gt;</a> drawFrameBuffer_;</div>
-<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;  <a class="code" href="classregen_1_1ValueStack.html" title="State stack with single argument apply function.">ValueStack&lt;Viewport&gt;</a> viewport_;</div>
-<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;</div>
-<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;  <a class="code" href="classregen_1_1ValueStackAtomic.html">ValueStackAtomic&lt;GLuint&gt;</a> shader_;</div>
-<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;</div>
-<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;  <a class="code" href="classregen_1_1ValueStackAtomic.html">ValueStackAtomic&lt;GLenum&gt;</a> activeTexture_;</div>
-<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;  <a class="code" href="classregen_1_1IndexedValueStack.html" title="State stack with indexed apply function.">IndexedValueStack&lt;TextureBind&gt;</a> textures_;</div>
-<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;  GLint textureCounter_;</div>
-<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;</div>
-<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;  <a class="code" href="classregen_1_1IndexedValueStack.html">IndexedValueStack&lt;GLuint&gt;</a> attributeDivisor_;</div>
-<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;</div>
-<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;  <a class="code" href="classregen_1_1IndexedValueStack.html" title="State stack with indexed apply function.">IndexedValueStack&lt;Scissor&gt;</a> scissor_;</div>
-<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;  <a class="code" href="classregen_1_1ValueStackAtomic.html">ValueStackAtomic&lt;GLenum&gt;</a> cullFace_;</div>
-<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;</div>
-<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;  <a class="code" href="classregen_1_1ValueStackAtomic.html">ValueStackAtomic&lt;GLboolean&gt;</a> depthMask_;</div>
-<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;  <a class="code" href="classregen_1_1ValueStackAtomic.html">ValueStackAtomic&lt;GLenum&gt;</a> depthFunc_;</div>
-<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;  <a class="code" href="classregen_1_1ValueStackAtomic.html">ValueStackAtomic&lt;GLclampd&gt;</a> depthClear_;</div>
-<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;  <a class="code" href="classregen_1_1IndexedValueStack.html" title="State stack with indexed apply function.">IndexedValueStack&lt;DepthRange&gt;</a> depthRange_;</div>
-<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;</div>
-<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;  <a class="code" href="classregen_1_1ValueStack.html" title="State stack with single argument apply function.">ValueStack&lt;Vec4f&gt;</a> blendColor_;</div>
-<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;  <a class="code" href="classregen_1_1IndexedValueStack.html" title="State stack with indexed apply function.">IndexedValueStack&lt;BlendEquation&gt;</a> blendEquation_;</div>
-<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;  <a class="code" href="classregen_1_1IndexedValueStack.html" title="State stack with indexed apply function.">IndexedValueStack&lt;BlendFunction&gt;</a> blendFunc_;</div>
-<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;</div>
-<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;  <a class="code" href="classregen_1_1ValueStackAtomic.html">ValueStackAtomic&lt;GLuint&gt;</a> stencilMask_;</div>
-<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;  <a class="code" href="classregen_1_1ValueStack.html" title="State stack with single argument apply function.">ValueStack&lt;StencilFunc&gt;</a> stencilFunc_;</div>
-<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;  <a class="code" href="classregen_1_1ValueStack.html" title="State stack with single argument apply function.">ValueStack&lt;StencilOp&gt;</a> stencilOp_;</div>
-<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;</div>
-<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;  <a class="code" href="classregen_1_1ParameterStackAtomic.html">ParameterStackAtomic&lt;GLenum&gt;</a> polygonMode_;</div>
-<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;  <a class="code" href="classregen_1_1ValueStack.html" title="State stack with single argument apply function.">ValueStack&lt;Vec2f&gt;</a> polygonOffset_;</div>
-<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;</div>
-<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;  <a class="code" href="classregen_1_1ValueStackAtomic.html">ValueStackAtomic&lt;GLfloat&gt;</a> pointSize_;</div>
-<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;  <a class="code" href="classregen_1_1ParameterStackAtomic.html">ParameterStackAtomic&lt;GLfloat&gt;</a> pointFadeThreshold_;</div>
-<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;  <a class="code" href="classregen_1_1ParameterStackAtomic.html">ParameterStackAtomic&lt;GLint&gt;</a> pointSpriteOrigin_;</div>
-<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;</div>
-<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;  <a class="code" href="classregen_1_1ParameterStackAtomic.html">ParameterStackAtomic&lt;GLint&gt;</a> patchVertices_;</div>
-<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;  <a class="code" href="classregen_1_1ValueStack.html" title="State stack with single argument apply function.">ValueStack&lt;PatchLevels&gt;</a> patchLevel_;</div>
-<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;</div>
-<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;  <a class="code" href="classregen_1_1IndexedValueStack.html" title="State stack with indexed apply function.">IndexedValueStack&lt;ColorMask&gt;</a> colorMask_;</div>
-<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;  <a class="code" href="classregen_1_1ValueStack.html" title="State stack with single argument apply function.">ValueStack&lt;ClearColor&gt;</a> clearColor_;</div>
-<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;</div>
-<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;  <a class="code" href="classregen_1_1ValueStackAtomic.html">ValueStackAtomic&lt;GLfloat&gt;</a> lineWidth_;</div>
-<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;  <a class="code" href="classregen_1_1ValueStackAtomic.html">ValueStackAtomic&lt;GLfloat&gt;</a> minSampleShading_;</div>
-<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;  <a class="code" href="classregen_1_1ValueStackAtomic.html">ValueStackAtomic&lt;GLenum&gt;</a> logicOp_;</div>
-<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;  <a class="code" href="classregen_1_1ValueStackAtomic.html">ValueStackAtomic&lt;GLenum&gt;</a> frontFace_;</div>
-<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;</div>
-<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;  <a class="code" href="classregen_1_1RenderState.html" title="Handles server-side GL states.">RenderState</a>();</div>
-<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;};</div>
-<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;</div>
-<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;</div>
-<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* RENDER_STATE_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;  <a class="code" href="classregen_1_1ValueStackAtomic.html">ValueStackAtomic&lt;GLuint&gt;</a> vao_;</div>
+<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;</div>
+<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;  <a class="code" href="classregen_1_1IndexedValueStack.html" title="State stack with indexed apply function.">IndexedValueStack&lt;BufferRange&gt;</a> uniformBufferRange_;</div>
+<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;  <a class="code" href="classregen_1_1IndexedValueStack.html" title="State stack with indexed apply function.">IndexedValueStack&lt;BufferRange&gt;</a> feedbackBufferRange_;</div>
+<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;  <a class="code" href="classregen_1_1IndexedValueStack.html" title="State stack with indexed apply function.">IndexedValueStack&lt;BufferRange&gt;</a> atomicCounterBufferRange_;</div>
+<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;  <a class="code" href="classregen_1_1IndexedValueStack.html" title="State stack with indexed apply function.">IndexedValueStack&lt;BufferRange&gt;</a> shaderStorageBufferRange_;</div>
+<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;</div>
+<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;  <a class="code" href="classregen_1_1ParameterStackAtomic.html">ParameterStackAtomic&lt;GLuint&gt;</a> readFrameBuffer_;</div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;  <a class="code" href="classregen_1_1ParameterStackAtomic.html">ParameterStackAtomic&lt;GLuint&gt;</a> drawFrameBuffer_;</div>
+<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;  <a class="code" href="classregen_1_1ValueStack.html" title="State stack with single argument apply function.">ValueStack&lt;Viewport&gt;</a> viewport_;</div>
+<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;</div>
+<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;  <a class="code" href="classregen_1_1ValueStackAtomic.html">ValueStackAtomic&lt;GLuint&gt;</a> shader_;</div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;</div>
+<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;  <a class="code" href="classregen_1_1ValueStackAtomic.html">ValueStackAtomic&lt;GLenum&gt;</a> activeTexture_;</div>
+<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;  <a class="code" href="classregen_1_1IndexedValueStack.html" title="State stack with indexed apply function.">IndexedValueStack&lt;TextureBind&gt;</a> textures_;</div>
+<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;  GLint textureCounter_;</div>
+<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;</div>
+<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;  <a class="code" href="classregen_1_1IndexedValueStack.html" title="State stack with indexed apply function.">IndexedValueStack&lt;Scissor&gt;</a> scissor_;</div>
+<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;  <a class="code" href="classregen_1_1ValueStackAtomic.html">ValueStackAtomic&lt;GLenum&gt;</a> cullFace_;</div>
+<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;</div>
+<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;  <a class="code" href="classregen_1_1ValueStackAtomic.html">ValueStackAtomic&lt;GLboolean&gt;</a> depthMask_;</div>
+<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;  <a class="code" href="classregen_1_1ValueStackAtomic.html">ValueStackAtomic&lt;GLenum&gt;</a> depthFunc_;</div>
+<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;  <a class="code" href="classregen_1_1ValueStackAtomic.html">ValueStackAtomic&lt;GLclampd&gt;</a> depthClear_;</div>
+<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;  <a class="code" href="classregen_1_1IndexedValueStack.html" title="State stack with indexed apply function.">IndexedValueStack&lt;DepthRange&gt;</a> depthRange_;</div>
+<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;</div>
+<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;  <a class="code" href="classregen_1_1ValueStack.html" title="State stack with single argument apply function.">ValueStack&lt;Vec4f&gt;</a> blendColor_;</div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;  <a class="code" href="classregen_1_1IndexedValueStack.html" title="State stack with indexed apply function.">IndexedValueStack&lt;BlendEquation&gt;</a> blendEquation_;</div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;  <a class="code" href="classregen_1_1IndexedValueStack.html" title="State stack with indexed apply function.">IndexedValueStack&lt;BlendFunction&gt;</a> blendFunc_;</div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;</div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;  <a class="code" href="classregen_1_1ValueStackAtomic.html">ValueStackAtomic&lt;GLuint&gt;</a> stencilMask_;</div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;  <a class="code" href="classregen_1_1ValueStack.html" title="State stack with single argument apply function.">ValueStack&lt;StencilFunc&gt;</a> stencilFunc_;</div>
+<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;  <a class="code" href="classregen_1_1ValueStack.html" title="State stack with single argument apply function.">ValueStack&lt;StencilOp&gt;</a> stencilOp_;</div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;</div>
+<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;  <a class="code" href="classregen_1_1ParameterStackAtomic.html">ParameterStackAtomic&lt;GLenum&gt;</a> polygonMode_;</div>
+<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;  <a class="code" href="classregen_1_1ValueStack.html" title="State stack with single argument apply function.">ValueStack&lt;Vec2f&gt;</a> polygonOffset_;</div>
+<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;</div>
+<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;  <a class="code" href="classregen_1_1ValueStackAtomic.html">ValueStackAtomic&lt;GLfloat&gt;</a> pointSize_;</div>
+<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;  <a class="code" href="classregen_1_1ParameterStackAtomic.html">ParameterStackAtomic&lt;GLfloat&gt;</a> pointFadeThreshold_;</div>
+<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;  <a class="code" href="classregen_1_1ParameterStackAtomic.html">ParameterStackAtomic&lt;GLint&gt;</a> pointSpriteOrigin_;</div>
+<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;</div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;  <a class="code" href="classregen_1_1ParameterStackAtomic.html">ParameterStackAtomic&lt;GLint&gt;</a> patchVertices_;</div>
+<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;  <a class="code" href="classregen_1_1ValueStack.html" title="State stack with single argument apply function.">ValueStack&lt;PatchLevels&gt;</a> patchLevel_;</div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;</div>
+<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;  <a class="code" href="classregen_1_1IndexedValueStack.html" title="State stack with indexed apply function.">IndexedValueStack&lt;ColorMask&gt;</a> colorMask_;</div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;  <a class="code" href="classregen_1_1ValueStack.html" title="State stack with single argument apply function.">ValueStack&lt;ClearColor&gt;</a> clearColor_;</div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;</div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;  <a class="code" href="classregen_1_1ValueStackAtomic.html">ValueStackAtomic&lt;GLfloat&gt;</a> lineWidth_;</div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;  <a class="code" href="classregen_1_1ValueStackAtomic.html">ValueStackAtomic&lt;GLfloat&gt;</a> minSampleShading_;</div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;  <a class="code" href="classregen_1_1ValueStackAtomic.html">ValueStackAtomic&lt;GLenum&gt;</a> logicOp_;</div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;  <a class="code" href="classregen_1_1ValueStackAtomic.html">ValueStackAtomic&lt;GLenum&gt;</a> frontFace_;</div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;</div>
+<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;  <a class="code" href="classregen_1_1RenderState.html" title="Handles server-side GL states.">RenderState</a>();</div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;};</div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;</div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;</div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* RENDER_STATE_H_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_b70464c1df99f3a2fdf623cd3d1b16df.html">gl-types</a></li><li class="navelem"><b>render-state.h</b></li>
-    <li class="footer">Generated on Mon Apr 15 2013 21:08:05 for regen by
+    <li class="footer">Generated on Wed Apr 24 2013 00:41:46 for regen by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

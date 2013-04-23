@@ -15,6 +15,5 @@ var classregen_1_1AnimationNode =
     [ "set_channelIndex", "classregen_1_1AnimationNode.html#ad8255937d06fad85097f19a15b81ebb5", null ],
     [ "set_globalTransform", "classregen_1_1AnimationNode.html#ade15501919d3e1026f63280fce861071", null ],
     [ "set_localTransform", "classregen_1_1AnimationNode.html#ac14fae1390aa59430610f3ba259ac6d6", null ],
-    [ "updateBoneTransformationMatrix", "classregen_1_1AnimationNode.html#ab484d419adbf657d317fb71456e25636", null ],
     [ "updateTransforms", "classregen_1_1AnimationNode.html#acebe4f08912305bfbd13b5a6f58a3875", null ]
 ];

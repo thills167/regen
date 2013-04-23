@@ -20,5 +20,6 @@ var dir_128f75dce35ba73c52fc2f45d15b5117 =
     [ "state.h", "state_8h_source.html", null ],
     [ "tesselation-state.h", "tesselation-state_8h_source.html", null ],
     [ "texture-state.h", "texture-state_8h_source.html", null ],
-    [ "tonemap.h", "tonemap_8h_source.html", null ]
+    [ "tonemap.h", "tonemap_8h_source.html", null ],
+    [ "vao-state.h", "vao-state_8h_source.html", null ]
 ];

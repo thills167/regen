@@ -28,9 +28,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="icon-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">regen
-   &#160;<span id="projectnumber">..</span>
+   &#160;<span id="projectnumber">0.1.0</span>
    </div>
   </td>
  </tr>
@@ -105,7 +106,6 @@ $(document).ready(function(){initNavTree('classregen_1_1VertexArrayObject.html',
 
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classregen_1_1VertexArrayObject-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">regen::VertexArrayObject Class Reference</div>  </div>
@@ -124,12 +124,13 @@ Inheritance diagram for regen::VertexArrayObject:</div>
 <area shape="rect" id="node2" href="classregen_1_1BufferObject.html" title="Base class for buffer objects." alt="" coords="22,5,156,32"/></map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a286a4c0fe0c4236f259bc45cb46c0e6a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1VertexArrayObject.html#a286a4c0fe0c4236f259bc45cb46c0e6a">bind</a> () const </td></tr>
-<tr class="separator:a286a4c0fe0c4236f259bc45cb46c0e6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add4be96ee41a20f684c957afb562992a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1VertexArrayObject.html#add4be96ee41a20f684c957afb562992a">unbind</a> () const </td></tr>
-<tr class="separator:add4be96ee41a20f684c957afb562992a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_classregen_1_1BufferObject"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classregen_1_1BufferObject')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classregen_1_1BufferObject.html">regen::BufferObject</a></td></tr>
+<tr class="memitem:a0846a306b57c6ec46579a9fe8d486fde inherit pub_types_classregen_1_1BufferObject"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1BufferObject.html#a0846a306b57c6ec46579a9fe8d486fde">CreateBufferFunc</a> )(GLsizei, GLuint *)</td></tr>
+<tr class="separator:a0846a306b57c6ec46579a9fe8d486fde inherit pub_types_classregen_1_1BufferObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bd45023a0ee9af7fb000f6946361cb2 inherit pub_types_classregen_1_1BufferObject"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1BufferObject.html#a0bd45023a0ee9af7fb000f6946361cb2">ReleaseBufferFunc</a> )(GLsizei, const GLuint *)</td></tr>
+<tr class="separator:a0bd45023a0ee9af7fb000f6946361cb2 inherit pub_types_classregen_1_1BufferObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classregen_1_1BufferObject"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classregen_1_1BufferObject')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classregen_1_1BufferObject.html">regen::BufferObject</a></td></tr>
 <tr class="memitem:a5be6e49b61ea8e20afcb2b5c9d4d8473 inherit pub_methods_classregen_1_1BufferObject"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1BufferObject.html#a5be6e49b61ea8e20afcb2b5c9d4d8473">BufferObject</a> (<a class="el" href="classregen_1_1BufferObject.html#a0846a306b57c6ec46579a9fe8d486fde">CreateBufferFunc</a> createBuffers, <a class="el" href="classregen_1_1BufferObject.html#a0bd45023a0ee9af7fb000f6946361cb2">ReleaseBufferFunc</a> releaseBuffers, GLuint <a class="el" href="classregen_1_1BufferObject.html#a9f26d9d0932e0ba500b9cccc2ad94cdd">numBuffers</a>=1)</td></tr>
 <tr class="separator:a5be6e49b61ea8e20afcb2b5c9d4d8473 inherit pub_methods_classregen_1_1BufferObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,53 +146,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9f26d9d0932e0ba500b9cccc2ad94cdd inherit pub_methods_classregen_1_1BufferObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac076ad4f3c7894a291770807ce44c239 inherit pub_methods_classregen_1_1BufferObject"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1BufferObject.html#ac076ad4f3c7894a291770807ce44c239">set_bufferIndex</a> (GLuint <a class="el" href="classregen_1_1BufferObject.html#aa4019026e1c6c09398d4926ddd1a0c71">bufferIndex</a>)</td></tr>
 <tr class="separator:ac076ad4f3c7894a291770807ce44c239 inherit pub_methods_classregen_1_1BufferObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_types_classregen_1_1BufferObject"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classregen_1_1BufferObject')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classregen_1_1BufferObject.html">regen::BufferObject</a></td></tr>
-<tr class="memitem:a0846a306b57c6ec46579a9fe8d486fde inherit pub_types_classregen_1_1BufferObject"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1BufferObject.html#a0846a306b57c6ec46579a9fe8d486fde">CreateBufferFunc</a> )(GLsizei, GLuint *)</td></tr>
-<tr class="separator:a0846a306b57c6ec46579a9fe8d486fde inherit pub_types_classregen_1_1BufferObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0bd45023a0ee9af7fb000f6946361cb2 inherit pub_types_classregen_1_1BufferObject"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1BufferObject.html#a0bd45023a0ee9af7fb000f6946361cb2">ReleaseBufferFunc</a> )(GLsizei, const GLuint *)</td></tr>
-<tr class="separator:a0bd45023a0ee9af7fb000f6946361cb2 inherit pub_types_classregen_1_1BufferObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Vertex Array Objects (VAO) are OpenGL Objects that store the set of bindings between Vertex Attributes and the user's source vertex data. </p>
 <p>VBOs store the actual vertex and index arrays, while VAOs store the settings for interpreting the data in those arrays.</p>
 <p>The currently bound vertex array object is used for all commands which modify vertex array state, such as VertexAttribPointer and EnableVertexAttribArray; all commands which draw from vertex arrays, such as DrawArrays and DrawElements; and all queries of vertex array state. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a286a4c0fe0c4236f259bc45cb46c0e6a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void VertexArrayObject::bind </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Bind the vertex array object. </p>
-
-</div>
-</div>
-<a class="anchor" id="add4be96ee41a20f684c957afb562992a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void VertexArrayObject::unbind </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Unbind the vertex array object. </p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>gl-types/<a class="el" href="vao_8h_source.html">vao.h</a></li>
 <li>gl-types/vao.cpp</li>
 </ul>
@@ -201,7 +161,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>regen</b></li><li class="navelem"><a class="el" href="classregen_1_1VertexArrayObject.html">VertexArrayObject</a></li>
-    <li class="footer">Generated on Mon Apr 15 2013 21:08:06 for regen by
+    <li class="footer">Generated on Wed Apr 24 2013 00:41:47 for regen by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

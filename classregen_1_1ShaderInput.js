@@ -2,8 +2,7 @@ var classregen_1_1ShaderInput =
 [
     [ "ShaderInput", "classregen_1_1ShaderInput.html#ae4d8473db53f85362b6591895a2063af", null ],
     [ "~ShaderInput", "classregen_1_1ShaderInput.html#ad4d835d604f7eb7f5532f06ab40caa41", null ],
-    [ "disableAttribute", "classregen_1_1ShaderInput.html#a37b1f546adf8653f6fee312af269b123", null ],
-    [ "enableAttribute", "classregen_1_1ShaderInput.html#addc40160500a513e5c192caa6a41680f", null ],
+    [ "enableAttribute", "classregen_1_1ShaderInput.html#a74102f5e4fdee2ba6676a6a3bfc28e50", null ],
     [ "enableUniform", "classregen_1_1ShaderInput.html#a815707b4ab66dfc93d849c90bc7e9b0b", null ],
     [ "enableUniform1d", "classregen_1_1ShaderInput.html#a5a2ef9b7476182597625fa6d0cc5a3d8", null ],
     [ "enableUniform1f", "classregen_1_1ShaderInput.html#a16902bd99158e44099b42abdbcab7512", null ],

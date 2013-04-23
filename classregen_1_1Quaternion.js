@@ -5,6 +5,7 @@ var classregen_1_1Quaternion =
     [ "calculateMatrix", "classregen_1_1Quaternion.html#a3ee6d8c26f3aefe70ce63acec79886a8", null ],
     [ "conjugate", "classregen_1_1Quaternion.html#a61e18c4f3d8fe57b270fe6ed7f2909bc", null ],
     [ "interpolate", "classregen_1_1Quaternion.html#a6a05eb6364edc4039ba55e1b7da9a98b", null ],
+    [ "interpolateLinear", "classregen_1_1Quaternion.html#a294f31c106c0cc21069d5ce18efaab6a", null ],
     [ "normalize", "classregen_1_1Quaternion.html#ad3ad976cf0db8e2e7bab89118650272f", null ],
     [ "operator!=", "classregen_1_1Quaternion.html#a516167bd64249d1f4e18a84986dff169", null ],
     [ "operator*", "classregen_1_1Quaternion.html#aafe7c1f373ba697e7aa1305d3685c078", null ],

@@ -28,9 +28,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="icon-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">regen
-   &#160;<span id="projectnumber">..</span>
+   &#160;<span id="projectnumber">0.1.0</span>
    </div>
   </td>
  </tr>
@@ -133,7 +134,7 @@ $(document).ready(function(){initNavTree('atomic-states_8h_source.html','');});
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">  </span>{ <span class="keywordflow">return</span> toggle_; }</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
 <div class="line"><a name="l00046"></a><span class="lineno"><a class="code" href="classregen_1_1ToggleState.html#a888d8ebe4895b8ddc83b5203f08938ed">   46</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1ToggleState.html#a888d8ebe4895b8ddc83b5203f08938ed">enable</a>(<a class="code" href="classregen_1_1RenderState.html" title="Handles server-side GL states.">RenderState</a> *rs)</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  { rs-&gt;<a class="code" href="classregen_1_1RenderState.html#af8cee4d00bb07255442edf4b8e21ee00">toggles</a>().<a class="code" href="classregen_1_1IndexedValueStack.html#ae80e7a9361d6b17fdd682c2fc8ae8ff3">push</a>(key_, toggle_); }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  { rs-&gt;<a class="code" href="classregen_1_1RenderState.html#af8cee4d00bb07255442edf4b8e21ee00">toggles</a>().<a class="code" href="classregen_1_1IndexedValueStack.html#a790c4f3ce2364770a3ec2cbffb120462">push</a>(key_, toggle_); }</div>
 <div class="line"><a name="l00048"></a><span class="lineno"><a class="code" href="classregen_1_1ToggleState.html#a93349b4431e3b7c2b98d322000385c83">   48</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1ToggleState.html#a93349b4431e3b7c2b98d322000385c83">disable</a>(<a class="code" href="classregen_1_1RenderState.html" title="Handles server-side GL states.">RenderState</a> *rs)</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  { rs-&gt;<a class="code" href="classregen_1_1RenderState.html#af8cee4d00bb07255442edf4b8e21ee00">toggles</a>().<a class="code" href="classregen_1_1IndexedValueStack.html#a1a131d367462a09fa0a6ea3c79f04f42">pop</a>(key_); }</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
@@ -254,7 +255,7 @@ $(document).ready(function(){initNavTree('atomic-states_8h_source.html','');});
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  : <a class="code" href="classregen_1_1ServerSideState.html" title="Base class for &#39;atomic&#39; states.">ServerSideState</a>(), factor_(factor), units_(units) {}</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;</div>
 <div class="line"><a name="l00246"></a><span class="lineno"><a class="code" href="classregen_1_1PolygonOffsetState.html#aa5560eca257d31e08d3f0bd64035c760">  246</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1PolygonOffsetState.html#aa5560eca257d31e08d3f0bd64035c760">enable</a>(<a class="code" href="classregen_1_1RenderState.html" title="Handles server-side GL states.">RenderState</a> *rs) {</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    rs-&gt;<a class="code" href="classregen_1_1RenderState.html#af8cee4d00bb07255442edf4b8e21ee00">toggles</a>().<a class="code" href="classregen_1_1IndexedValueStack.html#ae80e7a9361d6b17fdd682c2fc8ae8ff3">push</a>(<a class="code" href="classregen_1_1RenderState.html#a8f8200e8fafeca3ace12631506a61152ae01a38d5392d54134f69d63ea7c9b1fd">RenderState::POLYGON_OFFSET_FILL</a>, GL_TRUE);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    rs-&gt;<a class="code" href="classregen_1_1RenderState.html#af8cee4d00bb07255442edf4b8e21ee00">toggles</a>().<a class="code" href="classregen_1_1IndexedValueStack.html#a790c4f3ce2364770a3ec2cbffb120462">push</a>(<a class="code" href="classregen_1_1RenderState.html#a8f8200e8fafeca3ace12631506a61152ae01a38d5392d54134f69d63ea7c9b1fd">RenderState::POLYGON_OFFSET_FILL</a>, GL_TRUE);</div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    rs-&gt;<a class="code" href="classregen_1_1RenderState.html#af3eb002d00afdd3a93e8af4982dfc87b">polygonOffset</a>().push(<a class="code" href="classregen_1_1Vec2.html">Vec2f</a>(factor_, units_));</div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  }</div>
 <div class="line"><a name="l00250"></a><span class="lineno"><a class="code" href="classregen_1_1PolygonOffsetState.html#a35524421e3d3fd3fa224d7f8be9a5e4a">  250</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1PolygonOffsetState.html#a35524421e3d3fd3fa224d7f8be9a5e4a">disable</a>(<a class="code" href="classregen_1_1RenderState.html" title="Handles server-side GL states.">RenderState</a> *rs) {</div>
@@ -423,7 +424,7 @@ $(document).ready(function(){initNavTree('atomic-states_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_128f75dce35ba73c52fc2f45d15b5117.html">states</a></li><li class="navelem"><b>atomic-states.h</b></li>
-    <li class="footer">Generated on Mon Apr 15 2013 21:08:06 for regen by
+    <li class="footer">Generated on Wed Apr 24 2013 00:41:46 for regen by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

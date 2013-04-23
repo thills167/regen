@@ -3,7 +3,7 @@ var searchData=
   ['back',['back',['../structregen_1_1DrawBuffers.html#a5aa984b6a0da5b0f29a3a28a48cd51c3',1,'regen::DrawBuffers']]],
   ['begintransformfeedback',['beginTransformFeedback',['../classregen_1_1RenderState.html#ae8cfc4be856297e7e143b474333200c6',1,'regen::RenderState']]],
   ['bias',['bias',['../structregen_1_1Mat4f.html#a5a57741a3ff7310cea01422f9af16941',1,'regen::Mat4f']]],
-  ['bind',['bind',['../classregen_1_1RenderBufferObject.html#ad698b89af41e4fc4a3646ae7daac9cbf',1,'regen::RenderBufferObject::bind()'],['../classregen_1_1VertexArrayObject.html#a286a4c0fe0c4236f259bc45cb46c0e6a',1,'regen::VertexArrayObject::bind()']]],
+  ['bind',['bind',['../classregen_1_1RenderBufferObject.html#ad698b89af41e4fc4a3646ae7daac9cbf',1,'regen::RenderBufferObject']]],
   ['bindblock',['bindBlock',['../classregen_1_1UniformBufferObject.html#acad169512e1055fca2d4934cb57db98e',1,'regen::UniformBufferObject']]],
   ['bits',['bits',['../classregen_1_1AudioBuffer.html#a78e7e0c1d8cf62ed29b9f7f29ae203dc',1,'regen::AudioBuffer']]],
   ['blendcolor',['blendColor',['../classregen_1_1RenderState.html#a7dfa61d9d8c7b026b79e01c13c1a5a81',1,'regen::RenderState']]],

@@ -28,9 +28,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="icon-small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">regen
-   &#160;<span id="projectnumber">..</span>
+   &#160;<span id="projectnumber">0.1.0</span>
    </div>
   </td>
  </tr>
@@ -105,6 +106,7 @@ $(document).ready(function(){initNavTree('classregen_1_1IndexedValueStack.html',
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#friends">Friends</a> &#124;
@@ -140,21 +142,15 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1a131d367462a09fa0a6ea3c79f04f42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a981eada4e23e66259fb9658a1496c9be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1IndexedValueStack.html#a981eada4e23e66259fb9658a1496c9be">pop</a> (GLuint index)</td></tr>
 <tr class="separator:a981eada4e23e66259fb9658a1496c9be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae80e7a9361d6b17fdd682c2fc8ae8ff3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1IndexedValueStack.html#ae80e7a9361d6b17fdd682c2fc8ae8ff3">push</a> (const ValueType &amp;v_)</td></tr>
-<tr class="separator:ae80e7a9361d6b17fdd682c2fc8ae8ff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f7bfddfcf3664ed8bc073419d17710b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1IndexedValueStack.html#a0f7bfddfcf3664ed8bc073419d17710b">push</a> (GLuint index, const ValueType &amp;v_)</td></tr>
-<tr class="separator:a0f7bfddfcf3664ed8bc073419d17710b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a790c4f3ce2364770a3ec2cbffb120462"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1IndexedValueStack.html#a790c4f3ce2364770a3ec2cbffb120462">push</a> (const ValueType &amp;v)</td></tr>
+<tr class="separator:a790c4f3ce2364770a3ec2cbffb120462"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa694c7ab9fe948b03019b7519e7c3f0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1IndexedValueStack.html#aa694c7ab9fe948b03019b7519e7c3f0f">push</a> (GLuint index, const ValueType &amp;v)</td></tr>
+<tr class="separator:aa694c7ab9fe948b03019b7519e7c3f0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac93aaed646446cde5f8600045fef2373"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1IndexedValueStack.html#ac93aaed646446cde5f8600045fef2373">unlock</a> ()</td></tr>
 <tr class="separator:ac93aaed646446cde5f8600045fef2373"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:ad378e40c6aaf193ae8ba3dfa972c413f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad378e40c6aaf193ae8ba3dfa972c413f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>applyEmptyStamped</b> (<a class="el" href="classregen_1_1IndexedValueStack.html">IndexedValueStack</a> *, const ValueType &amp;)</td></tr>
-<tr class="separator:ad378e40c6aaf193ae8ba3dfa972c413f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18dd528195378f49bb5234fe023d88be"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a18dd528195378f49bb5234fe023d88be"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>applyEmptyStampedi</b> (<a class="el" href="classregen_1_1IndexedValueStack.html">IndexedValueStack</a> *, GLuint, const ValueType &amp;)</td></tr>
-<tr class="separator:a18dd528195378f49bb5234fe023d88be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acfc50c1dbb67d66e1a932f380e856c5a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acfc50c1dbb67d66e1a932f380e856c5a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>applyFilledStamped</b> (<a class="el" href="classregen_1_1IndexedValueStack.html">IndexedValueStack</a> *, const ValueType &amp;)</td></tr>
 <tr class="separator:acfc50c1dbb67d66e1a932f380e856c5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -394,7 +390,7 @@ template&lt;typename ValueType&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ae80e7a9361d6b17fdd682c2fc8ae8ff3"></a>
+<a class="anchor" id="a790c4f3ce2364770a3ec2cbffb120462"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -407,7 +403,7 @@ template&lt;typename ValueType&gt; </div>
           <td class="memname">void <a class="el" href="classregen_1_1IndexedValueStack.html">regen::IndexedValueStack</a>&lt; ValueType &gt;::push </td>
           <td>(</td>
           <td class="paramtype">const ValueType &amp;&#160;</td>
-          <td class="paramname"><em>v_</em></td><td>)</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -420,14 +416,14 @@ template&lt;typename ValueType&gt; </div>
 <p>Push a value onto the stack. Applies to all indices. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">v_</td><td>the value. </td></tr>
+    <tr><td class="paramname">v</td><td>the value. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="a0f7bfddfcf3664ed8bc073419d17710b"></a>
+<a class="anchor" id="aa694c7ab9fe948b03019b7519e7c3f0f"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -446,7 +442,7 @@ template&lt;typename ValueType&gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const ValueType &amp;&#160;</td>
-          <td class="paramname"><em>v_</em>&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -464,7 +460,7 @@ template&lt;typename ValueType&gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">index</td><td>the index. </td></tr>
-    <tr><td class="paramname">v_</td><td>the value. </td></tr>
+    <tr><td class="paramname">v</td><td>the value. </td></tr>
   </table>
   </dd>
 </dl>
@@ -506,7 +502,7 @@ template&lt;typename ValueType&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>regen</b></li><li class="navelem"><a class="el" href="classregen_1_1IndexedValueStack.html">IndexedValueStack</a></li>
-    <li class="footer">Generated on Mon Apr 15 2013 21:08:06 for regen by
+    <li class="footer">Generated on Wed Apr 24 2013 00:41:46 for regen by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>
