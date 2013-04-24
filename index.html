@@ -81,17 +81,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">regen </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>regen &ndash; Real-time Graphics Engine &ndash; is a portable OpenGL library written in C++. The purpose of this library is to help creating real-time rendering software.</p>
-<p>A graphics card supporting the OpenGL 3.3 API is required for regen. Some features from the 4.0 API are also supported but optional for backwards compatibility. The engine is tested with NVIDIA and ATI drivers and on the Arch Linux and Ubuntu 11.10 (ATI dropped support for my notebook graphics adapter so i had to use an old Ubuntu version). Other Unix based Operating-Systems should work from the scratch. Windows 8 with latest ATI drivers was also tested. You will find some special notes for compiling the engine under Win in this document.</p>
+<div class="textblock"><p><code>regen</code> &ndash; Real-time Graphics Engine &ndash; is a portable OpenGL library written in C++. The purpose of this library is to help creating real-time rendering software.</p>
+<p>A graphics card supporting the OpenGL 3.3 API is required for <code>regen</code>. Some features from the 4.0 API are also supported but optional for backwards compatibility. The engine is tested with NVIDIA and ATI drivers and on Arch Linux and Ubuntu 11.10 (ATI dropped support for my notebook graphics adapter so i had to use an old Ubuntu version). Other Unix based Operating-Systems should work from the scratch. Windows 8 with latest ATI drivers was also tested. You will find some special notes for compiling the engine under Win in this document.</p>
 <h1>Downloading</h1>
 <p>Clone the code from <a href="https://github.com/daniel86/regen">github</a>. The master branch contains the most up to date source code. For each release you will find a custom branch.</p>
-<div class="fragment"><div class="line">git clone git@github.com:daniel86/regen.git</div>
-</div><!-- fragment --><h1>Compiling</h1>
-<p>regen builds with <a href="http://www.cmake.org/">CMake</a>. Run <code>cmake .</code> in the root directory to generate files needed for compiling. On Unix systems CMake will generate Makefile's with usual targets. Running <code>make</code> invokes the compiler and linker and if <code>make</code> was successfull a static engine library <code>libregen.a</code> was created in the root directory. On Windows CMake generates Visual Studio files, just open them and compile from the IDE.</p>
-<p>regen defines following build targets: </p>
+<h1>Compiling</h1>
+<p><code>regen</code> builds with <a href="http://www.cmake.org/">CMake</a>. Run <code>cmake .</code> in the root directory to generate files needed for compiling. On Unix systems CMake will generate Makefile's with usual targets. Running <code>make</code> invokes the compiler and linker and if <code>make</code> was successfull a static engine library <code>libregen.a</code> was created in the root directory. On Windows CMake generates Visual Studio files, just open them and compile from the IDE.</p>
+<p><code>regen</code> defines following build targets:</p>
 <table class="doxtable">
 <tr>
-<th>Target </th><th>Description</th></tr>
+<th>Target </th><th>Description </th></tr>
 <tr>
 <td>all </td><td>Compile and link the engine. </td></tr>
 <tr>
@@ -99,10 +98,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr>
 <td>doc </td><td>Generate doxygen documentation. </td></tr>
 </table>
-<p>CMake supports some default parameters for compiler and build path setup, consider the CMake documentations for those arguments. Following you can find a list of <code>cmake</code> arguments with special handling in the CMake build files:</p>
+<p>CMake supports some default parameters for compiler and build path setup, consider the CMake documentations for those arguments. Following you can find a list of <code>cmake</code> arguments with special handling in the <code>regen</code> build files:</p>
 <table class="doxtable">
 <tr>
-<th>Argument </th><th>Default </th><th>Description</th></tr>
+<th>Argument </th><th>Default </th><th>Description </th></tr>
 <tr>
 <td>-DCMAKE_BUILD_TYPE </td><td>Release </td><td>One of Release or Debug. With Debug mode the engine is compiled with additional debugging symbols. </td></tr>
 <tr>
@@ -146,7 +145,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li><code>Volume Rendering</code>: Simple raycasting volume renderer</li>
 </ul>
 <h1>Dependency List</h1>
-<p>Following you can find a list of libraries that must be installed in order to compile regen.</p>
+<p>Following you can find a list of libraries that must be installed in order to compile <code>regen</code>.</p>
 <ul>
 <li><a href="http://www.opengl.org/">OpenGL</a> &gt;=3.3</li>
 <li><a href="http://kcat.strangesoft.net/openal.html">OpenAL Soft</a> &gt;=1.1</li>
@@ -164,11 +163,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>The documentation is hosted using the <a href="http://daniel86.github.com/regen/">gh-pages branch</a></p>
 <h1>Contact</h1>
 <p>If you find any bugs please report them to the <a href="https://github.com/daniel86/regen/issues">github tracker</a>.</p>
-<p>You also can contact me directly via <a href="#" onclick="location.href='mai'+'lto:'+'dan'+'ie'+'l@o'+'rg'+'izm'+'.n'+'et'; return false;">mail</a> or <a href="daniel@orgizm.net">Jabber</a>. </p>
+<p>You also can contact me directly via <a href="daniel@orgizm.net">mail</a> if you like. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 25 2013 00:27:35 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Apr 25 2013 00:47:16 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>
