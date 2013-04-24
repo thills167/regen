@@ -8,19 +8,13 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-  $(window).load(resizeHeight);
-</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="regen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -75,21 +69,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('classregen_1_1StateStack.html','');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -104,6 +83,11 @@ $(document).ready(function(){initNavTree('classregen_1_1StateStack.html','');});
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>regen</b></li><li class="navelem"><a class="el" href="classregen_1_1StateStack.html">StateStack</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -119,13 +103,15 @@ $(document).ready(function(){initNavTree('classregen_1_1StateStack.html','');});
  <a href="classregen_1_1StateStack.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="state-stacks_8h_source.html">state-stacks.h</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for regen::StateStack&lt; StackType, ValueType, ApplyFunc &gt;:</div>
-<div class="dyncontent">
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for regen::StateStack&lt; StackType, ValueType, ApplyFunc &gt;:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classregen_1_1StateStack__inherit__graph.png" border="0" usemap="#regen_1_1StateStack_3_01StackType_00_01ValueType_00_01ApplyFunc_01_4_inherit__map" alt="Inheritance graph"/></div>
 <map name="regen_1_1StateStack_3_01StackType_00_01ValueType_00_01ApplyFunc_01_4_inherit__map" id="regen_1_1StateStack_3_01StackType_00_01ValueType_00_01ApplyFunc_01_4_inherit__map">
 <area shape="rect" id="node2" href="classregen_1_1ParameterStackAtomic.html" title="ParameterStackAtomic\l\&lt; GLenum \&gt;" alt="" coords="245,5,403,46"/><area shape="rect" id="node3" href="classregen_1_1ParameterStackAtomic.html" title="ParameterStackAtomic\l\&lt; GLfloat \&gt;" alt="" coords="245,70,403,111"/><area shape="rect" id="node4" href="classregen_1_1ParameterStackAtomic.html" title="ParameterStackAtomic\l\&lt; GLint \&gt;" alt="" coords="245,135,403,177"/><area shape="rect" id="node5" href="classregen_1_1ParameterStackAtomic.html" title="ParameterStackAtomic\l\&lt; GLuint \&gt;" alt="" coords="245,201,403,242"/><area shape="rect" id="node6" href="classregen_1_1ValueStack.html" title="ValueStack\&lt; regen::\lDrawBuffers \&gt;" alt="" coords="253,266,395,307"/><area shape="rect" id="node7" href="classregen_1_1ValueStack.html" title="ValueStack\&lt; regen::\lPatchLevels \&gt;" alt="" coords="253,331,395,373"/><area shape="rect" id="node8" href="classregen_1_1ValueStack.html" title="ValueStack\&lt; regen::\lStencilFunc \&gt;" alt="" coords="253,397,395,438"/><area shape="rect" id="node9" href="classregen_1_1ValueStack.html" title="ValueStack\&lt; regen::\lVec2 \&gt;" alt="" coords="253,462,395,503"/><area shape="rect" id="node10" href="classregen_1_1ValueStack.html" title="ValueStack\&lt; regen::\lVec3 \&gt;" alt="" coords="253,527,395,569"/><area shape="rect" id="node11" href="classregen_1_1ValueStack.html" title="ValueStack\&lt; regen::\lVec4 \&gt;" alt="" coords="253,593,395,634"/><area shape="rect" id="node12" href="classregen_1_1ValueStack.html" title="ValueStack\&lt; Vec4\&lt; GLuint \&gt; \&gt;" alt="" coords="221,659,427,685"/><area shape="rect" id="node13" href="classregen_1_1ValueStackAtomic.html" title="ValueStackAtomic\&lt; GLboolean \&gt;" alt="" coords="216,709,432,736"/><area shape="rect" id="node14" href="classregen_1_1ValueStackAtomic.html" title="ValueStackAtomic\&lt; GLclampd \&gt;" alt="" coords="217,760,431,787"/><area shape="rect" id="node15" href="classregen_1_1ValueStackAtomic.html" title="ValueStackAtomic\&lt; GLenum \&gt;" alt="" coords="223,811,425,837"/><area shape="rect" id="node16" href="classregen_1_1ValueStackAtomic.html" title="ValueStackAtomic\&lt; GLfloat \&gt;" alt="" coords="226,861,422,888"/><area shape="rect" id="node17" href="classregen_1_1ValueStackAtomic.html" title="ValueStackAtomic\&lt; GLuint \&gt;" alt="" coords="228,912,420,939"/></map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -371,15 +357,11 @@ template&lt;typename StackType, typename ValueType, typename ApplyFunc&gt; </div
 <li>gl-types/<a class="el" href="state-stacks_8h_source.html">state-stacks.h</a></li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><b>regen</b></li><li class="navelem"><a class="el" href="classregen_1_1StateStack.html">StateStack</a></li>
-    <li class="footer">Generated on Wed Apr 24 2013 01:39:16 for regen by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated on Wed Apr 24 2013 03:24:16 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.3.1
+</small></address>
 </body>
 </html>
