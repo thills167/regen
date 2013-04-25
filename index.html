@@ -82,11 +82,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><code>regen</code> &ndash; Real-time Graphics Engine &ndash; is a portable OpenGL library written in C++. The purpose of this library is to help creating real-time rendering software.</p>
-<p>A graphics card supporting the OpenGL 3.3 API is required for <code>regen</code>. Some features from the 4.0 API are also supported but optional for backwards compatibility. The engine is tested with NVIDIA and ATI drivers and on Arch Linux and Ubuntu 11.10 (ATI dropped support for my notebook graphics adapter so i had to use an old Ubuntu version). Other Unix based Operating-Systems should work from the scratch. Windows 8 with latest ATI drivers was also tested. You will find some special notes for compiling the engine under Win in this document.</p>
+<p>A graphics card supporting the OpenGL 3.3 API is required for <code>regen</code>. Some features from the 4.0 API are also supported but optional for backwards compatibility. The engine was tested with NVIDIA drivers on Arch Linux and ATI drivers on Ubuntu 11.10 (ATI dropped support for my notebook graphics adapter so i had to use an old Ubuntu version). Other Unix based Operating-Systems should work from the scratch. Windows 8 with latest ATI drivers was also tested. You will find some special notes for compiling the engine under Win in this document.</p>
 <h1>Downloading</h1>
 <p>Clone the code from <a href="https://github.com/daniel86/regen">github</a>. The master branch contains the most up to date source code. For each release you will find a custom branch.</p>
 <h1>Compiling</h1>
-<p><code>regen</code> builds with <a href="http://www.cmake.org/">CMake</a>. Run <code>cmake .</code> in the root directory to generate files needed for compiling. On Unix systems CMake will generate Makefile's with usual targets. Running <code>make</code> invokes the compiler and linker and if <code>make</code> was successfull a static engine library <code>libregen.a</code> was created in the root directory. On Windows CMake generates Visual Studio files, just open them and compile from the IDE.</p>
+<p><code>regen</code> builds with <a href="http://www.cmake.org/">CMake</a>. Run <code>cmake .</code> in the root directory to generate files needed for compiling. On Unix systems CMake will generate Makefile's with usual targets. Running <code>make</code> invokes the compiler and linker and if <code>make</code> was successfull a static library <code>libregen.a</code> was created in the root directory. On Windows CMake generates Visual Studio files, just open them and compile from the IDE.</p>
 <p><code>regen</code> defines following build targets:</p>
 <table class="doxtable">
 <tr>
@@ -94,7 +94,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr>
 <td>all </td><td>Compile and link the engine. </td></tr>
 <tr>
-<td>install </td><td>Install engine. </td></tr>
+<td>install </td><td>Install compiled library. </td></tr>
 <tr>
 <td>doc </td><td>Generate doxygen documentation. </td></tr>
 </table>
@@ -138,7 +138,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li><code>Text rendering</code>: Loading of Freetype fonts, rendering with texture mapped text</li>
 <li><code>Model loading</code>: Support for common model formats (3ds, ply, obj, ...), support for bone animations</li>
 <li><code>Shading</code>: Deferred and Direct shading is supported</li>
-<li><code>Picking</code>: Supports to distinguish between instances</li>
+<li><code>Picking</code>: Supports to distinguish between objects and instances</li>
 <li><code>Scene post processing</code>: FXAA, Ambient Occlusion, Volumetric Fog, Tonemap ...</li>
 <li><code>Sky Rendering</code>: Dynamic sky with realistic scattering</li>
 <li><code>Particles</code>: Simple implementations of smoke,rain,snow particles</li>
@@ -152,7 +152,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li><a href="http://assimp.sourceforge.net/">Assimp</a> &gt;= 2.0</li>
 <li><a href="http://openil.sourceforge.net/">DevIL</a> &gt;= 1.4.0</li>
 <li><a href="http://www.freetype.org/">FreeType</a> &gt;= 2.4.0</li>
-<li><a href="http://www.boost.org/">Boost</a></li>
+<li><a href="http://www.boost.org/">Boost</a> (thread system date_time filesystem regex)</li>
 <li><a href="http://www.ffmpeg.org/">FFmpeg</a></li>
 </ul>
 <p>In order to compile the test applications you will also need to install the following list of libraries:</p>
@@ -162,12 +162,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <h1>Documentation</h1>
 <p>The documentation is hosted using the <a href="http://daniel86.github.com/regen/">gh-pages branch</a></p>
 <h1>Contact</h1>
-<p>If you find any bugs please report them to the <a href="https://github.com/daniel86/regen/issues">github tracker</a>.</p>
+<p>If you find any bugs or if you have any feature requests please report them to the <a href="https://github.com/daniel86/regen/issues">github tracker</a>.</p>
 <p>You also can contact me directly via mail or Jabber if you like (address: daniel(at)orgizm.net). </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 25 2013 01:57:52 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Apr 25 2013 20:32:40 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

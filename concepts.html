@@ -87,27 +87,37 @@ Logging</h1>
 <div class="fragment"><div class="line">Logging::addLogger(<span class="keyword">new</span> CoutLogger(Logging::INFO));</div>
 </div><!-- fragment --><p>Use log macros with &lt;&lt; operator to log a message: </p>
 <div class="fragment"><div class="line">INFO_LOG(<span class="stringliteral">&quot;value=&quot;</span>&lt;&lt;value);</div>
-</div><!-- fragment --><h1><a class="anchor" id="cpu_mem"></a>
+</div><!-- fragment --><p>Use <a class="el" href="classregen_1_1Application.html#acf72b2b646adcc90ab35807919c2c2de">regen::Application::setupLogging</a> if you want to see all log messages on the console.</p>
+<h1><a class="anchor" id="cpu_mem"></a>
 CPU-side Memory management</h1>
 <p>regen excessively uses the <a class="el" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">regen::ref_ptr</a> template class for memory management. The template class supports assignment operator and copy constructor. To access the pointer you can use -&gt; operator. Intern all references share the same counter, if the counter reaches zero delete is called.</p>
 <p>You have to explicitly request to manage the memory with reference counting using <a class="el" href="classregen_1_1ref__ptr.html#adce623adb3524c797afb084dee011de4">regen::ref_ptr::manage</a>. Make sure to manage data only once or you will run into double free corruption.</p>
 <p>Simple usage example: </p>
 <div class="fragment"><div class="line"><span class="keyword">struct </span>Test { <span class="keywordtype">int</span> i; }</div>
+<div class="line"><span class="comment">// create reference counted instance of Test data type.</span></div>
+<div class="line"><span class="comment">// the reference count is 1 after calling this.</span></div>
 <div class="line">ref_ptr&lt;Test&gt; i0 = ref_ptr&lt;Test&gt;::manage(<span class="keyword">new</span> Test);</div>
+<div class="line"><span class="comment">// assign a new value to the Test instance.</span></div>
 <div class="line">i0-&gt;i = 2;</div>
+<div class="line"><span class="comment">// copy the reference pointer, reference count will be 2 afterwards.</span></div>
 <div class="line">ref_ptr&lt;Test&gt; i1 = i0;</div>
-</div><!-- fragment --><p>Dynamic memory allocation can be a bottleneck in real-time applications. You should avoid calling new and delete in the render loop. Use pre-allocated RAM instead.</p>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>Dynamic memory allocation can be a bottleneck in real-time applications. You should avoid calling new and delete in the render loop. Use pre-allocated RAM instead.</dd></dl>
 <h1><a class="anchor" id="gpu_mem"></a>
 GPU-side Memory management</h1>
-<p>regen uses <a class="el" href="classregen_1_1VBOManager.html" title="Helps using VertexBufferObject&#39;s.">regen::VBOManager</a> to keep track of allocated VRAM. The VRAM is allocated in blocks of a few MB and organized in a free list of contiguous GPU memory blocks.</p>
+<p>Various aspects of the OpenGL API require to allocate VRAM.</p>
+<p>Shader programs are relative light weight. They require some space for storing uniform values but not much more. Shaders usually are used many frames and not generated per frame. When a shader is compiled and linked in <code>regen</code> the VRAM is dynamically allocated. VRAM used by textures is currently also dynamically allocated when the texture is loaded.</p>
+<p>Vertex data is saved in VBO's. <code>regen</code> allocates blocks of a few MB in advance and manages this block of memory for the incoming vertex data to avoid dynamic memory allocation. <a class="el" href="classregen_1_1VBOManager.html" title="Helps using VertexBufferObject&#39;s.">regen::VBOManager</a> uses a free list of contiguous memory blocks to manage the allocated memory.</p>
 <h1><a class="anchor" id="Animations"></a>
 Animations</h1>
-<p>Animation's in regen can implement two different interfaces: <a class="el" href="classregen_1_1Animation.html#ab94f88dbdbc74ac787fc16762ec82037">regen::Animation::animate</a> and <a class="el" href="classregen_1_1Animation.html#a5d07ab60447d3e20faec1c497108de55">regen::Animation::glAnimate</a>. The first one is executed in an dedicated animation thread without GL context setup when the function is invoked. The second function will be executed in the render thread with GL context setup. These interfaces can be used to create simple producer-consumer animations to put some of the computation load on another CPU core.</p>
-<p>Animations add themselves to the animation thread when they are constructed. You can remove them again calling <a class="el" href="classregen_1_1Animation.html#a0de8514303e0146cb61b4b5838f832ed">regen::Animation::stopAnimation</a>. It is ok to call stop in the above interface functions.</p>
+<p><a class="el" href="classregen_1_1Animation.html" title="Abstract base class for animations.">regen::Animation</a>'s can implement two different interfaces: <a class="el" href="classregen_1_1Animation.html#ab94f88dbdbc74ac787fc16762ec82037">regen::Animation::animate</a> and <a class="el" href="classregen_1_1Animation.html#a5d07ab60447d3e20faec1c497108de55">regen::Animation::glAnimate</a>. The first one is executed in an dedicated animation thread without GL context when the function is invoked. The second function will be executed in the render thread with GL context. These interfaces can be used to create simple producer-consumer animations to put some of the computation load on another CPU core.</p>
+<p>Animations add themselves to the animation thread when they are constructed. You can remove them again by calling <a class="el" href="classregen_1_1Animation.html#a0de8514303e0146cb61b4b5838f832ed">regen::Animation::stopAnimation</a>. It is ok to call stop in the above interface functions.</p>
 <p>The animation thread is synchronized with the render thread. Each animation is invoked once in the animation thread and once in the render thread for each rendered frame.</p>
 <h1><a class="anchor" id="Events"></a>
 Events</h1>
-<p><a class="el" href="classregen_1_1EventObject.html" title="Allows to integrate events into subclasses.">regen::EventObject</a> implements a simple interface for providing sync and async event messages to other components. Event providers must call <a class="el" href="classregen_1_1EventObject.html#a960c9f22b9bf76cfa7d408190991c799">regen::EventObject::registerEvent</a> with an unique event name. Other components can connect callbacks to the event. The event provider decides if the message is send directly to listeners &ndash; using <a class="el" href="classregen_1_1EventObject.html#ad7262b8beaaf6d5af87dec99d3a373f2">regen::EventObject::emitEvent</a> within the same thread the event message was generated &ndash; or if the message is send async via <a class="el" href="classregen_1_1EventObject.html#aa2ec1cc5026f3894e428750a702e63f2">regen::EventObject::queueEmit</a> to be processed in the rendering thread.</p>
+<p><a class="el" href="classregen_1_1EventObject.html" title="Allows to integrate events into subclasses.">regen::EventObject</a> provides a simple interface for providing sync and async event messages to other components via callback functions. For async events the connected callbacks are called after the next frame was rendered within the render thread (with GL context). For example this event mechanism is used to dispatch GUI events from the GUI thread to the render thread.</p>
+<p>Implementing <a class="el" href="classregen_1_1EventObject.html" title="Allows to integrate events into subclasses.">regen::EventObject</a> is easy. Each <a class="el" href="classregen_1_1EventObject.html" title="Allows to integrate events into subclasses.">regen::EventObject</a> can define multiple named events by calling the static function <a class="el" href="classregen_1_1EventObject.html#a960c9f22b9bf76cfa7d408190991c799">regen::EventObject::registerEvent</a>. This has to be done only once per class (not once per instance). The function returns an unique event id that can be use to refer to the registered event.</p>
+<p>After the event was registered <a class="el" href="classregen_1_1EventObject.html" title="Allows to integrate events into subclasses.">regen::EventObject</a> implementations can call <a class="el" href="classregen_1_1EventObject.html#ad7262b8beaaf6d5af87dec99d3a373f2">regen::EventObject::emitEvent</a> for an synch event or <a class="el" href="classregen_1_1EventObject.html#aa2ec1cc5026f3894e428750a702e63f2">regen::EventObject::queueEmit</a> for an asynch event. If you need any special event data you can subclass <a class="el" href="classregen_1_1EventData.html" title="Data passed from event emitter to event handlers.">regen::EventData</a> and pass it to the emit function.</p>
+<p>Listeners can be connected to and disconnted from <a class="el" href="classregen_1_1EventObject.html" title="Allows to integrate events into subclasses.">regen::EventObject</a>'s. Event listeners must subclass <a class="el" href="classregen_1_1EventHandler.html" title="Baseclass for event handler.">regen::EventHandler</a> and implement <a class="el" href="classregen_1_1EventHandler.html#a596806401e6999c6c698e6415de55750">regen::EventHandler::call</a>.</p>
 <h1><a class="anchor" id="Shader"></a>
 Shader Loading</h1>
 <p>When a shader is loaded the code is pre-processed on the CPU before it is send to the GL. Regular GLSL code should work fine but the actual code send to the GL maybe different from the code passed in.</p>
@@ -184,7 +194,7 @@ IO transformation</h2>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 25 2013 01:57:51 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Apr 25 2013 20:32:39 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>
