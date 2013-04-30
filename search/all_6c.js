@@ -2,7 +2,7 @@ var searchData=
 [
   ['lacunarity',['lacunarity',['../structregen_1_1NoiseTextureLoader_1_1PerlinNoiseConfig.html#a5dcd700ec8b39e600cc660d0777cae6a',1,'regen::NoiseTextureLoader::PerlinNoiseConfig']]],
   ['layout',['layout',['../structregen_1_1GLSLInputOutputProcessor_1_1InputOutput.html#a8caeadf0ab090aa1c95181cbbb750c32',1,'regen::GLSLInputOutputProcessor::InputOutput::layout()'],['../classregen_1_1UniformBufferObject.html#ad4637e358248037d82217bb27156f7a7',1,'regen::UniformBufferObject::layout() const '],['../classregen_1_1UniformBufferObject.html#a9d7dac5febcb8c5518c5d25ccfa83229',1,'regen::UniformBufferObject::Layout()']]],
-  ['left',['LEFT',['../classregen_1_1TextureCube.html#a0ee559b519bdbc94105bcd43d39d155ea286f54ca8b8fc4e1459d9edde4877a55',1,'regen::TextureCube::LEFT()'],['../structregen_1_1VBOBlock.html#a14beac5cf9a5f4d1fb02864e5bb5d84e',1,'regen::VBOBlock::left()'],['../structregen_1_1FreeTypeFont_1_1FaceData.html#af38665d56af9247af0307a8bbfc173ac',1,'regen::FreeTypeFont::FaceData::left()']]],
+  ['left',['left',['../structregen_1_1Font_1_1FaceData.html#afc92bf0a3bd5460f09b86221f1b339ca',1,'regen::Font::FaceData::left()'],['../classregen_1_1TextureCube.html#a0ee559b519bdbc94105bcd43d39d155ea286f54ca8b8fc4e1459d9edde4877a55',1,'regen::TextureCube::LEFT()']]],
   ['length',['length',['../classregen_1_1Vec2.html#a5f7a932382ec68ca9cbdcdf2d832bbf9',1,'regen::Vec2::length()'],['../classregen_1_1Vec3.html#a751bdc79dcf0e08ced72d70af21a0c7c',1,'regen::Vec3::length()']]],
   ['level',['level',['../classregen_1_1Logger.html#a8a02211fee8bb2b530fe15ad513a43cd',1,'regen::Logger']]],
   ['levelkey',['LevelKey',['../classregen_1_1Logger.html#afa2dd98692c9b827084ff566e7dab2db',1,'regen::Logger']]],
@@ -16,7 +16,7 @@ var searchData=
   ['lights',['lights',['../classregen_1_1AssimpImporter.html#adea6c02b508e29fb7a29fc2dd1793d06',1,'regen::AssimpImporter']]],
   ['lighttype',['lightType',['../classregen_1_1Light.html#a109e1c3ff8592e8a347ddcd418b2ef9e',1,'regen::Light']]],
   ['line_5fsmooth',['LINE_SMOOTH',['../classregen_1_1RenderState.html#a8f8200e8fafeca3ace12631506a61152aa12693b258b03386ea40b0957cb2fad0',1,'regen::RenderState']]],
-  ['lineheight',['lineHeight',['../classregen_1_1FreeTypeFont.html#a7daaca43ac8a167fce90897f41ce2c60',1,'regen::FreeTypeFont']]],
+  ['lineheight',['lineHeight',['../classregen_1_1Font.html#ae552a464ac580bd1139dd7b79a91fcbc',1,'regen::Font']]],
   ['linekey',['LineKey',['../classregen_1_1Logger.html#ad69feed8a99552f6d4d22afdd5eec826',1,'regen::Logger']]],
   ['linewidth',['lineWidth',['../classregen_1_1RenderState.html#aa67d0dd7e52e9b97cd0fa08cce949a4e',1,'regen::RenderState']]],
   ['link',['link',['../classregen_1_1Shader.html#ab75f6ed386ca723ae221bee12244eb57',1,'regen::Shader']]],

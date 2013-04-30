@@ -98,10 +98,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr>
 <td>doc </td><td>Generate doxygen documentation. </td></tr>
 </table>
-<p>CMake supports some default parameters for compiler and build path setup, consider the CMake documentations for those arguments. Following you can find a list of <code>cmake</code> arguments with special handling in the <code>regen</code> build files:</p>
+<p>CMake supports some default parameters for compiler and build path setup, consider the CMake documentations for a complete socumentation of these arguments. Some important argument are listed below.</p>
 <table class="doxtable">
 <tr>
-<th>Argument </th><th>Default </th><th>Description </th></tr>
+<th>CMake argument </th><th>Description </th></tr>
+<tr>
+<td>CMAKE_INSTALL_PREFIX </td><td>Path were the engine should get installed when the ´install´ target is used. </td></tr>
+<tr>
+<td>CMAKE_INCLUDE_PATH </td><td>Path were you installed the dependency library headers. </td></tr>
+<tr>
+<td>CMAKE_LIBRARY_PATH </td><td>Path were you installed the dependency libraries. </td></tr>
+<tr>
+<td>-G $GENERATOR_NAME </td><td>Specifies custom build file generator. You might need to set this to "Visual Studio 11 Win64" when you intend to build the library with 64 Bit under Windows. </td></tr>
+</table>
+<p>Following you can find a list of <code>cmake</code> arguments with special handling in the <code>regen</code> build files:</p>
+<table class="doxtable">
+<tr>
+<th>CMake argument </th><th>Default </th><th>Description </th></tr>
 <tr>
 <td>-DCMAKE_BUILD_TYPE </td><td>Release </td><td>One of Release or Debug. With Debug mode the engine is compiled with additional debugging symbols. </td></tr>
 <tr>
@@ -110,18 +123,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <td>-DBUILD_VIDEO_PLAYER </td><td>0 </td><td>If set to 1 the video player application will be compiled by all target </td></tr>
 <tr>
 <td>-DBUILD_TEXTURE_UPDATER </td><td>0 </td><td>If set to 1 the texture updater application will be compiled by all target </td></tr>
+</table>
+<p>On Windows you might have to set environment variables for the dependency libraries. Following you can find a list of those variables:</p>
+<table class="doxtable">
 <tr>
-<td>-DBoost_DIR </td><td>- </td><td>Base path for Boost library. You should set this on Windows. </td></tr>
+<th>Environment variable </th><th>Description </th></tr>
 <tr>
-<td>-DASSIMP_DIR </td><td>- </td><td>Base path for Assimp library. You should set this on Windows. </td></tr>
+<td>GLEW_DIR </td><td>Base path for GLEW library. </td></tr>
 <tr>
-<td>-DFREETYPE_DIR </td><td>- </td><td>Base path for Freetype library. You should set this on Windows. </td></tr>
+<td>Boost_DIR </td><td>Base path for Boost library. </td></tr>
 <tr>
-<td>-DDEVIL_DIR </td><td>- </td><td>Base path for DevIL library. You should set this on Windows. </td></tr>
+<td>ASSIMP_DIR </td><td>Base path for Assimp library. </td></tr>
 <tr>
-<td>-DFFMPEG_DIR </td><td>- </td><td>Base path for FFmpeg library. You should set this on Windows. </td></tr>
+<td>FREETYPE_DIR </td><td>Base path for Freetype library. </td></tr>
 <tr>
-<td>-DALUT_DIR </td><td>- </td><td>Base path for ALut library. You should set this on Windows. </td></tr>
+<td>DEVIL_DIR </td><td>Base path for DevIL library. </td></tr>
+<tr>
+<td>FFMPEG_DIR </td><td>Base path for FFmpeg library. </td></tr>
+<tr>
+<td>OPENAL_DIR </td><td>Base path for OpenAL library. </td></tr>
+<tr>
+<td>ALUT_DIR </td><td>Base path for ALut library. </td></tr>
 </table>
 <h1>Feature List</h1>
 <p>Here you find a brief list of supported features in this library.</p>
@@ -157,7 +179,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </ul>
 <p>In order to compile the test applications you will also need to install the following list of libraries:</p>
 <ul>
-<li><a href="http://qt-project.org/">Qt</a> &gt;=4.0 (QtCore, QtGui, QtOpenGL)</li>
+<li><a href="http://qt-project.org/">Qt</a> &gt;=4.0 (QtCore, QtGui, QtOpenGL)<ul>
+<li><a href="http://code.google.com/p/qt-msvc-installer">Qt4 installer for 64Bit</a></li>
+</ul>
+</li>
 </ul>
 <h1>Documentation</h1>
 <p>The documentation is hosted using the <a href="http://daniel86.github.com/regen/">gh-pages branch</a></p>
@@ -167,7 +192,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 25 2013 20:32:40 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 30 2013 11:45:05 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

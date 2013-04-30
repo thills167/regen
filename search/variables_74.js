@@ -9,6 +9,6 @@ var searchData=
   ['texturetarget',['textureTarget',['../structregen_1_1ShadowMap_1_1Config.html#a1f5696b99c6c026e27ec868777aeb5f1',1,'regen::ShadowMap::Config']]],
   ['time',['time',['../structregen_1_1NodeAnimation_1_1KeyFrame3f.html#ade8099135f89c4b56e94d7976e20d7a7',1,'regen::NodeAnimation::KeyFrame3f::time()'],['../structregen_1_1NodeAnimation_1_1KeyFrameQuaternion.html#acf03ddf08a9f290a3763ff7e1d5c5126',1,'regen::NodeAnimation::KeyFrameQuaternion::time()']]],
   ['timekey',['TimeKey',['../classregen_1_1Logger.html#a5c3cf0877329e1da813f5fc4a01eee40',1,'regen::Logger']]],
-  ['top',['top',['../structregen_1_1FreeTypeFont_1_1FaceData.html#a94c07bb4823e29a28166a2ac80df971a',1,'regen::FreeTypeFont::FaceData']]],
+  ['top',['top',['../structregen_1_1Font_1_1FaceData.html#a505df6cb631fc7d9ae7c8d2929aec4ed',1,'regen::Font::FaceData']]],
   ['translation',['translation',['../structregen_1_1Rectangle_1_1Config.html#a6c41980f0285c5aaff854231ceef2293',1,'regen::Rectangle::Config']]]
 ];

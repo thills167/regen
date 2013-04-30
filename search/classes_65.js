@@ -5,7 +5,7 @@ var searchData=
   ['error',['Error',['../classregen_1_1AssimpImporter_1_1Error.html',1,'regen::AssimpImporter']]],
   ['error',['Error',['../classregen_1_1TextureLoader_1_1Error.html',1,'regen::TextureLoader']]],
   ['error',['Error',['../classregen_1_1AudioVideoStream_1_1Error.html',1,'regen::AudioVideoStream']]],
-  ['error',['Error',['../classregen_1_1FreeTypeFont_1_1Error.html',1,'regen::FreeTypeFont']]],
+  ['error',['Error',['../classregen_1_1Font_1_1Error.html',1,'regen::Font']]],
   ['error',['Error',['../classregen_1_1VideoTexture_1_1Error.html',1,'regen::VideoTexture']]],
   ['error',['Error',['../classregen_1_1Demuxer_1_1Error.html',1,'regen::Demuxer']]],
   ['eventdata',['EventData',['../classregen_1_1EventData.html',1,'regen']]],

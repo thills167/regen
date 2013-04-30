@@ -113,9 +113,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00027"></a><span class="lineno"><a class="code" href="classregen_1_1FullscreenPass.html#a95588dc54a3e7b9b77925c5d81d89514">   27</a></span>&#160;  <a class="code" href="classregen_1_1FullscreenPass.html#a95588dc54a3e7b9b77925c5d81d89514">FullscreenPass</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;<a class="code" href="classregen_1_1HasShader.html#aa82a21cf779df2a17237ddac6e7a17ef">shaderKey</a>) : <a class="code" href="classregen_1_1State.html" title="Base class for states.">State</a>(), <a class="code" href="classregen_1_1HasShader.html" title="can be used to mix in a shader.">HasShader</a>(shaderKey)</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  {</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    vao_ = <a class="code" href="classregen_1_1ref__ptr.html#adce623adb3524c797afb084dee011de4">ref_ptr&lt;VAOState&gt;::manage</a>(<span class="keyword">new</span> <a class="code" href="classregen_1_1VAOState.html" title="Vertex Array Objects (VAO) are OpenGL Objects that store the set of bindings between Vertex Attribute...">VAOState</a>(shaderState_));</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="classregen_1_1State.html#ab0343b5ec3b6516b6ab79177814c3ec2">joinStates</a>(<a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;State&gt;::cast</a>(shaderState_));</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="classregen_1_1State.html#ab0343b5ec3b6516b6ab79177814c3ec2">joinStates</a>(<a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;State&gt;::cast</a>(vao_));</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="classregen_1_1State.html#ab0343b5ec3b6516b6ab79177814c3ec2">joinStates</a>(<a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;State&gt;::cast</a>(<a class="code" href="classregen_1_1Rectangle.html#a2d17109e800da25cccccc6fa59f31bde">Rectangle::getUnitQuad</a>()));</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="classregen_1_1State.html#ab0343b5ec3b6516b6ab79177814c3ec2">joinStates</a>(shaderState_);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="classregen_1_1State.html#ab0343b5ec3b6516b6ab79177814c3ec2">joinStates</a>(vao_);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="classregen_1_1State.html#ab0343b5ec3b6516b6ab79177814c3ec2">joinStates</a>(<a class="code" href="classregen_1_1Rectangle.html#a2d17109e800da25cccccc6fa59f31bde">Rectangle::getUnitQuad</a>());</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  }</div>
 <div class="line"><a name="l00037"></a><span class="lineno"><a class="code" href="classregen_1_1FullscreenPass.html#adb62196f0a92f80f7e5c2f6c488d84db">   37</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1FullscreenPass.html#adb62196f0a92f80f7e5c2f6c488d84db">createShader</a>(<span class="keyword">const</span> <a class="code" href="structregen_1_1ShaderState_1_1Config.html" title="Configures a Shader object.">ShaderState::Config</a> &amp;cfg)</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  {</div>
@@ -130,7 +130,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 25 2013 20:32:39 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 30 2013 11:45:04 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

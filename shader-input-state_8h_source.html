@@ -118,41 +118,48 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00044"></a><span class="lineno"><a class="code" href="classregen_1_1ShaderInputState.html#ab826b491c730b36b37e0c10adeb949ed">   44</a></span>&#160;  <span class="keyword">typedef</span> InputContainer::const_iterator <a class="code" href="classregen_1_1ShaderInputState.html#ab826b491c730b36b37e0c10adeb949ed">InputItConst</a>;</div>
 <div class="line"><a name="l00048"></a><span class="lineno"><a class="code" href="classregen_1_1ShaderInputState.html#a1d3a9df9f9434ef30720baafaf3f7d50">   48</a></span>&#160;  <span class="keyword">typedef</span> InputContainer::iterator <a class="code" href="classregen_1_1ShaderInputState.html#a1d3a9df9f9434ef30720baafaf3f7d50">InputIt</a>;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <a class="code" href="classregen_1_1ShaderInputState.html" title="Container State for shader input data.">ShaderInputState</a>();</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <a class="code" href="classregen_1_1ShaderInputState.html" title="Container State for shader input data.">ShaderInputState</a>(<span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInput&gt;</a> &amp;in, <span class="keyword">const</span> <span class="keywordtype">string</span> &amp;name=<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  ~<a class="code" href="classregen_1_1ShaderInputState.html" title="Container State for shader input data.">ShaderInputState</a>();</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1ShaderInputState.html#abe39728e2c466d0a484a53e54140a8a5">set_useVBOManager</a>(GLboolean v);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  GLuint <a class="code" href="classregen_1_1ShaderInputState.html#a02903b5cc6ffe799a78d01e6e5c41f15">numVertices</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  GLuint <a class="code" href="classregen_1_1ShaderInputState.html#a1755f40ae5dc2a2ea79fe931ff1f494b">numInstances</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keyword">const</span> <a class="code" href="classregen_1_1ShaderInputState.html#a1b06393a8203b1032768a7becac17cd9">InputContainer</a>&amp; <a class="code" href="classregen_1_1ShaderInputState.html#a265a38e1d2763531fed03633551f1643">inputs</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  GLboolean <a class="code" href="classregen_1_1ShaderInputState.html#a282212e92efd657bd034b717a81546d1">hasInput</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;name) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInput&gt;</a> <a class="code" href="classregen_1_1ShaderInputState.html#ab24f3144d81cce339e51234d87ac7241">getInput</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;name) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <a class="code" href="classregen_1_1ShaderInputState.html#ab826b491c730b36b37e0c10adeb949ed">InputItConst</a> <a class="code" href="classregen_1_1ShaderInputState.html#a42876266d3ffa11a19f6759476e2b0cd">setInput</a>(<span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInput&gt;</a> &amp;in, <span class="keyword">const</span> <span class="keywordtype">string</span> &amp;name=<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <a class="code" href="classregen_1_1ShaderInputState.html#a1b06393a8203b1032768a7becac17cd9">InputContainer</a> inputs_;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  set&lt;string&gt; inputMap_;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  GLboolean useVBOManager_;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  GLuint numVertices_;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  GLuint numInstances_;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keywordtype">void</span> removeInput(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;name);</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keywordtype">void</span> removeInput(<span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInput&gt;</a> &amp;att);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;};</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* ATTRIBUTE_STATE_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <a class="code" href="classregen_1_1ShaderInputState.html#a4222a86e97fd2a6b93868001cc39cc05">ShaderInputState</a>(</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      GLboolean <a class="code" href="classregen_1_1ShaderInputState.html#a240338d46011491ebd990c90f7e6aebe">useAutoUpload</a>=GL_TRUE,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      <a class="code" href="classregen_1_1VertexBufferObject.html#a1dd913e197329d8ae7d0eab0d2200b94" title="Flag indicating the usage of the data in the VBO.">VertexBufferObject::Usage</a> usage=VertexBufferObject::USAGE_DYNAMIC);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <a class="code" href="classregen_1_1ShaderInputState.html#a4222a86e97fd2a6b93868001cc39cc05">ShaderInputState</a>(<span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInput&gt;</a> &amp;in, <span class="keyword">const</span> <span class="keywordtype">string</span> &amp;name=<span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      GLboolean <a class="code" href="classregen_1_1ShaderInputState.html#a240338d46011491ebd990c90f7e6aebe">useAutoUpload</a>=GL_TRUE,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      <a class="code" href="classregen_1_1VertexBufferObject.html#a1dd913e197329d8ae7d0eab0d2200b94" title="Flag indicating the usage of the data in the VBO.">VertexBufferObject::Usage</a> usage=VertexBufferObject::USAGE_DYNAMIC);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  ~<a class="code" href="classregen_1_1ShaderInputState.html" title="Container State for shader input data.">ShaderInputState</a>();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <a class="code" href="classregen_1_1VertexBufferObject.html" title="Buffer object that is used for vertex data.">VertexBufferObject</a>&amp; <a class="code" href="classregen_1_1ShaderInputState.html#ab2904e154be08dff86b5ee9c4dc94bac">inputBuffer</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  GLboolean <a class="code" href="classregen_1_1ShaderInputState.html#a240338d46011491ebd990c90f7e6aebe">useAutoUpload</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  GLuint <a class="code" href="classregen_1_1ShaderInputState.html#a02903b5cc6ffe799a78d01e6e5c41f15">numVertices</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  GLuint <a class="code" href="classregen_1_1ShaderInputState.html#a1755f40ae5dc2a2ea79fe931ff1f494b">numInstances</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="keyword">const</span> <a class="code" href="classregen_1_1ShaderInputState.html#a1b06393a8203b1032768a7becac17cd9">InputContainer</a>&amp; <a class="code" href="classregen_1_1ShaderInputState.html#a265a38e1d2763531fed03633551f1643">inputs</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  GLboolean <a class="code" href="classregen_1_1ShaderInputState.html#a282212e92efd657bd034b717a81546d1">hasInput</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;name) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInput&gt;</a> <a class="code" href="classregen_1_1ShaderInputState.html#ab24f3144d81cce339e51234d87ac7241">getInput</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;name) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <a class="code" href="classregen_1_1ShaderInputState.html#ab826b491c730b36b37e0c10adeb949ed">InputItConst</a> <a class="code" href="classregen_1_1ShaderInputState.html#a42876266d3ffa11a19f6759476e2b0cd">setInput</a>(<span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInput&gt;</a> &amp;in, <span class="keyword">const</span> <span class="keywordtype">string</span> &amp;name=<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <a class="code" href="classregen_1_1ShaderInputState.html#a1b06393a8203b1032768a7becac17cd9">InputContainer</a> inputs_;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  set&lt;string&gt; inputMap_;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  GLuint numVertices_;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  GLuint numInstances_;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  GLboolean useAutoUpload_;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;VertexBufferObject&gt;</a> inputBuffer_;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="keywordtype">void</span> removeInput(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;name);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <span class="keywordtype">void</span> removeInput(<span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInput&gt;</a> &amp;att);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;};</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* ATTRIBUTE_STATE_H_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 25 2013 20:32:39 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 30 2013 11:45:04 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

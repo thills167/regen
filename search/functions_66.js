@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['facedata',['faceData',['../classregen_1_1FreeTypeFont.html#a255197873b642c3c33ffdaeed8ca0748',1,'regen::FreeTypeFont']]],
+  ['facedata',['faceData',['../classregen_1_1Font.html#a52d348bd63aca4615c94dd0cdb187ea1',1,'regen::Font']]],
   ['far',['far',['../classregen_1_1Frustum.html#aa586ea3a19786fbcf96d609fc1b7118b',1,'regen::Frustum']]],
   ['fbo',['fbo',['../classregen_1_1FBOState.html#a612473aa77b1db0d14c374d87261ebca',1,'regen::FBOState']]],
   ['fbostate',['fboState',['../classregen_1_1TBuffer.html#ab1507297c80bdfa3f969b0c519d5a601',1,'regen::TBuffer::fboState()'],['../classregen_1_1FBOState.html#a1e642e16cd5dc5a71eb7b5374f2ad4ef',1,'regen::FBOState::FBOState()']]],
@@ -25,12 +25,12 @@ var searchData=
   ['fogcolor',['fogColor',['../classregen_1_1DistanceFog.html#ac37a2bc146fdab5a3569f47808d42d6d',1,'regen::DistanceFog']]],
   ['fogdensity',['fogDensity',['../classregen_1_1DistanceFog.html#aaf7fba2c9ad2b3b78fdef5286cfb8858',1,'regen::DistanceFog']]],
   ['fogdistance',['fogDistance',['../classregen_1_1DistanceFog.html#ac75c778a1a7460c085160605b2b58588',1,'regen::DistanceFog::fogDistance()'],['../classregen_1_1VolumetricFog.html#a2a4e4252ff43160d4e4d3f9fd95bd98b',1,'regen::VolumetricFog::fogDistance()']]],
+  ['font',['Font',['../classregen_1_1Font.html#aea474012b241c8f429eeb20a41c55cf4',1,'regen::Font']]],
   ['forcearray',['forceArray',['../classregen_1_1ShaderInput.html#a60f19727b8cd883961f593ee56eac222',1,'regen::ShaderInput']]],
   ['format',['format',['../classregen_1_1Texture.html#a0872fe042d07aa85869180d29701caf6',1,'regen::Texture']]],
   ['fov',['fov',['../classregen_1_1Frustum.html#a29d02d00727a94dd5ad9f15030665af7',1,'regen::Frustum']]],
-  ['framebufferobject',['FrameBufferObject',['../classregen_1_1FrameBufferObject.html#ab5dd81ebfbefb4c74e66b2183b06b3b3',1,'regen::FrameBufferObject']]],
-  ['free',['free',['../classregen_1_1VertexBufferObject.html#a0f9357e4ffd0fdc09feb8d67d4657272',1,'regen::VertexBufferObject']]],
-  ['freetypefont',['FreeTypeFont',['../classregen_1_1FreeTypeFont.html#a9e2565c340cc3ea785e69ae33f6d7750',1,'regen::FreeTypeFont']]],
+  ['framebufferobject',['FrameBufferObject',['../classregen_1_1FrameBufferObject.html#ab5dd81ebfbefb4c74e66b2183b06b3b3',1,'regen::FrameBufferObject::FrameBufferObject(GLuint width, GLuint height, GLuint depth, GLenum depthTarget, GLenum depthFormat, GLenum depthType)'],['../classregen_1_1FrameBufferObject.html#a83106f27d8f5f158c783396a8d4ee829',1,'regen::FrameBufferObject::FrameBufferObject(GLuint width, GLuint height, GLuint depth=1)']]],
+  ['free',['free',['../classregen_1_1VertexBufferObject.html#ab2da8621dc548d326b5a150004380089',1,'regen::VertexBufferObject::free()'],['../classregen_1_1AllocatorPool.html#a0a7e03d29a5216c15054d39aac0f274d',1,'regen::AllocatorPool::free()'],['../classregen_1_1BuddyAllocator.html#a1059874be41484f7206ae3ec9fdf9682',1,'regen::BuddyAllocator::free()']]],
   ['frequency',['frequency',['../classregen_1_1AudioBuffer.html#ab7aaec66466be4d9f2fc06e285dbbc17',1,'regen::AudioBuffer']]],
   ['front',['front',['../structregen_1_1DrawBuffers.html#a52ec7f8e1721a7f055945050bdcaa054',1,'regen::DrawBuffers']]],
   ['frontface',['frontFace',['../classregen_1_1RenderState.html#a540d82e24d07115121fe4be17650483b',1,'regen::RenderState']]],

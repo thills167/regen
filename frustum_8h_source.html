@@ -106,40 +106,48 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;regen/math/vector.h&gt;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;regen/gl-types/shader-input.h&gt;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span>regen {</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="code" href="classregen_1_1Frustum.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="classregen_1_1Frustum.html" title="A portion of a pyramid that lies between two parallel planes cutting it.">Frustum</a> {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <a class="code" href="classregen_1_1Frustum.html" title="A portion of a pyramid that lies between two parallel planes cutting it.">Frustum</a>();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordtype">void</span> setProjection(GLdouble fov, GLdouble aspect, GLdouble near, GLdouble far);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInput1f&gt;</a>&amp; fov() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInput1f&gt;</a>&amp; near() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInput1f&gt;</a>&amp; far() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInput1f&gt;</a>&amp; aspect() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordtype">void</span> computePoints(<span class="keyword">const</span> <a class="code" href="classregen_1_1Vec3.html">Vec3f</a> &amp;origin, <span class="keyword">const</span> <a class="code" href="classregen_1_1Vec3.html">Vec3f</a> &amp;dir);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keyword">const</span> <a class="code" href="classregen_1_1Vec3.html">Vec3f</a>* points() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  vector&lt;Frustum*&gt; split(GLuint n, GLdouble weight) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInput1f&gt;</a> fov_;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInput1f&gt;</a> aspect_;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInput1f&gt;</a> far_;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInput1f&gt;</a> near_;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  GLdouble nearPlaneHeight_;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  GLdouble nearPlaneWidth_;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  GLdouble farPlaneHeight_;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  GLdouble farPlaneWidth_;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <a class="code" href="classregen_1_1Vec3.html">Vec3f</a> points_[8];</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;};</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* _FRUSTUM_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// Defeat evil windows defines...</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#ifdef far</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#undef far</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#ifdef near</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#undef near</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span>regen {</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="code" href="classregen_1_1Frustum.html">   29</a></span>&#160;<span class="keyword">class </span><a class="code" href="classregen_1_1Frustum.html" title="A portion of a pyramid that lies between two parallel planes cutting it.">Frustum</a> {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <a class="code" href="classregen_1_1Frustum.html" title="A portion of a pyramid that lies between two parallel planes cutting it.">Frustum</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordtype">void</span> setProjection(GLdouble fov, GLdouble aspect, GLdouble near, GLdouble far);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInput1f&gt;</a>&amp; fov() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInput1f&gt;</a>&amp; near() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInput1f&gt;</a>&amp; far() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInput1f&gt;</a>&amp; aspect() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordtype">void</span> computePoints(<span class="keyword">const</span> <a class="code" href="classregen_1_1Vec3.html">Vec3f</a> &amp;origin, <span class="keyword">const</span> <a class="code" href="classregen_1_1Vec3.html">Vec3f</a> &amp;dir);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keyword">const</span> <a class="code" href="classregen_1_1Vec3.html">Vec3f</a>* points() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  vector&lt;Frustum*&gt; split(GLuint n, GLdouble weight) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInput1f&gt;</a> fov_;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInput1f&gt;</a> aspect_;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInput1f&gt;</a> far_;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInput1f&gt;</a> near_;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  GLdouble nearPlaneHeight_;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  GLdouble nearPlaneWidth_;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  GLdouble farPlaneHeight_;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  GLdouble farPlaneWidth_;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <a class="code" href="classregen_1_1Vec3.html">Vec3f</a> points_[8];</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;};</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* _FRUSTUM_H_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 25 2013 20:32:39 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 30 2013 11:45:04 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

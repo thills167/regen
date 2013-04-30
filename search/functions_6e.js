@@ -6,7 +6,7 @@ var searchData=
   ['nextbuffer',['nextBuffer',['../classregen_1_1BufferObject.html#ac78068c7a7be21f2afbb054d2a99f6b4',1,'regen::BufferObject']]],
   ['nextframe',['nextFrame',['../classregen_1_1AnimationManager.html#ac761ea649bd33ea14c3c3bab5bff369e',1,'regen::AnimationManager']]],
   ['nextstamp',['nextStamp',['../classregen_1_1VertexAttribute.html#aaf512f81424e610be4a36c5aa1c9a592',1,'regen::VertexAttribute']]],
-  ['node',['Node',['../classregen_1_1Stack_1_1Node.html#a9831a5ef65e7570387f02624270a0e07',1,'regen::Stack::Node']]],
+  ['node',['Node',['../structregen_1_1AllocatorPool_1_1Node.html#a7ec3102e585a45ea2be6c9c7b7ce82ec',1,'regen::AllocatorPool::Node::Node()'],['../classregen_1_1Stack_1_1Node.html#a9831a5ef65e7570387f02624270a0e07',1,'regen::Stack::Node::Node()']]],
   ['nodeanimation',['NodeAnimation',['../classregen_1_1NodeAnimation.html#ad46aa8d2d2a119a7d8e8899f6b55813e',1,'regen::NodeAnimation']]],
   ['nodeeyedepthcomparator',['NodeEyeDepthComparator',['../classregen_1_1NodeEyeDepthComparator.html#a89d7fab4752d0eff26ba95de9f494c4e',1,'regen::NodeEyeDepthComparator']]],
   ['noisefactor',['noiseFactor',['../classregen_1_1Particles.html#abbb331cb724f4b8345ed268d2e8f706d',1,'regen::Particles']]],

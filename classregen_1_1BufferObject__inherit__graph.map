@@ -2,7 +2,6 @@
 <area shape="rect" id="node2" href="$classregen_1_1RectBufferObject.html" title="A 2D rectangular buffer." alt="" coords="199,132,361,159"/>
 <area shape="rect" id="node19" href="$classregen_1_1UniformBufferObject.html" title="A Buffer Object that is used to store uniform data for a shader program." alt="" coords="189,183,371,209"/>
 <area shape="rect" id="node20" href="$classregen_1_1VertexArrayObject.html" title="Vertex Array Objects (VAO) are OpenGL Objects that store the set of bindings between Vertex Attribute..." alt="" coords="195,233,365,260"/>
-<area shape="rect" id="node21" href="$classregen_1_1VertexBufferObject.html" title="Buffer object that is used for vertex data." alt="" coords="193,284,367,311"/>
 <area shape="rect" id="node3" href="$classregen_1_1FrameBufferObject.html" title="Framebuffer Objects are a mechanism for rendering to images other than the default OpenGL Default Fra..." alt="" coords="422,81,594,108"/>
 <area shape="rect" id="node4" href="$classregen_1_1RenderBufferObject.html" title="OpenGL Objects that contain images." alt="" coords="419,132,597,159"/>
 <area shape="rect" id="node5" href="$classregen_1_1Texture.html" title="A OpenGL Object that contains one or more images that all have the same image format." alt="" coords="455,183,561,209"/>

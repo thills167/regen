@@ -26,12 +26,13 @@ var searchData=
   ['bottomnode',['bottomNode',['../classregen_1_1Stack.html#af271baa2e21ee70bf835c33dbeb8ab0f',1,'regen::Stack']]],
   ['box',['Box',['../classregen_1_1Box.html#a9afef5a15132d688ca6060ecb44a9571',1,'regen::Box']]],
   ['brightness',['brightness',['../classregen_1_1Particles.html#a0d58e5be0faebbfb1814d53570f6f201',1,'regen::Particles']]],
+  ['buddyallocator',['BuddyAllocator',['../classregen_1_1BuddyAllocator.html#a6c188442a57473b0d68c4bd6788095f8',1,'regen::BuddyAllocator']]],
   ['buffer',['buffer',['../classregen_1_1VertexAttribute.html#a24db43fc4e9a5f65359c65b9cd2229dd',1,'regen::VertexAttribute']]],
+  ['bufferid',['bufferID',['../structregen_1_1VertexBufferObject_1_1Reference.html#a83a6fe628146424474d04bbc73c59702',1,'regen::VertexBufferObject::Reference']]],
   ['bufferindex',['bufferIndex',['../classregen_1_1BufferObject.html#aa4019026e1c6c09398d4926ddd1a0c71',1,'regen::BufferObject']]],
-  ['bufferiterator',['bufferIterator',['../classregen_1_1VertexAttribute.html#ae4c6a86258a46b6655c61b9037bd984d',1,'regen::VertexAttribute']]],
+  ['bufferiterator',['bufferIterator',['../classregen_1_1VertexAttribute.html#aa492adc226d3570ce2434155f6977c5b',1,'regen::VertexAttribute']]],
   ['bufferobject',['BufferObject',['../classregen_1_1BufferObject.html#a5be6e49b61ea8e20afcb2b5c9d4d8473',1,'regen::BufferObject']]],
   ['bufferrange',['BufferRange',['../structregen_1_1BufferRange.html#aece79a3a2658ac961e557a2f8f9adbed',1,'regen::BufferRange']]],
-  ['buffersize',['bufferSize',['../classregen_1_1VertexBufferObject.html#ae9a0c36741aef6f88c6cb26ddb0e9885',1,'regen::VertexBufferObject']]],
   ['bufferstamp',['bufferStamp',['../classregen_1_1VertexAttribute.html#a1e3af055f7a7621008743932efd97c7e',1,'regen::VertexAttribute']]],
   ['byteoffset',['byteOffset',['../classregen_1_1AudioSource.html#abe5669fe737f1713e9dfd8e367529b89',1,'regen::AudioSource']]]
 ];

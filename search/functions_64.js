@@ -1,7 +1,7 @@
 var searchData=
 [
   ['dampingfactor',['dampingFactor',['../classregen_1_1Particles.html#a1500b8febf678b795b90ee6c48a78c87',1,'regen::Particles']]],
-  ['data',['data',['../classregen_1_1Texture.html#abb494cf75d6a5125317ac771cf62b8a9',1,'regen::Texture::data()'],['../classregen_1_1VertexBufferObject.html#aaab2aed5436e53ee1de81a90ea0e5f93',1,'regen::VertexBufferObject::data()'],['../classregen_1_1VertexAttribute.html#a40971e8c85eaf0875afad99c642343e9',1,'regen::VertexAttribute::data()']]],
+  ['data',['data',['../classregen_1_1Texture.html#abb494cf75d6a5125317ac771cf62b8a9',1,'regen::Texture::data()'],['../classregen_1_1VertexAttribute.html#a40971e8c85eaf0875afad99c642343e9',1,'regen::VertexAttribute::data()']]],
   ['dataptr',['dataPtr',['../classregen_1_1VertexAttribute.html#a0700a891699fdb0113b5312c5760a3f4',1,'regen::VertexAttribute']]],
   ['datatype',['dataType',['../classregen_1_1VertexAttribute.html#a560f9326acf9e3aac14d29ec2aa4df6b',1,'regen::VertexAttribute']]],
   ['datatypebytes',['dataTypeBytes',['../classregen_1_1VertexAttribute.html#ad749d34cdb5a84d750deca39f4ff917b',1,'regen::VertexAttribute']]],
@@ -10,6 +10,7 @@ var searchData=
   ['decode',['decode',['../classregen_1_1AudioStream.html#a4e7b41be7917bce1a3738e2f95cdfb51',1,'regen::AudioStream::decode()'],['../classregen_1_1AudioVideoStream.html#a5e48e6377de91954f860f3cd67715b63',1,'regen::AudioVideoStream::decode()'],['../classregen_1_1Demuxer.html#abd7359e6a4ebee556932af09ed49dffb',1,'regen::Demuxer::decode()'],['../classregen_1_1VideoStream.html#afcd71aeb7bff527d67bc37e67af03f7f',1,'regen::VideoStream::decode()']]],
   ['define',['define',['../classregen_1_1ShaderConfigurer.html#af7a76c7cc322c1afd0a7fb41c77beef4',1,'regen::ShaderConfigurer']]],
   ['definefunction',['defineFunction',['../classregen_1_1ShaderConfigurer.html#a0c5874ce70a9dbb5bc9a92b67e517164',1,'regen::ShaderConfigurer']]],
+  ['deleteallocator',['deleteAllocator',['../structregen_1_1VertexBufferObject_1_1VBOAllocator.html#ae871d5cabb400438477dcfac1536ef6c',1,'regen::VertexBufferObject::VBOAllocator']]],
   ['demuxer',['Demuxer',['../classregen_1_1Demuxer.html#a70d746ba09fd2229a4791a2be5e589b3',1,'regen::Demuxer::Demuxer()'],['../classregen_1_1VideoTexture.html#a3b9239b5ecd8f871f21eb488c7da089e',1,'regen::VideoTexture::demuxer()']]],
   ['depth',['depth',['../classregen_1_1FrameBufferObject.html#a13e51be49d859ca96ec0ba9714edbfe2',1,'regen::FrameBufferObject::depth()'],['../classregen_1_1Texture3D.html#a601fa90735c95e9d4ebba77ef53c9366',1,'regen::Texture3D::depth()']]],
   ['depthattachmentformat',['depthAttachmentFormat',['../classregen_1_1FrameBufferObject.html#ae4280d54e32726f32d26f88b40a26236',1,'regen::FrameBufferObject']]],
@@ -25,6 +26,7 @@ var searchData=
   ['depthtexture2d',['DepthTexture2D',['../classregen_1_1DepthTexture2D.html#a06de2160622eb311822146c78df82cea',1,'regen::DepthTexture2D']]],
   ['depthtexture2dmultisample',['DepthTexture2DMultisample',['../classregen_1_1DepthTexture2DMultisample.html#a677b2c8d2f3226de26d481a5a0df31b2',1,'regen::DepthTexture2DMultisample']]],
   ['depthtexture3d',['DepthTexture3D',['../classregen_1_1DepthTexture3D.html#a4a9ea2da295cde12289c2bf9fa4d4dea',1,'regen::DepthTexture3D']]],
+  ['destroymemorypools',['destroyMemoryPools',['../classregen_1_1VertexBufferObject.html#a5be144b846534d22c0b08efcfac01c96',1,'regen::VertexBufferObject']]],
   ['determinant',['determinant',['../structregen_1_1Mat4f.html#a25ee8c6adf99d1de07a03df4eef33829',1,'regen::Mat4f']]],
   ['diffuse',['diffuse',['../classregen_1_1Light.html#a97a55d598ceaeeeebc3926e90df0966f',1,'regen::Light::diffuse()'],['../classregen_1_1Material.html#a183555384613f4e96ccbeca6c71a7d99',1,'regen::Material::diffuse()']]],
   ['direction',['direction',['../classregen_1_1Light.html#a0e6ec72d5a9cc50051c616727a8a7623',1,'regen::Light::direction()'],['../classregen_1_1Camera.html#aba784b27bf3920ca07824dec6e433851',1,'regen::Camera::direction()']]],

@@ -115,10 +115,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a27b0764ddadf3f2369734d16871c9df2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1TextureBufferObject.html#a27b0764ddadf3f2369734d16871c9df2">TextureBufferObject</a> (GLenum texelFormat)</td></tr>
 <tr class="separator:a27b0764ddadf3f2369734d16871c9df2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b46fa9f786cb1ad62baa4d83b1f7148"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1TextureBufferObject.html#a7b46fa9f786cb1ad62baa4d83b1f7148">attach</a> (const <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classregen_1_1VertexBufferObject.html">VertexBufferObject</a> &gt; &amp;vbo)</td></tr>
-<tr class="separator:a7b46fa9f786cb1ad62baa4d83b1f7148"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee897a9fec2707f75c4c681a260890c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1TextureBufferObject.html#aee897a9fec2707f75c4c681a260890c3">attach</a> (const <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classregen_1_1VertexBufferObject.html">VertexBufferObject</a> &gt; &amp;vbo, <a class="el" href="classregen_1_1ref__ptr.html">VBOReference</a> &amp;ref)</td></tr>
+<tr class="separator:aee897a9fec2707f75c4c681a260890c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ca73926b5f4843ab604782a5dde8366"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1TextureBufferObject.html#a6ca73926b5f4843ab604782a5dde8366">attach</a> (GLuint storage)</td></tr>
 <tr class="separator:a6ca73926b5f4843ab604782a5dde8366"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80488b00774b5191a472b04d455ace43"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1TextureBufferObject.html#a80488b00774b5191a472b04d455ace43">attach</a> (GLuint storage, GLuint offset, GLuint size)</td></tr>
+<tr class="separator:a80488b00774b5191a472b04d455ace43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classregen_1_1Texture"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classregen_1_1Texture')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classregen_1_1Texture.html">regen::Texture</a></td></tr>
 <tr class="memitem:ad4aae373c141303765314ca2fb181860 inherit pub_methods_classregen_1_1Texture"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1Texture.html#ad4aae373c141303765314ca2fb181860">Texture</a> (GLuint numTextures=1)</td></tr>
 <tr class="separator:ad4aae373c141303765314ca2fb181860 inherit pub_methods_classregen_1_1Texture"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -242,12 +244,12 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Accepted values are GL_ALPHA*, GL_INTENSITY*, GL_R*, GL_RG*, GL_RGB* GL_RGBA*, GL_DEPTH_COMPONENT*, GL_LUMINANCE*, GL_SRGB*, GL_SLUMINANCE*, GL_COMPRESSED_*. </p>
+<p>Accepted values are GL_R*, GL_RG*, GL_RGB* GL_RGBA*, GL_DEPTH_COMPONENT*, GL_SRGB*, GL_COMPRESSED_*. </p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a7b46fa9f786cb1ad62baa4d83b1f7148"></a>
+<a class="anchor" id="aee897a9fec2707f75c4c681a260890c3"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -255,8 +257,18 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">void TextureBufferObject::attach </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classregen_1_1VertexBufferObject.html">VertexBufferObject</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>vbo</em></td><td>)</td>
+          <td class="paramname"><em>vbo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="classregen_1_1ref__ptr.html">VBOReference</a> &amp;&#160;</td>
+          <td class="paramname"><em>ref</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -281,6 +293,39 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a80488b00774b5191a472b04d455ace43"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TextureBufferObject::attach </td>
+          <td>(</td>
+          <td class="paramtype">GLuint&#160;</td>
+          <td class="paramname"><em>storage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLuint&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLuint&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Attach the storage for a buffer object to the active buffer texture. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>gl-types/<a class="el" href="tbo_8h_source.html">tbo.h</a></li>
 <li>gl-types/tbo.cpp</li>
@@ -288,7 +333,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 25 2013 20:32:40 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 30 2013 11:45:05 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

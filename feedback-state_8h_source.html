@@ -138,13 +138,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  GLenum feedbackMode_;</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  GLenum feedbackStage_;</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  GLuint feedbackCount_;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  GLboolean dirty_;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  GLuint feedbackBufferSize_;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  GLuint requiredBufferSize_;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  GLuint allocatedBufferSize_;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;VertexBufferObject&gt;</a> feedbackBuffer_;</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <a class="code" href="structregen_1_1BufferRange.html" title="Bind a range within a buffer object to an indexed buffer target.">BufferRange</a> bufferRange_;</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  FeedbackList feedbackAttributes_;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  VBOBlockIterator vboIt_;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html">VBOReference</a> vboRef_;</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  map&lt;string, FeedbackList::iterator&gt; feedbackAttributeMap_;</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
@@ -162,7 +162,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 25 2013 20:32:39 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 30 2013 11:45:04 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

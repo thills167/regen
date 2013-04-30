@@ -88,9 +88,13 @@ Logging</h1>
 </div><!-- fragment --><p>Use log macros with &lt;&lt; operator to log a message: </p>
 <div class="fragment"><div class="line">INFO_LOG(<span class="stringliteral">&quot;value=&quot;</span>&lt;&lt;value);</div>
 </div><!-- fragment --><p>Use <a class="el" href="classregen_1_1Application.html#acf72b2b646adcc90ab35807919c2c2de">regen::Application::setupLogging</a> if you want to see all log messages on the console.</p>
-<h1><a class="anchor" id="cpu_mem"></a>
-CPU-side Memory management</h1>
-<p>regen excessively uses the <a class="el" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">regen::ref_ptr</a> template class for memory management. The template class supports assignment operator and copy constructor. To access the pointer you can use -&gt; operator. Intern all references share the same counter, if the counter reaches zero delete is called.</p>
+<h1><a class="anchor" id="mem"></a>
+Memory management</h1>
+<p>Dynamic memory allocation is not cheap. GPU memory is precious. Explicit deallocation is error-prone.</p>
+<p>For these reasons <code>regen</code> provides some memory management classes.</p>
+<h2><a class="anchor" id="ref_ptr"></a>
+Reference counting</h2>
+<p>regen excessively uses the <a class="el" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">regen::ref_ptr</a> template class for reference counting. The template class supports assignment operator and copy constructor. To access the pointer you can use -&gt; operator. Intern all references share the same counter, if the counter reaches zero delete is called.</p>
 <p>You have to explicitly request to manage the memory with reference counting using <a class="el" href="classregen_1_1ref__ptr.html#adce623adb3524c797afb084dee011de4">regen::ref_ptr::manage</a>. Make sure to manage data only once or you will run into double free corruption.</p>
 <p>Simple usage example: </p>
 <div class="fragment"><div class="line"><span class="keyword">struct </span>Test { <span class="keywordtype">int</span> i; }</div>
@@ -101,12 +105,13 @@ CPU-side Memory management</h1>
 <div class="line">i0-&gt;i = 2;</div>
 <div class="line"><span class="comment">// copy the reference pointer, reference count will be 2 afterwards.</span></div>
 <div class="line">ref_ptr&lt;Test&gt; i1 = i0;</div>
-</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>Dynamic memory allocation can be a bottleneck in real-time applications. You should avoid calling new and delete in the render loop. Use pre-allocated RAM instead.</dd></dl>
-<h1><a class="anchor" id="gpu_mem"></a>
-GPU-side Memory management</h1>
-<p>Various aspects of the OpenGL API require to allocate VRAM.</p>
-<p>Shader programs are relative light weight. They require some space for storing uniform values but not much more. Shaders usually are used many frames and not generated per frame. When a shader is compiled and linked in <code>regen</code> the VRAM is dynamically allocated. VRAM used by textures is currently also dynamically allocated when the texture is loaded.</p>
-<p>Vertex data is saved in VBO's. <code>regen</code> allocates blocks of a few MB in advance and manages this block of memory for the incoming vertex data to avoid dynamic memory allocation. <a class="el" href="classregen_1_1VBOManager.html" title="Helps using VertexBufferObject&#39;s.">regen::VBOManager</a> uses a free list of contiguous memory blocks to manage the allocated memory.</p>
+</div><!-- fragment --><h2><a class="anchor" id="mem_pool"></a>
+Memory pools</h2>
+<p><code>regen</code> supports virtual memory allocation using the <a class="el" href="classregen_1_1AllocatorPool.html" title="A pool of memory allocators.">regen::AllocatorPool</a> template class. An AllocatorPool is defined by an actual allocator and an virtual allocator. Actual allocators are used to actually allocate a block of memory (a GPU memory allocator may calls glGenBuffers and the initial glBufferData). The actual block of pre-allocated memory is managed by the virtual allocator. When someone requests memory from the pool, the pool checks if there is an virtual allocator with enough contiguous space left. If not the pool may actually allocates memory for creating a virtual allocator with enough contiguous free space. Currently the pool will choose the allocator with minimal max. contiguous space that fits the request.</p>
+<p>Virtual allocators must implement alloc,free,size,maxSpace and a constructor taking an uint defining the amount of managed memory. The actual unit of the managed memory is arbitrary, it can refer to KBs, MBs, pages or whatever you need to manage. For example if you define your unit as pages you can be sure that no one can allocate blocks smaller then a page-size.</p>
+<p>The actual and virtual allocator types are template arguments, you could define your own allocator types and use them together with the memory pool.</p>
+<p>Currently only one virtual allocator is implemented: <a class="el" href="classregen_1_1BuddyAllocator.html" title="Implements a variant of the buddy memory allocation algorithm for virtual memory allocation.">regen::BuddyAllocator</a>, a variant of the buddy memory allocation algorithm. The algorithm uses a binary tree to partition the pre-allocated memory. When memory is allocated the algorithm searches for a <code>free</code> node that offers enough space for the request. The chosen node is cut in halves until half the node size does not fit the request anymore. Then the node is cut into one <code>full</code> node that fits the request exactly and another <code>free</code> node for the remaining space. No internal fragmentation occurs using this implementation. External fragmentation can happen when partitions are to small to fit allocation requests for a long time. Allocating some relative small chunks of memory helps in keeping the fragmentation costs low.</p>
+<dl class="section note"><dt>Note</dt><dd>Dynamic memory allocation can be a bottleneck in real-time applications. You should avoid calling new and delete in the render loop. Use pre-allocated memory instead.</dd></dl>
 <h1><a class="anchor" id="Animations"></a>
 Animations</h1>
 <p><a class="el" href="classregen_1_1Animation.html" title="Abstract base class for animations.">regen::Animation</a>'s can implement two different interfaces: <a class="el" href="classregen_1_1Animation.html#ab94f88dbdbc74ac787fc16762ec82037">regen::Animation::animate</a> and <a class="el" href="classregen_1_1Animation.html#a5d07ab60447d3e20faec1c497108de55">regen::Animation::glAnimate</a>. The first one is executed in an dedicated animation thread without GL context when the function is invoked. The second function will be executed in the render thread with GL context. These interfaces can be used to create simple producer-consumer animations to put some of the computation load on another CPU core.</p>
@@ -194,7 +199,7 @@ IO transformation</h2>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 25 2013 20:32:39 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 30 2013 11:45:04 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

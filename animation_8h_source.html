@@ -101,57 +101,56 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define GL_ANIMATION_H_</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;GL/glew.h&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;GL/gl.h&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;boost/thread/mutex.hpp&gt;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;regen/utility/event-object.h&gt;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;regen/gl-types/render-state.h&gt;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">namespace </span>regen {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="code" href="classregen_1_1Animation.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="classregen_1_1Animation.html" title="Abstract base class for animations.">Animation</a> : <span class="keyword">public</span> <a class="code" href="classregen_1_1EventObject.html" title="Allows to integrate events into subclasses.">EventObject</a></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="code" href="classregen_1_1Animation.html#a795351e5d748464916d6e5824e410b76">   29</a></span>&#160;  <span class="keyword">static</span> GLuint <a class="code" href="classregen_1_1Animation.html#a795351e5d748464916d6e5824e410b76">ANIMATION_STARTED</a>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="code" href="classregen_1_1Animation.html#ac6f1a747006d659c8ec63a5881d6fc18">   33</a></span>&#160;  <span class="keyword">static</span> GLuint <a class="code" href="classregen_1_1Animation.html#ac6f1a747006d659c8ec63a5881d6fc18">ANIMATION_STOPPED</a>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <a class="code" href="classregen_1_1Animation.html#a6516be83b2ecbac1d338d4269089d4c5">Animation</a>(GLboolean <a class="code" href="classregen_1_1Animation.html#af46a4207864569324f00004873080d9e">useGLAnimation</a>, GLboolean <a class="code" href="classregen_1_1Animation.html#a2fef6ad1b8b0cb46a56ab9800403a3b4">useAnimation</a>);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keyword">virtual</span> ~<a class="code" href="classregen_1_1Animation.html" title="Abstract base class for animations.">Animation</a>();</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  GLboolean <a class="code" href="classregen_1_1Animation.html#a8f75b0cb6062f490a4a7ad51a372cae7">isRunning</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1Animation.html#a5e42f1e3474b8c2d9a48e0f27d1e6825">startAnimation</a>();</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1Animation.html#a0de8514303e0146cb61b4b5838f832ed">stopAnimation</a>();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  GLboolean <a class="code" href="classregen_1_1Animation.html#ae65a6110b62ecaef1845ff32ea3de934">try_lock</a>();</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1Animation.html#acb18019eae4e96e4d0f963acdd39a534">lock</a>();</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1Animation.html#a59a0f133568f70bfefc5bb299f98e627">unlock</a>();</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1Animation.html#aba50716e3ef7d2b59926f3c65f00e70f">wait</a>(GLuint milliseconds);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  GLboolean <a class="code" href="classregen_1_1Animation.html#af46a4207864569324f00004873080d9e">useGLAnimation</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  GLboolean <a class="code" href="classregen_1_1Animation.html#a2fef6ad1b8b0cb46a56ab9800403a3b4">useAnimation</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno"><a class="code" href="classregen_1_1Animation.html#ab94f88dbdbc74ac787fc16762ec82037">   93</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classregen_1_1Animation.html#ab94f88dbdbc74ac787fc16762ec82037">animate</a>(GLdouble dt){}</div>
-<div class="line"><a name="l00101"></a><span class="lineno"><a class="code" href="classregen_1_1Animation.html#a5d07ab60447d3e20faec1c497108de55">  101</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classregen_1_1Animation.html#a5d07ab60447d3e20faec1c497108de55">glAnimate</a>(<a class="code" href="classregen_1_1RenderState.html" title="Handles server-side GL states.">RenderState</a> *rs, GLdouble dt){}</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  boost::mutex mutex_;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  GLboolean useGLAnimation_;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  GLboolean useAnimation_;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  GLboolean isRunning_;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <a class="code" href="classregen_1_1Animation.html#a6516be83b2ecbac1d338d4269089d4c5">Animation</a>(<span class="keyword">const</span> <a class="code" href="classregen_1_1Animation.html" title="Abstract base class for animations.">Animation</a>&amp;);</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classregen_1_1Animation.html" title="Abstract base class for animations.">Animation</a>&amp;);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;};</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* GL_ANIMATION_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;boost/thread/mutex.hpp&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;regen/utility/event-object.h&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;regen/gl-types/render-state.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span>regen {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="code" href="classregen_1_1Animation.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="classregen_1_1Animation.html" title="Abstract base class for animations.">Animation</a> : <span class="keyword">public</span> <a class="code" href="classregen_1_1EventObject.html" title="Allows to integrate events into subclasses.">EventObject</a></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="classregen_1_1Animation.html#a795351e5d748464916d6e5824e410b76">   28</a></span>&#160;  <span class="keyword">static</span> GLuint <a class="code" href="classregen_1_1Animation.html#a795351e5d748464916d6e5824e410b76">ANIMATION_STARTED</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="code" href="classregen_1_1Animation.html#ac6f1a747006d659c8ec63a5881d6fc18">   32</a></span>&#160;  <span class="keyword">static</span> GLuint <a class="code" href="classregen_1_1Animation.html#ac6f1a747006d659c8ec63a5881d6fc18">ANIMATION_STOPPED</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <a class="code" href="classregen_1_1Animation.html#a6516be83b2ecbac1d338d4269089d4c5">Animation</a>(GLboolean <a class="code" href="classregen_1_1Animation.html#af46a4207864569324f00004873080d9e">useGLAnimation</a>, GLboolean <a class="code" href="classregen_1_1Animation.html#a2fef6ad1b8b0cb46a56ab9800403a3b4">useAnimation</a>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keyword">virtual</span> ~<a class="code" href="classregen_1_1Animation.html" title="Abstract base class for animations.">Animation</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  GLboolean <a class="code" href="classregen_1_1Animation.html#a8f75b0cb6062f490a4a7ad51a372cae7">isRunning</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1Animation.html#a5e42f1e3474b8c2d9a48e0f27d1e6825">startAnimation</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1Animation.html#a0de8514303e0146cb61b4b5838f832ed">stopAnimation</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  GLboolean <a class="code" href="classregen_1_1Animation.html#ae65a6110b62ecaef1845ff32ea3de934">try_lock</a>();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1Animation.html#acb18019eae4e96e4d0f963acdd39a534">lock</a>();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1Animation.html#a59a0f133568f70bfefc5bb299f98e627">unlock</a>();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1Animation.html#aba50716e3ef7d2b59926f3c65f00e70f">wait</a>(GLuint milliseconds);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  GLboolean <a class="code" href="classregen_1_1Animation.html#af46a4207864569324f00004873080d9e">useGLAnimation</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  GLboolean <a class="code" href="classregen_1_1Animation.html#a2fef6ad1b8b0cb46a56ab9800403a3b4">useAnimation</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="code" href="classregen_1_1Animation.html#ab94f88dbdbc74ac787fc16762ec82037">   92</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classregen_1_1Animation.html#ab94f88dbdbc74ac787fc16762ec82037">animate</a>(GLdouble dt){}</div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="code" href="classregen_1_1Animation.html#a5d07ab60447d3e20faec1c497108de55">  100</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classregen_1_1Animation.html#a5d07ab60447d3e20faec1c497108de55">glAnimate</a>(<a class="code" href="classregen_1_1RenderState.html" title="Handles server-side GL states.">RenderState</a> *rs, GLdouble dt){}</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  boost::mutex mutex_;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  GLboolean useGLAnimation_;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  GLboolean useAnimation_;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  GLboolean isRunning_;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <a class="code" href="classregen_1_1Animation.html#a6516be83b2ecbac1d338d4269089d4c5">Animation</a>(<span class="keyword">const</span> <a class="code" href="classregen_1_1Animation.html" title="Abstract base class for animations.">Animation</a>&amp;);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classregen_1_1Animation.html" title="Abstract base class for animations.">Animation</a>&amp;);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;};</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* GL_ANIMATION_H_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 25 2013 20:32:39 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 30 2013 11:45:04 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

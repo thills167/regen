@@ -2,12 +2,11 @@ var searchData=
 [
   ['gain',['gain',['../classregen_1_1AudioSource.html#a2b27c266e34a5d91a6f379fc2a023df9',1,'regen::AudioSource::gain()'],['../classregen_1_1AudioSystem.html#ae3f19882e57d4ca67a57da0f76778c67',1,'regen::AudioSystem::gain()']]],
   ['gamma',['gamma',['../classregen_1_1Tonemap.html#afc0abc1d4775279984d847ad7e6d6425',1,'regen::Tonemap']]],
-  ['get',['get',['../classregen_1_1AnimationManager.html#a6255ceefd5e220e0f7b57eeeead0ac21',1,'regen::AnimationManager::get()'],['../classregen_1_1AudioSystem.html#a45c479d8f469a18e906cfd980009d7ed',1,'regen::AudioSystem::get()'],['../classregen_1_1RenderState.html#a309141a8d492ce60a57a1629cdfaf928',1,'regen::RenderState::get()'],['../classregen_1_1FontManager.html#a40225fbd76062967d2e871ceb9b00b60',1,'regen::FontManager::get()'],['../classregen_1_1ref__ptr.html#a1b71a4418b6b92cc64af655de8e68e97',1,'regen::ref_ptr::get()']]],
+  ['get',['get',['../classregen_1_1AnimationManager.html#a6255ceefd5e220e0f7b57eeeead0ac21',1,'regen::AnimationManager::get()'],['../classregen_1_1AudioSystem.html#a45c479d8f469a18e906cfd980009d7ed',1,'regen::AudioSystem::get()'],['../classregen_1_1RenderState.html#a309141a8d492ce60a57a1629cdfaf928',1,'regen::RenderState::get()'],['../classregen_1_1Font.html#a296ce26666c0da77d72c00cca398304d',1,'regen::Font::get()'],['../classregen_1_1ref__ptr.html#a1b71a4418b6b92cc64af655de8e68e97',1,'regen::ref_ptr::get()']]],
   ['getbasecone',['getBaseCone',['../classregen_1_1ConeClosed.html#a0e227edc719ed8554d7d0378ae1faa6b',1,'regen::ConeClosed']]],
   ['getblockindex',['getBlockIndex',['../classregen_1_1UniformBufferObject.html#abede34e6cf8d094a7e6257ce9729f9a9',1,'regen::UniformBufferObject']]],
   ['geteyedepth',['getEyeDepth',['../classregen_1_1NodeEyeDepthComparator.html#a10c9bd38c5e1ea7b83095eebe559eb66',1,'regen::NodeEyeDepthComparator']]],
   ['getfeedback',['getFeedback',['../classregen_1_1FeedbackState.html#a20b3bcadf9a1716350e7c685437319b7',1,'regen::FeedbackState']]],
-  ['getfont',['getFont',['../classregen_1_1FontManager.html#a845043830a29491b4f735837a2adf975',1,'regen::FontManager']]],
   ['getinput',['getInput',['../classregen_1_1ShaderInputState.html#ab24f3144d81cce339e51234d87ac7241',1,'regen::ShaderInputState']]],
   ['getline',['getline',['../classregen_1_1GLSLDirectiveProcessor.html#a438cea274ba40c350d744ee8b8675727',1,'regen::GLSLDirectiveProcessor::getline()'],['../classregen_1_1GLSLInputOutputProcessor.html#a5e9e37ded0802a5fe38262551c95077c',1,'regen::GLSLInputOutputProcessor::getline()']]],
   ['getmeshmaterial',['getMeshMaterial',['../classregen_1_1AssimpImporter.html#ae3c3865c489e2c114c429063bd6767a5',1,'regen::AssimpImporter']]],
