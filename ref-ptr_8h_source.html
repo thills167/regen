@@ -140,7 +140,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
 <div class="line"><a name="l00080"></a><span class="lineno"><a class="code" href="classregen_1_1ref__ptr.html#a1ec1a623402962232ca9b45a3b508a6d">   80</a></span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html#a1ec1a623402962232ca9b45a3b508a6d">~ref_ptr</a>()</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">if</span>(ptr_ != NULL) { unref(); }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">if</span>(ptr_ != NULL &amp;&amp; refCount_ != NULL) { unref(); }</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  }</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
 <div class="line"><a name="l00089"></a><span class="lineno"><a class="code" href="classregen_1_1ref__ptr.html#ab4d3f331ee7199c59356bd2856abcfb4">   89</a></span>&#160;  T* <a class="code" href="classregen_1_1ref__ptr.html#ab4d3f331ee7199c59356bd2856abcfb4">operator-&gt;</a>()<span class="keyword"> const</span></div>
@@ -214,7 +214,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 30 2013 11:45:04 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 30 2013 12:27:22 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>
