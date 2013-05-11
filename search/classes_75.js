@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['uniformbufferobject',['UniformBufferObject',['../classregen_1_1UniformBufferObject.html',1,'regen']]]
+  ['ubo',['UBO',['../classregen_1_1UBO.html',1,'regen']]]
 ];

@@ -105,24 +105,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a779221d9854fd62da014c6df1511e944"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structregen_1_1ShaderTextureLocation.html#a779221d9854fd62da014c6df1511e944">ShaderTextureLocation</a> (const string &amp;_name, GLint *_channel, GLint _location)</td></tr>
-<tr class="separator:a779221d9854fd62da014c6df1511e944"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e2ad92f4a6ed2b1e0e1b022d0a079ab"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structregen_1_1ShaderTextureLocation.html#a8e2ad92f4a6ed2b1e0e1b022d0a079ab">ShaderTextureLocation</a> (const string &amp;_name, const <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classregen_1_1Texture.html">Texture</a> &gt; &amp;_tex, GLint _location)</td></tr>
+<tr class="separator:a8e2ad92f4a6ed2b1e0e1b022d0a079ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a51b21ee57c26ff8814967125a2b2bbb5"><td class="memItemLeft" align="right" valign="top">GLint *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structregen_1_1ShaderTextureLocation.html#a51b21ee57c26ff8814967125a2b2bbb5">channel</a></td></tr>
-<tr class="separator:a51b21ee57c26ff8814967125a2b2bbb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4bd69d93a813ab1672820e75b756b1e6"><td class="memItemLeft" align="right" valign="top">GLint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structregen_1_1ShaderTextureLocation.html#a4bd69d93a813ab1672820e75b756b1e6">location</a></td></tr>
 <tr class="separator:a4bd69d93a813ab1672820e75b756b1e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1884f651375a3000b7b2c1cad334af6"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structregen_1_1ShaderTextureLocation.html#aa1884f651375a3000b7b2c1cad334af6">name</a></td></tr>
 <tr class="separator:aa1884f651375a3000b7b2c1cad334af6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a744f41b31c69fe247a1b7722918aac13"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classregen_1_1Texture.html">Texture</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structregen_1_1ShaderTextureLocation.html#a744f41b31c69fe247a1b7722918aac13">tex</a></td></tr>
+<tr class="separator:a744f41b31c69fe247a1b7722918aac13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a798888f85b1a607a916a631df8dd4e89"><td class="memItemLeft" align="right" valign="top">GLint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structregen_1_1ShaderTextureLocation.html#a798888f85b1a607a916a631df8dd4e89">uploadChannel</a></td></tr>
 <tr class="separator:a798888f85b1a607a916a631df8dd4e89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Maps texture to shader location. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a779221d9854fd62da014c6df1511e944"></a>
+<a class="anchor" id="a8e2ad92f4a6ed2b1e0e1b022d0a079ab"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -138,8 +138,8 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLint *&#160;</td>
-          <td class="paramname"><em>_channel</em>, </td>
+          <td class="paramtype">const <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classregen_1_1Texture.html">Texture</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>_tex</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -162,7 +162,7 @@ Public Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">_name</td><td>texture name. </td></tr>
-    <tr><td class="paramname">_channel</td><td>texture channel pointer. </td></tr>
+    <tr><td class="paramname">_tex</td><td>the texture. </td></tr>
     <tr><td class="paramname">_location</td><td>texture location in shader. </td></tr>
   </table>
   </dd>
@@ -171,19 +171,6 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a51b21ee57c26ff8814967125a2b2bbb5"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">GLint* regen::ShaderTextureLocation::channel</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>the texture channel. </p>
-
-</div>
-</div>
 <a class="anchor" id="a4bd69d93a813ab1672820e75b756b1e6"></a>
 <div class="memitem">
 <div class="memproto">
@@ -210,6 +197,19 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a744f41b31c69fe247a1b7722918aac13"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt;<a class="el" href="classregen_1_1Texture.html">Texture</a>&gt; regen::ShaderTextureLocation::tex</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>the texture. </p>
+
+</div>
+</div>
 <a class="anchor" id="a798888f85b1a607a916a631df8dd4e89"></a>
 <div class="memitem">
 <div class="memproto">
@@ -229,7 +229,7 @@ Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 30 2013 12:27:22 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 11 2013 11:01:20 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

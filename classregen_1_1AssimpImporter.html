@@ -121,10 +121,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:adace4217716a835fdecf9900993ccbf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a140d4d3cb3bedc2c7d1a6b88af7fc96e"><td class="memItemLeft" align="right" valign="top">list&lt; <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classregen_1_1AnimationNode.html">AnimationNode</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1AssimpImporter.html#a140d4d3cb3bedc2c7d1a6b88af7fc96e">loadMeshBones</a> (<a class="el" href="classregen_1_1Mesh.html">Mesh</a> *meshState, <a class="el" href="classregen_1_1NodeAnimation.html">NodeAnimation</a> *anim)</td></tr>
 <tr class="separator:a140d4d3cb3bedc2c7d1a6b88af7fc96e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a785725faaf9306440af6e3219bc146c8"><td class="memItemLeft" align="right" valign="top">list&lt; <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classregen_1_1Mesh.html">Mesh</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1AssimpImporter.html#a785725faaf9306440af6e3219bc146c8">loadMeshes</a> (const <a class="el" href="structregen_1_1Mat4f.html">Mat4f</a> &amp;transform=<a class="el" href="structregen_1_1Mat4f.html#aaba662ed4ed01f55ed37b91761fb36b1">Mat4f::identity</a>())</td></tr>
-<tr class="separator:a785725faaf9306440af6e3219bc146c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe818f83f6ac68d2195e568dfeb04719"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classregen_1_1NodeAnimation.html">NodeAnimation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1AssimpImporter.html#afe818f83f6ac68d2195e568dfeb04719">loadNodeAnimation</a> (GLboolean forceChannelStates, <a class="el" href="classregen_1_1NodeAnimation.html#a99b37150e1a65552414c2f2eaecc268e">NodeAnimation::Behavior</a> forcedPostState, <a class="el" href="classregen_1_1NodeAnimation.html#a99b37150e1a65552414c2f2eaecc268e">NodeAnimation::Behavior</a> forcedPreState, GLdouble defaultTicksPerSecond)</td></tr>
-<tr class="separator:afe818f83f6ac68d2195e568dfeb04719"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a408ceedbd1d396aef4ad8ffb77760a9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1AssimpImporter.html#a408ceedbd1d396aef4ad8ffb77760a9f">loadMeshes</a> (const <a class="el" href="structregen_1_1Mat4f.html">Mat4f</a> &amp;transform, <a class="el" href="classregen_1_1VBO.html#a7adfdbbd8d84e304e697cd7ef521540e">VBO::Usage</a> usage, list&lt; <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classregen_1_1Mesh.html">Mesh</a> &gt; &gt; &amp;meshes)</td></tr>
+<tr class="separator:a408ceedbd1d396aef4ad8ffb77760a9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5be1c568fed3b9a1fa113003fce252b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classregen_1_1NodeAnimation.html">NodeAnimation</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1AssimpImporter.html#a5be1c568fed3b9a1fa113003fce252b8">loadNodeAnimation</a> (GLboolean forceChannelStates, <a class="el" href="classregen_1_1NodeAnimation.html#a99b37150e1a65552414c2f2eaecc268e">NodeAnimation::Behavior</a> forcedPostState, <a class="el" href="classregen_1_1NodeAnimation.html#a99b37150e1a65552414c2f2eaecc268e">NodeAnimation::Behavior</a> forcedPreState, GLdouble defaultTicksPerSecond)</td></tr>
+<tr class="separator:a5be1c568fed3b9a1fa113003fce252b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa75247f2d2ad0ca13f88457e43fb05d1"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classregen_1_1Material.html">Material</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1AssimpImporter.html#aa75247f2d2ad0ca13f88457e43fb05d1">materials</a> ()</td></tr>
 <tr class="separator:aa75247f2d2ad0ca13f88457e43fb05d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f73ad08b4dcdb5405cbae6c40805031"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1AssimpImporter.html#a4f73ad08b4dcdb5405cbae6c40805031">numBoneWeights</a> (<a class="el" href="classregen_1_1Mesh.html">Mesh</a> *meshState)</td></tr>
@@ -253,16 +253,32 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a785725faaf9306440af6e3219bc146c8"></a>
+<a class="anchor" id="a408ceedbd1d396aef4ad8ffb77760a9f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">list&lt; <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classregen_1_1Mesh.html">Mesh</a> &gt; &gt; AssimpImporter::loadMeshes </td>
+          <td class="memname">void AssimpImporter::loadMeshes </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structregen_1_1Mat4f.html">Mat4f</a> &amp;&#160;</td>
-          <td class="paramname"><em>transform</em> = <code><a class="el" href="structregen_1_1Mat4f.html#aaba662ed4ed01f55ed37b91761fb36b1">Mat4f::identity</a>()</code></td><td>)</td>
+          <td class="paramname"><em>transform</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="classregen_1_1VBO.html#a7adfdbbd8d84e304e697cd7ef521540e">VBO::Usage</a>&#160;</td>
+          <td class="paramname"><em>usage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">list&lt; <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classregen_1_1Mesh.html">Mesh</a> &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>meshes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -270,12 +286,12 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="afe818f83f6ac68d2195e568dfeb04719"></a>
+<a class="anchor" id="a5be1c568fed3b9a1fa113003fce252b8"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classregen_1_1NodeAnimation.html">NodeAnimation</a> * AssimpImporter::loadNodeAnimation </td>
+          <td class="memname"><a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classregen_1_1NodeAnimation.html">NodeAnimation</a> &gt; AssimpImporter::loadNodeAnimation </td>
           <td>(</td>
           <td class="paramtype">GLboolean&#160;</td>
           <td class="paramname"><em>forceChannelStates</em>, </td>
@@ -349,7 +365,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 30 2013 12:27:22 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 11 2013 11:01:18 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

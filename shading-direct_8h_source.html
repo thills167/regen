@@ -105,41 +105,41 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;regen/shading/shadow-map.h&gt;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span>regen {</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="code" href="classregen_1_1DirectShading.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="classregen_1_1DirectShading.html" title="Implements deferred shading.">DirectShading</a> : <span class="keyword">public</span> <a class="code" href="classregen_1_1State.html" title="Base class for states.">State</a></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <a class="code" href="classregen_1_1DirectShading.html" title="Implements deferred shading.">DirectShading</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="code" href="classregen_1_1DirectShading.html">   22</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classregen_1_1DirectShading.html" title="Implements deferred shading.">DirectShading</a> : <span class="keyword">public</span> <a class="code" href="classregen_1_1State.html" title="Base class for states.">State</a></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="classregen_1_1DirectShading.html" title="Implements deferred shading.">DirectShading</a>();</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInput3f&gt;</a>&amp; <a class="code" href="classregen_1_1DirectShading.html#a203fdd26e7a370ae7a5b5fa5b46cb8cd">ambientLight</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1DirectShading.html#a89b646d5d47d1773cfe6ed1dfd2168cc">addLight</a>(<span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;Light&gt;</a> &amp;l);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1DirectShading.html#a89b646d5d47d1773cfe6ed1dfd2168cc">addLight</a>(</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;Light&gt;</a> &amp;l,</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShadowMap&gt;</a> &amp;sm,</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      <a class="code" href="classregen_1_1ShadowMap.html#a470d1fbd374d9067e227d66e69f59dd3" title="Configures filtering.">ShadowMap::FilterMode</a> shadowFilter);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1DirectShading.html#ac92c89073521dffde5e83e5ddaeff541">removeLight</a>(<span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;Light&gt;</a> &amp;l);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;ShaderInput3f&gt;</a>&amp; <a class="code" href="classregen_1_1DirectShading.html#a203fdd26e7a370ae7a5b5fa5b46cb8cd">ambientLight</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1DirectShading.html#a89b646d5d47d1773cfe6ed1dfd2168cc">addLight</a>(<span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Light&gt;</a> &amp;l);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1DirectShading.html#a89b646d5d47d1773cfe6ed1dfd2168cc">addLight</a>(</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Light&gt;</a> &amp;l,</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;ShadowMap&gt;</a> &amp;sm,</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="classregen_1_1ShadowMap.html#a470d1fbd374d9067e227d66e69f59dd3" title="Configures filtering.">ShadowMap::FilterMode</a> shadowFilter);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1DirectShading.html#ac92c89073521dffde5e83e5ddaeff541">removeLight</a>(<span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Light&gt;</a> &amp;l);</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  GLint idCounter_;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    GLint idCounter_;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keyword">struct </span>DirectLight {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    GLuint id_;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;Light&gt;</a> light_;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShadowMap&gt;</a> sm_;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;TextureState&gt;</a> shadowMap_;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="classregen_1_1ShadowMap.html#a470d1fbd374d9067e227d66e69f59dd3" title="Configures filtering.">ShadowMap::FilterMode</a> shadowFilter_;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  };</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  list&lt;DirectLight&gt; lights_;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInput3f&gt;</a> ambientLight_;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">struct </span>DirectLight {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      GLuint id_;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Light&gt;</a> light_;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;ShadowMap&gt;</a> sm_;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;TextureState&gt;</a> shadowMap_;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      <a class="code" href="classregen_1_1ShadowMap.html#a470d1fbd374d9067e227d66e69f59dd3" title="Configures filtering.">ShadowMap::FilterMode</a> shadowFilter_;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    };</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    list&lt;DirectLight&gt; lights_;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;ShaderInput3f&gt;</a> ambientLight_;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordtype">void</span> updateDefine(DirectLight &amp;l, GLuint lightIndex);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;};</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> updateDefine(DirectLight &amp;l, GLuint lightIndex);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  };</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;} <span class="comment">// namespace</span></div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __SHADING_DIRECT_H_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 30 2013 12:27:22 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 11 2013 11:01:18 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

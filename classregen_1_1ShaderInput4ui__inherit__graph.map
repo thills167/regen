@@ -1,5 +1,4 @@
 <map id="regen::ShaderInput4ui" name="regen::ShaderInput4ui">
-<area shape="rect" id="node2" href="$classregen_1_1ShaderInputui.html" title="Provides unsigned int input to shader programs." alt="" coords="7,155,149,181"/>
-<area shape="rect" id="node3" href="$classregen_1_1ShaderInput.html" title="Provides input to shader programs." alt="" coords="13,80,144,107"/>
-<area shape="rect" id="node4" href="$classregen_1_1VertexAttribute.html" title="Shader input with individual values per vertex." alt="" coords="4,5,152,32"/>
+<area shape="rect" id="node2" href="$classregen_1_1ShaderInputui.html" title="Provides unsigned int input to shader programs." alt="" coords="7,80,149,107"/>
+<area shape="rect" id="node3" href="$classregen_1_1ShaderInput.html" title="Provides input to shader programs." alt="" coords="13,5,144,32"/>
 </map>

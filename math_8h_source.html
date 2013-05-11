@@ -112,26 +112,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">namespace </span>regen {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span>math {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keyword">static</span> <span class="keyword">inline</span> GLboolean isApprox(<span class="keyword">const</span> GLfloat &amp;a, <span class="keyword">const</span> GLfloat &amp;b, GLfloat delta=1e-6)</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  { <span class="keywordflow">return</span> abs(a-b)&lt;=delta; }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keyword">namespace </span>math {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">static</span> <span class="keyword">inline</span> GLboolean isApprox(<span class="keyword">const</span> GLfloat &amp;a, <span class="keyword">const</span> GLfloat &amp;b, GLfloat delta=1e-6)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    { <span class="keywordflow">return</span> abs(a-b)&lt;=delta; }</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keyword">static</span> <span class="keyword">inline</span> GLdouble mix(GLdouble x, GLdouble y, GLdouble a)</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  { <span class="keywordflow">return</span> x*(1.0-a) + y*a; }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">static</span> <span class="keyword">inline</span> GLdouble mix(GLdouble x, GLdouble y, GLdouble a)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    { <span class="keywordflow">return</span> x*(1.0-a) + y*a; }</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keyword">static</span> <span class="keyword">inline</span> GLfloat clamp(GLfloat x, GLfloat min, GLfloat max)</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">if</span>(x&gt;max)      <span class="keywordflow">return</span> max;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(x&lt;min) <span class="keywordflow">return</span> min;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">else</span>           <span class="keywordflow">return</span> x;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  }</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* MATH_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">static</span> <span class="keyword">inline</span> GLfloat clamp(GLfloat x, GLfloat min, GLfloat max)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      <span class="keywordflow">if</span>(x&gt;max)      <span class="keywordflow">return</span> max;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span>(x&lt;min) <span class="keywordflow">return</span> min;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      <span class="keywordflow">else</span>           <span class="keywordflow">return</span> x;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* MATH_H_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 30 2013 12:27:22 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 11 2013 11:01:18 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

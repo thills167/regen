@@ -1,5 +1,4 @@
 <map id="regen::ShaderInput4f" name="regen::ShaderInput4f">
-<area shape="rect" id="node2" href="$classregen_1_1ShaderInputf.html" title="Provides float input to shader programs." alt="" coords="11,155,145,181"/>
-<area shape="rect" id="node3" href="$classregen_1_1ShaderInput.html" title="Provides input to shader programs." alt="" coords="13,80,144,107"/>
-<area shape="rect" id="node4" href="$classregen_1_1VertexAttribute.html" title="Shader input with individual values per vertex." alt="" coords="4,5,152,32"/>
+<area shape="rect" id="node2" href="$classregen_1_1ShaderInputf.html" title="Provides float input to shader programs." alt="" coords="8,80,143,107"/>
+<area shape="rect" id="node3" href="$classregen_1_1ShaderInput.html" title="Provides input to shader programs." alt="" coords="10,5,141,32"/>
 </map>

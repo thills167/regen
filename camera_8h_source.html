@@ -100,68 +100,70 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef _CAMERA_H_</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define _CAMERA_H_</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;regen/states/shader-input-state.h&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;regen/states/state.h&gt;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;regen/utility/ref-ptr.h&gt;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;regen/math/matrix.h&gt;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;regen/math/frustum.h&gt;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span>regen {</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="code" href="classregen_1_1Camera.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classregen_1_1Camera.html" title="Camera with perspective projection.">Camera</a> : <span class="keyword">public</span> <a class="code" href="classregen_1_1ShaderInputState.html" title="Container State for shader input data.">ShaderInputState</a></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <a class="code" href="classregen_1_1Camera.html" title="Camera with perspective projection.">Camera</a>();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  GLfloat <a class="code" href="classregen_1_1Camera.html#a387d6a85e7878fbb44b9af8b383ecdfe">sensitivity</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1Camera.html#a8aa4df72940154a5f700837344a9f99a">set_sensitivity</a>(GLfloat sensitivity);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  GLfloat <a class="code" href="classregen_1_1Camera.html#afe2aa41c55366e7aa8412cf24a542dd0">walkSpeed</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1Camera.html#a13de26b3d3b94124ad6d555e4b72564b">set_walkSpeed</a>(GLfloat walkSpeed);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInput3f&gt;</a>&amp; <a class="code" href="classregen_1_1Camera.html#aee00b7b1bcd9a3fe5e47cba5b2eaecf2">position</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInput3f&gt;</a>&amp; <a class="code" href="classregen_1_1Camera.html#aba784b27bf3920ca07824dec6e433851">direction</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInput3f&gt;</a>&amp; <a class="code" href="classregen_1_1Camera.html#a4d84a021f55af653f2b56bbd6c799408">velocity</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInputMat4&gt;</a>&amp; <a class="code" href="classregen_1_1Camera.html#af0d194b54298a58c37aca41a155e51d2">view</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInputMat4&gt;</a>&amp; <a class="code" href="classregen_1_1Camera.html#a91be1113ab0fb6159e7df5ec54742ee0">viewInverse</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInputMat4&gt;</a>&amp; <a class="code" href="classregen_1_1Camera.html#ab575b4b1f627557ec6d1b18cb934592b">projection</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInputMat4&gt;</a>&amp; <a class="code" href="classregen_1_1Camera.html#ae4efae9b4884cddc1c69fdfaabaf924c">projectionInverse</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInputMat4&gt;</a>&amp; <a class="code" href="classregen_1_1Camera.html#a710011b4550abf77a7da054709c6c5d4">viewProjection</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInputMat4&gt;</a>&amp; <a class="code" href="classregen_1_1Camera.html#a45ecd5d43c0b47d392434d331c359c14">viewProjectionInverse</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;Frustum&gt;</a>&amp; <a class="code" href="classregen_1_1Camera.html#aa711fae18cb8d2bb66c7a11b3748a075">frustum</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1Camera.html#a5c75fc0bec453441b5d909cef036a80c">set_isAudioListener</a>(GLboolean useAudio);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  GLboolean <a class="code" href="classregen_1_1Camera.html#af4ada1a87e8f7204094e61a87355e6ac">isAudioListener</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  GLfloat sensitivity_;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  GLfloat walkSpeed_;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  GLboolean isAudioListener_;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;regen/gl-types/shader-input-container.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span>regen {</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="code" href="classregen_1_1Camera.html">   21</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classregen_1_1Camera.html" title="Camera with perspective projection.">Camera</a> : <span class="keyword">public</span> <a class="code" href="classregen_1_1State.html" title="Base class for states.">State</a>, <span class="keyword">public</span> <a class="code" href="classregen_1_1HasInput.html" title="Interface for State&#39;s with input.">HasInput</a></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="classregen_1_1Camera.html" title="Camera with perspective projection.">Camera</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    GLfloat <a class="code" href="classregen_1_1Camera.html#a387d6a85e7878fbb44b9af8b383ecdfe">sensitivity</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1Camera.html#a8aa4df72940154a5f700837344a9f99a">set_sensitivity</a>(GLfloat sensitivity);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    GLfloat <a class="code" href="classregen_1_1Camera.html#afe2aa41c55366e7aa8412cf24a542dd0">walkSpeed</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1Camera.html#a13de26b3d3b94124ad6d555e4b72564b">set_walkSpeed</a>(GLfloat walkSpeed);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;ShaderInput3f&gt;</a>&amp; <a class="code" href="classregen_1_1Camera.html#aee00b7b1bcd9a3fe5e47cba5b2eaecf2">position</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;ShaderInput3f&gt;</a>&amp; <a class="code" href="classregen_1_1Camera.html#aba784b27bf3920ca07824dec6e433851">direction</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;ShaderInput3f&gt;</a>&amp; <a class="code" href="classregen_1_1Camera.html#a4d84a021f55af653f2b56bbd6c799408">velocity</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;ShaderInputMat4&gt;</a>&amp; <a class="code" href="classregen_1_1Camera.html#af0d194b54298a58c37aca41a155e51d2">view</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;ShaderInputMat4&gt;</a>&amp; <a class="code" href="classregen_1_1Camera.html#a91be1113ab0fb6159e7df5ec54742ee0">viewInverse</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;ShaderInputMat4&gt;</a>&amp; <a class="code" href="classregen_1_1Camera.html#ab575b4b1f627557ec6d1b18cb934592b">projection</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;ShaderInputMat4&gt;</a>&amp; <a class="code" href="classregen_1_1Camera.html#ae4efae9b4884cddc1c69fdfaabaf924c">projectionInverse</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;ShaderInputMat4&gt;</a>&amp; <a class="code" href="classregen_1_1Camera.html#a710011b4550abf77a7da054709c6c5d4">viewProjection</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;ShaderInputMat4&gt;</a>&amp; <a class="code" href="classregen_1_1Camera.html#a45ecd5d43c0b47d392434d331c359c14">viewProjectionInverse</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Frustum&gt;</a>&amp; <a class="code" href="classregen_1_1Camera.html#aa711fae18cb8d2bb66c7a11b3748a075">frustum</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1Camera.html#a5c75fc0bec453441b5d909cef036a80c">set_isAudioListener</a>(GLboolean useAudio);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    GLboolean <a class="code" href="classregen_1_1Camera.html#af4ada1a87e8f7204094e61a87355e6ac">isAudioListener</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;ShaderInputContainer&gt;</a> inputs_;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    GLfloat sensitivity_;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    GLfloat walkSpeed_;</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInput3f&gt;</a> position_;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInput3f&gt;</a> direction_;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInput3f&gt;</a> vel_;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;Frustum&gt;</a> frustum_;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    GLboolean isAudioListener_;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;ShaderInput3f&gt;</a> position_;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;ShaderInput3f&gt;</a> direction_;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;ShaderInput3f&gt;</a> vel_;</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInputMat4&gt;</a> view_;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInputMat4&gt;</a> viewInv_;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInputMat4&gt;</a> proj_;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInputMat4&gt;</a> projInv_;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInputMat4&gt;</a> viewproj_;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInputMat4&gt;</a> viewprojInv_;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;};</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* _CAMERA_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Frustum&gt;</a> frustum_;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;ShaderInputMat4&gt;</a> view_;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;ShaderInputMat4&gt;</a> viewInv_;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;ShaderInputMat4&gt;</a> proj_;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;ShaderInputMat4&gt;</a> projInv_;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;ShaderInputMat4&gt;</a> viewproj_;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;ShaderInputMat4&gt;</a> viewprojInv_;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  };</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* _CAMERA_H_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 30 2013 12:27:22 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 11 2013 11:01:18 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

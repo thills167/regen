@@ -9,7 +9,6 @@ var searchData=
   ['bones',['Bones',['../classregen_1_1Bones.html',1,'regen']]],
   ['box',['Box',['../classregen_1_1Box.html',1,'regen']]],
   ['buddyallocator',['BuddyAllocator',['../classregen_1_1BuddyAllocator.html',1,'regen']]],
-  ['bufferobject',['BufferObject',['../classregen_1_1BufferObject.html',1,'regen']]],
   ['bufferrange',['BufferRange',['../structregen_1_1BufferRange.html',1,'regen']]],
   ['buttonevent',['ButtonEvent',['../classregen_1_1Application_1_1ButtonEvent.html',1,'regen::Application']]]
 ];

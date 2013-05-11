@@ -159,8 +159,6 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a71d6c45002eeb107534f33782b931401"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1TextureState.html#a71d6c45002eeb107534f33782b931401">TextureState</a> (const <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classregen_1_1Texture.html">Texture</a> &gt; &amp;tex, const string &amp;<a class="el" href="classregen_1_1TextureState.html#a97dc8649d814cdc466510f05dcd21349">name</a>=&quot;&quot;)</td></tr>
 <tr class="separator:a71d6c45002eeb107534f33782b931401"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3fce497f4c05989a1952f02a2a31d03e"><td class="memItemLeft" align="right" valign="top">GLint *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1TextureState.html#a3fce497f4c05989a1952f02a2a31d03e">channel</a> () const </td></tr>
-<tr class="separator:a3fce497f4c05989a1952f02a2a31d03e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad23a4ab1dfb6e09e54ee9ed446159f94"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1TextureState.html#ad23a4ab1dfb6e09e54ee9ed446159f94">disable</a> (<a class="el" href="classregen_1_1RenderState.html">RenderState</a> *rs)</td></tr>
 <tr class="separator:ad23a4ab1dfb6e09e54ee9ed446159f94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c95eabde10c1f7ed1c53694e2149cad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1TextureState.html#a3c95eabde10c1f7ed1c53694e2149cad">enable</a> (<a class="el" href="classregen_1_1RenderState.html">RenderState</a> *rs)</td></tr>
@@ -185,7 +183,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8dff773719fbd0b5dcb59d1f2cf690cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ac09b3e327937eb956369285466918b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1TextureState.html#a5ac09b3e327937eb956369285466918b">set_name</a> (const string &amp;<a class="el" href="classregen_1_1TextureState.html#a97dc8649d814cdc466510f05dcd21349">name</a>)</td></tr>
 <tr class="separator:a5ac09b3e327937eb956369285466918b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d9016142324c0f3d512bfe091e4133b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1TextureState.html#a6d9016142324c0f3d512bfe091e4133b">set_texcoChannel</a> (GLuint <a class="el" href="classregen_1_1TextureState.html#a3fce497f4c05989a1952f02a2a31d03e">channel</a>)</td></tr>
+<tr class="memitem:a6d9016142324c0f3d512bfe091e4133b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1TextureState.html#a6d9016142324c0f3d512bfe091e4133b">set_texcoChannel</a> (GLuint channel)</td></tr>
 <tr class="separator:a6d9016142324c0f3d512bfe091e4133b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec04d25a7ecc1af66ac7f3a0be048bf8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1TextureState.html#aec04d25a7ecc1af66ac7f3a0be048bf8">set_texcoTransfer</a> (<a class="el" href="classregen_1_1TextureState.html#a3e571a37c136c39b85d8b5a1d90eaa25">TransferTexco</a> mode)</td></tr>
 <tr class="separator:aec04d25a7ecc1af66ac7f3a0be048bf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -420,22 +418,6 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a3fce497f4c05989a1952f02a2a31d03e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">GLint * regen::TextureState::channel </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>the reserved texture channel. </dd></dl>
-
-</div>
-</div>
 <a class="anchor" id="ad23a4ab1dfb6e09e54ee9ed446159f94"></a>
 <div class="memitem">
 <div class="memproto">
@@ -986,7 +968,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 30 2013 12:27:23 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 11 2013 11:01:21 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

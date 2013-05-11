@@ -13,7 +13,7 @@ var searchData=
   ['patchlevelstate',['PatchLevelState',['../classregen_1_1PatchLevelState.html',1,'regen']]],
   ['patchverticesstate',['PatchVerticesState',['../classregen_1_1PatchVerticesState.html',1,'regen']]],
   ['pathchoice',['PathChoice',['../structregen_1_1PathChoice.html',1,'regen']]],
-  ['perlinnoiseconfig',['PerlinNoiseConfig',['../structregen_1_1NoiseTextureLoader_1_1PerlinNoiseConfig.html',1,'regen::NoiseTextureLoader']]],
+  ['perlinnoiseconfig',['PerlinNoiseConfig',['../structregen_1_1textures_1_1PerlinNoiseConfig.html',1,'regen::textures']]],
   ['pickevent',['PickEvent',['../classregen_1_1PickingGeom_1_1PickEvent.html',1,'regen::PickingGeom']]],
   ['pickinggeom',['PickingGeom',['../classregen_1_1PickingGeom.html',1,'regen']]],
   ['planetproperties',['PlanetProperties',['../structregen_1_1SkyScattering_1_1PlanetProperties.html',1,'regen::SkyScattering']]],

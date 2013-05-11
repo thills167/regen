@@ -121,8 +121,8 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4cc49888ce02bd5aed2edba322aa9ff3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1PickingGeom.html#a4cc49888ce02bd5aed2edba322aa9ff3">PickingGeom</a> (const <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classregen_1_1Texture.html">Texture</a> &gt; &amp;depthTexture, GLuint maxPickedObjects=999)</td></tr>
-<tr class="separator:a4cc49888ce02bd5aed2edba322aa9ff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add6c0557047defa6766cd5d0482758f6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1PickingGeom.html#add6c0557047defa6766cd5d0482758f6">PickingGeom</a> (const <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classregen_1_1ShaderInput2f.html">ShaderInput2f</a> &gt; &amp;mouseTexco, const <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classregen_1_1ShaderInputMat4.html">ShaderInputMat4</a> &gt; &amp;inverseProjectionMatrix)</td></tr>
+<tr class="separator:add6c0557047defa6766cd5d0482758f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b58c6f30ffaa917444391596f283197"><td class="memItemLeft" align="right" valign="top">GLboolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1PickingGeom.html#a0b58c6f30ffaa917444391596f283197">add</a> (const <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classregen_1_1Mesh.html">Mesh</a> &gt; &amp;mesh, const <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classregen_1_1StateNode.html">StateNode</a> &gt; &amp;meshNode, const <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classregen_1_1Shader.html">Shader</a> &gt; &amp;meshShader)</td></tr>
 <tr class="separator:a0b58c6f30ffaa917444391596f283197"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44b4361af232934963d3d544465ea1fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1PickingGeom.html#a44b4361af232934963d3d544465ea1fb">glAnimate</a> (<a class="el" href="classregen_1_1RenderState.html">RenderState</a> *rs, GLdouble dt)</td></tr>
@@ -237,21 +237,21 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p>Implements geometry picking. </p>
 <p>Uses special geometry shader that checks if the mouse intersects the processed face. If an intersection occurred the object id, instance id and face depth are written to output variables. These outputs are captured using transform feedback. Finally a CPU depth test is used to obtain the front-most face intersection. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a4cc49888ce02bd5aed2edba322aa9ff3"></a>
+<a class="anchor" id="add6c0557047defa6766cd5d0482758f6"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">PickingGeom::PickingGeom </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classregen_1_1Texture.html">Texture</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>depthTexture</em>, </td>
+          <td class="paramtype">const <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classregen_1_1ShaderInput2f.html">ShaderInput2f</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mouseTexco</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLuint&#160;</td>
-          <td class="paramname"><em>maxPickedObjects</em> = <code>999</code>&#160;</td>
+          <td class="paramtype">const <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classregen_1_1ShaderInputMat4.html">ShaderInputMat4</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>inverseProjectionMatrix</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -262,8 +262,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">depthTexture</td><td>picker tests against this depth. </td></tr>
-    <tr><td class="paramname">maxPickedObjects</td><td>maximum number of pickable objects intersection each other on the screen. </td></tr>
+    <tr><td class="paramname">mouseTexco</td><td>mouse position in range [0,1]. </td></tr>
+    <tr><td class="paramname">inverseProjectionMatrix</td><td>inverse camera projection. </td></tr>
   </table>
   </dd>
 </dl>
@@ -496,7 +496,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 30 2013 12:27:22 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 11 2013 11:01:20 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

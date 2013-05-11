@@ -104,48 +104,46 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;regen/utility/ref-ptr.h&gt;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span>regen {</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="code" href="classregen_1_1NoiseTextureLoader.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="classregen_1_1NoiseTextureLoader.html" title="Loads procedural textures using coherent noise.">NoiseTextureLoader</a></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="structregen_1_1NoiseTextureLoader_1_1PerlinNoiseConfig.html">   28</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structregen_1_1NoiseTextureLoader_1_1PerlinNoiseConfig.html">PerlinNoiseConfig</a> {</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="code" href="structregen_1_1NoiseTextureLoader_1_1PerlinNoiseConfig.html#af44d0478fba1fe5c2a762ee046c07bf2">   32</a></span>&#160;    GLdouble <a class="code" href="structregen_1_1NoiseTextureLoader_1_1PerlinNoiseConfig.html#af44d0478fba1fe5c2a762ee046c07bf2">baseFrequency</a>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="code" href="structregen_1_1NoiseTextureLoader_1_1PerlinNoiseConfig.html#afc51f4d31c50d2f1ec968f5725bda3df">   37</a></span>&#160;    GLdouble <a class="code" href="structregen_1_1NoiseTextureLoader_1_1PerlinNoiseConfig.html#afc51f4d31c50d2f1ec968f5725bda3df">persistence</a>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="code" href="structregen_1_1NoiseTextureLoader_1_1PerlinNoiseConfig.html#a5dcd700ec8b39e600cc660d0777cae6a">   42</a></span>&#160;    GLdouble <a class="code" href="structregen_1_1NoiseTextureLoader_1_1PerlinNoiseConfig.html#a5dcd700ec8b39e600cc660d0777cae6a">lacunarity</a>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="code" href="structregen_1_1NoiseTextureLoader_1_1PerlinNoiseConfig.html#a7072519dae8f1e2c23a1e451688de26a">   47</a></span>&#160;    GLuint <a class="code" href="structregen_1_1NoiseTextureLoader_1_1PerlinNoiseConfig.html#a7072519dae8f1e2c23a1e451688de26a">octaveCount</a>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="structregen_1_1NoiseTextureLoader_1_1PerlinNoiseConfig.html">PerlinNoiseConfig</a>();</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  };</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keyword">namespace </span>textures {</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="structregen_1_1textures_1_1PerlinNoiseConfig.html">   19</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structregen_1_1textures_1_1PerlinNoiseConfig.html">PerlinNoiseConfig</a> {</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="code" href="structregen_1_1textures_1_1PerlinNoiseConfig.html#afcb5008d1c0a1d1f74acd8df5b8cee8a">   23</a></span>&#160;      GLdouble <a class="code" href="structregen_1_1textures_1_1PerlinNoiseConfig.html#afcb5008d1c0a1d1f74acd8df5b8cee8a">baseFrequency</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="structregen_1_1textures_1_1PerlinNoiseConfig.html#a20468447d7099da74f581a115e476019">   28</a></span>&#160;      GLdouble <a class="code" href="structregen_1_1textures_1_1PerlinNoiseConfig.html#a20468447d7099da74f581a115e476019">persistence</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="code" href="structregen_1_1textures_1_1PerlinNoiseConfig.html#a49a0c8941f6fe49b67391bc3fbc895cd">   33</a></span>&#160;      GLdouble <a class="code" href="structregen_1_1textures_1_1PerlinNoiseConfig.html#a49a0c8941f6fe49b67391bc3fbc895cd">lacunarity</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="code" href="structregen_1_1textures_1_1PerlinNoiseConfig.html#a430607c9b521bb5d18670bd260dcb1e1">   38</a></span>&#160;      GLuint <a class="code" href="structregen_1_1textures_1_1PerlinNoiseConfig.html#a430607c9b521bb5d18670bd260dcb1e1">octaveCount</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      <a class="code" href="structregen_1_1textures_1_1PerlinNoiseConfig.html">PerlinNoiseConfig</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    };</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Texture2D&gt;</a> perlin2D(</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        GLuint width, GLuint height,</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keyword">const</span> <a class="code" href="structregen_1_1textures_1_1PerlinNoiseConfig.html">PerlinNoiseConfig</a> &amp;cfg,</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        GLint randomSeed=0,</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        GLboolean isSeamless=GL_FALSE);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keyword">static</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;Texture2D&gt;</a> <a class="code" href="classregen_1_1NoiseTextureLoader.html#a97164d8a2c2f8a5d579acad9a40c9b57">perlin2D</a>(</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      GLuint width, GLuint height,</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      <span class="keyword">const</span> <a class="code" href="structregen_1_1NoiseTextureLoader_1_1PerlinNoiseConfig.html">PerlinNoiseConfig</a> &amp;cfg,</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      GLint randomSeed=0,</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      GLboolean isSeamless=GL_FALSE);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Texture3D&gt;</a> perlin3D(</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        GLuint width, GLuint height, GLuint depth,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keyword">const</span> <a class="code" href="structregen_1_1textures_1_1PerlinNoiseConfig.html">PerlinNoiseConfig</a> &amp;cfg,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        GLint randomSeed=0,</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        GLboolean isSeamless=GL_FALSE);</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keyword">static</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;Texture3D&gt;</a> <a class="code" href="classregen_1_1NoiseTextureLoader.html#a5fd32f72f789abc690dd1f42f66b0cf4">perlin3D</a>(</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      GLuint width, GLuint height, GLuint depth,</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      <span class="keyword">const</span> <a class="code" href="structregen_1_1NoiseTextureLoader_1_1PerlinNoiseConfig.html">PerlinNoiseConfig</a> &amp;cfg,</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      GLint randomSeed=0,</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      GLboolean isSeamless=GL_FALSE);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keyword">static</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;Texture2D&gt;</a> <a class="code" href="classregen_1_1NoiseTextureLoader.html#a470edc1de42bcec44da337c4c3dad615">clouds2D</a>(</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      GLuint width, GLuint height,</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      GLint randomSeed, GLboolean isSeamless);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keyword">static</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;Texture2D&gt;</a> <a class="code" href="classregen_1_1NoiseTextureLoader.html#a784e387cec795fb1563fcdc6edc135c5">wood</a>(</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      GLuint width, GLuint height,</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      GLint randomSeed, GLboolean isSeamless);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Texture2D&gt;</a> clouds2D(</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        GLuint width, GLuint height,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        GLint randomSeed, GLboolean isSeamless);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Texture2D&gt;</a> wood(</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        GLuint width, GLuint height,</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        GLint randomSeed, GLboolean isSeamless);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Texture2D&gt;</a> granite(</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        GLuint width, GLuint height,</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        GLint randomSeed, GLboolean isSeamless);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  };</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;} <span class="comment">// namespace</span></div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keyword">static</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;Texture2D&gt;</a> <a class="code" href="classregen_1_1NoiseTextureLoader.html#aec81fe68ee0299128a63234f7b163907">granite</a>(</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      GLuint width, GLuint height,</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      GLint randomSeed, GLboolean isSeamless);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;};</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* NOISE_TEXTURE_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* NOISE_TEXTURE_H_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 30 2013 12:27:22 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 11 2013 11:01:18 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

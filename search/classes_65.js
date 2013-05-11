@@ -1,9 +1,9 @@
 var searchData=
 [
   ['egocameramanipulator',['EgoCameraManipulator',['../classregen_1_1EgoCameraManipulator.html',1,'regen']]],
-  ['error',['Error',['../classregen_1_1XMLLoader_1_1Error.html',1,'regen::XMLLoader']]],
+  ['error',['Error',['../classregen_1_1xml_1_1Error.html',1,'regen::xml']]],
   ['error',['Error',['../classregen_1_1AssimpImporter_1_1Error.html',1,'regen::AssimpImporter']]],
-  ['error',['Error',['../classregen_1_1TextureLoader_1_1Error.html',1,'regen::TextureLoader']]],
+  ['error',['Error',['../classregen_1_1textures_1_1Error.html',1,'regen::textures']]],
   ['error',['Error',['../classregen_1_1AudioVideoStream_1_1Error.html',1,'regen::AudioVideoStream']]],
   ['error',['Error',['../classregen_1_1Font_1_1Error.html',1,'regen::Font']]],
   ['error',['Error',['../classregen_1_1VideoTexture_1_1Error.html',1,'regen::VideoTexture']]],

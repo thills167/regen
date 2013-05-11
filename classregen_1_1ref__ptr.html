@@ -98,7 +98,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Adds auto reference Management to a pointer.  
+<p>Reference counter template class.  
  <a href="classregen_1_1ref__ptr.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="ref-ptr_8h_source.html">ref-ptr.h</a>&gt;</code></p>
@@ -118,19 +118,33 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1b71a4418b6b92cc64af655de8e68e97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4d3f331ee7199c59356bd2856abcfb4"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1ref__ptr.html#ab4d3f331ee7199c59356bd2856abcfb4">operator-&gt;</a> () const </td></tr>
 <tr class="separator:ab4d3f331ee7199c59356bd2856abcfb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76e2e1be66b13d73c5a0daa059590468"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1ref__ptr.html#a76e2e1be66b13d73c5a0daa059590468">operator&lt;</a> (const <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; T &gt; &amp;other) const </td></tr>
-<tr class="separator:a76e2e1be66b13d73c5a0daa059590468"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d2d3b7d8c9f75ca1c3bf502898a8575"><td class="memTemplParams" colspan="2">template&lt;typename K &gt; </td></tr>
+<tr class="memitem:a6d2d3b7d8c9f75ca1c3bf502898a8575"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classregen_1_1ref__ptr.html#a6d2d3b7d8c9f75ca1c3bf502898a8575">operator&lt;</a> (const <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; K &gt; &amp;other) const </td></tr>
+<tr class="separator:a6d2d3b7d8c9f75ca1c3bf502898a8575"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27f14181413d42e5c19017879c2634c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1ref__ptr.html#a27f14181413d42e5c19017879c2634c4">operator=</a> (<a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; T &gt; other)</td></tr>
 <tr class="separator:a27f14181413d42e5c19017879c2634c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abfda1e9205569326bd3777910d20ad80"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1ref__ptr.html#abfda1e9205569326bd3777910d20ad80">operator==</a> (const <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; T &gt; &amp;other) const </td></tr>
-<tr class="separator:abfda1e9205569326bd3777910d20ad80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dc014578e9f654aa47cfbb0de539be5"><td class="memTemplParams" colspan="2">template&lt;typename K &gt; </td></tr>
+<tr class="memitem:a5dc014578e9f654aa47cfbb0de539be5"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classregen_1_1ref__ptr.html#a5dc014578e9f654aa47cfbb0de539be5">operator==</a> (const <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; K &gt; &amp;other) const </td></tr>
+<tr class="separator:a5dc014578e9f654aa47cfbb0de539be5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1af5a2b75308545630b690825c921a9"><td class="memItemLeft" align="right" valign="top">unsigned int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1ref__ptr.html#ad1af5a2b75308545630b690825c921a9">refCount</a> () const </td></tr>
 <tr class="separator:ad1af5a2b75308545630b690825c921a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:adce623adb3524c797afb084dee011de4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1ref__ptr.html#adce623adb3524c797afb084dee011de4">manage</a> (T *ptr)</td></tr>
-<tr class="separator:adce623adb3524c797afb084dee011de4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac26b25152a25a5fcbbf1541a4c4f7467"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1ref__ptr.html#ac26b25152a25a5fcbbf1541a4c4f7467">alloc</a> ()</td></tr>
+<tr class="separator:ac26b25152a25a5fcbbf1541a4c4f7467"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1434dc44882999c047093f0cfcffae5a"><td class="memTemplParams" colspan="2">template&lt;typename A &gt; </td></tr>
+<tr class="memitem:a1434dc44882999c047093f0cfcffae5a"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classregen_1_1ref__ptr.html#a1434dc44882999c047093f0cfcffae5a">alloc</a> (const A &amp;v0)</td></tr>
+<tr class="separator:a1434dc44882999c047093f0cfcffae5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa07872167813d7bf59375aa8a988982"><td class="memTemplParams" colspan="2">template&lt;typename A , typename B &gt; </td></tr>
+<tr class="memitem:aaa07872167813d7bf59375aa8a988982"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classregen_1_1ref__ptr.html#aaa07872167813d7bf59375aa8a988982">alloc</a> (const A &amp;v0, const B &amp;v1)</td></tr>
+<tr class="separator:aaa07872167813d7bf59375aa8a988982"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a581a45e4322bc615542a0bed1d972744"><td class="memTemplParams" colspan="2">template&lt;typename A , typename B , typename C &gt; </td></tr>
+<tr class="memitem:a581a45e4322bc615542a0bed1d972744"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classregen_1_1ref__ptr.html#a581a45e4322bc615542a0bed1d972744">alloc</a> (const A &amp;v0, const B &amp;v1, const C &amp;v2)</td></tr>
+<tr class="separator:a581a45e4322bc615542a0bed1d972744"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1eb3fc9c396dbc5e9ff76f3bbdf0914"><td class="memTemplParams" colspan="2">template&lt;typename A , typename B , typename C , typename D &gt; </td></tr>
+<tr class="memitem:ad1eb3fc9c396dbc5e9ff76f3bbdf0914"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classregen_1_1ref__ptr.html#ad1eb3fc9c396dbc5e9ff76f3bbdf0914">alloc</a> (const A &amp;v0, const B &amp;v1, const C &amp;v2, const D &amp;v3)</td></tr>
+<tr class="separator:ad1eb3fc9c396dbc5e9ff76f3bbdf0914"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3254ff1ef1db637b07a6f0bf432b1ed9"><td class="memTemplParams" colspan="2">template&lt;typename K &gt; </td></tr>
 <tr class="memitem:a3254ff1ef1db637b07a6f0bf432b1ed9"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classregen_1_1ref__ptr.html#a3254ff1ef1db637b07a6f0bf432b1ed9">upCast</a> (<a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; K &gt; v)</td></tr>
 <tr class="separator:a3254ff1ef1db637b07a6f0bf432b1ed9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -139,8 +153,7 @@ Static Public Member Functions</h2></td></tr>
 <div class="textblock"><h3>template&lt;class T&gt;<br/>
 class regen::ref_ptr&lt; T &gt;</h3>
 
-<p>Adds auto reference Management to a pointer. </p>
-<p>Note that only <a class="el" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr</a> should manage the memory of the data pointer. Else you get double free corruption. Do not instantiate two <a class="el" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr</a> with the same data pointer. Copying a <a class="el" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr</a> is valid. </p>
+<p>Reference counter template class. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a56e3ab3769666ea60ffea7677c1beaa6"></a>
 <div class="memitem">
@@ -191,7 +204,7 @@ template&lt;class T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Copy constructor. Takes a reference on the data pointer of the other <a class="el" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr</a>. </p>
+<p>Copy constructor. Takes a reference on the data pointer of the other <a class="el" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr</a>. </p>
 
 </div>
 </div>
@@ -220,7 +233,7 @@ template&lt;typename K &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Type-safe down-casting constructor. Takes a reference on the data pointer of the other <a class="el" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr</a>. </p>
+<p>Type-safe down-casting constructor. Takes a reference on the data pointer of the other <a class="el" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr</a>. </p>
 
 </div>
 </div>
@@ -251,6 +264,231 @@ template&lt;class T&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ac26b25152a25a5fcbbf1541a4c4f7467"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt;T&gt; <a class="el" href="classregen_1_1ref__ptr.html">regen::ref_ptr</a>&lt; T &gt;::alloc </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Create reference counted T* instance by calling new without arguments. </p>
+<dl class="section return"><dt>Returns</dt><dd>references counted instance of T </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1434dc44882999c047093f0cfcffae5a"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<div class="memtemplate">
+template&lt;typename A &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt;T&gt; <a class="el" href="classregen_1_1ref__ptr.html">regen::ref_ptr</a>&lt; T &gt;::alloc </td>
+          <td>(</td>
+          <td class="paramtype">const A &amp;&#160;</td>
+          <td class="paramname"><em>v0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Create reference counted T* instance by calling new provided argument. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v0</td><td>the first constructor argument. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>references counted instance of T </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aaa07872167813d7bf59375aa8a988982"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<div class="memtemplate">
+template&lt;typename A , typename B &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt;T&gt; <a class="el" href="classregen_1_1ref__ptr.html">regen::ref_ptr</a>&lt; T &gt;::alloc </td>
+          <td>(</td>
+          <td class="paramtype">const A &amp;&#160;</td>
+          <td class="paramname"><em>v0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const B &amp;&#160;</td>
+          <td class="paramname"><em>v1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Create reference counted T* instance by calling new provided arguments. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v0</td><td>the first constructor argument. </td></tr>
+    <tr><td class="paramname">v1</td><td>the second constructor argument. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>references counted instance of T </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a581a45e4322bc615542a0bed1d972744"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<div class="memtemplate">
+template&lt;typename A , typename B , typename C &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt;T&gt; <a class="el" href="classregen_1_1ref__ptr.html">regen::ref_ptr</a>&lt; T &gt;::alloc </td>
+          <td>(</td>
+          <td class="paramtype">const A &amp;&#160;</td>
+          <td class="paramname"><em>v0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const B &amp;&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const C &amp;&#160;</td>
+          <td class="paramname"><em>v2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Create reference counted T* instance by calling new provided arguments. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v0</td><td>the first constructor argument. </td></tr>
+    <tr><td class="paramname">v1</td><td>the second constructor argument. </td></tr>
+    <tr><td class="paramname">v2</td><td>the third constructor argument. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>references counted instance of T </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad1eb3fc9c396dbc5e9ff76f3bbdf0914"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<div class="memtemplate">
+template&lt;typename A , typename B , typename C , typename D &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt;T&gt; <a class="el" href="classregen_1_1ref__ptr.html">regen::ref_ptr</a>&lt; T &gt;::alloc </td>
+          <td>(</td>
+          <td class="paramtype">const A &amp;&#160;</td>
+          <td class="paramname"><em>v0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const B &amp;&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const C &amp;&#160;</td>
+          <td class="paramname"><em>v2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const D &amp;&#160;</td>
+          <td class="paramname"><em>v3</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Create reference counted T* instance by calling new provided arguments. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v0</td><td>the first constructor argument. </td></tr>
+    <tr><td class="paramname">v1</td><td>the second constructor argument. </td></tr>
+    <tr><td class="paramname">v2</td><td>the third constructor argument. </td></tr>
+    <tr><td class="paramname">v3</td><td>the fourth constructor argument. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>references counted instance of T </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a1b71a4418b6b92cc64af655de8e68e97"></a>
 <div class="memitem">
 <div class="memproto">
@@ -273,34 +511,7 @@ template&lt;class T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns referenced pointer. Do not delete, this is done in <a class="el" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr</a> destructor. Returns NULL if no data pointer set. </p>
-
-</div>
-</div>
-<a class="anchor" id="adce623adb3524c797afb084dee011de4"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt;T&gt; <a class="el" href="classregen_1_1ref__ptr.html">regen::ref_ptr</a>&lt; T &gt;::manage </td>
-          <td>(</td>
-          <td class="paramtype">T *&#160;</td>
-          <td class="paramname"><em>ptr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Manage a pointer with reference counting. You should never add the same pointer twice with <a class="el" href="classregen_1_1ref__ptr.html#adce623adb3524c797afb084dee011de4">manage()</a>. </p>
+<p>Returns referenced pointer. Do not delete, this is done in <a class="el" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr</a> destructor. Returns NULL if no data pointer set. </p>
 
 </div>
 </div>
@@ -330,11 +541,13 @@ template&lt;class T&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a76e2e1be66b13d73c5a0daa059590468"></a>
+<a class="anchor" id="a6d2d3b7d8c9f75ca1c3bf502898a8575"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class T&gt; </div>
+<div class="memtemplate">
+template&lt;typename K &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -342,7 +555,7 @@ template&lt;class T&gt; </div>
         <tr>
           <td class="memname">bool <a class="el" href="classregen_1_1ref__ptr.html">regen::ref_ptr</a>&lt; T &gt;::operator&lt; </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; K &gt; &amp;&#160;</td>
           <td class="paramname"><em>other</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -353,7 +566,7 @@ template&lt;class T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Compares <a class="el" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr</a> by data pointer. </p>
+<p>Compares <a class="el" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr</a> by data pointer. </p>
 
 </div>
 </div>
@@ -380,15 +593,17 @@ template&lt;class T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Set from other <a class="el" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr</a>, both will share same data and reference counter afterwards. Old data gets unreferenced. </p>
+<p>Set from other <a class="el" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr</a>, both will share same data and reference counter afterwards. Old data gets unreferenced. </p>
 
 </div>
 </div>
-<a class="anchor" id="abfda1e9205569326bd3777910d20ad80"></a>
+<a class="anchor" id="a5dc014578e9f654aa47cfbb0de539be5"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class T&gt; </div>
+<div class="memtemplate">
+template&lt;typename K &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -396,7 +611,7 @@ template&lt;class T&gt; </div>
         <tr>
           <td class="memname">bool <a class="el" href="classregen_1_1ref__ptr.html">regen::ref_ptr</a>&lt; T &gt;::operator== </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; K &gt; &amp;&#160;</td>
           <td class="paramname"><em>other</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -407,7 +622,7 @@ template&lt;class T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Compares <a class="el" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr</a> by data pointer. </p>
+<p>Compares <a class="el" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr</a> by data pointer. </p>
 
 </div>
 </div>
@@ -479,7 +694,7 @@ template&lt;typename K &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 30 2013 12:27:22 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 11 2013 11:01:20 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

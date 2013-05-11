@@ -1,10 +1,10 @@
 <map id="regen::ParticleCloud" name="regen::ParticleCloud">
-<area shape="rect" id="node8" href="$classregen_1_1ParticleRain.html" title="Rain streak particles emitted from a cloud." alt="" coords="5,453,139,480"/>
-<area shape="rect" id="node9" href="$classregen_1_1ParticleSnow.html" title="Snow flake particles emitted from a cloud." alt="" coords="163,453,301,480"/>
-<area shape="rect" id="node2" href="$classregen_1_1Particles.html" title="Point sprite particle system." alt="" coords="95,304,208,331"/>
-<area shape="rect" id="node3" href="$classregen_1_1Mesh.html" title="A collection of vertices, edges and faces that defines the shape of an object in 3D space..." alt="" coords="62,229,156,256"/>
-<area shape="rect" id="node4" href="$classregen_1_1ShaderInputState.html" title="Container State for shader input data." alt="" coords="8,155,171,181"/>
-<area shape="rect" id="node5" href="$classregen_1_1State.html" title="Base class for states." alt="" coords="83,80,176,107"/>
-<area shape="rect" id="node6" href="$classregen_1_1EventObject.html" title="Allows to integrate events into subclasses." alt="" coords="114,5,248,32"/>
-<area shape="rect" id="node7" href="$classregen_1_1Animation.html" title="Abstract base class for animations." alt="" coords="195,155,315,181"/>
+<area shape="rect" id="node8" href="$classregen_1_1ParticleRain.html" title="Rain streak particles emitted from a cloud." alt="" coords="61,379,195,405"/>
+<area shape="rect" id="node9" href="$classregen_1_1ParticleSnow.html" title="Snow flake particles emitted from a cloud." alt="" coords="219,379,357,405"/>
+<area shape="rect" id="node2" href="$classregen_1_1Particles.html" title="Point sprite particle system." alt="" coords="151,229,264,256"/>
+<area shape="rect" id="node3" href="$classregen_1_1Mesh.html" title="A collection of vertices, edges and faces that defines the shape of an object in 3D space..." alt="" coords="95,155,189,181"/>
+<area shape="rect" id="node4" href="$classregen_1_1State.html" title="Base class for states." alt="" coords="5,80,99,107"/>
+<area shape="rect" id="node5" href="$classregen_1_1EventObject.html" title="Allows to integrate events into subclasses." alt="" coords="95,5,229,32"/>
+<area shape="rect" id="node7" href="$classregen_1_1Animation.html" title="Abstract base class for animations." alt="" coords="215,155,335,181"/>
+<area shape="rect" id="node6" href="$classregen_1_1HasInput.html" title="Interface for State&#39;s with input." alt="" coords="123,80,237,107"/>
 </map>

@@ -1,7 +1,6 @@
 var searchData=
 [
   ['centeratorigin',['centerAtOrigin',['../structregen_1_1Rectangle_1_1Config.html#ac354505de47a2b7cac31672514531cde',1,'regen::Rectangle::Config']]],
-  ['channel',['channel',['../structregen_1_1ShaderTextureLocation.html#a51b21ee57c26ff8814967125a2b2bbb5',1,'regen::ShaderTextureLocation']]],
   ['choices_5f',['choices_',['../structregen_1_1PathChoice.html#a4bb6361a21418f3ef5c325fac59b66d8',1,'regen::PathChoice']]],
   ['clearcolor',['clearColor',['../structregen_1_1ClearColorState_1_1Data.html#a63af93adb04dc2cabc986bf27a605647',1,'regen::ClearColorState::Data']]],
   ['colorbuffers',['colorBuffers',['../structregen_1_1ClearColorState_1_1Data.html#afd6bd5a810284843235c8f20e0cc3009',1,'regen::ClearColorState::Data::colorBuffers()'],['../classregen_1_1DrawBufferState.html#adcd57d94e291b004d50fce07c4726a43',1,'regen::DrawBufferState::colorBuffers()']]],

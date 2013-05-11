@@ -1,5 +1,5 @@
 <map id="regen::BlitTexToScreen" name="regen::BlitTexToScreen">
-<area shape="rect" id="node2" href="$classregen_1_1BlitToScreen.html" title="Blits a FrameBufferObject color attachment to screen." alt="" coords="15,155,152,181"/>
+<area shape="rect" id="node2" href="$classregen_1_1BlitToScreen.html" title="Blits a FBO color attachment to screen." alt="" coords="15,155,152,181"/>
 <area shape="rect" id="node3" href="$classregen_1_1State.html" title="Base class for states." alt="" coords="37,80,131,107"/>
 <area shape="rect" id="node4" href="$classregen_1_1EventObject.html" title="Allows to integrate events into subclasses." alt="" coords="17,5,151,32"/>
 </map>

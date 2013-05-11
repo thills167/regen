@@ -103,95 +103,96 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;regen/states/fullscreen-pass.h&gt;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;regen/states/texture-state.h&gt;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;regen/states/fbo-state.h&gt;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;regen/utility/interfaces.h&gt;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span>regen {</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="code" href="classregen_1_1Filter.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classregen_1_1Filter.html" title="Apply a filter on input Texture.">Filter</a> : <span class="keyword">public</span> <a class="code" href="classregen_1_1FullscreenPass.html" title="State that updates each texel of the active render target.">FullscreenPass</a></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="code" href="structregen_1_1Filter_1_1Output.html">   26</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structregen_1_1Filter_1_1Output.html" title="Ping-Pong filter output target.">Output</a> {</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="structregen_1_1Filter_1_1Output.html#a5674b1f83971deb2ad8bbaff855318c2">   28</a></span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;FrameBufferObject&gt;</a> <a class="code" href="structregen_1_1Filter_1_1Output.html#a5674b1f83971deb2ad8bbaff855318c2">fbo_</a>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="code" href="structregen_1_1Filter_1_1Output.html#abe6f5bee42b3bab0acba3a12a11c1c50">   30</a></span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;Texture&gt;</a> <a class="code" href="structregen_1_1Filter_1_1Output.html#abe6f5bee42b3bab0acba3a12a11c1c50">tex0_</a>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="code" href="structregen_1_1Filter_1_1Output.html#a43306dfa69f6c9abed3b3920bde2f860">   32</a></span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;Texture&gt;</a> <a class="code" href="structregen_1_1Filter_1_1Output.html#a43306dfa69f6c9abed3b3920bde2f860">tex1_</a>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  };</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <a class="code" href="classregen_1_1Filter.html#aabf76fd14e1fa0aa0e2b9662dc3255cb">Filter</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;<a class="code" href="classregen_1_1HasShader.html#aa82a21cf779df2a17237ddac6e7a17ef">shaderKey</a>, GLfloat <a class="code" href="classregen_1_1Filter.html#a89093999506246bfb2e9b0bfe5321912">scaleFactor</a>=1.0);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1Filter.html#af609ac017cbafa5e7f6401e1ace10e61">set_bindInput</a>(GLboolean v);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1Filter.html#abb92d38bde676561253ee86e82b8b536">set_format</a>(GLenum v);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1Filter.html#a61d3a1cdbba88b67d5a4e81125add3e0">set_internalFormat</a>(GLenum v);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1Filter.html#a3aff907ff61b63dd2980bdb8f3f4919f">set_pixelType</a>(GLenum v);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  GLfloat <a class="code" href="classregen_1_1Filter.html#a89093999506246bfb2e9b0bfe5321912">scaleFactor</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;Output&gt;</a>&amp; <a class="code" href="classregen_1_1Filter.html#a5fc09e48d82557ca154c76d9dbe15709">output</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  GLenum <a class="code" href="classregen_1_1Filter.html#aeda1f26046219f03457c4edd20bc6642">outputAttachment</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1Filter.html#ac11dddc73d183872f940289f369ab95b">setInput</a>(<span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;Texture&gt;</a> &amp;input);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1Filter.html#ac11dddc73d183872f940289f369ab95b">setInput</a>(<span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;Output&gt;</a> &amp;lastOutput, GLenum lastAttachment);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;Texture&gt;</a> input_;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;Output&gt;</a> out_;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  GLenum outputAttachment_;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;DrawBufferState&gt;</a> drawBufferState_;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;TextureState&gt;</a> inputState_;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderState&gt;</a> shader_;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  GLfloat scaleFactor_;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  GLenum format_;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  GLenum internalFormat_;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  GLenum pixelType_;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  GLboolean bindInput_;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keywordtype">void</span> set_input(<span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;Texture&gt;</a> &amp;input);</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;Texture&gt;</a> createTexture();</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;};</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span>regen {</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="classregen_1_1Filter.html">   19</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classregen_1_1Filter.html" title="Apply a filter on input Texture.">Filter</a> : <span class="keyword">public</span> <a class="code" href="classregen_1_1FullscreenPass.html" title="State that updates each texel of the active render target.">FullscreenPass</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="code" href="structregen_1_1Filter_1_1Output.html">   25</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structregen_1_1Filter_1_1Output.html" title="Ping-Pong filter output target.">Output</a> {</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="code" href="structregen_1_1Filter_1_1Output.html#a9c8f733558a6425b691a8abb06a51d5f">   27</a></span>&#160;      <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;FBO&gt;</a> <a class="code" href="structregen_1_1Filter_1_1Output.html#a9c8f733558a6425b691a8abb06a51d5f">fbo_</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="code" href="structregen_1_1Filter_1_1Output.html#abe6f5bee42b3bab0acba3a12a11c1c50">   29</a></span>&#160;      <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Texture&gt;</a> <a class="code" href="structregen_1_1Filter_1_1Output.html#abe6f5bee42b3bab0acba3a12a11c1c50">tex0_</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="code" href="structregen_1_1Filter_1_1Output.html#a43306dfa69f6c9abed3b3920bde2f860">   31</a></span>&#160;      <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Texture&gt;</a> <a class="code" href="structregen_1_1Filter_1_1Output.html#a43306dfa69f6c9abed3b3920bde2f860">tex1_</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    };</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="classregen_1_1Filter.html#aabf76fd14e1fa0aa0e2b9662dc3255cb">Filter</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;<a class="code" href="classregen_1_1HasShader.html#aa82a21cf779df2a17237ddac6e7a17ef">shaderKey</a>, GLfloat <a class="code" href="classregen_1_1Filter.html#a89093999506246bfb2e9b0bfe5321912">scaleFactor</a>=1.0);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1Filter.html#af609ac017cbafa5e7f6401e1ace10e61">set_bindInput</a>(GLboolean v);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1Filter.html#abb92d38bde676561253ee86e82b8b536">set_format</a>(GLenum v);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1Filter.html#a61d3a1cdbba88b67d5a4e81125add3e0">set_internalFormat</a>(GLenum v);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1Filter.html#a3aff907ff61b63dd2980bdb8f3f4919f">set_pixelType</a>(GLenum v);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    GLfloat <a class="code" href="classregen_1_1Filter.html#a89093999506246bfb2e9b0bfe5321912">scaleFactor</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Output&gt;</a>&amp; <a class="code" href="classregen_1_1Filter.html#a5fc09e48d82557ca154c76d9dbe15709">output</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    GLenum <a class="code" href="classregen_1_1Filter.html#aeda1f26046219f03457c4edd20bc6642">outputAttachment</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1Filter.html#ac11dddc73d183872f940289f369ab95b">setInput</a>(<span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Texture&gt;</a> &amp;input);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1Filter.html#ac11dddc73d183872f940289f369ab95b">setInput</a>(<span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Output&gt;</a> &amp;lastOutput, GLenum lastAttachment);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Texture&gt;</a> input_;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Output&gt;</a> out_;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    GLenum outputAttachment_;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;DrawBufferState&gt;</a> drawBufferState_;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;TextureState&gt;</a> inputState_;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;ShaderState&gt;</a> shader_;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    GLfloat scaleFactor_;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    GLenum format_;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    GLenum internalFormat_;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    GLenum pixelType_;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    GLboolean bindInput_;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">void</span> set_input(<span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Texture&gt;</a> &amp;input);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Texture&gt;</a> createTexture();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  };</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;} <span class="comment">// end namespace</span></div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-<div class="line"><a name="l00106"></a><span class="lineno"><a class="code" href="classregen_1_1FilterSequence.html">  106</a></span>&#160;<span class="keyword">class </span><a class="code" href="classregen_1_1FilterSequence.html" title="Filters input texture by applying a sequence of filters to the input.">FilterSequence</a> : <span class="keyword">public</span> <a class="code" href="classregen_1_1State.html" title="Base class for states.">State</a>, <span class="keyword">public</span> <a class="code" href="classregen_1_1Resizable.html" title="interface for resizable objects.">Resizable</a></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;{</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <a class="code" href="classregen_1_1FilterSequence.html#a0b93a1616632447987bb44d1a3d0dad1">FilterSequence</a>(<span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;Texture&gt;</a> &amp;<a class="code" href="classregen_1_1FilterSequence.html#a3f8e40a1298006a56f798a970e8151ad">input</a>, GLboolean bindInput=GL_TRUE);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1FilterSequence.html#ad0442808bfe6dc52614803ef5d8699b5">createShader</a>(<a class="code" href="structregen_1_1ShaderState_1_1Config.html" title="Configures a Shader object.">ShaderState::Config</a> &amp;cfg);</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1FilterSequence.html#a9e556bf3a066ec6655bde63cb4417642">resize</a>();</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1FilterSequence.html#a9bc3e71d9d525d8950216f5cfbc6d47b">setClearColor</a>(<span class="keyword">const</span> <a class="code" href="classregen_1_1Vec4.html">Vec4f</a> &amp;v);</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1FilterSequence.html#a6605945a6ce786aaac1a964dc3dee664">set_format</a>(GLenum v);</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1FilterSequence.html#a10470493be20fcbb59d2fc0cb65ea001">set_internalFormat</a>(GLenum v);</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1FilterSequence.html#a98f38d6108abd1ab2400404104707bc1">set_pixelType</a>(GLenum v);</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1FilterSequence.html#aad6cea695b252ccce82e09e7aa1dd006">addFilter</a>(<span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;Filter&gt;</a> &amp;f);</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;Texture&gt;</a>&amp; <a class="code" href="classregen_1_1FilterSequence.html#a3f8e40a1298006a56f798a970e8151ad">input</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;Texture&gt;</a>&amp; <a class="code" href="classregen_1_1FilterSequence.html#acad8d199cc83f46de73cc6d5117c310b">output</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  <span class="comment">// override</span></div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1FilterSequence.html#ad413969e4b10cd6bacf25377f4aa5679">enable</a>(<a class="code" href="classregen_1_1RenderState.html" title="Handles server-side GL states.">RenderState</a> *state);</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  list&lt; ref_ptr&lt;Filter&gt; &gt; filterSequence_;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;Texture&gt;</a> input_;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInput2f&gt;</a> viewport_;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInput2f&gt;</a> inverseViewport_;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  GLboolean clearFirstFilter_;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  <a class="code" href="classregen_1_1Vec4.html">Vec4f</a> clearColor_;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  GLboolean bindInput_;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  GLenum format_;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  GLenum internalFormat_;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  GLenum pixelType_;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;};</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;} <span class="comment">// end namespace</span></div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* FILTER_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="keyword">namespace </span>regen {</div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="code" href="classregen_1_1FilterSequence.html">  107</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classregen_1_1FilterSequence.html" title="Filters input texture by applying a sequence of filters to the input.">FilterSequence</a> : <span class="keyword">public</span> <a class="code" href="classregen_1_1State.html" title="Base class for states.">State</a>, <span class="keyword">public</span> <a class="code" href="classregen_1_1Resizable.html" title="interface for resizable objects.">Resizable</a></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <a class="code" href="classregen_1_1FilterSequence.html#a0b93a1616632447987bb44d1a3d0dad1">FilterSequence</a>(<span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Texture&gt;</a> &amp;<a class="code" href="classregen_1_1FilterSequence.html#a3f8e40a1298006a56f798a970e8151ad">input</a>, GLboolean bindInput=GL_TRUE);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1FilterSequence.html#a201694098d7720c2838f08d111f08a1b">createShader</a>(<a class="code" href="structregen_1_1StateConfig.html" title="Configures a Shader object.">StateConfig</a> &amp;cfg);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1FilterSequence.html#a9e556bf3a066ec6655bde63cb4417642">resize</a>();</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1FilterSequence.html#a9bc3e71d9d525d8950216f5cfbc6d47b">setClearColor</a>(<span class="keyword">const</span> <a class="code" href="classregen_1_1Vec4.html">Vec4f</a> &amp;v);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1FilterSequence.html#a6605945a6ce786aaac1a964dc3dee664">set_format</a>(GLenum v);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1FilterSequence.html#a10470493be20fcbb59d2fc0cb65ea001">set_internalFormat</a>(GLenum v);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1FilterSequence.html#a98f38d6108abd1ab2400404104707bc1">set_pixelType</a>(GLenum v);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1FilterSequence.html#aad6cea695b252ccce82e09e7aa1dd006">addFilter</a>(<span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Filter&gt;</a> &amp;f);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Texture&gt;</a>&amp; <a class="code" href="classregen_1_1FilterSequence.html#a3f8e40a1298006a56f798a970e8151ad">input</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Texture&gt;</a>&amp; <a class="code" href="classregen_1_1FilterSequence.html#acad8d199cc83f46de73cc6d5117c310b">output</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="comment">// override</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1FilterSequence.html#ad413969e4b10cd6bacf25377f4aa5679">enable</a>(<a class="code" href="classregen_1_1RenderState.html" title="Handles server-side GL states.">RenderState</a> *state);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    list&lt; ref_ptr&lt;Filter&gt; &gt; filterSequence_;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Texture&gt;</a> input_;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;ShaderInput2f&gt;</a> viewport_;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;ShaderInput2f&gt;</a> inverseViewport_;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    GLboolean clearFirstFilter_;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <a class="code" href="classregen_1_1Vec4.html">Vec4f</a> clearColor_;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    GLboolean bindInput_;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    GLenum format_;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    GLenum internalFormat_;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    GLenum pixelType_;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  };</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;} <span class="comment">// end namespace</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* FILTER_H_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 30 2013 12:27:22 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 11 2013 11:01:18 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

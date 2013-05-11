@@ -1,10 +1,10 @@
 var searchData=
 [
   ['id_5f',['id_',['../structregen_1_1TextureBind.html#a442b3ce06cf140111ab76c115c0d85f1',1,'regen::TextureBind']]],
-  ['in_5f',['in_',['../structregen_1_1ShaderInputState_1_1Named.html#a4f6e6e1b936a7425779cecf15f0f60c6',1,'regen::ShaderInputState::Named']]],
+  ['in_5f',['in_',['../structregen_1_1NamedShaderInput.html#ad155e258f4862900609b28cf7651cf7e',1,'regen::NamedShaderInput']]],
   ['inner_5f',['inner_',['../structregen_1_1PatchLevels.html#a1683437f8d5e24746364e2df987a1069',1,'regen::PatchLevels']]],
   ['input',['input',['../structregen_1_1ShaderInputLocation.html#a2f05c88964d04e69bda8bea1767242b2',1,'regen::ShaderInputLocation']]],
-  ['inputs_5f',['inputs_',['../structregen_1_1ShaderState_1_1Config.html#a6a6201449fd81525b469d2832612400d',1,'regen::ShaderState::Config']]],
+  ['inputs_5f',['inputs_',['../structregen_1_1StateConfig.html#a86a2b4695d5418511cd5895513ed6187',1,'regen::StateConfig']]],
   ['instanceid',['instanceId',['../classregen_1_1PickingGeom_1_1PickEvent.html#af9adab13e69588e3662d682359537588',1,'regen::PickingGeom::PickEvent']]],
   ['interpolation',['interpolation',['../structregen_1_1GLSLInputOutputProcessor_1_1InputOutput.html#a2b3e9ea773875914a958f7ab5f4965d0',1,'regen::GLSLInputOutputProcessor::InputOutput']]],
   ['interpolationkey',['interpolationKey',['../structregen_1_1MeshAnimation_1_1Interpoation.html#a7ee46ef4f3ac95ad75dc90e74e69241a',1,'regen::MeshAnimation::Interpoation']]],

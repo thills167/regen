@@ -95,13 +95,13 @@ Creating a window</h1>
 </div><!-- fragment --><h1><a class="anchor" id="tut_fbo"></a>
 Creating a render target</h1>
 <p>Instantiate the FBO. Specify texture dimensions and depth texture parameters. If you set them to anything but GL_NONE the depth texture is automatically attached. </p>
-<div class="fragment"><div class="line">FrameBufferObject *fbo = <span class="keyword">new</span> FrameBufferObject(</div>
+<div class="fragment"><div class="line">FBO *fbo = <span class="keyword">new</span> FBO(</div>
 <div class="line">    width, height, 1,</div>
 <div class="line">    GL_TEXTURE_2D,</div>
 <div class="line">    GL_DEPTH_COMPONENT24,</div>
 <div class="line">    GL_UNSIGNED_BYTE);</div>
 <div class="line">ref_ptr&lt;FBOState&gt; fboState = ref_ptr&lt;FBOState&gt;::manage(</div>
-<div class="line">    <span class="keyword">new</span> FBOState(ref_ptr&lt;FrameBufferObject&gt;::manage(fbo)));</div>
+<div class="line">    <span class="keyword">new</span> FBOState(ref_ptr&lt;FBO&gt;::manage(fbo)));</div>
 </div><!-- fragment --><p>Add a color texture to the render target. </p>
 <div class="fragment"><div class="line">ref_ptr&lt;Texture&gt; colorAttachment = fbo-&gt;addTexture(1,</div>
 <div class="line">    GL_TEXTURE_2D,</div>
@@ -145,7 +145,7 @@ Rendering a Cube</h1>
 <div class="line">    <span class="keyword">new</span> StateNode(ref_ptr&lt;State&gt;::cast(cube)));</div>
 <div class="line">fboState-&gt;addChild(meshNode);</div>
 </div><!-- fragment --><p>Configure the shader using the hierarchical tree structure. </p>
-<div class="fragment"><div class="line">ShaderConfigurer shaderConfigurer;</div>
+<div class="fragment"><div class="line">StateConfigurer shaderConfigurer;</div>
 <div class="line">shaderConfigurer.addNode(meshNode.get());</div>
 </div><!-- fragment --><p>Finally compile the shader that is used to render the cube. Note that the 'mesh' shader is used here. It can be considered as some kind of Uber shader that blanks out a lot of unused functionality using the shader configuration generated above. </p>
 <div class="fragment"><div class="line">shaderState-&gt;createShader(shaderConfigurer.cfg(), <span class="stringliteral">&quot;mesh&quot;</span>);</div>
@@ -193,13 +193,13 @@ Deferred Shading</h1>
 <div class="line">    <span class="keyword">new</span> StateNode(ref_ptr&lt;State&gt;::cast(shading)));</div>
 <div class="line">rootNode-&gt;addChild(shadingNode);</div>
 <div class="line"></div>
-<div class="line">ShaderConfigurer shaderConfigurer;</div>
+<div class="line">StateConfigurer shaderConfigurer;</div>
 <div class="line">shaderConfigurer.addNode(shadingNode.get());</div>
 <div class="line">shading-&gt;createShader(shaderConfigurer.cfg());</div>
 </div><!-- fragment --> </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 30 2013 12:27:22 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 11 2013 11:01:18 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

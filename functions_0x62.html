@@ -136,7 +136,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classregen_1_1TextureCube.html#a0ee559b519bdbc94105bcd43d39d155ea35c35d25f0859cd6248a77c0e0357734">regen::TextureCube</a>
 </li>
 <li>baseFrequency
-: <a class="el" href="structregen_1_1NoiseTextureLoader_1_1PerlinNoiseConfig.html#af44d0478fba1fe5c2a762ee046c07bf2">regen::NoiseTextureLoader::PerlinNoiseConfig</a>
+: <a class="el" href="structregen_1_1textures_1_1PerlinNoiseConfig.html#afcb5008d1c0a1d1f74acd8df5b8cee8a">regen::textures::PerlinNoiseConfig</a>
+</li>
+<li>begin()
+: <a class="el" href="classregen_1_1ShaderInputContainer.html#a2eb20210e1a3fd3077e459d345be289b">regen::ShaderInputContainer</a>
+, <a class="el" href="classregen_1_1Texture.html#ae121c14f5591d5999bb20bd5cf01fed4">regen::Texture</a>
+, <a class="el" href="classregen_1_1Mesh.html#a69f8487d7f4ed7e529e88e211a186b24">regen::Mesh</a>
 </li>
 <li>beginTransformFeedback()
 : <a class="el" href="classregen_1_1RenderState.html#ae8cfc4be856297e7e143b474333200c6">regen::RenderState</a>
@@ -160,10 +165,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="structregen_1_1Mat4f.html#a5a57741a3ff7310cea01422f9af16941">regen::Mat4f</a>
 </li>
 <li>bind()
-: <a class="el" href="classregen_1_1RenderBufferObject.html#ad698b89af41e4fc4a3646ae7daac9cbf">regen::RenderBufferObject</a>
+: <a class="el" href="classregen_1_1RBO.html#a23628bd2112df0d0d30c7d9bce08a397">regen::RBO</a>
 </li>
 <li>bindBlock()
-: <a class="el" href="classregen_1_1UniformBufferObject.html#acad169512e1055fca2d4934cb57db98e">regen::UniformBufferObject</a>
+: <a class="el" href="classregen_1_1UBO.html#a56e705a23839cfc30327e565ebd61d80">regen::UBO</a>
 </li>
 <li>bits()
 : <a class="el" href="classregen_1_1AudioBuffer.html#a78e7e0c1d8cf62ed29b9f7f29ae203dc">regen::AudioBuffer</a>
@@ -193,16 +198,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classregen_1_1BlendState.html#adaa10aee02a50a4645656424adf5f392">regen::BlendState</a>
 </li>
 <li>blitCopy()
-: <a class="el" href="classregen_1_1FrameBufferObject.html#af1790ab26e1d807c6fbcaa1bd364587d">regen::FrameBufferObject</a>
+: <a class="el" href="classregen_1_1FBO.html#ade21f2ba6262dd1383229449927cbe00">regen::FBO</a>
 </li>
 <li>blitCopyToScreen()
-: <a class="el" href="classregen_1_1FrameBufferObject.html#a61f15482fb2cb3ebab5465fb462c8648">regen::FrameBufferObject</a>
+: <a class="el" href="classregen_1_1FBO.html#a35bce9fde53694fffb24e8dfaf8da934">regen::FBO</a>
 </li>
 <li>BlitTexToScreen()
-: <a class="el" href="classregen_1_1BlitTexToScreen.html#a81d642a8ce3b4ada80ac487f6716a2ae">regen::BlitTexToScreen</a>
+: <a class="el" href="classregen_1_1BlitTexToScreen.html#a746cfce63cee5607db130a9e4ddae872">regen::BlitTexToScreen</a>
 </li>
 <li>BlitToScreen()
-: <a class="el" href="classregen_1_1BlitToScreen.html#a0773aeefa38192f76404b0ba9b23efc9">regen::BlitToScreen</a>
+: <a class="el" href="classregen_1_1BlitToScreen.html#a8f4f2b1e8010ab0b31f58687813e12ca">regen::BlitToScreen</a>
 </li>
 <li>blurAmount()
 : <a class="el" href="classregen_1_1Tonemap.html#a9abe48ec1042045dd68e52b21e076607">regen::Tonemap</a>
@@ -217,7 +222,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classregen_1_1AnimationNode.html#a8ae55d58987bb99bb4d124e9d8bd4219">regen::AnimationNode</a>
 </li>
 <li>Bones()
-: <a class="el" href="classregen_1_1Bones.html#a2cc659b19c74e01fcc907e0d5bb21002">regen::Bones</a>
+: <a class="el" href="classregen_1_1Bones.html#afa4e15721bfb80d21f1cda4ad014fa54">regen::Bones</a>
 </li>
 <li>boneTransformationMatrix()
 : <a class="el" href="classregen_1_1AnimationNode.html#a27a88bda4e32b9fd8662cdf0ff17fc23">regen::AnimationNode</a>
@@ -238,22 +243,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classregen_1_1BuddyAllocator.html#a6c188442a57473b0d68c4bd6788095f8">regen::BuddyAllocator</a>
 </li>
 <li>buffer()
-: <a class="el" href="classregen_1_1VertexAttribute.html#a24db43fc4e9a5f65359c65b9cd2229dd">regen::VertexAttribute</a>
+: <a class="el" href="classregen_1_1ShaderInput.html#af6ad976626e3b748239380e9accfebb4">regen::ShaderInput</a>
 </li>
 <li>buffer_
 : <a class="el" href="structregen_1_1BufferRange.html#a2f376494af02196b09a62a3d45fb339b">regen::BufferRange</a>
 </li>
 <li>bufferID()
-: <a class="el" href="structregen_1_1VertexBufferObject_1_1Reference.html#a83a6fe628146424474d04bbc73c59702">regen::VertexBufferObject::Reference</a>
-</li>
-<li>bufferIndex()
-: <a class="el" href="classregen_1_1BufferObject.html#aa4019026e1c6c09398d4926ddd1a0c71">regen::BufferObject</a>
+: <a class="el" href="structregen_1_1VBO_1_1Reference.html#ad8996fb751cb44204c88d212b2e87cf5">regen::VBO::Reference</a>
 </li>
 <li>bufferIterator()
-: <a class="el" href="classregen_1_1VertexAttribute.html#aa492adc226d3570ce2434155f6977c5b">regen::VertexAttribute</a>
-</li>
-<li>BufferObject()
-: <a class="el" href="classregen_1_1BufferObject.html#a5be6e49b61ea8e20afcb2b5c9d4d8473">regen::BufferObject</a>
+: <a class="el" href="classregen_1_1ShaderInput.html#a940572bfc2ac175fca7c59ffac8298b0">regen::ShaderInput</a>
 </li>
 <li>BufferRange()
 : <a class="el" href="structregen_1_1BufferRange.html#aece79a3a2658ac961e557a2f8f9adbed">regen::BufferRange</a>
@@ -262,7 +261,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="structregen_1_1DrawBuffers.html#a94b9e1b0c1a30382992be811694444b7">regen::DrawBuffers</a>
 </li>
 <li>bufferStamp()
-: <a class="el" href="classregen_1_1VertexAttribute.html#a1e3af055f7a7621008743932efd97c7e">regen::VertexAttribute</a>
+: <a class="el" href="classregen_1_1ShaderInput.html#a7634f85e360c02e7af591c41454951c8">regen::ShaderInput</a>
 </li>
 <li>Button
 : <a class="el" href="classregen_1_1Application.html#ad172b0960875ad9d7f1208549ea2f31d">regen::Application</a>
@@ -280,7 +279,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 30 2013 12:27:23 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 11 2013 11:01:22 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

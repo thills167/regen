@@ -112,79 +112,84 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;regen/animations/animation-node.h&gt;</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">namespace </span>regen {</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="code" href="classregen_1_1AssimpImporter.html">   30</a></span>&#160;<span class="keyword">class </span><a class="code" href="classregen_1_1AssimpImporter.html" title="Load meshes using the Open Asset import Library.">AssimpImporter</a></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="code" href="classregen_1_1AssimpImporter_1_1Error.html">   36</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classregen_1_1AssimpImporter_1_1Error.html" title="Something went wrong processing the model file.">Error</a> : <span class="keyword">public</span> runtime_error {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="code" href="classregen_1_1AssimpImporter_1_1Error.html#a824206db2037947697e4bed20e364236">   41</a></span>&#160;    <a class="code" href="classregen_1_1AssimpImporter_1_1Error.html#a824206db2037947697e4bed20e364236">Error</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;message) : runtime_error(message) {}</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  };</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="code" href="classregen_1_1AssimpImporter.html">   30</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classregen_1_1AssimpImporter.html" title="Load meshes using the Open Asset import Library.">AssimpImporter</a></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="code" href="classregen_1_1AssimpImporter_1_1Error.html">   36</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classregen_1_1AssimpImporter_1_1Error.html" title="Something went wrong processing the model file.">Error</a> : <span class="keyword">public</span> runtime_error {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="code" href="classregen_1_1AssimpImporter_1_1Error.html#a824206db2037947697e4bed20e364236">   41</a></span>&#160;      <a class="code" href="classregen_1_1AssimpImporter_1_1Error.html#a824206db2037947697e4bed20e364236">Error</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;message) : runtime_error(message) {}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    };</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <a class="code" href="classregen_1_1AssimpImporter.html#a6cc920cfd3be495e84f90f36db164b1b">AssimpImporter</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;assimpFile, <span class="keyword">const</span> <span class="keywordtype">string</span> &amp;texturePath, GLint assimpFlags=-1);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  ~<a class="code" href="classregen_1_1AssimpImporter.html" title="Load meshes using the Open Asset import Library.">AssimpImporter</a>();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="classregen_1_1AssimpImporter.html#a6cc920cfd3be495e84f90f36db164b1b">AssimpImporter</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;assimpFile, <span class="keyword">const</span> <span class="keywordtype">string</span> &amp;texturePath, GLint assimpFlags=-1);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    ~<a class="code" href="classregen_1_1AssimpImporter.html" title="Load meshes using the Open Asset import Library.">AssimpImporter</a>();</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  list&lt; ref_ptr&lt;Light&gt; &gt;&amp; <a class="code" href="classregen_1_1AssimpImporter.html#adea6c02b508e29fb7a29fc2dd1793d06">lights</a>();</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  vector&lt; ref_ptr&lt;Material&gt; &gt;&amp; <a class="code" href="classregen_1_1AssimpImporter.html#aa75247f2d2ad0ca13f88457e43fb05d1">materials</a>();</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;LightNode&gt;</a> <a class="code" href="classregen_1_1AssimpImporter.html#adace4217716a835fdecf9900993ccbf6">loadLightNode</a>(<span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;Light&gt;</a> &amp;light);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  list&lt; ref_ptr&lt;Mesh&gt; &gt; <a class="code" href="classregen_1_1AssimpImporter.html#a785725faaf9306440af6e3219bc146c8">loadMeshes</a>(<span class="keyword">const</span> <a class="code" href="structregen_1_1Mat4f.html" title="A 4x4 matrix.">Mat4f</a> &amp;transform=<a class="code" href="structregen_1_1Mat4f.html#aaba662ed4ed01f55ed37b91761fb36b1">Mat4f::identity</a>());</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;Material&gt;</a> <a class="code" href="classregen_1_1AssimpImporter.html#ae3c3865c489e2c114c429063bd6767a5">getMeshMaterial</a>(<a class="code" href="classregen_1_1Mesh.html" title="A collection of vertices, edges and faces that defines the shape of an object in 3D space...">Mesh</a> *state);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  list&lt; ref_ptr&lt;AnimationNode&gt; &gt; <a class="code" href="classregen_1_1AssimpImporter.html#a140d4d3cb3bedc2c7d1a6b88af7fc96e">loadMeshBones</a>(<a class="code" href="classregen_1_1Mesh.html" title="A collection of vertices, edges and faces that defines the shape of an object in 3D space...">Mesh</a> *meshState, <a class="code" href="classregen_1_1NodeAnimation.html" title="A skeletal animation.">NodeAnimation</a> *anim);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  GLuint <a class="code" href="classregen_1_1AssimpImporter.html#a4f73ad08b4dcdb5405cbae6c40805031">numBoneWeights</a>(<a class="code" href="classregen_1_1Mesh.html" title="A collection of vertices, edges and faces that defines the shape of an object in 3D space...">Mesh</a> *meshState);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <a class="code" href="classregen_1_1NodeAnimation.html" title="A skeletal animation.">NodeAnimation</a>* <a class="code" href="classregen_1_1AssimpImporter.html#afe818f83f6ac68d2195e568dfeb04719">loadNodeAnimation</a>(</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;      GLboolean forceChannelStates,</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      <a class="code" href="classregen_1_1NodeAnimation.html#a99b37150e1a65552414c2f2eaecc268e">NodeAnimation::Behavior</a> forcedPostState,</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      <a class="code" href="classregen_1_1NodeAnimation.html#a99b37150e1a65552414c2f2eaecc268e">NodeAnimation::Behavior</a> forcedPreState,</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      GLdouble defaultTicksPerSecond);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="keyword">const</span> <span class="keyword">struct </span>aiScene *scene_;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    list&lt; ref_ptr&lt;Light&gt; &gt;&amp; <a class="code" href="classregen_1_1AssimpImporter.html#adea6c02b508e29fb7a29fc2dd1793d06">lights</a>();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    vector&lt; ref_ptr&lt;Material&gt; &gt;&amp; <a class="code" href="classregen_1_1AssimpImporter.html#aa75247f2d2ad0ca13f88457e43fb05d1">materials</a>();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;LightNode&gt;</a> <a class="code" href="classregen_1_1AssimpImporter.html#adace4217716a835fdecf9900993ccbf6">loadLightNode</a>(<span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Light&gt;</a> &amp;light);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1AssimpImporter.html#a408ceedbd1d396aef4ad8ffb77760a9f">loadMeshes</a>(</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keyword">const</span> <a class="code" href="structregen_1_1Mat4f.html" title="A 4x4 matrix.">Mat4f</a> &amp;transform,</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <a class="code" href="classregen_1_1VBO.html#a7adfdbbd8d84e304e697cd7ef521540e" title="Flag indicating the usage of the data in the VBO.">VBO::Usage</a> usage,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        list&lt; <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Mesh&gt;</a> &gt; &amp;meshes);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Material&gt;</a> <a class="code" href="classregen_1_1AssimpImporter.html#ae3c3865c489e2c114c429063bd6767a5">getMeshMaterial</a>(<a class="code" href="classregen_1_1Mesh.html" title="A collection of vertices, edges and faces that defines the shape of an object in 3D space...">Mesh</a> *state);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    list&lt; ref_ptr&lt;AnimationNode&gt; &gt; <a class="code" href="classregen_1_1AssimpImporter.html#a140d4d3cb3bedc2c7d1a6b88af7fc96e">loadMeshBones</a>(<a class="code" href="classregen_1_1Mesh.html" title="A collection of vertices, edges and faces that defines the shape of an object in 3D space...">Mesh</a> *meshState, <a class="code" href="classregen_1_1NodeAnimation.html" title="A skeletal animation.">NodeAnimation</a> *anim);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    GLuint <a class="code" href="classregen_1_1AssimpImporter.html#a4f73ad08b4dcdb5405cbae6c40805031">numBoneWeights</a>(<a class="code" href="classregen_1_1Mesh.html" title="A collection of vertices, edges and faces that defines the shape of an object in 3D space...">Mesh</a> *meshState);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;NodeAnimation&gt;</a> <a class="code" href="classregen_1_1AssimpImporter.html#a5be1c568fed3b9a1fa113003fce252b8">loadNodeAnimation</a>(</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        GLboolean forceChannelStates,</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <a class="code" href="classregen_1_1NodeAnimation.html#a99b37150e1a65552414c2f2eaecc268e">NodeAnimation::Behavior</a> forcedPostState,</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <a class="code" href="classregen_1_1NodeAnimation.html#a99b37150e1a65552414c2f2eaecc268e">NodeAnimation::Behavior</a> forcedPreState,</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        GLdouble defaultTicksPerSecond);</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="comment">// name to node map</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  map&lt;string, struct aiNode*&gt; nodes_;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keyword">const</span> <span class="keyword">struct </span>aiScene *scene_;</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="comment">// user specified texture path</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keywordtype">string</span> texturePath_;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="comment">// name to node map</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    map&lt;string, struct aiNode*&gt; nodes_;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="comment">// loaded lights</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  list&lt; ref_ptr&lt;Light&gt; &gt; lights_;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="comment">// user specified texture path</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">string</span> texturePath_;</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="comment">// loaded materials</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  vector&lt; ref_ptr&lt;Material&gt; &gt; materials_;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="comment">// mesh to material mapping</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  map&lt; Mesh*, ref_ptr&lt;Material&gt; &gt; meshMaterials_;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  map&lt; Mesh*, const struct aiMesh* &gt; meshToAiMesh_;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  map&lt; Light*, struct aiLight* &gt; lightToAiLight_;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="comment">// root node of skeleton</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;AnimationNode&gt;</a> rootNode_;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="comment">// maps assimp bone nodes to Bone implementation</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  map&lt; struct aiNode*, ref_ptr&lt;AnimationNode&gt; &gt; aiNodeToNode_;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  list&lt; ref_ptr&lt;Light&gt; &gt; loadLights();</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  vector&lt; ref_ptr&lt;Material&gt; &gt; loadMaterials();</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  list&lt; ref_ptr&lt;Mesh&gt; &gt; <a class="code" href="classregen_1_1AssimpImporter.html#a785725faaf9306440af6e3219bc146c8">loadMeshes</a>(</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      <span class="keyword">const</span> <span class="keyword">struct</span> aiNode &amp;node,</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      <span class="keyword">const</span> <a class="code" href="structregen_1_1Mat4f.html" title="A 4x4 matrix.">Mat4f</a> &amp;transform=<a class="code" href="structregen_1_1Mat4f.html#aaba662ed4ed01f55ed37b91761fb36b1">Mat4f::identity</a>());</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;Mesh&gt;</a> loadMesh(</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      <span class="keyword">const</span> <span class="keyword">struct</span> aiMesh &amp;mesh,</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      <span class="keyword">const</span> <a class="code" href="structregen_1_1Mat4f.html" title="A 4x4 matrix.">Mat4f</a> &amp;transform);</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;AnimationNode&gt;</a> loadNodeTree();</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;AnimationNode&gt;</a> loadNodeTree(</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;      <span class="keyword">struct</span> aiNode* assimpNode, <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;AnimationNode&gt;</a> parent);</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;};</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* ASSIMP_MODEL_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="comment">// loaded lights</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    list&lt; ref_ptr&lt;Light&gt; &gt; lights_;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="comment">// loaded materials</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    vector&lt; ref_ptr&lt;Material&gt; &gt; materials_;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="comment">// mesh to material mapping</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    map&lt; Mesh*, ref_ptr&lt;Material&gt; &gt; meshMaterials_;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    map&lt; Mesh*, const struct aiMesh* &gt; meshToAiMesh_;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    map&lt; Light*, struct aiLight* &gt; lightToAiLight_;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="comment">// root node of skeleton</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;AnimationNode&gt;</a> rootNode_;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="comment">// maps assimp bone nodes to Bone implementation</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    map&lt; struct aiNode*, ref_ptr&lt;AnimationNode&gt; &gt; aiNodeToNode_;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    list&lt; ref_ptr&lt;Light&gt; &gt; loadLights();</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    vector&lt; ref_ptr&lt;Material&gt; &gt; loadMaterials();</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1AssimpImporter.html#a408ceedbd1d396aef4ad8ffb77760a9f">loadMeshes</a>(</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keyword">const</span> <span class="keyword">struct</span> aiNode &amp;node,</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keyword">const</span> <a class="code" href="structregen_1_1Mat4f.html" title="A 4x4 matrix.">Mat4f</a> &amp;transform,</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <a class="code" href="classregen_1_1VBO.html#a7adfdbbd8d84e304e697cd7ef521540e" title="Flag indicating the usage of the data in the VBO.">VBO::Usage</a> usage,</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        list&lt; <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Mesh&gt;</a> &gt; &amp;meshes);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Mesh&gt;</a> loadMesh(</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="keyword">const</span> <span class="keyword">struct</span> aiMesh &amp;mesh,</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="keyword">const</span> <a class="code" href="structregen_1_1Mat4f.html" title="A 4x4 matrix.">Mat4f</a> &amp;transform,</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <a class="code" href="classregen_1_1VBO.html#a7adfdbbd8d84e304e697cd7ef521540e" title="Flag indicating the usage of the data in the VBO.">VBO::Usage</a> usage);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;AnimationNode&gt;</a> loadNodeTree();</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;AnimationNode&gt;</a> loadNodeTree(</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="keyword">struct</span> aiNode* assimpNode, <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;AnimationNode&gt;</a> parent);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  };</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* ASSIMP_MODEL_H_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 30 2013 12:27:22 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 11 2013 11:01:18 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

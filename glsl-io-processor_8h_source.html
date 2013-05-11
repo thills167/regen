@@ -109,61 +109,60 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">using namespace </span>std;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">namespace </span>regen {</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="code" href="classregen_1_1GLSLInputOutputProcessor.html">   35</a></span>&#160;<span class="keyword">class </span><a class="code" href="classregen_1_1GLSLInputOutputProcessor.html" title="A GLSL processor that modifies the IO behavior of the Shader code.">GLSLInputOutputProcessor</a> {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="code" href="structregen_1_1GLSLInputOutputProcessor_1_1InputOutput.html">   40</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structregen_1_1GLSLInputOutputProcessor_1_1InputOutput.html" title="IO Varying used in Shader code.">InputOutput</a> {</div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="code" href="structregen_1_1GLSLInputOutputProcessor_1_1InputOutput.html#a8caeadf0ab090aa1c95181cbbb750c32">   41</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="structregen_1_1GLSLInputOutputProcessor_1_1InputOutput.html#a8caeadf0ab090aa1c95181cbbb750c32">layout</a>; </div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="code" href="structregen_1_1GLSLInputOutputProcessor_1_1InputOutput.html#a2b3e9ea773875914a958f7ab5f4965d0">   42</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="structregen_1_1GLSLInputOutputProcessor_1_1InputOutput.html#a2b3e9ea773875914a958f7ab5f4965d0">interpolation</a>; </div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="code" href="structregen_1_1GLSLInputOutputProcessor_1_1InputOutput.html#a889f47cb8afcc022d21898f402013455">   43</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="structregen_1_1GLSLInputOutputProcessor_1_1InputOutput.html#a889f47cb8afcc022d21898f402013455">ioType</a>; </div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="code" href="structregen_1_1GLSLInputOutputProcessor_1_1InputOutput.html#aae71a011cab0fa79ac83ef54bd1c6171">   44</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="structregen_1_1GLSLInputOutputProcessor_1_1InputOutput.html#aae71a011cab0fa79ac83ef54bd1c6171">dataType</a>; </div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="code" href="structregen_1_1GLSLInputOutputProcessor_1_1InputOutput.html#ad347c634ff64e25fd8b44bd53f4aebdc">   45</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="structregen_1_1GLSLInputOutputProcessor_1_1InputOutput.html#ad347c634ff64e25fd8b44bd53f4aebdc">name</a>; </div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="code" href="structregen_1_1GLSLInputOutputProcessor_1_1InputOutput.html#a81c7c247350ff5bea0fef08adcf1c001">   46</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="structregen_1_1GLSLInputOutputProcessor_1_1InputOutput.html#a81c7c247350ff5bea0fef08adcf1c001">numElements</a>; </div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="code" href="structregen_1_1GLSLInputOutputProcessor_1_1InputOutput.html#a1f548df3f4604e058f2efce45fd4fb6a">   47</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="structregen_1_1GLSLInputOutputProcessor_1_1InputOutput.html#a1f548df3f4604e058f2efce45fd4fb6a">value</a>; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="structregen_1_1GLSLInputOutputProcessor_1_1InputOutput.html" title="IO Varying used in Shader code.">InputOutput</a>();</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="structregen_1_1GLSLInputOutputProcessor_1_1InputOutput.html" title="IO Varying used in Shader code.">InputOutput</a>(<span class="keyword">const</span> <a class="code" href="structregen_1_1GLSLInputOutputProcessor_1_1InputOutput.html" title="IO Varying used in Shader code.">InputOutput</a>&amp;);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">string</span> declaration(GLenum stage);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  };</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="code" href="classregen_1_1GLSLInputOutputProcessor.html">   35</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classregen_1_1GLSLInputOutputProcessor.html" title="A GLSL processor that modifies the IO behavior of the Shader code.">GLSLInputOutputProcessor</a> {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="code" href="structregen_1_1GLSLInputOutputProcessor_1_1InputOutput.html">   40</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structregen_1_1GLSLInputOutputProcessor_1_1InputOutput.html" title="IO Varying used in Shader code.">InputOutput</a> {</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="code" href="structregen_1_1GLSLInputOutputProcessor_1_1InputOutput.html#a8caeadf0ab090aa1c95181cbbb750c32">   41</a></span>&#160;      <span class="keywordtype">string</span> <a class="code" href="structregen_1_1GLSLInputOutputProcessor_1_1InputOutput.html#a8caeadf0ab090aa1c95181cbbb750c32">layout</a>; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="code" href="structregen_1_1GLSLInputOutputProcessor_1_1InputOutput.html#a2b3e9ea773875914a958f7ab5f4965d0">   42</a></span>&#160;      <span class="keywordtype">string</span> <a class="code" href="structregen_1_1GLSLInputOutputProcessor_1_1InputOutput.html#a2b3e9ea773875914a958f7ab5f4965d0">interpolation</a>; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="code" href="structregen_1_1GLSLInputOutputProcessor_1_1InputOutput.html#a889f47cb8afcc022d21898f402013455">   43</a></span>&#160;      <span class="keywordtype">string</span> <a class="code" href="structregen_1_1GLSLInputOutputProcessor_1_1InputOutput.html#a889f47cb8afcc022d21898f402013455">ioType</a>; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="code" href="structregen_1_1GLSLInputOutputProcessor_1_1InputOutput.html#aae71a011cab0fa79ac83ef54bd1c6171">   44</a></span>&#160;      <span class="keywordtype">string</span> <a class="code" href="structregen_1_1GLSLInputOutputProcessor_1_1InputOutput.html#aae71a011cab0fa79ac83ef54bd1c6171">dataType</a>; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="code" href="structregen_1_1GLSLInputOutputProcessor_1_1InputOutput.html#ad347c634ff64e25fd8b44bd53f4aebdc">   45</a></span>&#160;      <span class="keywordtype">string</span> <a class="code" href="structregen_1_1GLSLInputOutputProcessor_1_1InputOutput.html#ad347c634ff64e25fd8b44bd53f4aebdc">name</a>; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="code" href="structregen_1_1GLSLInputOutputProcessor_1_1InputOutput.html#a81c7c247350ff5bea0fef08adcf1c001">   46</a></span>&#160;      <span class="keywordtype">string</span> <a class="code" href="structregen_1_1GLSLInputOutputProcessor_1_1InputOutput.html#a81c7c247350ff5bea0fef08adcf1c001">numElements</a>; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="code" href="structregen_1_1GLSLInputOutputProcessor_1_1InputOutput.html#a1f548df3f4604e058f2efce45fd4fb6a">   47</a></span>&#160;      <span class="keywordtype">string</span> <a class="code" href="structregen_1_1GLSLInputOutputProcessor_1_1InputOutput.html#a1f548df3f4604e058f2efce45fd4fb6a">value</a>; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      <a class="code" href="structregen_1_1GLSLInputOutputProcessor_1_1InputOutput.html" title="IO Varying used in Shader code.">InputOutput</a>();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      <a class="code" href="structregen_1_1GLSLInputOutputProcessor_1_1InputOutput.html" title="IO Varying used in Shader code.">InputOutput</a>(<span class="keyword">const</span> <a class="code" href="structregen_1_1GLSLInputOutputProcessor_1_1InputOutput.html" title="IO Varying used in Shader code.">InputOutput</a>&amp;);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <span class="keywordtype">string</span> declaration(GLenum stage);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    };</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">string</span> getNameWithoutPrefix(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;name);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">string</span> getNameWithoutPrefix(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;name);</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <a class="code" href="classregen_1_1GLSLInputOutputProcessor.html" title="A GLSL processor that modifies the IO behavior of the Shader code.">GLSLInputOutputProcessor</a>(</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      istream &amp;in,</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      GLenum stage,</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      GLenum nextStage,</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      <span class="keyword">const</span> map&lt;string,InputOutput&gt; &amp;nextStageInputs,</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      <span class="keyword">const</span> map&lt;<span class="keywordtype">string</span>, <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;ShaderInput&gt;</a> &gt; &amp;specifiedInput);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="classregen_1_1GLSLInputOutputProcessor.html" title="A GLSL processor that modifies the IO behavior of the Shader code.">GLSLInputOutputProcessor</a>(</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        istream &amp;in,</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        GLenum stage,</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        GLenum nextStage,</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keyword">const</span> map&lt;string,InputOutput&gt; &amp;nextStageInputs,</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keyword">const</span> map&lt;<span class="keywordtype">string</span>, <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;ShaderInput&gt;</a> &gt; &amp;specifiedInput);</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  map&lt;string,InputOutput&gt;&amp; outputs();</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  map&lt;string,InputOutput&gt;&amp; inputs();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    map&lt;string,InputOutput&gt;&amp; outputs();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    map&lt;string,InputOutput&gt;&amp; inputs();</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="keywordtype">bool</span> getline(<span class="keywordtype">string</span> &amp;line);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">bool</span> getline(<span class="keywordtype">string</span> &amp;line);</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keywordtype">void</span> preProcess(ostream &amp;out);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">void</span> preProcess(ostream &amp;out);</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  istream &amp;in_;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  list&lt;string&gt; lineQueue_;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keyword">const</span> map&lt;string,InputOutput&gt; &amp;nextStageInputs_;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  map&lt;string,InputOutput&gt; outputs_;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  map&lt;string,InputOutput&gt; inputs_;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    istream &amp;in_;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    list&lt;string&gt; lineQueue_;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keyword">const</span> map&lt;string,InputOutput&gt; &amp;nextStageInputs_;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    map&lt;string,InputOutput&gt; outputs_;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    map&lt;string,InputOutput&gt; inputs_;</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  GLboolean wasEmpty_;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  GLenum stage_;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  GLenum nextStage_;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keyword">const</span> map&lt;string, ref_ptr&lt;ShaderInput&gt; &gt; &amp;specifiedInput_;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    GLboolean wasEmpty_;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    GLenum stage_;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    GLenum nextStage_;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keyword">const</span> map&lt;string, ref_ptr&lt;ShaderInput&gt; &gt; &amp;specifiedInput_;</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="keywordtype">void</span> defineHandleIO();</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <span class="keywordtype">void</span> parseValue(<span class="keywordtype">string</span> &amp;v, <span class="keywordtype">string</span> &amp;val);</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="keywordtype">void</span> parseArray(<span class="keywordtype">string</span> &amp;v, <span class="keywordtype">string</span> &amp;numElements);</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;};</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* GLSL_IO_PROCESSOR_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">void</span> defineHandleIO();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordtype">void</span> parseValue(<span class="keywordtype">string</span> &amp;v, <span class="keywordtype">string</span> &amp;val);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">void</span> parseArray(<span class="keywordtype">string</span> &amp;v, <span class="keywordtype">string</span> &amp;numElements);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  };</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* GLSL_IO_PROCESSOR_H_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 30 2013 12:27:22 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 11 2013 11:01:18 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

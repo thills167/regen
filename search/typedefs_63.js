@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['createbufferfunc',['CreateBufferFunc',['../classregen_1_1BufferObject.html#a0846a306b57c6ec46579a9fe8d486fde',1,'regen::BufferObject']]]
+  ['createobjectfunc',['CreateObjectFunc',['../classregen_1_1GLObject.html#a435476eff4829be16ec4c8be33bb0aa2',1,'regen::GLObject']]]
 ];

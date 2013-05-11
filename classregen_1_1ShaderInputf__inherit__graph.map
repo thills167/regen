@@ -1,11 +1,10 @@
 <map id="regen::ShaderInputf" name="regen::ShaderInputf">
-<area shape="rect" id="node4" href="$classregen_1_1ShaderInput1f.html" title="Provides 1D float input to shader programs." alt="" coords="574,5,717,32"/>
-<area shape="rect" id="node5" href="$classregen_1_1ShaderInput2f.html" title="Provides 2D float input to shader programs." alt="" coords="574,56,717,83"/>
-<area shape="rect" id="node6" href="$classregen_1_1ShaderInput3f.html" title="Provides 3D float input to shader programs." alt="" coords="574,107,717,133"/>
-<area shape="rect" id="node7" href="$classregen_1_1ShaderInput4f.html" title="Provides 4D float input to shader programs." alt="" coords="574,157,717,184"/>
-<area shape="rect" id="node8" href="$classregen_1_1ShaderInputMat.html" title="Provides float matrix input to shader programs." alt="" coords="568,208,723,235"/>
-<area shape="rect" id="node2" href="$classregen_1_1ShaderInput.html" title="Provides input to shader programs." alt="" coords="203,107,335,133"/>
-<area shape="rect" id="node3" href="$classregen_1_1VertexAttribute.html" title="Shader input with individual values per vertex." alt="" coords="5,107,155,133"/>
-<area shape="rect" id="node9" href="$classregen_1_1ShaderInputMat3.html" title="Provides 3x3 matrix input to shader programs." alt="" coords="771,183,933,209"/>
-<area shape="rect" id="node10" href="$classregen_1_1ShaderInputMat4.html" title="Provides 4x4 matrix input to shader programs." alt="" coords="771,233,933,260"/>
+<area shape="rect" id="node3" href="$classregen_1_1ShaderInput1f.html" title="Provides 1D float input to shader programs." alt="" coords="377,5,519,32"/>
+<area shape="rect" id="node4" href="$classregen_1_1ShaderInput2f.html" title="Provides 2D float input to shader programs." alt="" coords="377,56,519,83"/>
+<area shape="rect" id="node5" href="$classregen_1_1ShaderInput3f.html" title="Provides 3D float input to shader programs." alt="" coords="377,107,519,133"/>
+<area shape="rect" id="node6" href="$classregen_1_1ShaderInput4f.html" title="Provides 4D float input to shader programs." alt="" coords="377,157,519,184"/>
+<area shape="rect" id="node7" href="$classregen_1_1ShaderInputMat.html" title="Provides float matrix input to shader programs." alt="" coords="371,208,525,235"/>
+<area shape="rect" id="node2" href="$classregen_1_1ShaderInput.html" title="Provides input to shader programs." alt="" coords="6,107,138,133"/>
+<area shape="rect" id="node8" href="$classregen_1_1ShaderInputMat3.html" title="Provides 3x3 matrix input to shader programs." alt="" coords="574,183,735,209"/>
+<area shape="rect" id="node9" href="$classregen_1_1ShaderInputMat4.html" title="Provides 4x4 matrix input to shader programs." alt="" coords="574,233,735,260"/>
 </map>

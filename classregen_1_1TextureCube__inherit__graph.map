@@ -1,7 +1,10 @@
 <map id="regen::TextureCube" name="regen::TextureCube">
-<area shape="rect" id="node6" href="$classregen_1_1CubeMapDepthTexture.html" title="Texture with exactly 6 distinct sets of 2D images, all of the same size." alt="" coords="5,379,203,405"/>
-<area shape="rect" id="node2" href="$classregen_1_1Texture2D.html" title="Images in this texture all are 2&#45;dimensional." alt="" coords="43,229,165,256"/>
-<area shape="rect" id="node3" href="$classregen_1_1Texture.html" title="A OpenGL Object that contains one or more images that all have the same image format." alt="" coords="51,155,157,181"/>
-<area shape="rect" id="node4" href="$classregen_1_1RectBufferObject.html" title="A 2D rectangular buffer." alt="" coords="23,80,185,107"/>
-<area shape="rect" id="node5" href="$classregen_1_1BufferObject.html" title="Base class for buffer objects." alt="" coords="37,5,171,32"/>
+<area shape="rect" id="node9" href="$classregen_1_1CubeMapDepthTexture.html" title="Texture with exactly 6 distinct sets of 2D images, all of the same size." alt="" coords="59,453,256,480"/>
+<area shape="rect" id="node2" href="$classregen_1_1Texture2D.html" title="Images in this texture all are 2&#45;dimensional." alt="" coords="96,304,219,331"/>
+<area shape="rect" id="node3" href="$classregen_1_1Texture.html" title="A OpenGL Object that contains one or more images that all have the same image format." alt="" coords="104,229,211,256"/>
+<area shape="rect" id="node4" href="$classregen_1_1GLRectangle.html" title="A 2D rectangular buffer." alt="" coords="5,155,144,181"/>
+<area shape="rect" id="node5" href="$classregen_1_1GLObject.html" title="Base class for buffer objects." alt="" coords="16,80,132,107"/>
+<area shape="rect" id="node6" href="$classregen_1_1ShaderInput1i.html" title="Provides 1D int input to shader programs." alt="" coords="169,155,311,181"/>
+<area shape="rect" id="node7" href="$classregen_1_1ShaderInputi.html" title="Provides int input to shader programs." alt="" coords="173,80,307,107"/>
+<area shape="rect" id="node8" href="$classregen_1_1ShaderInput.html" title="Provides input to shader programs." alt="" coords="174,5,305,32"/>
 </map>

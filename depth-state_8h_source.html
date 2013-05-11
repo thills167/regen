@@ -103,27 +103,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;regen/states/atomic-states.h&gt;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span>regen {</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="code" href="classregen_1_1DepthState.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classregen_1_1DepthState.html" title="Allows manipulating how the depth buffer is handled.">DepthState</a> : <span class="keyword">public</span> <a class="code" href="classregen_1_1ServerSideState.html" title="Base class for &#39;atomic&#39; states.">ServerSideState</a></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1DepthState.html#a52da7dcce043cff299022666e71a0a36">set_useDepthTest</a>(GLboolean useDepthTest);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1DepthState.html#acd489e9b07188b88efe9c429f5451db0">set_useDepthWrite</a>(GLboolean useDepthTest);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1DepthState.html#a0331322bd331d5569d0b6d2cd6fc666f">set_depthFunc</a>(GLenum depthFunc=GL_LESS);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1DepthState.html#a4cba3c41086d9a2e92a4007add8ccb84">set_depthRange</a>(GLdouble nearVal=0.0, GLdouble farVal=1.0);</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="code" href="classregen_1_1DepthState.html">   17</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classregen_1_1DepthState.html" title="Allows manipulating how the depth buffer is handled.">DepthState</a> : <span class="keyword">public</span> <a class="code" href="classregen_1_1ServerSideState.html" title="Base class for &#39;atomic&#39; states.">ServerSideState</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1DepthState.html#a52da7dcce043cff299022666e71a0a36">set_useDepthTest</a>(GLboolean useDepthTest);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1DepthState.html#acd489e9b07188b88efe9c429f5451db0">set_useDepthWrite</a>(GLboolean useDepthTest);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1DepthState.html#a0331322bd331d5569d0b6d2cd6fc666f">set_depthFunc</a>(GLenum depthFunc=GL_LESS);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1DepthState.html#a4cba3c41086d9a2e92a4007add8ccb84">set_depthRange</a>(GLdouble nearVal=0.0, GLdouble farVal=1.0);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;State&gt;</a> depthTestToggle_;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;State&gt;</a> depthWriteToggle_;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;State&gt;</a> depthRange_;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;State&gt;</a> depthFunc_;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;};</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;State&gt;</a> depthTestToggle_;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;State&gt;</a> depthWriteToggle_;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;State&gt;</a> depthRange_;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;State&gt;</a> depthFunc_;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  };</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;} <span class="comment">// namespace</span></div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* BLIT_TO_SCREEN_H_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 30 2013 12:27:22 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 11 2013 11:01:18 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

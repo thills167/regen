@@ -102,121 +102,119 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;regen/gl-types/buffer-object.h&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;regen/gl-types/gl-object.h&gt;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;regen/utility/ref-ptr.h&gt;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;regen/utility/memory-allocator.h&gt;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span>regen {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">class </span>VertexAttribute; <span class="comment">// forward declaration</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#ifndef BUFFER_OFFSET</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor"></span><span class="preprocessor">  #define BUFFER_OFFSET(i) ((char *)NULL + (i))</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="classregen_1_1VertexBufferObject.html">   50</a></span>&#160;<span class="keyword">class </span><a class="code" href="classregen_1_1VertexBufferObject.html" title="Buffer object that is used for vertex data.">VertexBufferObject</a></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="code" href="structregen_1_1VertexBufferObject_1_1VBOAllocator.html">   56</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structregen_1_1VertexBufferObject_1_1VBOAllocator.html" title="Interface for allocating GPU memory.">VBOAllocator</a> {</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">static</span> GLuint <a class="code" href="structregen_1_1VertexBufferObject_1_1VBOAllocator.html#a8ca0a969d2a136e7b42b063cee45a0f1">createAllocator</a>(GLuint poolIndex, GLuint size);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="structregen_1_1VertexBufferObject_1_1VBOAllocator.html#ae871d5cabb400438477dcfac1536ef6c">deleteAllocator</a>(GLuint poolIndex, GLuint ref);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  };</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keyword">typedef</span> <a class="code" href="classregen_1_1AllocatorPool.html" title="A pool of memory allocators.">AllocatorPool</a>&lt;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      <a class="code" href="structregen_1_1VertexBufferObject_1_1VBOAllocator.html" title="Interface for allocating GPU memory.">VBOAllocator</a>, GLuint,   <span class="comment">// actual allocator and reference type</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      <a class="code" href="classregen_1_1BuddyAllocator.html" title="Implements a variant of the buddy memory allocation algorithm for virtual memory allocation.">BuddyAllocator</a>, GLuint  <span class="comment">// virtual allocator and reference type</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno"><a class="code" href="classregen_1_1VertexBufferObject.html#a398890b1a8e1b92c8a4be4cd39c80cb7">   75</a></span>&#160;  &gt; <a class="code" href="classregen_1_1VertexBufferObject.html#a398890b1a8e1b92c8a4be4cd39c80cb7" title="A pool of VBO memory allocators.">VBOPool</a>;</div>
-<div class="line"><a name="l00079"></a><span class="lineno"><a class="code" href="structregen_1_1VertexBufferObject_1_1Reference.html">   79</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structregen_1_1VertexBufferObject_1_1Reference.html" title="Reference to allocated data.">Reference</a> {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="structregen_1_1VertexBufferObject_1_1Reference.html" title="Reference to allocated data.">Reference</a>() : vbo_(NULL), allocatedSize_(0) {}</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    GLboolean <a class="code" href="structregen_1_1VertexBufferObject_1_1Reference.html#aac1ab7ebbe8f7887ee0f96f8b11afdcd">isNullReference</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    GLuint <a class="code" href="structregen_1_1VertexBufferObject_1_1Reference.html#a54ba2fd7034601987d9537e92e826938">allocatedSize</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    GLuint <a class="code" href="structregen_1_1VertexBufferObject_1_1Reference.html#ae3ff5b957a811a2d5253999866c420fc">address</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    GLuint <a class="code" href="structregen_1_1VertexBufferObject_1_1Reference.html#a83a6fe628146424474d04bbc73c59702">bufferID</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keyword">private</span>: <span class="comment">// only VertexBufferObject allowed to access</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <a class="code" href="classregen_1_1VertexBufferObject.html" title="Buffer object that is used for vertex data.">VertexBufferObject</a> *vbo_;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <a class="code" href="structregen_1_1AllocatorPool_1_1Reference.html" title="Reference to allocated memory.">VBOPool::Reference</a> poolReference_;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    GLuint allocatedSize_;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    list&lt; ref_ptr&lt;Reference&gt; &gt;::iterator it_;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    ~<a class="code" href="structregen_1_1VertexBufferObject_1_1Reference.html" title="Reference to allocated data.">Reference</a>();</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="comment">// no copy allowed</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <a class="code" href="structregen_1_1VertexBufferObject_1_1Reference.html" title="Reference to allocated data.">Reference</a>(<span class="keyword">const</span> <a class="code" href="structregen_1_1VertexBufferObject_1_1Reference.html" title="Reference to allocated data.">Reference</a>&amp;) {}</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <a class="code" href="structregen_1_1VertexBufferObject_1_1Reference.html" title="Reference to allocated data.">Reference</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="structregen_1_1VertexBufferObject_1_1Reference.html" title="Reference to allocated data.">Reference</a>&amp;) { <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classregen_1_1VertexBufferObject.html" title="Buffer object that is used for vertex data.">VertexBufferObject</a>;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr</a>&lt;Reference&gt;;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  };</div>
-<div class="line"><a name="l00113"></a><span class="lineno"><a class="code" href="classregen_1_1VertexBufferObject.html#a1dd913e197329d8ae7d0eab0d2200b94">  113</a></span>&#160;  <span class="keyword">enum</span> <a class="code" href="classregen_1_1VertexBufferObject.html#a1dd913e197329d8ae7d0eab0d2200b94" title="Flag indicating the usage of the data in the VBO.">Usage</a> {</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    USAGE_DYNAMIC = 0,</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    USAGE_STATIC,</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    USAGE_STREAM,</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    USAGE_FEEDBACK,</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    USAGE_TEXTURE,</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    USAGE_LAST</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  };</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <span class="keyword">static</span> GLuint <a class="code" href="classregen_1_1VertexBufferObject.html#ae13a0c73ecf541d913de3ebf855ff907">attributeSize</a>(</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;      <span class="keyword">const</span> list&lt; <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;VertexAttribute&gt;</a> &gt; &amp;attributes);</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classregen_1_1VertexBufferObject.html#a5a1d8d48a29c39fd7d3c61ea009b676a">copy</a>(GLuint from, GLuint to,</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;      GLuint size, GLuint offset, GLuint toOffset);</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classregen_1_1VertexBufferObject.html#a154287512cb0a5fa3615cdc582e0f114">createMemoryPools</a>();</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classregen_1_1VertexBufferObject.html#a5be144b846534d22c0b08efcfac01c96">destroyMemoryPools</a>();</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <span class="keyword">static</span> <a class="code" href="classregen_1_1VertexBufferObject.html#a398890b1a8e1b92c8a4be4cd39c80cb7" title="A pool of VBO memory allocators.">VBOPool</a>* <a class="code" href="classregen_1_1VertexBufferObject.html#ae10a04ba289fb1abfd52ca2c24762811">memoryPool</a>(<a class="code" href="classregen_1_1VertexBufferObject.html#a1dd913e197329d8ae7d0eab0d2200b94" title="Flag indicating the usage of the data in the VBO.">Usage</a> <a class="code" href="classregen_1_1VertexBufferObject.html#ae38cea589fae5e092700548f8f9435f8">usage</a>);</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  <a class="code" href="classregen_1_1VertexBufferObject.html#a98a6c393366e1ca1f61a6644006d441d">VertexBufferObject</a>(<a class="code" href="classregen_1_1VertexBufferObject.html#a1dd913e197329d8ae7d0eab0d2200b94" title="Flag indicating the usage of the data in the VBO.">Usage</a> <a class="code" href="classregen_1_1VertexBufferObject.html#ae38cea589fae5e092700548f8f9435f8">usage</a>);</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  <a class="code" href="classregen_1_1VertexBufferObject.html#a1dd913e197329d8ae7d0eab0d2200b94" title="Flag indicating the usage of the data in the VBO.">Usage</a> <a class="code" href="classregen_1_1VertexBufferObject.html#ae38cea589fae5e092700548f8f9435f8">usage</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  GLuint <a class="code" href="classregen_1_1VertexBufferObject.html#a326b9ffa3d43c2cfb881676445d0b4c6">allocatedSize</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;Reference&gt;</a>&amp; <a class="code" href="classregen_1_1VertexBufferObject.html#a7f9308ffde2c1052670fd89cdd168d71">alloc</a>(GLuint size);</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;Reference&gt;</a>&amp; <a class="code" href="classregen_1_1VertexBufferObject.html#a7f9308ffde2c1052670fd89cdd168d71">alloc</a>(<span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;VertexAttribute&gt;</a> &amp;att);</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;Reference&gt;</a>&amp; <a class="code" href="classregen_1_1VertexBufferObject.html#a85dc2e033333551c8b02629302fbb73e">allocInterleaved</a>(<span class="keyword">const</span> list&lt; <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;VertexAttribute&gt;</a> &gt; &amp;attributes);</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;Reference&gt;</a>&amp; <a class="code" href="classregen_1_1VertexBufferObject.html#a0ea30a075f036afbd0622ecc2abd207b">allocSequential</a>(<span class="keyword">const</span> list&lt; <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;VertexAttribute&gt;</a> &gt; &amp;attributes);</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classregen_1_1VertexBufferObject.html#ab2da8621dc548d326b5a150004380089">free</a>(Reference *ref);</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;</div>
-<div class="line"><a name="l00217"></a><span class="lineno"><a class="code" href="classregen_1_1VertexBufferObject.html#a7f071596eef02dd490e0bb0bf70ba8f9">  217</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1VertexBufferObject.html#a7f071596eef02dd490e0bb0bf70ba8f9">set_bufferSubData</a>(GLenum target, GLuint offset, GLuint size, <span class="keywordtype">void</span> *data)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="keyword">  </span>{ glBufferSubData(target, offset, size, data); }</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;</div>
-<div class="line"><a name="l00229"></a><span class="lineno"><a class="code" href="classregen_1_1VertexBufferObject.html#ac8fd0a68d2fb19f8937ee74b8fda411c">  229</a></span>&#160;  GLvoid* <a class="code" href="classregen_1_1VertexBufferObject.html#ac8fd0a68d2fb19f8937ee74b8fda411c">map</a>(GLenum target, GLuint offset, GLuint size, GLenum accessFlags)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="keyword">  </span>{ <span class="keywordflow">return</span> glMapBufferRange(target, offset, size, accessFlags); }</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;</div>
-<div class="line"><a name="l00235"></a><span class="lineno"><a class="code" href="classregen_1_1VertexBufferObject.html#a5a1c5a7331253e03040d313cf90342e3">  235</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classregen_1_1VertexBufferObject.html#a5a1c5a7331253e03040d313cf90342e3">unmap</a>(GLenum target)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;<span class="keyword">  </span>{ glUnmapBuffer(target); }</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  <span class="keyword">static</span> <a class="code" href="classregen_1_1VertexBufferObject.html#a398890b1a8e1b92c8a4be4cd39c80cb7" title="A pool of VBO memory allocators.">VBOPool</a> *dataPools_;</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;  list&lt; ref_ptr&lt;Reference&gt; &gt; allocations_;</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  <a class="code" href="classregen_1_1VertexBufferObject.html#a1dd913e197329d8ae7d0eab0d2200b94" title="Flag indicating the usage of the data in the VBO.">Usage</a> usage_;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  <span class="comment">// sum of allocated blocks</span></div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  GLuint allocatedSize_;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  <span class="keywordtype">void</span> uploadInterleaved(</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;      GLuint startByte,</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;      GLuint endByte,</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;      <span class="keyword">const</span> list&lt; <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;VertexAttribute&gt;</a> &gt; &amp;attributes,</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;      <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;Reference&gt;</a> &amp;ref);</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  <span class="keywordtype">void</span> uploadSequential(</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;      GLuint startByte,</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;      GLuint endByte,</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;      <span class="keyword">const</span> list&lt; <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;VertexAttribute&gt;</a> &gt; &amp;attributes,</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;      <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;Reference&gt;</a> &amp;ref);</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;Reference&gt;</a>&amp; createReference(GLuint numBytes);</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;  <a class="code" href="classregen_1_1ref__ptr.html" title="Adds auto reference Management to a pointer.">ref_ptr&lt;Reference&gt;</a>&amp; nullReference();</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;};</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="keyword">typedef</span> ref_ptr&lt;VertexBufferObject::Reference&gt; VBOReference;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keyword">class </span>ShaderInput; <span class="comment">// forward declaration</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">  #ifndef BUFFER_OFFSET</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor"></span><span class="preprocessor">    #define BUFFER_OFFSET(i) ((char *)NULL + (i))</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor"></span><span class="preprocessor">  #endif</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="code" href="classregen_1_1VBO.html">   49</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classregen_1_1VBO.html" title="Buffer object that is used for vertex data.">VBO</a></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="code" href="structregen_1_1VBO_1_1VBOAllocator.html">   55</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structregen_1_1VBO_1_1VBOAllocator.html" title="Interface for allocating GPU memory.">VBOAllocator</a> {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      <span class="keyword">static</span> GLuint <a class="code" href="structregen_1_1VBO_1_1VBOAllocator.html#a4e6c31dbcd522b4d1b5d5d437090fe5d">createAllocator</a>(GLuint poolIndex, GLuint size);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="structregen_1_1VBO_1_1VBOAllocator.html#a0b53292e9747517e0feefb6b43a863a4">deleteAllocator</a>(GLuint poolIndex, GLuint ref);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    };</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classregen_1_1AllocatorPool.html" title="A pool of memory allocators.">AllocatorPool</a>&lt;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <a class="code" href="structregen_1_1VBO_1_1VBOAllocator.html" title="Interface for allocating GPU memory.">VBOAllocator</a>, GLuint,   <span class="comment">// actual allocator and reference type</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="classregen_1_1BuddyAllocator.html" title="Implements a variant of the buddy memory allocation algorithm for virtual memory allocation.">BuddyAllocator</a>, GLuint  <span class="comment">// virtual allocator and reference type</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="code" href="classregen_1_1VBO.html#abcbefe36691a03363bf951d8e6a12644">   74</a></span>&#160;    &gt; <a class="code" href="classregen_1_1VBO.html#abcbefe36691a03363bf951d8e6a12644" title="A pool of VBO memory allocators.">VBOPool</a>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="code" href="structregen_1_1VBO_1_1Reference.html">   78</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structregen_1_1VBO_1_1Reference.html" title="Reference to allocated data.">Reference</a> {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      <a class="code" href="structregen_1_1VBO_1_1Reference.html" title="Reference to allocated data.">Reference</a>() : vbo_(NULL), allocatedSize_(0) {}</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      GLboolean <a class="code" href="structregen_1_1VBO_1_1Reference.html#a2c4dffafee2c4d007809b5d244f7f11d">isNullReference</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      GLuint <a class="code" href="structregen_1_1VBO_1_1Reference.html#a2bd472198b61d34e9f7196b274fb194e">allocatedSize</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      GLuint <a class="code" href="structregen_1_1VBO_1_1Reference.html#ad19bd33654f72f399649439c80ecbdc9">address</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      GLuint <a class="code" href="structregen_1_1VBO_1_1Reference.html#ad8996fb751cb44204c88d212b2e87cf5">bufferID</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keyword">private</span>: <span class="comment">// only VBO allowed to access</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;      <a class="code" href="classregen_1_1VBO.html" title="Buffer object that is used for vertex data.">VBO</a> *vbo_;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      <a class="code" href="structregen_1_1AllocatorPool_1_1Reference.html" title="Reference to allocated memory.">VBOPool::Reference</a> poolReference_;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;      GLuint allocatedSize_;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      list&lt; ref_ptr&lt;Reference&gt; &gt;::iterator it_;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;      ~<a class="code" href="structregen_1_1VBO_1_1Reference.html" title="Reference to allocated data.">Reference</a>();</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      <span class="comment">// no copy allowed</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      <a class="code" href="structregen_1_1VBO_1_1Reference.html" title="Reference to allocated data.">Reference</a>(<span class="keyword">const</span> <a class="code" href="structregen_1_1VBO_1_1Reference.html" title="Reference to allocated data.">Reference</a>&amp;) {}</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;      <a class="code" href="structregen_1_1VBO_1_1Reference.html" title="Reference to allocated data.">Reference</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="structregen_1_1VBO_1_1Reference.html" title="Reference to allocated data.">Reference</a>&amp;) { <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classregen_1_1VBO.html" title="Buffer object that is used for vertex data.">VBO</a>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr</a>&lt;Reference&gt;;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    };</div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="code" href="classregen_1_1VBO.html#a7adfdbbd8d84e304e697cd7ef521540e">  112</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="classregen_1_1VBO.html#a7adfdbbd8d84e304e697cd7ef521540e" title="Flag indicating the usage of the data in the VBO.">Usage</a> {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      USAGE_DYNAMIC = 0,</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      USAGE_STATIC,</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;      USAGE_STREAM,</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;      USAGE_FEEDBACK,</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      USAGE_TEXTURE,</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      USAGE_LAST</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    };</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keyword">static</span> GLuint <a class="code" href="classregen_1_1VBO.html#a7ca5f0a4eed65fb0ce4aa4bacba4cf26">attributeSize</a>(</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keyword">const</span> list&lt; <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;ShaderInput&gt;</a> &gt; &amp;attributes);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classregen_1_1VBO.html#a9daac0077dc7f73808ceb4b3bb8cd3e9">copy</a>(GLuint from, GLuint to,</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        GLuint size, GLuint offset, GLuint toOffset);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classregen_1_1VBO.html#addeede33e4e9cc9b30c86d708bee0f3c">createMemoryPools</a>();</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classregen_1_1VBO.html#afbeddfa098d3ea54a4e33a2c2dcc5b23">destroyMemoryPools</a>();</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keyword">static</span> <a class="code" href="classregen_1_1VBO.html#abcbefe36691a03363bf951d8e6a12644" title="A pool of VBO memory allocators.">VBOPool</a>* <a class="code" href="classregen_1_1VBO.html#a0ce84b4e9c9a13d569935b2fb061e87c">memoryPool</a>(<a class="code" href="classregen_1_1VBO.html#a7adfdbbd8d84e304e697cd7ef521540e" title="Flag indicating the usage of the data in the VBO.">Usage</a> <a class="code" href="classregen_1_1VBO.html#a82e127bc151c09fb7bb035c3470f8da2">usage</a>);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <a class="code" href="classregen_1_1VBO.html#a0ccfdae6881dc0a237706ee79f5d8fb8">VBO</a>(<a class="code" href="classregen_1_1VBO.html#a7adfdbbd8d84e304e697cd7ef521540e" title="Flag indicating the usage of the data in the VBO.">Usage</a> <a class="code" href="classregen_1_1VBO.html#a82e127bc151c09fb7bb035c3470f8da2">usage</a>);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <a class="code" href="classregen_1_1VBO.html#a7adfdbbd8d84e304e697cd7ef521540e" title="Flag indicating the usage of the data in the VBO.">Usage</a> <a class="code" href="classregen_1_1VBO.html#a82e127bc151c09fb7bb035c3470f8da2">usage</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    GLuint <a class="code" href="classregen_1_1VBO.html#addf4f0a068f88b890b5d2e55be17a739">allocatedSize</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Reference&gt;</a>&amp; <a class="code" href="classregen_1_1VBO.html#accd1fa098ee0fc582dd01fae2e32c918">alloc</a>(GLuint size);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Reference&gt;</a>&amp; <a class="code" href="classregen_1_1VBO.html#accd1fa098ee0fc582dd01fae2e32c918">alloc</a>(<span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;ShaderInput&gt;</a> &amp;att);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Reference&gt;</a>&amp; <a class="code" href="classregen_1_1VBO.html#a73994ca8ef0590cf2b56d5d4626da903">allocInterleaved</a>(<span class="keyword">const</span> list&lt; <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;ShaderInput&gt;</a> &gt; &amp;attributes);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Reference&gt;</a>&amp; <a class="code" href="classregen_1_1VBO.html#a0f81d057465b6937c77fa29e1d614049">allocSequential</a>(<span class="keyword">const</span> list&lt; <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;ShaderInput&gt;</a> &gt; &amp;attributes);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classregen_1_1VBO.html#a5bc177d32923f0da22ae8baadedb7999">free</a>(Reference *ref);</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;</div>
+<div class="line"><a name="l00216"></a><span class="lineno"><a class="code" href="classregen_1_1VBO.html#adff75ac644121841c82c2fbc6d4ad317">  216</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1VBO.html#adff75ac644121841c82c2fbc6d4ad317">set_bufferSubData</a>(GLenum target, GLuint offset, GLuint size, <span class="keywordtype">void</span> *data)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="keyword">    </span>{ glBufferSubData(target, offset, size, data); }</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
+<div class="line"><a name="l00228"></a><span class="lineno"><a class="code" href="classregen_1_1VBO.html#a35c1b4bff4edca9e4d30fbad13cd916b">  228</a></span>&#160;    GLvoid* <a class="code" href="classregen_1_1VBO.html#a35c1b4bff4edca9e4d30fbad13cd916b">map</a>(GLenum target, GLuint offset, GLuint size, GLenum accessFlags)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="keyword">    </span>{ <span class="keywordflow">return</span> glMapBufferRange(target, offset, size, accessFlags); }</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;</div>
+<div class="line"><a name="l00234"></a><span class="lineno"><a class="code" href="classregen_1_1VBO.html#ac453c52238faee37d1da4041d24d62b3">  234</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1VBO.html#ac453c52238faee37d1da4041d24d62b3">unmap</a>(GLenum target)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="keyword">    </span>{ glUnmapBuffer(target); }</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keyword">static</span> <a class="code" href="classregen_1_1VBO.html#abcbefe36691a03363bf951d8e6a12644" title="A pool of VBO memory allocators.">VBOPool</a> *dataPools_;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    list&lt; ref_ptr&lt;Reference&gt; &gt; allocations_;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <a class="code" href="classregen_1_1VBO.html#a7adfdbbd8d84e304e697cd7ef521540e" title="Flag indicating the usage of the data in the VBO.">Usage</a> usage_;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="comment">// sum of allocated blocks</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    GLuint allocatedSize_;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordtype">void</span> uploadInterleaved(</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        GLuint startByte,</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        GLuint endByte,</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="keyword">const</span> list&lt; <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;ShaderInput&gt;</a> &gt; &amp;attributes,</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Reference&gt;</a> &amp;ref);</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordtype">void</span> uploadSequential(</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        GLuint startByte,</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        GLuint endByte,</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <span class="keyword">const</span> list&lt; <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;ShaderInput&gt;</a> &gt; &amp;attributes,</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Reference&gt;</a> &amp;ref);</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Reference&gt;</a>&amp; createReference(GLuint numBytes);</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Reference&gt;</a>&amp; nullReference();</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;  };</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  <span class="keyword">typedef</span> ref_ptr&lt;VBO::Reference&gt; VBOReference;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;} <span class="comment">// namespace</span></div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* _VBO_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* _VBO_H_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 30 2013 12:27:22 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 11 2013 11:01:18 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

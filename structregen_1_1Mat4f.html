@@ -167,10 +167,12 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:ac5a0c6ec09bc82680d5bc2c8f9e815f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af367e9e7580624df9755690b2f29e8ee"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structregen_1_1Mat4f.html">Mat4f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structregen_1_1Mat4f.html#af367e9e7580624df9755690b2f29e8ee">orthogonalMatrix</a> (GLfloat l, GLfloat r, GLfloat b, GLfloat t, GLfloat n, GLfloat f)</td></tr>
 <tr class="separator:af367e9e7580624df9755690b2f29e8ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a898c91ee21ea283861e3c7b7f5bc3fb9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structregen_1_1Mat4f.html">Mat4f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structregen_1_1Mat4f.html#a898c91ee21ea283861e3c7b7f5bc3fb9">projectionMatrix</a> (GLfloat fov, GLfloat aspect, GLfloat near, GLfloat far)</td></tr>
-<tr class="separator:a898c91ee21ea283861e3c7b7f5bc3fb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dfcafa5414e71b44a096434e2f4fdc2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structregen_1_1Mat4f.html">Mat4f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structregen_1_1Mat4f.html#a7dfcafa5414e71b44a096434e2f4fdc2">projectionMatrix</a> (GLfloat fovDegree, GLfloat aspect, GLfloat near, GLfloat far)</td></tr>
+<tr class="separator:a7dfcafa5414e71b44a096434e2f4fdc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a055d2584ac32c582dc60756419db596b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structregen_1_1Mat4f.html">Mat4f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structregen_1_1Mat4f.html#a055d2584ac32c582dc60756419db596b">rotationMatrix</a> (GLfloat <a class="el" href="structregen_1_1Mat4f.html#ac29d45edd2b287a5669d890db65e8e1c">x</a>, GLfloat y, GLfloat z)</td></tr>
 <tr class="separator:a055d2584ac32c582dc60756419db596b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5187fe8dd1dec9c841a0c440ee50002"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structregen_1_1Mat4f.html">Mat4f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structregen_1_1Mat4f.html#ab5187fe8dd1dec9c841a0c440ee50002">scaleMatrix</a> (const <a class="el" href="classregen_1_1Vec3.html">Vec3f</a> &amp;v)</td></tr>
+<tr class="separator:ab5187fe8dd1dec9c841a0c440ee50002"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca2b031d306bf1f6beea1037808d7861"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structregen_1_1Mat4f.html">Mat4f</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structregen_1_1Mat4f.html#aca2b031d306bf1f6beea1037808d7861">transformationMatrix</a> (const <a class="el" href="classregen_1_1Vec3.html">Vec3f</a> &amp;rot, const <a class="el" href="classregen_1_1Vec3.html">Vec3f</a> &amp;translation, const <a class="el" href="classregen_1_1Vec3.html">Vec3f</a> &amp;<a class="el" href="structregen_1_1Mat4f.html#a009e91eb805982158a2ba0d4bffd7304">scale</a>)</td></tr>
 <tr class="separator:aca2b031d306bf1f6beea1037808d7861"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -1068,7 +1070,7 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a898c91ee21ea283861e3c7b7f5bc3fb9"></a>
+<a class="anchor" id="a7dfcafa5414e71b44a096434e2f4fdc2"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1079,7 +1081,7 @@ Public Attributes</h2></td></tr>
           <td class="memname">static <a class="el" href="structregen_1_1Mat4f.html">Mat4f</a> regen::Mat4f::projectionMatrix </td>
           <td>(</td>
           <td class="paramtype">GLfloat&#160;</td>
-          <td class="paramname"><em>fov</em>, </td>
+          <td class="paramname"><em>fovDegree</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1114,7 +1116,7 @@ Public Attributes</h2></td></tr>
 <p>Compute a perspective projection matrix. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fov</td><td>specifies the field of view angle, in degrees, in the y direction. </td></tr>
+    <tr><td class="paramname">fovDegree</td><td>specifies the field of view angle, in degrees, in the y direction. </td></tr>
     <tr><td class="paramname">aspect</td><td>specifies the aspect ratio that determines the field of view in the x direction. </td></tr>
     <tr><td class="paramname">near</td><td>specifies the distance from the viewer to the near clipping plane (always positive). </td></tr>
     <tr><td class="paramname">far</td><td>specifies the distance from the viewer to the far clipping plane (always positive). </td></tr>
@@ -1235,6 +1237,38 @@ Public Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="ab5187fe8dd1dec9c841a0c440ee50002"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structregen_1_1Mat4f.html">Mat4f</a> regen::Mat4f::scaleMatrix </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classregen_1_1Vec3.html">Vec3f</a> &amp;&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Computes a scaling matrix. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>scale factor for each dimension. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the scaling matrix. </dd></dl>
 
 </div>
 </div>
@@ -1457,7 +1491,7 @@ Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 30 2013 12:27:22 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 11 2013 11:01:20 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>
