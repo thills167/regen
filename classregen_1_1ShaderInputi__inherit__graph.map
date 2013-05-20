@@ -1,21 +1,21 @@
 <map id="regen::ShaderInputi" name="regen::ShaderInputi">
-<area shape="rect" id="node3" href="$classregen_1_1ShaderInput1i.html" title="Provides 1D int input to shader programs." alt="" coords="371,107,514,133"/>
-<area shape="rect" id="node18" href="$classregen_1_1ShaderInput2i.html" title="Provides 2D int input to shader programs." alt="" coords="371,157,514,184"/>
-<area shape="rect" id="node19" href="$classregen_1_1ShaderInput3i.html" title="Provides 3D int input to shader programs." alt="" coords="371,208,514,235"/>
-<area shape="rect" id="node20" href="$classregen_1_1ShaderInput4i.html" title="Provides 4D int input to shader programs." alt="" coords="371,259,514,285"/>
-<area shape="rect" id="node2" href="$classregen_1_1ShaderInput.html" title="Provides input to shader programs." alt="" coords="6,183,138,209"/>
-<area shape="rect" id="node4" href="$classregen_1_1Texture.html" title="A OpenGL Object that contains one or more images that all have the same image format." alt="" coords="563,107,669,133"/>
-<area shape="rect" id="node5" href="$classregen_1_1TBO.html" title="One&#45;dimensional arrays of texels whose storage comes from an attached buffer object." alt="" coords="734,31,823,57"/>
-<area shape="rect" id="node6" href="$classregen_1_1Texture1D.html" title="Images in this texture are all 1&#45;dimensional." alt="" coords="717,81,840,108"/>
-<area shape="rect" id="node7" href="$classregen_1_1Texture2D.html" title="Images in this texture all are 2&#45;dimensional." alt="" coords="717,132,840,159"/>
-<area shape="rect" id="node15" href="$classregen_1_1Texture3D.html" title="A 3 dimensional texture." alt="" coords="717,259,840,285"/>
-<area shape="rect" id="node8" href="$classregen_1_1DepthTexture2D.html" title="Texture with depth format." alt="" coords="906,5,1065,32"/>
-<area shape="rect" id="node10" href="$classregen_1_1Texture2DMultisample.html" title="The image in this texture (only one image. No mipmapping) is 2&#45;dimensional." alt="" coords="889,56,1082,83"/>
-<area shape="rect" id="node11" href="$classregen_1_1TextureCube.html" title="Texture with exactly 6 distinct sets of 2D images, all of the same size." alt="" coords="917,107,1054,133"/>
-<area shape="rect" id="node13" href="$classregen_1_1TextureRectangle.html" title="The image in this texture (only one image. No mipmapping) is 2&#45;dimensional." alt="" coords="903,157,1068,184"/>
-<area shape="rect" id="node14" href="$classregen_1_1VideoTexture.html" title="A texture that displays a video." alt="" coords="916,208,1055,235"/>
-<area shape="rect" id="node9" href="$classregen_1_1DepthTexture2DMultisample.html" title="The image in this texture (only one image. No mipmapping) is 2&#45;dimensional." alt="" coords="1131,5,1359,32"/>
-<area shape="rect" id="node12" href="$classregen_1_1CubeMapDepthTexture.html" title="Texture with exactly 6 distinct sets of 2D images, all of the same size." alt="" coords="1147,107,1344,133"/>
-<area shape="rect" id="node16" href="$classregen_1_1DepthTexture3D.html" title="A 3 dimensional depth texture." alt="" coords="906,259,1065,285"/>
-<area shape="rect" id="node17" href="$classregen_1_1Texture2DArray.html" title="Array of two dimensional textures." alt="" coords="908,309,1063,336"/>
+<area shape="rect" id="node3" href="$classregen_1_1ShaderInput1i.html" title="Provides 1D int input to shader programs." alt="" coords="371,191,514,217"/>
+<area shape="rect" id="node18" href="$classregen_1_1ShaderInput2i.html" title="Provides 2D int input to shader programs." alt="" coords="371,241,514,268"/>
+<area shape="rect" id="node19" href="$classregen_1_1ShaderInput3i.html" title="Provides 3D int input to shader programs." alt="" coords="371,292,514,319"/>
+<area shape="rect" id="node20" href="$classregen_1_1ShaderInput4i.html" title="Provides 4D int input to shader programs." alt="" coords="371,343,514,369"/>
+<area shape="rect" id="node2" href="$classregen_1_1ShaderInput.html" title="Provides input to shader programs." alt="" coords="6,267,138,293"/>
+<area shape="rect" id="node4" href="$classregen_1_1Texture.html" title="A OpenGL Object that contains one or more images that all have the same image format." alt="" coords="563,191,669,217"/>
+<area shape="rect" id="node5" href="$classregen_1_1Texture1D.html" title="Images in this texture are all 1&#45;dimensional." alt="" coords="727,115,849,141"/>
+<area shape="rect" id="node6" href="$classregen_1_1Texture2D.html" title="Images in this texture all are 2&#45;dimensional." alt="" coords="727,165,849,192"/>
+<area shape="rect" id="node14" href="$classregen_1_1Texture3D.html" title="A 3 dimensional texture." alt="" coords="727,241,849,268"/>
+<area shape="rect" id="node17" href="$classregen_1_1TextureBuffer.html" title="One&#45;dimensional arrays of texels whose storage comes from an attached buffer object." alt="" coords="717,292,859,319"/>
+<area shape="rect" id="node7" href="$classregen_1_1Texture2DDepth.html" title="Texture with depth format." alt="" coords="925,13,1083,40"/>
+<area shape="rect" id="node9" href="$classregen_1_1Texture2DMultisample.html" title="The image in this texture (only one image. No mipmapping) is 2&#45;dimensional." alt="" coords="907,64,1101,91"/>
+<area shape="rect" id="node10" href="$classregen_1_1TextureCube.html" title="Texture with exactly 6 distinct sets of 2D images, all of the same size." alt="" coords="935,115,1073,141"/>
+<area shape="rect" id="node12" href="$classregen_1_1TextureRectangle.html" title="The image in this texture (only one image. No mipmapping) is 2&#45;dimensional." alt="" coords="921,165,1087,192"/>
+<area shape="rect" id="node13" href="$classregen_1_1VideoTexture.html" title="A texture that displays a video." alt="" coords="935,216,1073,243"/>
+<area shape="rect" id="node8" href="$classregen_1_1Texture2DMultisampleDepth.html" title="The image in this texture (only one image. No mipmapping) is 2&#45;dimensional." alt="" coords="1150,6,1343,47"/>
+<area shape="rect" id="node11" href="$classregen_1_1TextureCubeDepth.html" title="Texture with exactly 6 distinct sets of 2D images, all of the same size." alt="" coords="1161,115,1333,141"/>
+<area shape="rect" id="node15" href="$classregen_1_1Texture2DArray.html" title="Array of two dimensional textures." alt="" coords="927,267,1081,293"/>
+<area shape="rect" id="node16" href="$classregen_1_1Texture3DDepth.html" title="A 3 dimensional depth texture." alt="" coords="925,317,1083,344"/>
 </map>

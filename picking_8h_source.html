@@ -128,10 +128,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    GLint <a class="code" href="classregen_1_1PickingGeom.html#a2af1c338fce5431b3f17e03442a89baa">pickedInstance</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    GLint <a class="code" href="classregen_1_1PickingGeom.html#afc48754cd47403870776019afe49cb40">pickedObject</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    GLboolean <a class="code" href="classregen_1_1PickingGeom.html#a0b58c6f30ffaa917444391596f283197">add</a>(</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    GLboolean <a class="code" href="classregen_1_1PickingGeom.html#ab9011972164c928172a950de2d6c4212">add</a>(</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Mesh&gt;</a> &amp;mesh,</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;StateNode&gt;</a> &amp;meshNode,</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Shader&gt;</a> &amp;meshShader);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Shader&gt;</a> &amp;meshShader,</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;State&gt;</a> &amp;meshState=<a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;State&gt;::alloc</a>());</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">void</span> <span class="keyword">remove</span>(<a class="code" href="classregen_1_1Mesh.html" title="A collection of vertices, edges and faces that defines the shape of an object in 3D space...">Mesh</a> *mesh);</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1PickingGeom.html#aaa059c6200c61c8468e10e40a6dbf1a5">update</a>(<a class="code" href="classregen_1_1RenderState.html" title="Handles server-side GL states.">RenderState</a> *rs);</div>
@@ -149,7 +149,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="comment">// and object id.</span></div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keyword">struct </span>PickMesh {</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Mesh&gt;</a> mesh_;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;      <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;StateNode&gt;</a> meshNode_;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;      <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;State&gt;</a> state_;</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;      <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;ShaderState&gt;</a> pickShader_;</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;      GLint id_;</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    };</div>
@@ -197,7 +197,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 11 2013 11:01:18 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon May 20 2013 19:24:58 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

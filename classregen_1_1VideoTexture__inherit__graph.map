@@ -1,11 +1,11 @@
 <map id="regen::VideoTexture" name="regen::VideoTexture">
-<area shape="rect" id="node2" href="$classregen_1_1Texture2D.html" title="Images in this texture all are 2&#45;dimensional." alt="" coords="96,304,219,331"/>
-<area shape="rect" id="node3" href="$classregen_1_1Texture.html" title="A OpenGL Object that contains one or more images that all have the same image format." alt="" coords="104,229,211,256"/>
-<area shape="rect" id="node4" href="$classregen_1_1GLRectangle.html" title="A 2D rectangular buffer." alt="" coords="5,155,144,181"/>
-<area shape="rect" id="node5" href="$classregen_1_1GLObject.html" title="Base class for buffer objects." alt="" coords="16,80,132,107"/>
-<area shape="rect" id="node6" href="$classregen_1_1ShaderInput1i.html" title="Provides 1D int input to shader programs." alt="" coords="169,155,311,181"/>
-<area shape="rect" id="node7" href="$classregen_1_1ShaderInputi.html" title="Provides int input to shader programs." alt="" coords="173,80,307,107"/>
-<area shape="rect" id="node8" href="$classregen_1_1ShaderInput.html" title="Provides input to shader programs." alt="" coords="174,5,305,32"/>
-<area shape="rect" id="node9" href="$classregen_1_1Animation.html" title="Abstract base class for animations." alt="" coords="243,304,363,331"/>
-<area shape="rect" id="node10" href="$classregen_1_1EventObject.html" title="Allows to integrate events into subclasses." alt="" coords="235,229,369,256"/>
+<area shape="rect" id="node2" href="$classregen_1_1Texture2D.html" title="Images in this texture all are 2&#45;dimensional." alt="" coords="96,320,219,347"/>
+<area shape="rect" id="node3" href="$classregen_1_1Texture.html" title="A OpenGL Object that contains one or more images that all have the same image format." alt="" coords="104,245,211,272"/>
+<area shape="rect" id="node4" href="$classregen_1_1GLRectangle.html" title="A 2D rectangular buffer." alt="" coords="5,171,144,197"/>
+<area shape="rect" id="node5" href="$classregen_1_1GLObject.html" title="Base class for buffer objects." alt="" coords="16,88,132,115"/>
+<area shape="rect" id="node6" href="$classregen_1_1ShaderInput1i.html" title="Provides 1D int input to shader programs." alt="" coords="170,171,312,197"/>
+<area shape="rect" id="node7" href="$classregen_1_1ShaderInputTyped.html" title="regen::ShaderInputTyped\l\&lt; GLint, GLint, GL_INT \&gt;" alt="" coords="157,81,328,122"/>
+<area shape="rect" id="node8" href="$classregen_1_1ShaderInput.html" title="Provides input to shader programs." alt="" coords="177,5,308,32"/>
+<area shape="rect" id="node9" href="$classregen_1_1Animation.html" title="Abstract base class for animations." alt="" coords="243,320,363,347"/>
+<area shape="rect" id="node10" href="$classregen_1_1EventObject.html" title="Allows to integrate events into subclasses." alt="" coords="235,245,369,272"/>
 </map>

@@ -26,6 +26,7 @@ var searchData=
   ['vec4',['Vec4',['../classregen_1_1Vec4.html',1,'regen']]],
   ['vec4_3c_20glfloat_20_3e',['Vec4&lt; GLfloat &gt;',['../classregen_1_1Vec4.html',1,'regen']]],
   ['vec4_3c_20gluint_20_3e',['Vec4&lt; GLuint &gt;',['../classregen_1_1Vec4.html',1,'regen']]],
+  ['vec6',['Vec6',['../classregen_1_1Vec6.html',1,'regen']]],
   ['videostream',['VideoStream',['../classregen_1_1VideoStream.html',1,'regen']]],
   ['videotexture',['VideoTexture',['../classregen_1_1VideoTexture.html',1,'regen']]],
   ['volumetricfog',['VolumetricFog',['../classregen_1_1VolumetricFog.html',1,'regen']]]

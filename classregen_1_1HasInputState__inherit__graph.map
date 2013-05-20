@@ -1,6 +1,8 @@
 <map id="regen::HasInputState" name="regen::HasInputState">
-<area shape="rect" id="node5" href="$classregen_1_1Bones.html" title="Provides bone matrices." alt="" coords="87,229,185,256"/>
-<area shape="rect" id="node2" href="$classregen_1_1State.html" title="Base class for states." alt="" coords="25,80,119,107"/>
-<area shape="rect" id="node3" href="$classregen_1_1EventObject.html" title="Allows to integrate events into subclasses." alt="" coords="5,5,139,32"/>
-<area shape="rect" id="node4" href="$classregen_1_1HasInput.html" title="Interface for State&#39;s with input." alt="" coords="143,80,257,107"/>
+<area shape="rect" id="node5" href="$classregen_1_1Bones.html" title="Provides bone matrices." alt="" coords="5,229,104,256"/>
+<area shape="rect" id="node6" href="$classregen_1_1Camera.html" title="Camera with perspective projection." alt="" coords="129,229,236,256"/>
+<area shape="rect" id="node7" href="$classregen_1_1Material.html" title="Provides material related uniforms." alt="" coords="261,229,368,256"/>
+<area shape="rect" id="node2" href="$classregen_1_1State.html" title="Base class for states." alt="" coords="72,80,165,107"/>
+<area shape="rect" id="node3" href="$classregen_1_1EventObject.html" title="Allows to integrate events into subclasses." alt="" coords="51,5,185,32"/>
+<area shape="rect" id="node4" href="$classregen_1_1HasInput.html" title="Interface for State&#39;s with input." alt="" coords="189,80,304,107"/>
 </map>

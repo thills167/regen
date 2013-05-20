@@ -120,13 +120,14 @@ Public Types</h2></td></tr>
 &#160;&#160;<b>USAGE_DYNAMIC</b> = 0, 
 <b>USAGE_STATIC</b>, 
 <b>USAGE_STREAM</b>, 
-<b>USAGE_FEEDBACK</b>, 
+<a class="el" href="classregen_1_1VBO.html#a7adfdbbd8d84e304e697cd7ef521540ea782e1d52f80879473b71f1f6d7860776">USAGE_FEEDBACK</a>, 
 <br/>
-&#160;&#160;<b>USAGE_TEXTURE</b>, 
+&#160;&#160;<a class="el" href="classregen_1_1VBO.html#a7adfdbbd8d84e304e697cd7ef521540ea7bd595f1febef6dfce35b4a6572ad949">USAGE_TEXTURE</a>, 
+<a class="el" href="classregen_1_1VBO.html#a7adfdbbd8d84e304e697cd7ef521540ea5a85d59f22e0e66895f5229dfc13c89a">USAGE_UNIFORM</a>, 
 <b>USAGE_LAST</b>
 <br/>
  }</td></tr>
-<tr class="memdesc:a7adfdbbd8d84e304e697cd7ef521540e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag indicating the usage of the data in the <a class="el" href="classregen_1_1VBO.html" title="Buffer object that is used for vertex data.">VBO</a>. <br/></td></tr>
+<tr class="memdesc:a7adfdbbd8d84e304e697cd7ef521540e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag indicating the usage of the data in the <a class="el" href="classregen_1_1VBO.html" title="Buffer object that is used for vertex data.">VBO</a>.  <a href="classregen_1_1VBO.html#a7adfdbbd8d84e304e697cd7ef521540e">More...</a><br/></td></tr>
 <tr class="separator:a7adfdbbd8d84e304e697cd7ef521540e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abcbefe36691a03363bf951d8e6a12644"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abcbefe36691a03363bf951d8e6a12644"></a>
 typedef <a class="el" href="classregen_1_1AllocatorPool.html">AllocatorPool</a><br class="typebreak"/>
@@ -178,7 +179,33 @@ Static Public Member Functions</h2></td></tr>
 <p>Since the storage for buffer objects is allocated by OpenGL, vertex buffer objects are a mechanism for storing vertex data in "fast" memory (i.e. video RAM or AGP RAM, and in the case of PCI Express, video RAM or RAM), thereby allowing for significant increases in vertex throughput between the application and the GPU.</p>
 <p>A memory pool of pre-allocated GPU storage is used in combination with a memory manager to avoid fragmentation. Each time alloc is called the memory pool is asked to provide a free block that fits the size request. As a result you can not be sure to get contiguous memory if you call alloc multiple times. Each allocation reserves a block of contiguous memory but blocks do not have to follow each other, they may not even be part of the same GL buffer object.</p>
 <p>In the destructor <a class="el" href="classregen_1_1VBO.html" title="Buffer object that is used for vertex data.">VBO</a>'s free all the storage that was allocated, you do not have to call free if you keep the alloc for the <a class="el" href="classregen_1_1VBO.html" title="Buffer object that is used for vertex data.">VBO</a> lifetime. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a class="anchor" id="a7adfdbbd8d84e304e697cd7ef521540e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classregen_1_1VBO.html#a7adfdbbd8d84e304e697cd7ef521540e">regen::VBO::Usage</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flag indicating the usage of the data in the <a class="el" href="classregen_1_1VBO.html" title="Buffer object that is used for vertex data.">VBO</a>. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a7adfdbbd8d84e304e697cd7ef521540ea782e1d52f80879473b71f1f6d7860776"></a>USAGE_FEEDBACK</em>&nbsp;</td><td class="fielddoc">
+<p>Transform feedback </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a7adfdbbd8d84e304e697cd7ef521540ea7bd595f1febef6dfce35b4a6572ad949"></a>USAGE_TEXTURE</em>&nbsp;</td><td class="fielddoc">
+<p>TBO </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a7adfdbbd8d84e304e697cd7ef521540ea5a85d59f22e0e66895f5229dfc13c89a"></a>USAGE_UNIFORM</em>&nbsp;</td><td class="fielddoc">
+<p>UBO </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a0ccfdae6881dc0a237706ee79f5d8fb8"></a>
 <div class="memitem">
 <div class="memproto">
@@ -624,7 +651,7 @@ Static Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 11 2013 11:01:21 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon May 20 2013 19:24:59 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

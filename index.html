@@ -82,7 +82,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><code>regen</code> &ndash; Real-time Graphics Engine &ndash; is a portable OpenGL library written in C++. The purpose of this library is to help creating real-time rendering software.</p>
-<p>A graphics card supporting the OpenGL 3.3 API is required for <code>regen</code>. Some features from the 4.0 API are also supported but optional for backwards compatibility. The engine was tested with NVIDIA drivers on Arch Linux and ATI drivers on Ubuntu 11.10 (ATI dropped support for my notebook graphics adapter so i had to use an old Ubuntu version). Other Unix based Operating-Systems should work from the scratch. Windows 8 with latest ATI drivers was also tested. You will find some special notes for compiling the engine under Win in this document.</p>
+<p>A graphics card supporting the OpenGL 3.3 API is required for <code>regen</code>. Some features from the 4.0 API are also supported but optional for backwards compatibility. The engine was tested with proprietary NVIDIA and ATI drivers and should work with Unix based operating systems and Windows.</p>
 <h1>Downloading</h1>
 <p>Clone the code from <a href="https://github.com/daniel86/regen">github</a>. The master branch contains the most up to date source code. For each release you will find a custom branch.</p>
 <h1>Compiling</h1>
@@ -92,37 +92,39 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr>
 <th>Target </th><th>Description </th></tr>
 <tr>
-<td>all </td><td>Compile and link the engine. </td></tr>
+<td><code>all</code> </td><td>Compile and link the engine. </td></tr>
 <tr>
-<td>install </td><td>Install compiled library. </td></tr>
+<td><code>install</code> </td><td>Install compiled library. </td></tr>
 <tr>
-<td>doc </td><td>Generate doxygen documentation. </td></tr>
+<td><code>doc</code> </td><td>Generate doxygen documentation. </td></tr>
+<tr>
+<td><code>package</code> </td><td>Generate a regen package (archive file on Linux). </td></tr>
 </table>
 <p>CMake supports some default parameters for compiler and build path setup, consider the CMake documentations for a complete socumentation of these arguments. Some important argument are listed below.</p>
 <table class="doxtable">
 <tr>
 <th>CMake argument </th><th>Description </th></tr>
 <tr>
-<td>CMAKE_INSTALL_PREFIX </td><td>Path were the engine should get installed when the ´install´ target is used. </td></tr>
+<td>CMAKE_INSTALL_PREFIX </td><td>Path were the engine should get installed when the <code>install</code> target is used. </td></tr>
 <tr>
 <td>CMAKE_INCLUDE_PATH </td><td>Path were you installed the dependency library headers. </td></tr>
 <tr>
 <td>CMAKE_LIBRARY_PATH </td><td>Path were you installed the dependency libraries. </td></tr>
 <tr>
-<td>-G $GENERATOR_NAME </td><td>Specifies custom build file generator. You might need to set this to "Visual Studio 11 Win64" when you intend to build the library with 64 Bit under Windows. </td></tr>
+<td>-G $GENERATOR_NAME </td><td>Specifies custom build file generator. You might need to set this to "Visual Studio 11 Win64" when you intend to build the library for Win 64 Bit. </td></tr>
 </table>
 <p>Following you can find a list of <code>cmake</code> arguments with special handling in the <code>regen</code> build files:</p>
 <table class="doxtable">
 <tr>
 <th>CMake argument </th><th>Default </th><th>Description </th></tr>
 <tr>
-<td>-DCMAKE_BUILD_TYPE </td><td>Release </td><td>One of Release or Debug. With Debug mode the engine is compiled with additional debugging symbols. </td></tr>
+<td>-DCMAKE_BUILD_TYPE </td><td>Release </td><td>One of <code>Release</code> or <code>Debug</code>. With Debug mode the engine is compiled with additional debugging symbols. </td></tr>
 <tr>
-<td>-DBUILD_TESTS </td><td>0 </td><td>If set to 1 the test applications will be compiled by all target </td></tr>
+<td>-DBUILD_TESTS </td><td>0 </td><td>If set to 1 the test applications will be compiled by <code>all</code> target </td></tr>
 <tr>
-<td>-DBUILD_VIDEO_PLAYER </td><td>0 </td><td>If set to 1 the video player application will be compiled by all target </td></tr>
+<td>-DBUILD_VIDEO_PLAYER </td><td>0 </td><td>If set to 1 the video player application will be compiled by <code>all</code> target </td></tr>
 <tr>
-<td>-DBUILD_TEXTURE_UPDATER </td><td>0 </td><td>If set to 1 the texture updater application will be compiled by all target </td></tr>
+<td>-DBUILD_TEXTURE_UPDATER </td><td>0 </td><td>If set to 1 the texture updater application will be compiled by <code>all</code> target </td></tr>
 </table>
 <p>On Windows you might have to set environment variables for the dependency libraries. Following you can find a list of those variables:</p>
 <table class="doxtable">
@@ -157,7 +159,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li><code>Render State</code>: encapsulates GL states and avoids redundant state switches.</li>
 <li><code>Audio/Video</code>: Streaming from file resources, 3D Sound</li>
 <li><code>Image loading</code>: Support for common image formats (png, jpg, hdr, ...)</li>
-<li><code>Text rendering</code>: Loading of Freetype fonts, rendering with texture mapped text</li>
+<li><code>Text rendering</code>: Loading of Freetype fonts, rendering of texture mapped text</li>
 <li><code>Model loading</code>: Support for common model formats (3ds, ply, obj, ...), support for bone animations</li>
 <li><code>Shading</code>: Deferred and Direct shading is supported</li>
 <li><code>Picking</code>: Supports to distinguish between objects and instances</li>
@@ -170,17 +172,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>Following you can find a list of libraries that must be installed in order to compile <code>regen</code>.</p>
 <ul>
 <li><a href="http://www.opengl.org/">OpenGL</a> &gt;=3.3</li>
-<li><a href="http://kcat.strangesoft.net/openal.html">OpenAL Soft</a> &gt;=1.1</li>
-<li><a href="http://assimp.sourceforge.net/">Assimp</a> &gt;= 2.0</li>
+<li><a href="http://kcat.strangesoft.net/openal.html">OpenAL Soft</a> &gt;=1.1 and <a href="http://connect.creativelabs.com/openal/Documentation/The%20OpenAL%20Utility%20Toolkit.htm">ALUT</a><ul>
+<li>You might have to compile ALUT manually on Win. I had troubles linking against the binary distribution using VisualStudio, probably incompatible compilers.</li>
+</ul>
+</li>
+<li><a href="http://assimp.sourceforge.net/">Assimp</a> &gt;= 2.0<ul>
+<li>You have to copy the dll manually to binary dir on Win (.dll is not named like .lib)</li>
+</ul>
+</li>
 <li><a href="http://openil.sourceforge.net/">DevIL</a> &gt;= 1.4.0</li>
-<li><a href="http://www.freetype.org/">FreeType</a> &gt;= 2.4.0</li>
-<li><a href="http://www.boost.org/">Boost</a> (thread system date_time filesystem regex)</li>
-<li><a href="http://www.ffmpeg.org/">FFmpeg</a></li>
+<li><a href="http://www.freetype.org/">FreeType</a> &gt;= 2.4.0<ul>
+<li>You might have to compile FreeType manually on Win. I had troubles linking against the binary distribution using VisualStudio, probably incompatible compilers.</li>
+</ul>
+</li>
+<li><a href="http://www.boost.org/">Boost</a><ul>
+<li>components: thread system date_time filesystem regex</li>
+<li>compile options: &ndash;build-type=complete</li>
+</ul>
+</li>
+<li><a href="http://www.ffmpeg.org/">FFmpeg</a><ul>
+<li>download <code>Dev</code> and <code>Shared</code> package from <a href="http://ffmpeg.zeranoe.com/builds/">here</a> on Win. You have to copy the dll manually to binary dir (.dll is not named like .lib).</li>
+</ul>
+</li>
 </ul>
 <p>In order to compile the test applications you will also need to install the following list of libraries:</p>
 <ul>
 <li><a href="http://qt-project.org/">Qt</a> &gt;=4.0 (QtCore, QtGui, QtOpenGL)<ul>
-<li><a href="http://code.google.com/p/qt-msvc-installer">Qt4 installer for 64Bit</a></li>
+<li><a href="http://code.google.com/p/qt-msvc-installer">Qt4 installer</a> for 64Bit Win</li>
 </ul>
 </li>
 </ul>
@@ -192,7 +210,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 11 2013 11:01:22 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon May 20 2013 19:24:59 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

@@ -121,10 +121,10 @@ Public Types</h2></td></tr>
 <tr class="memdesc:a5729e0ffaeb347cf8470e6f608d95de9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classregen_1_1UBO.html" title="A Buffer Object that is used to store uniform data for a shader program.">UBO</a> layout qualifier.  <a href="classregen_1_1UBO.html#a5729e0ffaeb347cf8470e6f608d95de9">More...</a><br/></td></tr>
 <tr class="separator:a5729e0ffaeb347cf8470e6f608d95de9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_classregen_1_1GLObject"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classregen_1_1GLObject')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classregen_1_1GLObject.html">regen::GLObject</a></td></tr>
-<tr class="memitem:a435476eff4829be16ec4c8be33bb0aa2 inherit pub_types_classregen_1_1GLObject"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1GLObject.html#a435476eff4829be16ec4c8be33bb0aa2">CreateObjectFunc</a> )(GLsizei, GLuint *)</td></tr>
-<tr class="separator:a435476eff4829be16ec4c8be33bb0aa2 inherit pub_types_classregen_1_1GLObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bd2575911b71623c52b3f9641a066f8 inherit pub_types_classregen_1_1GLObject"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1GLObject.html#a9bd2575911b71623c52b3f9641a066f8">ReleaseObjectFunc</a> )(GLsizei, const GLuint *)</td></tr>
-<tr class="separator:a9bd2575911b71623c52b3f9641a066f8 inherit pub_types_classregen_1_1GLObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adafbd9451877aa0b2bed3c8aab4105f8 inherit pub_types_classregen_1_1GLObject"><td class="memItemLeft" align="right" valign="top">typedef void(GLAPIENTRY *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1GLObject.html#adafbd9451877aa0b2bed3c8aab4105f8">CreateObjectFunc</a> )(GLsizei n, GLuint *buffers)</td></tr>
+<tr class="separator:adafbd9451877aa0b2bed3c8aab4105f8 inherit pub_types_classregen_1_1GLObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e111ef30f56fc385b045b405c8e1942 inherit pub_types_classregen_1_1GLObject"><td class="memItemLeft" align="right" valign="top">typedef void(GLAPIENTRY *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1GLObject.html#a2e111ef30f56fc385b045b405c8e1942">ReleaseObjectFunc</a> )(GLsizei n, const GLuint *buffers)</td></tr>
+<tr class="separator:a2e111ef30f56fc385b045b405c8e1942 inherit pub_types_classregen_1_1GLObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -141,7 +141,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af2535802f274d60a5cbac0e785be9fcd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1UBO.html#af2535802f274d60a5cbac0e785be9fcd">setSubData</a> (byte *data, GLuint offset, GLuint size) const </td></tr>
 <tr class="separator:af2535802f274d60a5cbac0e785be9fcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classregen_1_1GLObject"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classregen_1_1GLObject')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classregen_1_1GLObject.html">regen::GLObject</a></td></tr>
-<tr class="memitem:af79ffe3c6e6dc3057bdc1af5010ad558 inherit pub_methods_classregen_1_1GLObject"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1GLObject.html#af79ffe3c6e6dc3057bdc1af5010ad558">GLObject</a> (<a class="el" href="classregen_1_1GLObject.html#a435476eff4829be16ec4c8be33bb0aa2">CreateObjectFunc</a> createObjects, <a class="el" href="classregen_1_1GLObject.html#a9bd2575911b71623c52b3f9641a066f8">ReleaseObjectFunc</a> releaseObjects, GLuint <a class="el" href="classregen_1_1GLObject.html#a3c61a1391300b8a3c289fefc7e49bb04">numObjects</a>=1)</td></tr>
+<tr class="memitem:af79ffe3c6e6dc3057bdc1af5010ad558 inherit pub_methods_classregen_1_1GLObject"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1GLObject.html#af79ffe3c6e6dc3057bdc1af5010ad558">GLObject</a> (<a class="el" href="classregen_1_1GLObject.html#adafbd9451877aa0b2bed3c8aab4105f8">CreateObjectFunc</a> createObjects, <a class="el" href="classregen_1_1GLObject.html#a2e111ef30f56fc385b045b405c8e1942">ReleaseObjectFunc</a> releaseObjects, GLuint <a class="el" href="classregen_1_1GLObject.html#a3c61a1391300b8a3c289fefc7e49bb04">numObjects</a>=1)</td></tr>
 <tr class="separator:af79ffe3c6e6dc3057bdc1af5010ad558 inherit pub_methods_classregen_1_1GLObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a8ccdcbb8ca1a521fb4081923852f77 inherit pub_methods_classregen_1_1GLObject"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1GLObject.html#a3a8ccdcbb8ca1a521fb4081923852f77">id</a> () const </td></tr>
 <tr class="separator:a3a8ccdcbb8ca1a521fb4081923852f77 inherit pub_methods_classregen_1_1GLObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -352,7 +352,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 11 2013 11:01:21 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon May 13 2013 21:39:53 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

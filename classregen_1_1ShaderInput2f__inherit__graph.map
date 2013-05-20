@@ -1,4 +1,4 @@
 <map id="regen::ShaderInput2f" name="regen::ShaderInput2f">
-<area shape="rect" id="node2" href="$classregen_1_1ShaderInputf.html" title="Provides float input to shader programs." alt="" coords="8,80,143,107"/>
-<area shape="rect" id="node3" href="$classregen_1_1ShaderInput.html" title="Provides input to shader programs." alt="" coords="10,5,141,32"/>
+<area shape="rect" id="node2" href="$classregen_1_1ShaderInputTyped.html" title="regen::ShaderInputTyped\l\&lt; Vec2f, GLfloat, GL_FLOAT \&gt;" alt="" coords="5,81,208,122"/>
+<area shape="rect" id="node3" href="$classregen_1_1ShaderInput.html" title="Provides input to shader programs." alt="" coords="41,5,172,32"/>
 </map>

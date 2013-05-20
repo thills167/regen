@@ -83,9 +83,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="RenderState"></a>
 RenderState</h1>
-<p><code>regen</code> uses <a class="el" href="classregen_1_1RenderState.html" title="Handles server-side GL states.">regen::RenderState</a> to keep track of most GL states and to avoid redundant state changes. Avoiding redundant changes is done using the template class <a class="el" href="classregen_1_1StateStack.html" title="A stack that keeps track of a state value.">regen::StateStack</a>. The stack compares pushed values with the active value before calling any GL functions. When a value is popped the previous state is value is activated.</p>
+<p><code>regen</code> uses <a class="el" href="classregen_1_1RenderState.html" title="Handles server-side GL states.">regen::RenderState</a> to keep track of most GL states and to avoid redundant state changes. Avoiding redundant changes is done using the template class <a class="el" href="classregen_1_1StateStack.html" title="A stack that keeps track of a state value.">regen::StateStack</a>. The stack compares pushed values with the active value before calling any GL functions. When a value is popped the previous state value is activated.</p>
 <p>You should always use the RenderState if it provides a state stack for the particular state of your interest because it keeps track of the value and undefined behavior will occur when the RenderState assumes a wrong state value.</p>
-<p>The RenderState is a singleton. You can only use the singleton instance in the rendering thread. Multithreading is not supported. RenderState may manages resources that can not be shared between threads and it does not provide an interface to make the associated active in the calling thread.</p>
+<p>The RenderState is a singleton. You can only use the singleton instance in the rendering thread. Multithreading is not supported. RenderState may manages resources that can not be shared between threads and it does not provide an interface to make the associated context active in the calling thread.</p>
 <div class="fragment"><div class="line"><span class="keyword">using namespace </span>regen;</div>
 <div class="line"><span class="comment">// Get the singleton and activate the MULTISAMPLE state</span></div>
 <div class="line"><span class="comment">// aka. use multiple fragment samples in computing the final color of a pixel.</span></div>
@@ -101,17 +101,19 @@ Memory management</h1>
 <h2><a class="anchor" id="ref_ptr"></a>
 Reference counting</h2>
 <p><code>regen</code> excessively uses the <a class="el" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">regen::ref_ptr</a> template class for reference counting. The template class supports assignment operator and copy constructor. To access the pointer you can use -&gt; operator. Intern all references share the same counter, if the counter reaches zero <code>delete</code> is called.</p>
-<p>You have to explicitly request to manage the memory with reference counting by calling one of the regen::ref_ptr::allocate functions.</p>
+<p>You have to explicitly request to manage the memory with reference counting by calling one of the alloc functions.</p>
 <p>Simple usage example: </p>
 <div class="fragment"><div class="line"><span class="keyword">using namespace </span>regen;</div>
 <div class="line"><span class="keyword">struct </span>Test { <span class="keywordtype">int</span> i; }</div>
-<div class="line"><span class="comment">// create reference counted instance of Test data type.</span></div>
-<div class="line"><span class="comment">// the reference count is 1 after calling this.</span></div>
-<div class="line"><a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Test&gt;</a> i0 = <a class="code" href="classregen_1_1ref__ptr.html#ac26b25152a25a5fcbbf1541a4c4f7467">ref_ptr&lt;Test&gt;::alloc</a>();</div>
-<div class="line"><span class="comment">// assign a new value to the Test instance.</span></div>
-<div class="line">i0-&gt;i = 2;</div>
-<div class="line"><span class="comment">// copy the reference pointer, reference count will be 2 afterwards.</span></div>
-<div class="line"><a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Test&gt;</a> i1 = i0;</div>
+<div class="line">{</div>
+<div class="line">  <span class="comment">// create reference counted instance of Test data type.</span></div>
+<div class="line">  <span class="comment">// the reference count is 1 after calling this.</span></div>
+<div class="line">  <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Test&gt;</a> i0 = <a class="code" href="classregen_1_1ref__ptr.html#ac26b25152a25a5fcbbf1541a4c4f7467">ref_ptr&lt;Test&gt;::alloc</a>();</div>
+<div class="line">  <span class="comment">// assign a new value to the Test instance.</span></div>
+<div class="line">  i0-&gt;i = 2;</div>
+<div class="line">  <span class="comment">// copy the reference pointer, reference count will be 2 afterwards.</span></div>
+<div class="line">  <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;Test&gt;</a> i1 = i0;</div>
+<div class="line">} <span class="comment">// reference count reaches zero when leaving this block</span></div>
 </div><!-- fragment --><h2><a class="anchor" id="mem_pool"></a>
 Memory pools</h2>
 <p><code>regen</code> supports virtual memory allocation using the <a class="el" href="classregen_1_1AllocatorPool.html" title="A pool of memory allocators.">regen::AllocatorPool</a> template class. An AllocatorPool is defined by an actual allocator and an virtual allocator. Actual allocators are used to actually allocate a block of memory (a GPU memory allocator may calls glGenBuffers and the initial glBufferData). The actual block of pre-allocated memory is managed by the virtual allocator. When someone requests memory from the pool, the pool checks if there is an virtual allocator with enough contiguous space left. If not the pool may actually allocates memory for creating a virtual allocator with enough contiguous free space.</p>
@@ -128,7 +130,7 @@ Memory pools</h2>
 <div class="line"><a class="code" href="classregen_1_1ref__ptr.html">VBOReference</a> ref = vbo-&gt;alloc(NUM_BYTES);</div>
 <div class="line"><span class="comment">// Upload data to actual VRAM using the VBOReference.</span></div>
 <div class="line"><span class="comment">// The actual upload call `glBufferSubData` is wrapped in a RenderState push and pop</span></div>
-<div class="line"><span class="comment">// that makes the referenced buffer the current array buffer,</span></div>
+<div class="line"><span class="comment">// that makes the referenced buffer the current array buffer.</span></div>
 <div class="line"><a class="code" href="classregen_1_1RenderState.html" title="Handles server-side GL states.">RenderState</a>()::get()-&gt;arrayBuffer().push(ref-&gt;bufferID());</div>
 <div class="line">glBufferSubData(GL_ARRAY_BUFFER, ref-&gt;address(), NUM_BYTES, cpuDataPtr);</div>
 <div class="line"><a class="code" href="classregen_1_1RenderState.html" title="Handles server-side GL states.">RenderState</a>()::get()-&gt;arrayBuffer().pop();</div>
@@ -162,31 +164,70 @@ Animations</h1>
 Events</h1>
 <p><a class="el" href="classregen_1_1EventObject.html" title="Allows to integrate events into subclasses.">regen::EventObject</a> provides a simple interface for providing sync and async event messages to other components via callback functions. For async events the connected callbacks are called after the next frame was rendered within the render thread (with GL context). For example this event mechanism is used to dispatch GUI events from the GUI thread to the render thread.</p>
 <p>Implementing <a class="el" href="classregen_1_1EventObject.html" title="Allows to integrate events into subclasses.">regen::EventObject</a> is easy. Each <a class="el" href="classregen_1_1EventObject.html" title="Allows to integrate events into subclasses.">regen::EventObject</a> can define multiple named events by calling the static function <a class="el" href="classregen_1_1EventObject.html#a960c9f22b9bf76cfa7d408190991c799">regen::EventObject::registerEvent</a>. This has to be done only once per class (not once per instance). The function returns an unique event id that can be use to refer to the registered event.</p>
-<p>After the event was registered <a class="el" href="classregen_1_1EventObject.html" title="Allows to integrate events into subclasses.">regen::EventObject</a> implementations can call <a class="el" href="classregen_1_1EventObject.html#ad7262b8beaaf6d5af87dec99d3a373f2">regen::EventObject::emitEvent</a> for an synch event or <a class="el" href="classregen_1_1EventObject.html#aa2ec1cc5026f3894e428750a702e63f2">regen::EventObject::queueEmit</a> for an asynch event. If you need any special event data you can subclass <a class="el" href="classregen_1_1EventData.html" title="Data passed from event emitter to event handlers.">regen::EventData</a> and pass it to the emit function.</p>
+<p>After the event was registered <a class="el" href="classregen_1_1EventObject.html" title="Allows to integrate events into subclasses.">regen::EventObject</a> implementations can call <a class="el" href="classregen_1_1EventObject.html#a8649fc8f5e945b4482c6fa3bcbd84e42">regen::EventObject::emitEvent</a> for an synch event or <a class="el" href="classregen_1_1EventObject.html#a461b2d08a7a3ddffea3a3288d17fbdab">regen::EventObject::queueEmit</a> for an asynch event. If you need any special event data you can subclass <a class="el" href="classregen_1_1EventData.html" title="Data passed from event emitter to event handlers.">regen::EventData</a> and pass it to the emit function.</p>
 <p>Listeners can be connected to and disconnted from <a class="el" href="classregen_1_1EventObject.html" title="Allows to integrate events into subclasses.">regen::EventObject</a>'s. Event listeners must subclass <a class="el" href="classregen_1_1EventHandler.html" title="Baseclass for event handler.">regen::EventHandler</a> and implement <a class="el" href="classregen_1_1EventHandler.html#a596806401e6999c6c698e6415de55750">regen::EventHandler::call</a>.</p>
 <div class="fragment"><div class="line"><span class="keyword">using namespace </span>regen;</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// EventObject&#39;s provide events listeners can connect to.</span></div>
+<div class="line"><span class="keyword">class </span>MyEventObject : <span class="keyword">public</span> <a class="code" href="classregen_1_1EventObject.html" title="Allows to integrate events into subclasses.">EventObject</a></div>
+<div class="line">{</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">  <span class="comment">// This is the event identifier. We have to call EventObject::registerEvent</span></div>
+<div class="line">  <span class="comment">// to set the value.</span></div>
+<div class="line">  <span class="keyword">static</span> GLuint MY_EVENT;</div>
+<div class="line">  <span class="comment">// Each time MY_EVENT is emitted a MyEvent instance is generated</span></div>
+<div class="line">  <span class="comment">// and passed to connected handlers.</span></div>
+<div class="line">  <span class="keyword">class </span>MyEvent : <span class="keyword">public</span> <a class="code" href="classregen_1_1EventData.html" title="Data passed from event emitter to event handlers.">EventData</a></div>
+<div class="line">  {</div>
+<div class="line">  <span class="keyword">public</span>:</div>
+<div class="line">    <span class="comment">// add relevant data here...</span></div>
+<div class="line">    <span class="keywordtype">void</span> *myEventData;</div>
+<div class="line">  };</div>
+<div class="line"></div>
+<div class="line">  MyEventObject() : <a class="code" href="classregen_1_1EventObject.html" title="Allows to integrate events into subclasses.">EventObject</a>() {}</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">// Instantiate MyEvent and invoke connected listener.</span></div>
+<div class="line">  <span class="keywordtype">void</span> emitMyEvent(<span class="keywordtype">void</span> *myEventData)</div>
+<div class="line">  {</div>
+<div class="line">    <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;MyEvent&gt;</a> <span class="keyword">event</span> = <a class="code" href="classregen_1_1ref__ptr.html#ac26b25152a25a5fcbbf1541a4c4f7467">ref_ptr&lt;MyEvent&gt;::alloc</a>();</div>
+<div class="line">    <span class="keyword">event</span>-&gt;myEventData = myEventData;</div>
+<div class="line">    <span class="comment">// synchronous message</span></div>
+<div class="line">    emitEvent(MY_EVENT, event);</div>
+<div class="line">    <span class="comment">// asynchronous message</span></div>
+<div class="line">    <span class="comment">// queueEmit(MY_EVENT, event);</span></div>
+<div class="line">  }</div>
+<div class="line">}</div>
+<div class="line"><span class="comment">// statically register the event</span></div>
+<div class="line">GLuint MyEventObject::MY_EVENT = <a class="code" href="classregen_1_1EventObject.html#a960c9f22b9bf76cfa7d408190991c799">EventObject::registerEvent</a>(<span class="stringliteral">&quot;my-event&quot;</span>);</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// EventHandler is the interface used to connect to events.</span></div>
 <div class="line"><span class="keyword">class </span>MyEventHandler : <span class="keyword">public</span> <a class="code" href="classregen_1_1EventHandler.html" title="Baseclass for event handler.">EventHandler</a></div>
 <div class="line">{</div>
 <div class="line"><span class="keyword">public</span>:</div>
 <div class="line">  MyEventHandler(e) : <a class="code" href="classregen_1_1EventHandler.html" title="Baseclass for event handler.">EventHandler</a>() {}</div>
 <div class="line"></div>
+<div class="line">  <span class="comment">// EventHandler subclasses must implement this method.</span></div>
 <div class="line">  <span class="keywordtype">void</span> call(<a class="code" href="classregen_1_1EventObject.html" title="Allows to integrate events into subclasses.">EventObject</a> *evObject, <a class="code" href="classregen_1_1EventData.html" title="Data passed from event emitter to event handlers.">EventData</a> *evData)</div>
 <div class="line">  {</div>
-<div class="line">    <span class="comment">// If you connect to a single event only this check is not needed.</span></div>
-<div class="line">    <span class="keywordflow">if</span>(evData-&gt;<a class="code" href="classregen_1_1EventData.html#a9be8676ba025896cff7f548443b08f0e">eventID</a> == <a class="code" href="classregen_1_1Application.html#af132c0c03878092f851c40a512ec2d4c">Application::RESIZE_EVENT</a>)</div>
+<div class="line">    <span class="comment">// If you connect to a single event only, this check is not needed.</span></div>
+<div class="line">    <span class="keywordflow">if</span>(evData-&gt;<a class="code" href="classregen_1_1EventData.html#a9be8676ba025896cff7f548443b08f0e">eventID</a> == MyEventObject::MY_EVENT)</div>
 <div class="line">    {</div>
-<div class="line">      <a class="code" href="classregen_1_1Application.html" title="Provides a render tree and keyboard/mouse events.">Application</a> *app = (<a class="code" href="classregen_1_1Application.html" title="Provides a render tree and keyboard/mouse events.">Application</a>*)evObject;</div>
-<div class="line">      handleResizeEvent(app);</div>
+<div class="line">      <span class="comment">// you probably should use dynamic_cast&lt;&gt; and check for NULL pointer</span></div>
+<div class="line">      <span class="comment">// but if you don&#39;t care and know that the type is right just use unsafe casts</span></div>
+<div class="line">      MyEventObject *obj = (MyEventObject*)evObject;</div>
+<div class="line">      MyEvent *ev = (MyEvent*)evData;</div>
+<div class="line">      handleEvent(obj,ev);</div>
 <div class="line">    }</div>
 <div class="line">  }</div>
 <div class="line">};</div>
+<div class="line"></div>
 <div class="line"><span class="comment">// instantiate and connect handler</span></div>
-<div class="line"><a class="code" href="classregen_1_1Application.html" title="Provides a render tree and keyboard/mouse events.">Application</a> *app = createApplication();</div>
-<div class="line">app-&gt;connect(<a class="code" href="classregen_1_1Application.html#af132c0c03878092f851c40a512ec2d4c">Application::RESIZE_EVENT</a>, <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;MyEventHandler&gt;::alloc</a>());</div>
+<div class="line">MyEventObject evObj;</div>
+<div class="line">evObj.connect(MyEventObject::MY_EVENT, <a class="code" href="classregen_1_1ref__ptr.html" title="Reference counter template class.">ref_ptr&lt;MyEventHandler&gt;::alloc</a>());</div>
+<div class="line">evObj.emitMyEvent(NULL);</div>
 </div><!-- fragment --><h1><a class="anchor" id="Shader"></a>
 Shader Loading</h1>
 <p>When a shader is loaded the code is pre-processed on the CPU before it is send to the GL. Regular GLSL code should work fine but the actual code send to the GL maybe different from the code passed in.</p>
-<p>The pre-processors are implemented in <a class="el" href="classregen_1_1GLSLInputOutputProcessor.html" title="A GLSL processor that modifies the IO behavior of the Shader code.">regen::GLSLInputOutputProcessor</a> and <a class="el" href="classregen_1_1GLSLDirectiveProcessor.html" title="Offline Processing of Shader PreProcessor directives.">regen::GLSLDirectiveProcessor</a>.</p>
 <h2><a class="anchor" id="directives"></a>
 Directive handling</h2>
 <ul>
@@ -202,9 +243,9 @@ Macro name replacing</h2>
 <div class="line"><span class="preprocessor">int i = ${FOO};</span></div>
 </div><!-- fragment --><h2><a class="anchor" id="include_directive"></a>
 #include directive</h2>
-<p>#include directives are supported using GLSW. They are evaluated recursively. You can add custom include paths with ogle::Application::addShaderPath. The include key is build from the shader filename and a named section in the shader. Nodes in the path are separated by dots. For example to load the subsection 'bar' from the section 'foo' in the file 'baz' the include key would be 'baz.foo.bar'. The actual GLSL code would look like this: </p>
+<p>#include directives are supported using GLSW. They are evaluated recursively. You can add custom include paths with <a class="el" href="classregen_1_1Application.html#af478e5032c804b29c708d9ea94037518">regen::Application::addShaderPath</a>. The include key is build from the shader filename and a named section in the shader. Nodes in the path are separated by dots. For example to load the subsection 'bar' from the section 'foo' in the file 'baz' the include key would be 'baz.foo.bar'. The actual GLSL code would look like this: </p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include baz.foo.bar</span></div>
-</div><!-- fragment --><p><a class="el" href="classregen_1_1ShaderState.html" title="Binds Shader program to the RenderState.">regen::ShaderState</a> scans for implemented shader stages by appending the shader stage prefix (regen::GLEnum::glslStagePrefix) to the include key and compiles all defined stages into the shader program.</p>
+</div><!-- fragment --><p><a class="el" href="classregen_1_1ShaderState.html" title="Binds Shader program to the RenderState.">regen::ShaderState</a> scans for implemented shader stages by appending the shader stage prefix (regen::glenum::glslStagePrefix) to the include key and compiles all defined stages into the shader program.</p>
 <h2><a class="anchor" id="define2_directive"></a>
 #define2 directive</h2>
 <p>Practically the same as #define with the exception that the define is not included in the code send to GL. In other words this define can only be used by CPU pre-processors. For example this would work as intended: </p>
@@ -223,7 +264,7 @@ Macro name replacing</h2>
 </div><!-- fragment --><h2><a class="anchor" id="io_names"></a>
 IO name matching</h2>
 <p>The pre-processor handles name matching between shader stages by redefining the IO names. It is good practice to use 'in_' and 'out_' prefix for all inputs and outputs in each shader stage and let the pre-processor decide about the naming. You could also bypass this suggestion and give the IO data arbitrary names.</p>
-<p>For attributes a stage prefix (regen::GLEnum::glslStagePrefix) is prepended, uniforms get a 'u_' prefix and constants get a 'c_' prefix.</p>
+<p>For attributes a stage prefix (regen::glenum::glslStagePrefix) is prepended, uniforms get a 'u_' prefix and constants get a 'c_' prefix.</p>
 <p>For example this code is valid: </p>
 <div class="fragment"><div class="line">-- vs</div>
 <div class="line">in vec3 in_pos;</div>
@@ -266,7 +307,7 @@ Logging</h1>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 11 2013 11:01:18 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon May 20 2013 19:24:58 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

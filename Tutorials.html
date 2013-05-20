@@ -166,9 +166,9 @@ Deferred Shading</h1>
 <div class="line">  <span class="comment">// call glDrawBuffer</span></div>
 <div class="line">  fboState-&gt;addDrawBuffer(GL_COLOR_ATTACHMENT0+i+1);</div>
 <div class="line">}</div>
-<div class="line">ref_ptr&lt;Texture&gt; gDiffuseTexture = fbo-&gt;colorBuffer()[0];</div>
-<div class="line">ref_ptr&lt;Texture&gt; gSpecularTexture = fbo-&gt;colorBuffer()[2];</div>
-<div class="line">ref_ptr&lt;Texture&gt; gNorWorldTexture = fbo-&gt;colorBuffer()[3];</div>
+<div class="line">ref_ptr&lt;Texture&gt; gDiffuseTexture = fbo-&gt;colorTextures()[0];</div>
+<div class="line">ref_ptr&lt;Texture&gt; gSpecularTexture = fbo-&gt;colorTextures()[2];</div>
+<div class="line">ref_ptr&lt;Texture&gt; gNorWorldTexture = fbo-&gt;colorTextures()[3];</div>
 <div class="line">ref_ptr&lt;Texture&gt; gDepthTexture = fbo-&gt;depthTexture();</div>
 </div><!-- fragment --><p>Create the shading state and set G-buffer textures. </p>
 <div class="fragment"><div class="line">ref_ptr&lt;DeferredShading&gt; shading =</div>
@@ -199,7 +199,7 @@ Deferred Shading</h1>
 </div><!-- fragment --> </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat May 11 2013 11:01:18 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon May 20 2013 19:24:58 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>
