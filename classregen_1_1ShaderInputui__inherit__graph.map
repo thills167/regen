@@ -1,7 +1,0 @@
-<map id="regen::ShaderInputui" name="regen::ShaderInputui">
-<area shape="rect" id="node3" href="$classregen_1_1ShaderInput1ui.html" title="Provides 1D unsigned int input to shader programs." alt="" coords="379,5,528,32"/>
-<area shape="rect" id="node4" href="$classregen_1_1ShaderInput2ui.html" title="Provides 2D unsigned int input to shader programs." alt="" coords="379,56,528,83"/>
-<area shape="rect" id="node5" href="$classregen_1_1ShaderInput3ui.html" title="Provides 3D unsigned int input to shader programs." alt="" coords="379,107,528,133"/>
-<area shape="rect" id="node6" href="$classregen_1_1ShaderInput4ui.html" title="Provides 4D unsigned int input to shader programs." alt="" coords="379,157,528,184"/>
-<area shape="rect" id="node2" href="$classregen_1_1ShaderInput.html" title="Provides input to shader programs." alt="" coords="6,81,138,108"/>
-</map>

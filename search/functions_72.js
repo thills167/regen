@@ -1,12 +1,10 @@
 var searchData=
 [
-  ['radialblursamples',['radialBlurSamples',['../classregen_1_1Tonemap.html#a66ace6036f1cc50d4304c44ceadfff3a',1,'regen::Tonemap']]],
-  ['radialblurscalemul',['radialBlurScaleMul',['../classregen_1_1Tonemap.html#a03be272c102aed7ce9bfb75f9be7a7c4',1,'regen::Tonemap']]],
-  ['radialblurstartscale',['radialBlurStartScale',['../classregen_1_1Tonemap.html#ae832942952d676cbb9bb9ecfe0c6c696',1,'regen::Tonemap']]],
   ['radius',['radius',['../classregen_1_1LookAtCameraManipulator.html#a327de768fd7346aeef8b1aedf18b6ec6',1,'regen::LookAtCameraManipulator::radius()'],['../classregen_1_1Light.html#ad89dddd2caf0e826ea0a855c2b0d470a',1,'regen::Light::radius()']]],
   ['rayleigh',['rayleigh',['../classregen_1_1SkyScattering.html#ae946f82e8c60716eeb079be94a4803ce',1,'regen::SkyScattering']]],
   ['readbuffer',['readBuffer',['../classregen_1_1FBO.html#a97ac61005271404438571fdc7847f04f',1,'regen::FBO']]],
   ['readframebuffer',['readFrameBuffer',['../classregen_1_1RenderState.html#ab213ede354776e34d04d55d3bd5e506c',1,'regen::RenderState']]],
+  ['readserverdata',['readServerData',['../classregen_1_1ShaderInput.html#a96af7fb1d51b5c2f6fe01209059d41d2',1,'regen::ShaderInput']]],
   ['rectangle',['Rectangle',['../classregen_1_1Rectangle.html#a980a97acffde2e15743f23f8d53fea03',1,'regen::Rectangle::Rectangle(const Config &amp;cfg=Config())'],['../classregen_1_1Rectangle.html#a6a2b7bd57d6b3721dcfa914e4c8d4b6b',1,'regen::Rectangle::Rectangle(const ref_ptr&lt; ShaderInputContainer &gt; &amp;inputContainer)']]],
   ['ref_5fptr',['ref_ptr',['../classregen_1_1ref__ptr.html#a56e3ab3769666ea60ffea7677c1beaa6',1,'regen::ref_ptr::ref_ptr()'],['../classregen_1_1ref__ptr.html#ab763ce53abb071c3352475ce8bf38b2b',1,'regen::ref_ptr::ref_ptr(const ref_ptr&lt; T &gt; &amp;other)'],['../classregen_1_1ref__ptr.html#a96fbcc78ffafd68a55b888ec1ccf8fa1',1,'regen::ref_ptr::ref_ptr(ref_ptr&lt; K &gt; other)']]],
   ['refcount',['refCount',['../classregen_1_1ref__ptr.html#ad1af5a2b75308545630b690825c921a9',1,'regen::ref_ptr']]],
@@ -19,7 +17,7 @@ var searchData=
   ['removechild',['removeChild',['../classregen_1_1StateNode.html#a4f9cd96abb29321e0757413a9087ce07',1,'regen::StateNode']]],
   ['removefeedback',['removeFeedback',['../classregen_1_1FeedbackState.html#a14196f262a3b58cb6676c4c54a34b1d1',1,'regen::FeedbackState']]],
   ['removeinput',['removeInput',['../classregen_1_1ShaderInputContainer.html#a296190f24f25d051171d5bcc3ce64e28',1,'regen::ShaderInputContainer']]],
-  ['removelight',['removeLight',['../classregen_1_1LightPass.html#a016585ebe76865430652f1274b08b8c1',1,'regen::LightPass::removeLight()'],['../classregen_1_1DeferredShading.html#a46de50bbd16c29597151253e2fab5ae4',1,'regen::DeferredShading::removeLight()'],['../classregen_1_1DirectShading.html#ac92c89073521dffde5e83e5ddaeff541',1,'regen::DirectShading::removeLight()'],['../classregen_1_1VolumetricFog.html#a251fb07e7914a913245d1466c8ccf381',1,'regen::VolumetricFog::removeLight()']]],
+  ['removelight',['removeLight',['../classregen_1_1DirectShading.html#ac92c89073521dffde5e83e5ddaeff541',1,'regen::DirectShading::removeLight()'],['../classregen_1_1LightPass.html#a016585ebe76865430652f1274b08b8c1',1,'regen::LightPass::removeLight()']]],
   ['removelogger',['removeLogger',['../classregen_1_1Logging.html#ad0cf5d3d34359429177249c8f9653697',1,'regen::Logging']]],
   ['removeoperation',['removeOperation',['../classregen_1_1TextureUpdater.html#ad088bc527f65b18a9986d39321fa7f4b',1,'regen::TextureUpdater']]],
   ['removeprocessor',['removeProcessor',['../classregen_1_1PreProcessor.html#aff20b1a28fde0d78b389008e9eeee230',1,'regen::PreProcessor']]],
@@ -29,9 +27,13 @@ var searchData=
   ['rendertree',['renderTree',['../classregen_1_1Application.html#a4ebca0d639717206694f9f6c3f5f7a2d',1,'regen::Application']]],
   ['repeat',['repeat',['../classregen_1_1Demuxer.html#afc9b33fbe97b8703162e25bc54a7b22f',1,'regen::Demuxer']]],
   ['reservetexturechannel',['reserveTextureChannel',['../classregen_1_1RenderState.html#a253c15640535c9628e78f79d8ba4427c',1,'regen::RenderState']]],
-  ['resize',['resize',['../classregen_1_1FBO.html#afeedfc2b5dfa8b9bd918bbdf894115f4',1,'regen::FBO::resize()'],['../classregen_1_1FBOState.html#a3977e2ba458216d5c76f7576b3484024',1,'regen::FBOState::resize()'],['../classregen_1_1FilterSequence.html#a9e556bf3a066ec6655bde63cb4417642',1,'regen::FilterSequence::resize()'],['../classregen_1_1Resizable.html#a327ea39b7a4809f48e8d34ba45293fcc',1,'regen::Resizable::resize()']]],
+  ['reset',['reset',['../classregen_1_1RenderState.html#aedac400a45bcf73f77997837a61de2c7',1,'regen::RenderState']]],
+  ['resetgl',['resetGL',['../classregen_1_1GLObject.html#a6337a4c74819f635d32d99f79656f63b',1,'regen::GLObject::resetGL()'],['../classregen_1_1VAO.html#a40cfbe7b273f29be95491db7aa774ae1',1,'regen::VAO::resetGL()']]],
+  ['resize',['resize',['../classregen_1_1FBO.html#afeedfc2b5dfa8b9bd918bbdf894115f4',1,'regen::FBO::resize()'],['../classregen_1_1FBOState.html#a3977e2ba458216d5c76f7576b3484024',1,'regen::FBOState::resize()'],['../classregen_1_1Resizable.html#a327ea39b7a4809f48e8d34ba45293fcc',1,'regen::Resizable::resize()']]],
+  ['resourceprovider',['ResourceProvider',['../classregen_1_1scene_1_1ResourceProvider.html#a2a6413832227f3e0f6470f411c1a47cd',1,'regen::scene::ResourceProvider']]],
   ['resume',['resume',['../classregen_1_1AnimationManager.html#a498556e14f683faa358afdb603c7500e',1,'regen::AnimationManager']]],
   ['rewind',['rewind',['../classregen_1_1AudioSource.html#aa10ebcbb415b37220f87082cab3e0931',1,'regen::AudioSource']]],
+  ['rigidbody',['rigidBody',['../classregen_1_1PhysicalObject.html#a1a8df55dc1149eb14fe03793e0ff61a9',1,'regen::PhysicalObject']]],
   ['rotate',['rotate',['../structregen_1_1Mat4f.html#aec570c2059a9c9069dbd7bc7221c7228',1,'regen::Mat4f::rotate()'],['../classregen_1_1Quaternion.html#a114b8a8acd7a54e7114d24b24801f301',1,'regen::Quaternion::rotate()'],['../classregen_1_1Vec3.html#aca0738176ce4d2c703989427ad9637d0',1,'regen::Vec3::rotate()'],['../classregen_1_1ModelTransformation.html#af69aed667c6a97ca6e90df03f918239e',1,'regen::ModelTransformation::rotate()']]],
   ['rotationmatrix',['rotationMatrix',['../structregen_1_1Mat4f.html#a055d2584ac32c582dc60756419db596b',1,'regen::Mat4f']]]
 ];

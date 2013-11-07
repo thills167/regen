@@ -1,19 +1,16 @@
 <map id="regen::Mesh" name="regen::Mesh">
-<area shape="rect" id="node5" href="$classregen_1_1AttributeLessMesh.html" title="Mesh that can be used when no vertex shader input is required." alt="" coords="500,5,671,32"/>
+<area shape="rect" id="node5" href="$classregen_1_1AttributeLessMesh.html" title="Mesh that can be used when no vertex shader input is required. " alt="" coords="500,5,671,32"/>
 <area shape="rect" id="node6" href="$classregen_1_1Box.html" title="Three&#45;dimensional solid object bounded by six square faces, facets or sides, with three meeting at ea..." alt="" coords="543,56,628,83"/>
 <area shape="rect" id="node9" href="$classregen_1_1ConeClosed.html" title="A cone is an n&#45;dimensional geometric shape that tapers smoothly from a base to a point called the ape..." alt="" coords="518,107,653,133"/>
 <area shape="rect" id="node10" href="$classregen_1_1ConeOpened.html" title="A cone is an n&#45;dimensional geometric shape that tapers smoothly from a base to a point called the ape..." alt="" coords="516,157,655,184"/>
-<area shape="rect" id="node11" href="$classregen_1_1Particles.html" title="Point sprite particle system." alt="" coords="529,208,642,235"/>
-<area shape="rect" id="node15" href="$classregen_1_1Rectangle.html" title="A polygon with four edges, vertices and right angles." alt="" coords="525,259,646,285"/>
-<area shape="rect" id="node16" href="$classregen_1_1Sphere.html" title="Round geometrical object in three&#45;dimensional space &#45; a sphere ;)" alt="" coords="534,309,637,336"/>
-<area shape="rect" id="node17" href="$classregen_1_1SphereSprite.html" title="A sprite that generates sphere normals." alt="" coords="517,360,654,387"/>
-<area shape="rect" id="node18" href="$classregen_1_1TextureMappedText.html" title="Implements texture mapped text rendering." alt="" coords="496,411,675,437"/>
-<area shape="rect" id="node2" href="$classregen_1_1State.html" title="Base class for states." alt="" coords="200,183,293,209"/>
-<area shape="rect" id="node3" href="$classregen_1_1EventObject.html" title="Allows to integrate events into subclasses." alt="" coords="6,183,141,209"/>
-<area shape="rect" id="node4" href="$classregen_1_1HasInput.html" title="Interface for State&#39;s with input." alt="" coords="189,233,304,260"/>
-<area shape="rect" id="node7" href="$classregen_1_1SkyBox.html" title="A special Box that is not translated by camera movement." alt="" coords="739,56,847,83"/>
-<area shape="rect" id="node8" href="$classregen_1_1SkyScattering.html" title="Sky with atmospheric scattering." alt="" coords="912,56,1056,83"/>
-<area shape="rect" id="node12" href="$classregen_1_1ParticleCloud.html" title="A cloud particle emitter." alt="" coords="723,208,863,235"/>
-<area shape="rect" id="node13" href="$classregen_1_1ParticleRain.html" title="Rain streak particles emitted from a cloud." alt="" coords="917,183,1051,209"/>
-<area shape="rect" id="node14" href="$classregen_1_1ParticleSnow.html" title="Snow flake particles emitted from a cloud." alt="" coords="915,233,1053,260"/>
+<area shape="rect" id="node11" href="$classregen_1_1Particles.html" title="Point sprite particle system. " alt="" coords="529,208,642,235"/>
+<area shape="rect" id="node12" href="$classregen_1_1Rectangle.html" title="A polygon with four edges, vertices and right angles. " alt="" coords="525,259,646,285"/>
+<area shape="rect" id="node13" href="$classregen_1_1Sphere.html" title="Round geometrical object in three&#45;dimensional space &#45; a sphere ;) " alt="" coords="534,309,637,336"/>
+<area shape="rect" id="node14" href="$classregen_1_1SphereSprite.html" title="A sprite that generates sphere normals. " alt="" coords="517,360,654,387"/>
+<area shape="rect" id="node15" href="$classregen_1_1TextureMappedText.html" title="Implements texture mapped text rendering. " alt="" coords="496,411,675,437"/>
+<area shape="rect" id="node2" href="$classregen_1_1State.html" title="Base class for states. " alt="" coords="200,183,293,209"/>
+<area shape="rect" id="node3" href="$classregen_1_1EventObject.html" title="Allows to integrate events into subclasses. " alt="" coords="6,183,141,209"/>
+<area shape="rect" id="node4" href="$classregen_1_1HasInput.html" title="Interface for State&#39;s with input. " alt="" coords="189,233,304,260"/>
+<area shape="rect" id="node7" href="$classregen_1_1SkyBox.html" title="A special Box that is not translated by camera movement. " alt="" coords="723,56,831,83"/>
+<area shape="rect" id="node8" href="$classregen_1_1SkyScattering.html" title="Sky with atmospheric scattering. " alt="" coords="880,56,1024,83"/>
 </map>

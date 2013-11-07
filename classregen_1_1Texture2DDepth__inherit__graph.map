@@ -1,10 +1,10 @@
 <map id="regen::Texture2DDepth" name="regen::Texture2DDepth">
-<area shape="rect" id="node9" href="$classregen_1_1Texture2DMultisampleDepth.html" title="The image in this texture (only one image. No mipmapping) is 2&#45;dimensional." alt="" coords="61,470,253,511"/>
-<area shape="rect" id="node2" href="$classregen_1_1Texture2D.html" title="Images in this texture all are 2&#45;dimensional." alt="" coords="96,320,219,347"/>
-<area shape="rect" id="node3" href="$classregen_1_1Texture.html" title="A OpenGL Object that contains one or more images that all have the same image format." alt="" coords="104,245,211,272"/>
-<area shape="rect" id="node4" href="$classregen_1_1GLRectangle.html" title="A 2D rectangular buffer." alt="" coords="5,171,144,197"/>
-<area shape="rect" id="node5" href="$classregen_1_1GLObject.html" title="Base class for buffer objects." alt="" coords="15,88,131,115"/>
-<area shape="rect" id="node6" href="$classregen_1_1ShaderInput1i.html" title="Provides 1D int input to shader programs." alt="" coords="169,171,311,197"/>
+<area shape="rect" id="node9" href="$classregen_1_1Texture2DMultisampleDepth.html" title="The image in this texture (only one image. No mipmapping) is 2&#45;dimensional. " alt="" coords="61,470,253,511"/>
+<area shape="rect" id="node2" href="$classregen_1_1Texture2D.html" title="Images in this texture all are 2&#45;dimensional. " alt="" coords="96,320,219,347"/>
+<area shape="rect" id="node3" href="$classregen_1_1Texture.html" title="A OpenGL Object that contains one or more images that all have the same image format. " alt="" coords="104,245,211,272"/>
+<area shape="rect" id="node4" href="$classregen_1_1GLRectangle.html" title="A 2D rectangular buffer. " alt="" coords="5,171,144,197"/>
+<area shape="rect" id="node5" href="$classregen_1_1GLObject.html" title="Base class for buffer objects. " alt="" coords="15,88,131,115"/>
+<area shape="rect" id="node6" href="$classregen_1_1ShaderInput1i.html" title="Provides 1D int input to shader programs. " alt="" coords="169,171,311,197"/>
 <area shape="rect" id="node7" href="$classregen_1_1ShaderInputTyped.html" title="regen::ShaderInputTyped\l\&lt; GLint, GLint, GL_INT \&gt;" alt="" coords="156,81,327,122"/>
-<area shape="rect" id="node8" href="$classregen_1_1ShaderInput.html" title="Provides input to shader programs." alt="" coords="175,5,307,32"/>
+<area shape="rect" id="node8" href="$classregen_1_1ShaderInput.html" title="Provides input to shader programs. " alt="" coords="175,5,307,32"/>
 </map>

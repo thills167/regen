@@ -1,3 +1,10 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classregen_1_1Stack.html" title="regen::Stack\&lt; regen\l::Vec3 \&gt;" alt="" coords="6,5,146,46"/>
+<area shape="rect" id="node1" href="$classregen_1_1scene_1_1InputProcessor.html" title="regen::scene::InputProcessor\l\&lt; StateNode \&gt;" alt="" coords="6,169,199,210"/>
+<area shape="rect" id="node2" href="$classregen_1_1scene_1_1NodeProcessor.html" title="regen::scene::NodeProcessor" alt="" coords="248,176,443,203"/>
+<area shape="rect" id="node3" href="$classregen_1_1scene_1_1DirectShadingNodeProvider.html" title="regen::scene::DirectShading\lNodeProvider" alt="" coords="513,5,700,46"/>
+<area shape="rect" id="node4" href="$classregen_1_1scene_1_1FilterSequenceNodeProvider.html" title="regen::scene::FilterSequence\lNodeProvider" alt="" coords="511,70,703,111"/>
+<area shape="rect" id="node5" href="$classregen_1_1scene_1_1FullscreenPassNodeProvider.html" title="regen::scene::Fullscreen\lPassNodeProvider" alt="" coords="524,135,689,177"/>
+<area shape="rect" id="node6" href="$classregen_1_1scene_1_1LightPassNodeProvider.html" title="regen::scene::LightPassNode\lProvider" alt="" coords="509,201,704,242"/>
+<area shape="rect" id="node7" href="$classregen_1_1scene_1_1MeshNodeProvider.html" title="regen::scene::MeshNodeProvider" alt="" coords="499,267,715,293"/>
+<area shape="rect" id="node8" href="$classregen_1_1scene_1_1SceneNodeProcessor.html" title="regen::scene::SceneNodeProcessor" alt="" coords="491,317,723,344"/>
 </map>

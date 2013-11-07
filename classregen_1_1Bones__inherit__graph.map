@@ -1,7 +1,7 @@
 <map id="regen::Bones" name="regen::Bones">
-<area shape="rect" id="node2" href="$classregen_1_1HasInputState.html" title="A state with an input container." alt="" coords="44,155,191,181"/>
-<area shape="rect" id="node3" href="$classregen_1_1State.html" title="Base class for states." alt="" coords="5,80,99,107"/>
-<area shape="rect" id="node4" href="$classregen_1_1EventObject.html" title="Allows to integrate events into subclasses." alt="" coords="95,5,229,32"/>
-<area shape="rect" id="node6" href="$classregen_1_1Animation.html" title="Abstract base class for animations." alt="" coords="215,155,335,181"/>
-<area shape="rect" id="node5" href="$classregen_1_1HasInput.html" title="Interface for State&#39;s with input." alt="" coords="123,80,237,107"/>
+<area shape="rect" id="node2" href="$classregen_1_1HasInputState.html" title="A state with an input container. " alt="" coords="44,155,191,181"/>
+<area shape="rect" id="node3" href="$classregen_1_1State.html" title="Base class for states. " alt="" coords="5,80,99,107"/>
+<area shape="rect" id="node4" href="$classregen_1_1EventObject.html" title="Allows to integrate events into subclasses. " alt="" coords="95,5,229,32"/>
+<area shape="rect" id="node6" href="$classregen_1_1Animation.html" title="Abstract base class for animations. " alt="" coords="215,155,335,181"/>
+<area shape="rect" id="node5" href="$classregen_1_1HasInput.html" title="Interface for State&#39;s with input. " alt="" coords="123,80,237,107"/>
 </map>

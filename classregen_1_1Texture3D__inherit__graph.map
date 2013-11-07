@@ -1,10 +1,10 @@
 <map id="regen::Texture3D" name="regen::Texture3D">
-<area shape="rect" id="node8" href="$classregen_1_1Texture2DArray.html" title="Array of two dimensional textures." alt="" coords="5,395,159,421"/>
-<area shape="rect" id="node9" href="$classregen_1_1Texture3DDepth.html" title="A 3 dimensional depth texture." alt="" coords="185,395,343,421"/>
-<area shape="rect" id="node2" href="$classregen_1_1Texture.html" title="A OpenGL Object that contains one or more images that all have the same image format." alt="" coords="120,245,227,272"/>
-<area shape="rect" id="node3" href="$classregen_1_1GLRectangle.html" title="A 2D rectangular buffer." alt="" coords="21,171,160,197"/>
-<area shape="rect" id="node4" href="$classregen_1_1GLObject.html" title="Base class for buffer objects." alt="" coords="31,88,147,115"/>
-<area shape="rect" id="node5" href="$classregen_1_1ShaderInput1i.html" title="Provides 1D int input to shader programs." alt="" coords="185,171,327,197"/>
+<area shape="rect" id="node8" href="$classregen_1_1Texture2DArray.html" title="Array of two dimensional textures. " alt="" coords="5,395,159,421"/>
+<area shape="rect" id="node9" href="$classregen_1_1Texture3DDepth.html" title="A 3 dimensional depth texture. " alt="" coords="185,395,343,421"/>
+<area shape="rect" id="node2" href="$classregen_1_1Texture.html" title="A OpenGL Object that contains one or more images that all have the same image format. " alt="" coords="120,245,227,272"/>
+<area shape="rect" id="node3" href="$classregen_1_1GLRectangle.html" title="A 2D rectangular buffer. " alt="" coords="21,171,160,197"/>
+<area shape="rect" id="node4" href="$classregen_1_1GLObject.html" title="Base class for buffer objects. " alt="" coords="31,88,147,115"/>
+<area shape="rect" id="node5" href="$classregen_1_1ShaderInput1i.html" title="Provides 1D int input to shader programs. " alt="" coords="185,171,327,197"/>
 <area shape="rect" id="node6" href="$classregen_1_1ShaderInputTyped.html" title="regen::ShaderInputTyped\l\&lt; GLint, GLint, GL_INT \&gt;" alt="" coords="172,81,343,122"/>
-<area shape="rect" id="node7" href="$classregen_1_1ShaderInput.html" title="Provides input to shader programs." alt="" coords="191,5,323,32"/>
+<area shape="rect" id="node7" href="$classregen_1_1ShaderInput.html" title="Provides input to shader programs. " alt="" coords="191,5,323,32"/>
 </map>

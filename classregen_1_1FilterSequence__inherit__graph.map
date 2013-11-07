@@ -1,6 +1,4 @@
 <map id="regen::FilterSequence" name="regen::FilterSequence">
-<area shape="rect" id="node5" href="$classregen_1_1AmbientOcclusion.html" title="Computes dynamic ambient occlusion." alt="" coords="53,229,221,256"/>
-<area shape="rect" id="node2" href="$classregen_1_1State.html" title="Base class for states." alt="" coords="25,80,119,107"/>
-<area shape="rect" id="node3" href="$classregen_1_1EventObject.html" title="Allows to integrate events into subclasses." alt="" coords="5,5,139,32"/>
-<area shape="rect" id="node4" href="$classregen_1_1Resizable.html" title="interface for resizable objects." alt="" coords="143,80,263,107"/>
+<area shape="rect" id="node2" href="$classregen_1_1State.html" title="Base class for states. " alt="" coords="32,80,125,107"/>
+<area shape="rect" id="node3" href="$classregen_1_1EventObject.html" title="Allows to integrate events into subclasses. " alt="" coords="11,5,145,32"/>
 </map>

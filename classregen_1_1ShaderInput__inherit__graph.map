@@ -1,5 +1,5 @@
 <map id="regen::ShaderInput" name="regen::ShaderInput">
-<area shape="rect" id="node2" href="$classregen_1_1ShaderInputTyped.html" title="Provides typed input to shader programs." alt="" coords="236,5,404,61"/>
+<area shape="rect" id="node2" href="$classregen_1_1ShaderInputTyped.html" title="Provides typed input to shader programs. " alt="" coords="236,5,404,61"/>
 <area shape="rect" id="node3" href="$classregen_1_1ShaderInputTyped.html" title="regen::ShaderInputTyped\l\&lt; GLdouble, GLdouble,\l GL_DOUBLE \&gt;" alt="" coords="236,85,404,141"/>
 <area shape="rect" id="node5" href="$classregen_1_1ShaderInputTyped.html" title="regen::ShaderInputTyped\l\&lt; GLfloat, GLfloat, GL\l_FLOAT \&gt;" alt="" coords="236,165,404,221"/>
 <area shape="rect" id="node7" href="$classregen_1_1ShaderInputTyped.html" title="regen::ShaderInputTyped\l\&lt; GLint, GLint, GL_INT \&gt;" alt="" coords="235,245,405,286"/>
@@ -18,33 +18,33 @@
 <area shape="rect" id="node44" href="$classregen_1_1ShaderInputTyped.html" title="regen::ShaderInputTyped\l\&lt; Vec4f, GLfloat, GL_FLOAT \&gt;" alt="" coords="218,1134,422,1175"/>
 <area shape="rect" id="node46" href="$classregen_1_1ShaderInputTyped.html" title="regen::ShaderInputTyped\l\&lt; Vec4i, GLint, GL_INT \&gt;" alt="" coords="234,1199,406,1241"/>
 <area shape="rect" id="node48" href="$classregen_1_1ShaderInputTyped.html" title="regen::ShaderInputTyped\l\&lt; Vec4ui, GLuint, GL_UNSIGNED_INT \&gt;" alt="" coords="187,1265,453,1306"/>
-<area shape="rect" id="node4" href="$classregen_1_1ShaderInput1d.html" title="Provides 1D double input to shader programs." alt="" coords="509,100,656,127"/>
-<area shape="rect" id="node6" href="$classregen_1_1ShaderInput1f.html" title="Provides 1D float input to shader programs." alt="" coords="511,180,654,207"/>
-<area shape="rect" id="node8" href="$classregen_1_1ShaderInput1i.html" title="Provides 1D int input to shader programs." alt="" coords="511,252,654,279"/>
-<area shape="rect" id="node9" href="$classregen_1_1Texture.html" title="A OpenGL Object that contains one or more images that all have the same image format." alt="" coords="712,252,819,279"/>
-<area shape="rect" id="node10" href="$classregen_1_1Texture1D.html" title="Images in this texture are all 1&#45;dimensional." alt="" coords="876,176,999,203"/>
-<area shape="rect" id="node11" href="$classregen_1_1Texture2D.html" title="Images in this texture all are 2&#45;dimensional." alt="" coords="876,227,999,253"/>
-<area shape="rect" id="node17" href="$classregen_1_1Texture3D.html" title="A 3 dimensional texture." alt="" coords="876,277,999,304"/>
-<area shape="rect" id="node19" href="$classregen_1_1TextureBuffer.html" title="One&#45;dimensional arrays of texels whose storage comes from an attached buffer object." alt="" coords="867,328,1008,355"/>
-<area shape="rect" id="node12" href="$classregen_1_1Texture2DDepth.html" title="Texture with depth format." alt="" coords="1074,100,1233,127"/>
-<area shape="rect" id="node13" href="$classregen_1_1Texture2DMultisample.html" title="The image in this texture (only one image. No mipmapping) is 2&#45;dimensional." alt="" coords="1057,151,1250,177"/>
-<area shape="rect" id="node14" href="$classregen_1_1TextureCube.html" title="Texture with exactly 6 distinct sets of 2D images, all of the same size." alt="" coords="1085,201,1222,228"/>
-<area shape="rect" id="node15" href="$classregen_1_1TextureRectangle.html" title="The image in this texture (only one image. No mipmapping) is 2&#45;dimensional." alt="" coords="1071,252,1236,279"/>
-<area shape="rect" id="node16" href="$classregen_1_1VideoTexture.html" title="A texture that displays a video." alt="" coords="1084,303,1223,329"/>
-<area shape="rect" id="node18" href="$classregen_1_1Texture2DArray.html" title="Array of two dimensional textures." alt="" coords="1076,353,1231,380"/>
-<area shape="rect" id="node21" href="$classregen_1_1ShaderInput1ui.html" title="Provides 1D unsigned int input to shader programs." alt="" coords="508,317,657,344"/>
-<area shape="rect" id="node23" href="$classregen_1_1ShaderInputMat3.html" title="Provides 3x3 matrix input to shader programs." alt="" coords="502,383,663,409"/>
-<area shape="rect" id="node25" href="$classregen_1_1ShaderInputMat4.html" title="Provides 4x4 matrix input to shader programs." alt="" coords="502,448,663,475"/>
-<area shape="rect" id="node27" href="$classregen_1_1ShaderInput2d.html" title="Provides 2D double input to shader programs." alt="" coords="509,520,656,547"/>
-<area shape="rect" id="node29" href="$classregen_1_1ShaderInput2f.html" title="Provides 2D float input to shader programs." alt="" coords="511,592,654,619"/>
-<area shape="rect" id="node31" href="$classregen_1_1ShaderInput2i.html" title="Provides 2D int input to shader programs." alt="" coords="511,657,654,684"/>
-<area shape="rect" id="node33" href="$classregen_1_1ShaderInput2ui.html" title="Provides 2D unsigned int input to shader programs." alt="" coords="508,723,657,749"/>
-<area shape="rect" id="node35" href="$classregen_1_1ShaderInput3d.html" title="Provides 3D double input to shader programs." alt="" coords="509,795,656,821"/>
-<area shape="rect" id="node37" href="$classregen_1_1ShaderInput3f.html" title="Provides 3D float input to shader programs." alt="" coords="511,867,654,893"/>
-<area shape="rect" id="node39" href="$classregen_1_1ShaderInput3i.html" title="Provides 3D int input to shader programs." alt="" coords="511,932,654,959"/>
-<area shape="rect" id="node41" href="$classregen_1_1ShaderInput3ui.html" title="Provides 3D unsigned int input to shader programs." alt="" coords="508,997,657,1024"/>
-<area shape="rect" id="node43" href="$classregen_1_1ShaderInput4d.html" title="Provides 4D double input to shader programs." alt="" coords="509,1069,656,1096"/>
-<area shape="rect" id="node45" href="$classregen_1_1ShaderInput4f.html" title="Provides 4D float input to shader programs." alt="" coords="511,1141,654,1168"/>
-<area shape="rect" id="node47" href="$classregen_1_1ShaderInput4i.html" title="Provides 4D int input to shader programs." alt="" coords="511,1207,654,1233"/>
-<area shape="rect" id="node49" href="$classregen_1_1ShaderInput4ui.html" title="Provides 4D unsigned int input to shader programs." alt="" coords="508,1272,657,1299"/>
+<area shape="rect" id="node4" href="$classregen_1_1ShaderInput1d.html" title="Provides 1D double input to shader programs. " alt="" coords="509,100,656,127"/>
+<area shape="rect" id="node6" href="$classregen_1_1ShaderInput1f.html" title="Provides 1D float input to shader programs. " alt="" coords="511,180,654,207"/>
+<area shape="rect" id="node8" href="$classregen_1_1ShaderInput1i.html" title="Provides 1D int input to shader programs. " alt="" coords="511,252,654,279"/>
+<area shape="rect" id="node9" href="$classregen_1_1Texture.html" title="A OpenGL Object that contains one or more images that all have the same image format. " alt="" coords="712,252,819,279"/>
+<area shape="rect" id="node10" href="$classregen_1_1Texture1D.html" title="Images in this texture are all 1&#45;dimensional. " alt="" coords="876,176,999,203"/>
+<area shape="rect" id="node11" href="$classregen_1_1Texture2D.html" title="Images in this texture all are 2&#45;dimensional. " alt="" coords="876,227,999,253"/>
+<area shape="rect" id="node17" href="$classregen_1_1Texture3D.html" title="A 3 dimensional texture. " alt="" coords="876,277,999,304"/>
+<area shape="rect" id="node19" href="$classregen_1_1TextureBuffer.html" title="One&#45;dimensional arrays of texels whose storage comes from an attached buffer object. " alt="" coords="867,328,1008,355"/>
+<area shape="rect" id="node12" href="$classregen_1_1Texture2DDepth.html" title="Texture with depth format. " alt="" coords="1074,100,1233,127"/>
+<area shape="rect" id="node13" href="$classregen_1_1Texture2DMultisample.html" title="The image in this texture (only one image. No mipmapping) is 2&#45;dimensional. " alt="" coords="1057,151,1250,177"/>
+<area shape="rect" id="node14" href="$classregen_1_1TextureCube.html" title="Texture with exactly 6 distinct sets of 2D images, all of the same size. " alt="" coords="1085,201,1222,228"/>
+<area shape="rect" id="node15" href="$classregen_1_1TextureRectangle.html" title="The image in this texture (only one image. No mipmapping) is 2&#45;dimensional. " alt="" coords="1071,252,1236,279"/>
+<area shape="rect" id="node16" href="$classregen_1_1VideoTexture.html" title="A texture that displays a video. " alt="" coords="1084,303,1223,329"/>
+<area shape="rect" id="node18" href="$classregen_1_1Texture2DArray.html" title="Array of two dimensional textures. " alt="" coords="1076,353,1231,380"/>
+<area shape="rect" id="node21" href="$classregen_1_1ShaderInput1ui.html" title="Provides 1D unsigned int input to shader programs. " alt="" coords="508,317,657,344"/>
+<area shape="rect" id="node23" href="$classregen_1_1ShaderInputMat3.html" title="Provides 3x3 matrix input to shader programs. " alt="" coords="502,383,663,409"/>
+<area shape="rect" id="node25" href="$classregen_1_1ShaderInputMat4.html" title="Provides 4x4 matrix input to shader programs. " alt="" coords="502,448,663,475"/>
+<area shape="rect" id="node27" href="$classregen_1_1ShaderInput2d.html" title="Provides 2D double input to shader programs. " alt="" coords="509,520,656,547"/>
+<area shape="rect" id="node29" href="$classregen_1_1ShaderInput2f.html" title="Provides 2D float input to shader programs. " alt="" coords="511,592,654,619"/>
+<area shape="rect" id="node31" href="$classregen_1_1ShaderInput2i.html" title="Provides 2D int input to shader programs. " alt="" coords="511,657,654,684"/>
+<area shape="rect" id="node33" href="$classregen_1_1ShaderInput2ui.html" title="Provides 2D unsigned int input to shader programs. " alt="" coords="508,723,657,749"/>
+<area shape="rect" id="node35" href="$classregen_1_1ShaderInput3d.html" title="Provides 3D double input to shader programs. " alt="" coords="509,795,656,821"/>
+<area shape="rect" id="node37" href="$classregen_1_1ShaderInput3f.html" title="Provides 3D float input to shader programs. " alt="" coords="511,867,654,893"/>
+<area shape="rect" id="node39" href="$classregen_1_1ShaderInput3i.html" title="Provides 3D int input to shader programs. " alt="" coords="511,932,654,959"/>
+<area shape="rect" id="node41" href="$classregen_1_1ShaderInput3ui.html" title="Provides 3D unsigned int input to shader programs. " alt="" coords="508,997,657,1024"/>
+<area shape="rect" id="node43" href="$classregen_1_1ShaderInput4d.html" title="Provides 4D double input to shader programs. " alt="" coords="509,1069,656,1096"/>
+<area shape="rect" id="node45" href="$classregen_1_1ShaderInput4f.html" title="Provides 4D float input to shader programs. " alt="" coords="511,1141,654,1168"/>
+<area shape="rect" id="node47" href="$classregen_1_1ShaderInput4i.html" title="Provides 4D int input to shader programs. " alt="" coords="511,1207,654,1233"/>
+<area shape="rect" id="node49" href="$classregen_1_1ShaderInput4ui.html" title="Provides 4D unsigned int input to shader programs. " alt="" coords="508,1272,657,1299"/>
 </map>

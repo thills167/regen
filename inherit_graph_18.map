@@ -1,3 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structregen_1_1FBO_1_1Screen.html" title="Contains state stacks for the screen buffer." alt="" coords="5,5,144,32"/>
+<area shape="rect" id="node1" href="$classregen_1_1EventHandler.html" title="Baseclass for event handler. " alt="" coords="5,56,147,83"/>
+<area shape="rect" id="node2" href="$classFBOResizer.html" title="FBOResizer" alt="" coords="211,5,306,32"/>
+<area shape="rect" id="node3" href="$classProjectionUpdater.html" title="ProjectionUpdater" alt="" coords="195,56,322,83"/>
+<area shape="rect" id="node4" href="$classTextureResizer.html" title="TextureResizer" alt="" coords="203,107,314,133"/>
 </map>

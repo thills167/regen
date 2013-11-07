@@ -1,8 +1,8 @@
 <map id="regen::GLSLProcessor" name="regen::GLSLProcessor">
-<area shape="rect" id="node2" href="$classregen_1_1CommentProcessor.html" title="Removes comments from GLSL code." alt="" coords="219,5,397,32"/>
-<area shape="rect" id="node3" href="$classregen_1_1DirectiveProcessor.html" title="Offline Processing of Shader PreProcessor directives." alt="" coords="221,56,395,83"/>
-<area shape="rect" id="node4" href="$classregen_1_1InputProviderProcessor.html" title="Simple GLSL pre&#45;processor that provides the unprocessed GLSL code to child processors." alt="" coords="209,107,407,133"/>
-<area shape="rect" id="node5" href="$classregen_1_1IOProcessor.html" title="A GLSL processor that modifies the IO behavior of the Shader code." alt="" coords="241,157,375,184"/>
-<area shape="rect" id="node6" href="$classregen_1_1StreamProcessor.html" title="Simple GLSL pre&#45;processor that provides input from an arbitrary stringstream." alt="" coords="227,208,389,235"/>
-<area shape="rect" id="node7" href="$classregen_1_1WhiteSpaceProcessor.html" title="Removes empty lines from GLSL code." alt="" coords="212,259,404,285"/>
+<area shape="rect" id="node2" href="$classregen_1_1CommentProcessor.html" title="Removes comments from GLSL code. " alt="" coords="219,5,397,32"/>
+<area shape="rect" id="node3" href="$classregen_1_1DirectiveProcessor.html" title="Offline Processing of Shader PreProcessor directives. " alt="" coords="221,56,395,83"/>
+<area shape="rect" id="node4" href="$classregen_1_1InputProviderProcessor.html" title="Simple GLSL pre&#45;processor that provides the unprocessed GLSL code to child processors. " alt="" coords="209,107,407,133"/>
+<area shape="rect" id="node5" href="$classregen_1_1IOProcessor.html" title="A GLSL processor that modifies the IO behavior of the Shader code. " alt="" coords="241,157,375,184"/>
+<area shape="rect" id="node6" href="$classregen_1_1StreamProcessor.html" title="Simple GLSL pre&#45;processor that provides input from an arbitrary stringstream. " alt="" coords="227,208,389,235"/>
+<area shape="rect" id="node7" href="$classregen_1_1WhiteSpaceProcessor.html" title="Removes empty lines from GLSL code. " alt="" coords="212,259,404,285"/>
 </map>

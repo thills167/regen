@@ -8,6 +8,7 @@ var searchData=
   ['texcoscale',['texcoScale',['../structregen_1_1Box_1_1Config.html#aa9c1c2f680424ada782bfa280b453bb6',1,'regen::Box::Config::texcoScale()'],['../structregen_1_1Rectangle_1_1Config.html#a02f44d669f92db7e14441f9c2886ed10',1,'regen::Rectangle::Config::texcoScale()'],['../structregen_1_1Sphere_1_1Config.html#a10adcb2a8ac4142d90b08ee429bf8178',1,'regen::Sphere::Config::texcoScale()']]],
   ['textures_5f',['textures_',['../structregen_1_1StateConfig.html#aebaf2615997ffe6146c6d3fa33f16c0c',1,'regen::StateConfig']]],
   ['texturetarget',['textureTarget',['../structregen_1_1ShadowMap_1_1Config.html#a1f5696b99c6c026e27ec868777aeb5f1',1,'regen::ShadowMap::Config']]],
+  ['tickspersecond',['ticksPerSecond',['../structregen_1_1AssimpAnimationConfig.html#ad46853bca4d2305b3650940cbc7686dc',1,'regen::AssimpAnimationConfig']]],
   ['time',['time',['../structregen_1_1NodeAnimation_1_1KeyFrame3f.html#ade8099135f89c4b56e94d7976e20d7a7',1,'regen::NodeAnimation::KeyFrame3f::time()'],['../structregen_1_1NodeAnimation_1_1KeyFrameQuaternion.html#acf03ddf08a9f290a3763ff7e1d5c5126',1,'regen::NodeAnimation::KeyFrameQuaternion::time()']]],
   ['timekey',['TimeKey',['../classregen_1_1Logger.html#a5c3cf0877329e1da813f5fc4a01eee40',1,'regen::Logger']]],
   ['top',['top',['../structregen_1_1Font_1_1FaceData.html#a505df6cb631fc7d9ae7c8d2929aec4ed',1,'regen::Font::FaceData']]],

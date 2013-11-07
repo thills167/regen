@@ -1,6 +1,6 @@
 <map id="regen::Sphere" name="regen::Sphere">
 <area shape="rect" id="node2" href="$classregen_1_1Mesh.html" title="A collection of vertices, edges and faces that defines the shape of an object in 3D space..." alt="" coords="89,155,183,181"/>
-<area shape="rect" id="node3" href="$classregen_1_1State.html" title="Base class for states." alt="" coords="25,80,119,107"/>
-<area shape="rect" id="node4" href="$classregen_1_1EventObject.html" title="Allows to integrate events into subclasses." alt="" coords="5,5,139,32"/>
-<area shape="rect" id="node5" href="$classregen_1_1HasInput.html" title="Interface for State&#39;s with input." alt="" coords="143,80,257,107"/>
+<area shape="rect" id="node3" href="$classregen_1_1State.html" title="Base class for states. " alt="" coords="25,80,119,107"/>
+<area shape="rect" id="node4" href="$classregen_1_1EventObject.html" title="Allows to integrate events into subclasses. " alt="" coords="5,5,139,32"/>
+<area shape="rect" id="node5" href="$classregen_1_1HasInput.html" title="Interface for State&#39;s with input. " alt="" coords="143,80,257,107"/>
 </map>

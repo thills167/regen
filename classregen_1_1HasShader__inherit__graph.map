@@ -1,11 +1,8 @@
 <map id="regen::HasShader" name="regen::HasShader">
-<area shape="rect" id="node2" href="$classregen_1_1FullscreenPass.html" title="State that updates each texel of the active render target." alt="" coords="195,107,347,133"/>
-<area shape="rect" id="node7" href="$classregen_1_1SkyBox.html" title="A special Box that is not translated by camera movement." alt="" coords="217,183,325,209"/>
-<area shape="rect" id="node9" href="$classregen_1_1SphereSprite.html" title="A sprite that generates sphere normals." alt="" coords="202,233,339,260"/>
-<area shape="rect" id="node10" href="$classregen_1_1TextureMappedText.html" title="Implements texture mapped text rendering." alt="" coords="181,284,360,311"/>
-<area shape="rect" id="node3" href="$classregen_1_1DepthOfField.html" title="Depth&#45;of&#45;Field implementation." alt="" coords="411,5,549,32"/>
-<area shape="rect" id="node4" href="$classregen_1_1DistanceFog.html" title="Fog with distance attenuation." alt="" coords="412,56,548,83"/>
-<area shape="rect" id="node5" href="$classregen_1_1Filter.html" title="Apply a filter on input Texture." alt="" coords="435,107,525,133"/>
-<area shape="rect" id="node6" href="$classregen_1_1Tonemap.html" title="Implements a tonemap operation." alt="" coords="422,157,538,184"/>
-<area shape="rect" id="node8" href="$classregen_1_1SkyScattering.html" title="Sky with atmospheric scattering." alt="" coords="408,208,552,235"/>
+<area shape="rect" id="node2" href="$classregen_1_1FullscreenPass.html" title="State that updates each texel of the active render target. " alt="" coords="5,80,157,107"/>
+<area shape="rect" id="node4" href="$classregen_1_1SkyBox.html" title="A special Box that is not translated by camera movement. " alt="" coords="182,80,289,107"/>
+<area shape="rect" id="node6" href="$classregen_1_1SphereSprite.html" title="A sprite that generates sphere normals. " alt="" coords="314,80,451,107"/>
+<area shape="rect" id="node7" href="$classregen_1_1TextureMappedText.html" title="Implements texture mapped text rendering. " alt="" coords="476,80,655,107"/>
+<area shape="rect" id="node3" href="$classregen_1_1Filter.html" title="Apply a filter on input Texture. " alt="" coords="36,155,127,181"/>
+<area shape="rect" id="node5" href="$classregen_1_1SkyScattering.html" title="Sky with atmospheric scattering. " alt="" coords="164,155,308,181"/>
 </map>
