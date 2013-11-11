@@ -107,85 +107,89 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classregen_1_1BlitToFBO.html">   18</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classregen_1_1BlitToFBO.html">BlitToFBO</a> : <span class="keyword">public</span> <a class="code" href="classregen_1_1State.html">State</a></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  {</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="classregen_1_1BlitToFBO.html#ad5d46b23927ceae923406ed5c6698b0c">BlitToFBO</a>(</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html">ref_ptr&lt;FBO&gt;</a> &amp;src,</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html">ref_ptr&lt;FBO&gt;</a> &amp;dst,</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        GLenum srcAttachment=GL_COLOR_ATTACHMENT0,</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        GLenum dstAttachment=GL_COLOR_ATTACHMENT0);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1BlitToFBO.html#a053a0b488f3feb1bd56bf4949a537c1c">set_filterMode</a>(GLenum filterMode=GL_LINEAR);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1BlitToFBO.html#af87c1ea5b7f8dd5ae0761d09990e043c">set_sourceBuffer</a>(GLenum sourceBuffer=GL_COLOR_BUFFER_BIT);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">// override</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1BlitToFBO.html#a31b50f36f828c5399b8c8c15182b8430">enable</a>(<a class="code" href="classregen_1_1RenderState.html">RenderState</a> *state);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html">ref_ptr&lt;FBO&gt;</a> src_;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html">ref_ptr&lt;FBO&gt;</a> dst_;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    GLenum srcAttachment_;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    GLenum dstAttachment_;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    GLenum filterMode_;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    GLenum sourceBuffer_;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  };</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classregen_1_1BlitToScreen.html">   58</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classregen_1_1BlitToScreen.html">BlitToScreen</a> : <span class="keyword">public</span> <a class="code" href="classregen_1_1State.html">State</a></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="classregen_1_1BlitToScreen.html#a8f4f2b1e8010ab0b31f58687813e12ca">BlitToScreen</a>(</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html">ref_ptr&lt;FBO&gt;</a> &amp;fbo,</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html">ref_ptr&lt;ShaderInput2i&gt;</a> &amp;viewport,</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        GLenum attachment=GL_COLOR_ATTACHMENT0);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1BlitToScreen.html#aba9e1dcb55e098b1b5a2d4f8d6b31143">set_filterMode</a>(GLenum filterMode=GL_LINEAR);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1BlitToScreen.html#a39108b5a57aa78fa5a00ddb89d2e1134">set_sourceBuffer</a>(GLenum sourceBuffer=GL_COLOR_BUFFER_BIT);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="comment">// override</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1BlitToScreen.html#a1c28b1cadb2a61e849da4c5f224bb54f">enable</a>(<a class="code" href="classregen_1_1RenderState.html">RenderState</a> *state);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html">ref_ptr&lt;FBO&gt;</a> fbo_;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html">ref_ptr&lt;ShaderInput2i&gt;</a> viewport_;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    GLenum attachment_;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    GLenum filterMode_;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    GLenum sourceBuffer_;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  };</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="classregen_1_1BlitTexToScreen.html">   97</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classregen_1_1BlitTexToScreen.html">BlitTexToScreen</a> : <span class="keyword">public</span> <a class="code" href="classregen_1_1BlitToScreen.html">BlitToScreen</a></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  {</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <a class="code" href="classregen_1_1BlitTexToScreen.html#a746cfce63cee5607db130a9e4ddae872">BlitTexToScreen</a>(</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html">ref_ptr&lt;FBO&gt;</a> &amp;fbo,</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html">ref_ptr&lt;Texture&gt;</a> &amp;texture,</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html">ref_ptr&lt;ShaderInput2i&gt;</a> &amp;viewport,</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        GLenum attachment=GL_COLOR_ATTACHMENT0);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="comment">// override</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classregen_1_1BlitTexToScreen.html#a008f294a19207bb6e5cbe843206c973a">enable</a>(<a class="code" href="classregen_1_1RenderState.html">RenderState</a> *state);</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html">ref_ptr&lt;Texture&gt;</a> texture_;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    GLenum baseAttachment_;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  };</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* BLIT_TO_SCREEN_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="classregen_1_1BlitToFBO.html#a5a9d803adbc5b747dac1e875259374ae">BlitToFBO</a>(</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html">ref_ptr&lt;FBO&gt;</a> &amp;src,</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html">ref_ptr&lt;FBO&gt;</a> &amp;dst,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        GLenum srcAttachment=GL_COLOR_ATTACHMENT0,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        GLenum dstAttachment=GL_COLOR_ATTACHMENT0,</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        GLboolean keepRatio=GL_FALSE);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1BlitToFBO.html#a053a0b488f3feb1bd56bf4949a537c1c">set_filterMode</a>(GLenum filterMode=GL_LINEAR);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1BlitToFBO.html#af87c1ea5b7f8dd5ae0761d09990e043c">set_sourceBuffer</a>(GLenum sourceBuffer=GL_COLOR_BUFFER_BIT);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">// override</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1BlitToFBO.html#a31b50f36f828c5399b8c8c15182b8430">enable</a>(<a class="code" href="classregen_1_1RenderState.html">RenderState</a> *state);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html">ref_ptr&lt;FBO&gt;</a> src_;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html">ref_ptr&lt;FBO&gt;</a> dst_;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    GLenum srcAttachment_;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    GLenum dstAttachment_;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    GLenum filterMode_;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    GLenum sourceBuffer_;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    GLboolean keepRatio_;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  };</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classregen_1_1BlitToScreen.html">   61</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classregen_1_1BlitToScreen.html">BlitToScreen</a> : <span class="keyword">public</span> <a class="code" href="classregen_1_1State.html">State</a></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="classregen_1_1BlitToScreen.html#ac5afabd2be3112379f2518098702cc1c">BlitToScreen</a>(</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html">ref_ptr&lt;FBO&gt;</a> &amp;fbo,</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html">ref_ptr&lt;ShaderInput2i&gt;</a> &amp;viewport,</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        GLenum attachment=GL_COLOR_ATTACHMENT0,</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        GLboolean keepRatio=GL_FALSE);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1BlitToScreen.html#aba9e1dcb55e098b1b5a2d4f8d6b31143">set_filterMode</a>(GLenum filterMode=GL_LINEAR);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1BlitToScreen.html#a39108b5a57aa78fa5a00ddb89d2e1134">set_sourceBuffer</a>(GLenum sourceBuffer=GL_COLOR_BUFFER_BIT);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="comment">// override</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1BlitToScreen.html#a1c28b1cadb2a61e849da4c5f224bb54f">enable</a>(<a class="code" href="classregen_1_1RenderState.html">RenderState</a> *state);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html">ref_ptr&lt;FBO&gt;</a> fbo_;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html">ref_ptr&lt;ShaderInput2i&gt;</a> viewport_;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    GLenum attachment_;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    GLenum filterMode_;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    GLenum sourceBuffer_;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    GLboolean keepRatio_;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  };</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="classregen_1_1BlitTexToScreen.html">  103</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classregen_1_1BlitTexToScreen.html">BlitTexToScreen</a> : <span class="keyword">public</span> <a class="code" href="classregen_1_1BlitToScreen.html">BlitToScreen</a></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <a class="code" href="classregen_1_1BlitTexToScreen.html#a746cfce63cee5607db130a9e4ddae872">BlitTexToScreen</a>(</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html">ref_ptr&lt;FBO&gt;</a> &amp;fbo,</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html">ref_ptr&lt;Texture&gt;</a> &amp;texture,</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keyword">const</span> <a class="code" href="classregen_1_1ref__ptr.html">ref_ptr&lt;ShaderInput2i&gt;</a> &amp;viewport,</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        GLenum attachment=GL_COLOR_ATTACHMENT0);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="comment">// override</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classregen_1_1BlitTexToScreen.html#a008f294a19207bb6e5cbe843206c973a">enable</a>(<a class="code" href="classregen_1_1RenderState.html">RenderState</a> *state);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <a class="code" href="classregen_1_1ref__ptr.html">ref_ptr&lt;Texture&gt;</a> texture_;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    GLenum baseAttachment_;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  };</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* BLIT_TO_SCREEN_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="classregen_1_1BlitToScreen_html_ac5afabd2be3112379f2518098702cc1c"><div class="ttname"><a href="classregen_1_1BlitToScreen.html#ac5afabd2be3112379f2518098702cc1c">regen::BlitToScreen::BlitToScreen</a></div><div class="ttdeci">BlitToScreen(const ref_ptr&lt; FBO &gt; &amp;fbo, const ref_ptr&lt; ShaderInput2i &gt; &amp;viewport, GLenum attachment=GL_COLOR_ATTACHMENT0, GLboolean keepRatio=GL_FALSE)</div><div class="ttdef"><b>Definition:</b> blit-state.cpp:48</div></div>
 <div class="ttc" id="classregen_1_1BlitToFBO_html"><div class="ttname"><a href="classregen_1_1BlitToFBO.html">regen::BlitToFBO</a></div><div class="ttdoc">Blits a FBO color attachment to another FBO. </div><div class="ttdef"><b>Definition:</b> blit-state.h:18</div></div>
-<div class="ttc" id="classregen_1_1BlitTexToScreen_html"><div class="ttname"><a href="classregen_1_1BlitTexToScreen.html">regen::BlitTexToScreen</a></div><div class="ttdoc">Blits a FBO color attachment to screen. </div><div class="ttdef"><b>Definition:</b> blit-state.h:97</div></div>
-<div class="ttc" id="classregen_1_1BlitToFBO_html_ad5d46b23927ceae923406ed5c6698b0c"><div class="ttname"><a href="classregen_1_1BlitToFBO.html#ad5d46b23927ceae923406ed5c6698b0c">regen::BlitToFBO::BlitToFBO</a></div><div class="ttdeci">BlitToFBO(const ref_ptr&lt; FBO &gt; &amp;src, const ref_ptr&lt; FBO &gt; &amp;dst, GLenum srcAttachment=GL_COLOR_ATTACHMENT0, GLenum dstAttachment=GL_COLOR_ATTACHMENT0)</div><div class="ttdef"><b>Definition:</b> blit-state.cpp:11</div></div>
-<div class="ttc" id="classregen_1_1BlitToScreen_html_a8f4f2b1e8010ab0b31f58687813e12ca"><div class="ttname"><a href="classregen_1_1BlitToScreen.html#a8f4f2b1e8010ab0b31f58687813e12ca">regen::BlitToScreen::BlitToScreen</a></div><div class="ttdeci">BlitToScreen(const ref_ptr&lt; FBO &gt; &amp;fbo, const ref_ptr&lt; ShaderInput2i &gt; &amp;viewport, GLenum attachment=GL_COLOR_ATTACHMENT0)</div><div class="ttdef"><b>Definition:</b> blit-state.cpp:45</div></div>
-<div class="ttc" id="classregen_1_1BlitToScreen_html_a1c28b1cadb2a61e849da4c5f224bb54f"><div class="ttname"><a href="classregen_1_1BlitToScreen.html#a1c28b1cadb2a61e849da4c5f224bb54f">regen::BlitToScreen::enable</a></div><div class="ttdeci">void enable(RenderState *state)</div><div class="ttdef"><b>Definition:</b> blit-state.cpp:63</div></div>
+<div class="ttc" id="classregen_1_1BlitTexToScreen_html"><div class="ttname"><a href="classregen_1_1BlitTexToScreen.html">regen::BlitTexToScreen</a></div><div class="ttdoc">Blits a FBO color attachment to screen. </div><div class="ttdef"><b>Definition:</b> blit-state.h:103</div></div>
+<div class="ttc" id="classregen_1_1BlitToScreen_html_a1c28b1cadb2a61e849da4c5f224bb54f"><div class="ttname"><a href="classregen_1_1BlitToScreen.html#a1c28b1cadb2a61e849da4c5f224bb54f">regen::BlitToScreen::enable</a></div><div class="ttdeci">void enable(RenderState *state)</div><div class="ttdef"><b>Definition:</b> blit-state.cpp:68</div></div>
 <div class="ttc" id="classregen_1_1RenderState_html"><div class="ttname"><a href="classregen_1_1RenderState.html">regen::RenderState</a></div><div class="ttdoc">Handles server-side GL states. </div><div class="ttdef"><b>Definition:</b> render-state.h:130</div></div>
-<div class="ttc" id="classregen_1_1BlitToScreen_html_a39108b5a57aa78fa5a00ddb89d2e1134"><div class="ttname"><a href="classregen_1_1BlitToScreen.html#a39108b5a57aa78fa5a00ddb89d2e1134">regen::BlitToScreen::set_sourceBuffer</a></div><div class="ttdeci">void set_sourceBuffer(GLenum sourceBuffer=GL_COLOR_BUFFER_BIT)</div><div class="ttdef"><b>Definition:</b> blit-state.cpp:60</div></div>
-<div class="ttc" id="classregen_1_1BlitToFBO_html_a053a0b488f3feb1bd56bf4949a537c1c"><div class="ttname"><a href="classregen_1_1BlitToFBO.html#a053a0b488f3feb1bd56bf4949a537c1c">regen::BlitToFBO::set_filterMode</a></div><div class="ttdeci">void set_filterMode(GLenum filterMode=GL_LINEAR)</div><div class="ttdef"><b>Definition:</b> blit-state.cpp:26</div></div>
+<div class="ttc" id="classregen_1_1BlitToScreen_html_a39108b5a57aa78fa5a00ddb89d2e1134"><div class="ttname"><a href="classregen_1_1BlitToScreen.html#a39108b5a57aa78fa5a00ddb89d2e1134">regen::BlitToScreen::set_sourceBuffer</a></div><div class="ttdeci">void set_sourceBuffer(GLenum sourceBuffer=GL_COLOR_BUFFER_BIT)</div><div class="ttdef"><b>Definition:</b> blit-state.cpp:65</div></div>
+<div class="ttc" id="classregen_1_1BlitToFBO_html_a5a9d803adbc5b747dac1e875259374ae"><div class="ttname"><a href="classregen_1_1BlitToFBO.html#a5a9d803adbc5b747dac1e875259374ae">regen::BlitToFBO::BlitToFBO</a></div><div class="ttdeci">BlitToFBO(const ref_ptr&lt; FBO &gt; &amp;src, const ref_ptr&lt; FBO &gt; &amp;dst, GLenum srcAttachment=GL_COLOR_ATTACHMENT0, GLenum dstAttachment=GL_COLOR_ATTACHMENT0, GLboolean keepRatio=GL_FALSE)</div><div class="ttdef"><b>Definition:</b> blit-state.cpp:11</div></div>
+<div class="ttc" id="classregen_1_1BlitToFBO_html_a053a0b488f3feb1bd56bf4949a537c1c"><div class="ttname"><a href="classregen_1_1BlitToFBO.html#a053a0b488f3feb1bd56bf4949a537c1c">regen::BlitToFBO::set_filterMode</a></div><div class="ttdeci">void set_filterMode(GLenum filterMode=GL_LINEAR)</div><div class="ttdef"><b>Definition:</b> blit-state.cpp:28</div></div>
 <div class="ttc" id="classregen_1_1ref__ptr_html"><div class="ttname"><a href="classregen_1_1ref__ptr.html">regen::ref_ptr&lt; FBO &gt;</a></div></div>
-<div class="ttc" id="classregen_1_1BlitTexToScreen_html_a746cfce63cee5607db130a9e4ddae872"><div class="ttname"><a href="classregen_1_1BlitTexToScreen.html#a746cfce63cee5607db130a9e4ddae872">regen::BlitTexToScreen::BlitTexToScreen</a></div><div class="ttdeci">BlitTexToScreen(const ref_ptr&lt; FBO &gt; &amp;fbo, const ref_ptr&lt; Texture &gt; &amp;texture, const ref_ptr&lt; ShaderInput2i &gt; &amp;viewport, GLenum attachment=GL_COLOR_ATTACHMENT0)</div><div class="ttdef"><b>Definition:</b> blit-state.cpp:76</div></div>
-<div class="ttc" id="classregen_1_1State_html"><div class="ttname"><a href="classregen_1_1State.html">regen::State</a></div><div class="ttdoc">Base class for states. </div><div class="ttdef"><b>Definition:</b> state.h:108</div></div>
-<div class="ttc" id="classregen_1_1BlitToScreen_html"><div class="ttname"><a href="classregen_1_1BlitToScreen.html">regen::BlitToScreen</a></div><div class="ttdoc">Blits a FBO color attachment to screen. </div><div class="ttdef"><b>Definition:</b> blit-state.h:58</div></div>
-<div class="ttc" id="classregen_1_1BlitToScreen_html_aba9e1dcb55e098b1b5a2d4f8d6b31143"><div class="ttname"><a href="classregen_1_1BlitToScreen.html#aba9e1dcb55e098b1b5a2d4f8d6b31143">regen::BlitToScreen::set_filterMode</a></div><div class="ttdeci">void set_filterMode(GLenum filterMode=GL_LINEAR)</div><div class="ttdef"><b>Definition:</b> blit-state.cpp:58</div></div>
-<div class="ttc" id="classregen_1_1BlitTexToScreen_html_a008f294a19207bb6e5cbe843206c973a"><div class="ttname"><a href="classregen_1_1BlitTexToScreen.html#a008f294a19207bb6e5cbe843206c973a">regen::BlitTexToScreen::enable</a></div><div class="ttdeci">virtual void enable(RenderState *state)</div><div class="ttdef"><b>Definition:</b> blit-state.cpp:87</div></div>
-<div class="ttc" id="classregen_1_1BlitToFBO_html_af87c1ea5b7f8dd5ae0761d09990e043c"><div class="ttname"><a href="classregen_1_1BlitToFBO.html#af87c1ea5b7f8dd5ae0761d09990e043c">regen::BlitToFBO::set_sourceBuffer</a></div><div class="ttdeci">void set_sourceBuffer(GLenum sourceBuffer=GL_COLOR_BUFFER_BIT)</div><div class="ttdef"><b>Definition:</b> blit-state.cpp:28</div></div>
-<div class="ttc" id="classregen_1_1BlitToFBO_html_a31b50f36f828c5399b8c8c15182b8430"><div class="ttname"><a href="classregen_1_1BlitToFBO.html#a31b50f36f828c5399b8c8c15182b8430">regen::BlitToFBO::enable</a></div><div class="ttdeci">void enable(RenderState *state)</div><div class="ttdef"><b>Definition:</b> blit-state.cpp:31</div></div>
+<div class="ttc" id="classregen_1_1BlitTexToScreen_html_a746cfce63cee5607db130a9e4ddae872"><div class="ttname"><a href="classregen_1_1BlitTexToScreen.html#a746cfce63cee5607db130a9e4ddae872">regen::BlitTexToScreen::BlitTexToScreen</a></div><div class="ttdeci">BlitTexToScreen(const ref_ptr&lt; FBO &gt; &amp;fbo, const ref_ptr&lt; Texture &gt; &amp;texture, const ref_ptr&lt; ShaderInput2i &gt; &amp;viewport, GLenum attachment=GL_COLOR_ATTACHMENT0)</div><div class="ttdef"><b>Definition:</b> blit-state.cpp:82</div></div>
+<div class="ttc" id="classregen_1_1State_html"><div class="ttname"><a href="classregen_1_1State.html">regen::State</a></div><div class="ttdoc">Base class for states. </div><div class="ttdef"><b>Definition:</b> state.h:111</div></div>
+<div class="ttc" id="classregen_1_1BlitToScreen_html"><div class="ttname"><a href="classregen_1_1BlitToScreen.html">regen::BlitToScreen</a></div><div class="ttdoc">Blits a FBO color attachment to screen. </div><div class="ttdef"><b>Definition:</b> blit-state.h:61</div></div>
+<div class="ttc" id="classregen_1_1BlitToScreen_html_aba9e1dcb55e098b1b5a2d4f8d6b31143"><div class="ttname"><a href="classregen_1_1BlitToScreen.html#aba9e1dcb55e098b1b5a2d4f8d6b31143">regen::BlitToScreen::set_filterMode</a></div><div class="ttdeci">void set_filterMode(GLenum filterMode=GL_LINEAR)</div><div class="ttdef"><b>Definition:</b> blit-state.cpp:63</div></div>
+<div class="ttc" id="classregen_1_1BlitTexToScreen_html_a008f294a19207bb6e5cbe843206c973a"><div class="ttname"><a href="classregen_1_1BlitTexToScreen.html#a008f294a19207bb6e5cbe843206c973a">regen::BlitTexToScreen::enable</a></div><div class="ttdeci">virtual void enable(RenderState *state)</div><div class="ttdef"><b>Definition:</b> blit-state.cpp:93</div></div>
+<div class="ttc" id="classregen_1_1BlitToFBO_html_af87c1ea5b7f8dd5ae0761d09990e043c"><div class="ttname"><a href="classregen_1_1BlitToFBO.html#af87c1ea5b7f8dd5ae0761d09990e043c">regen::BlitToFBO::set_sourceBuffer</a></div><div class="ttdeci">void set_sourceBuffer(GLenum sourceBuffer=GL_COLOR_BUFFER_BIT)</div><div class="ttdef"><b>Definition:</b> blit-state.cpp:30</div></div>
+<div class="ttc" id="classregen_1_1BlitToFBO_html_a31b50f36f828c5399b8c8c15182b8430"><div class="ttname"><a href="classregen_1_1BlitToFBO.html#a31b50f36f828c5399b8c8c15182b8430">regen::BlitToFBO::enable</a></div><div class="ttdeci">void enable(RenderState *state)</div><div class="ttdef"><b>Definition:</b> blit-state.cpp:33</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Nov 7 2013 11:57:34 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 11 2013 20:46:54 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

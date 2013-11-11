@@ -162,16 +162,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <a class="code" href="structregen_1_1Font_1_1FaceData.html">FaceData</a> *faceData_;</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    GLfloat lineHeight_;</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <a class="code" href="classregen_1_1Font.html">Font</a>(<span class="keyword">const</span> <a class="code" href="classregen_1_1Font.html">Font</a>&amp;) : fontPath_(<span class="stringliteral">&quot;&quot;</span>), size_(0), dpi_(0) {}</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <a class="code" href="classregen_1_1Font.html">Font</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classregen_1_1Font.html">Font</a>&amp;) { <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    GLubyte* invertPixmapWithAlpha(<span class="keyword">const</span> FT_Bitmap&amp; bitmap, GLuint width, GLuint height) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordtype">void</span> initGlyph(FT_Face face, GLushort ch, GLuint textureWidth, GLuint textureHeight);</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  };</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* FONT_MANAGER_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <a class="code" href="classregen_1_1Font.html">Font</a>(<span class="keyword">const</span> <a class="code" href="classregen_1_1Font.html">Font</a>&amp;)</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    : fontPath_(<span class="stringliteral">&quot;&quot;</span>),</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      size_(0),</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      dpi_(0),</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      faceData_(NULL),</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      lineHeight_(0.0f) {}</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <a class="code" href="classregen_1_1Font.html">Font</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classregen_1_1Font.html">Font</a>&amp;) { <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    GLubyte* invertPixmapWithAlpha(<span class="keyword">const</span> FT_Bitmap&amp; bitmap, GLuint width, GLuint height) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordtype">void</span> initGlyph(FT_Face face, GLushort ch, GLuint textureWidth, GLuint textureHeight);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  };</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* FONT_MANAGER_H_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="structregen_1_1Font_1_1FaceData_html_a505df6cb631fc7d9ae7c8d2929aec4ed"><div class="ttname"><a href="structregen_1_1Font_1_1FaceData.html#a505df6cb631fc7d9ae7c8d2929aec4ed">regen::Font::FaceData::top</a></div><div class="ttdeci">GLfloat top</div><div class="ttdef"><b>Definition:</b> font.h:63</div></div>
 <div class="ttc" id="structregen_1_1Font_1_1FaceData_html"><div class="ttname"><a href="structregen_1_1Font_1_1FaceData.html">regen::Font::FaceData</a></div><div class="ttdef"><b>Definition:</b> font.h:51</div></div>
 <div class="ttc" id="structregen_1_1Font_1_1FaceData_html_a02b07a51a4938b5a43bb03ed07b71334"><div class="ttname"><a href="structregen_1_1Font_1_1FaceData.html#a02b07a51a4938b5a43bb03ed07b71334">regen::Font::FaceData::advanceX</a></div><div class="ttdeci">GLfloat advanceX</div><div class="ttdef"><b>Definition:</b> font.h:65</div></div>
@@ -187,7 +192,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Nov 7 2013 11:57:34 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 11 2013 20:46:54 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

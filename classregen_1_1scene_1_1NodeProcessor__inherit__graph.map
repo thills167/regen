@@ -5,5 +5,6 @@
 <area shape="rect" id="node6" href="$classregen_1_1scene_1_1LightPassNodeProvider.html" title="regen::scene::LightPassNode\lProvider" alt="" coords="509,201,704,242"/>
 <area shape="rect" id="node7" href="$classregen_1_1scene_1_1MeshNodeProvider.html" title="regen::scene::MeshNodeProvider" alt="" coords="499,267,715,293"/>
 <area shape="rect" id="node8" href="$classregen_1_1scene_1_1SceneNodeProcessor.html" title="regen::scene::SceneNodeProcessor" alt="" coords="491,317,723,344"/>
-<area shape="rect" id="node2" href="$classregen_1_1scene_1_1InputProcessor.html" title="regen::scene::InputProcessor\l\&lt; StateNode \&gt;" alt="" coords="6,169,199,210"/>
+<area shape="rect" id="node9" href="$classregen_1_1scene_1_1ShaderNodeProvider.html" title="regen::scene::ShaderNode\lProvider" alt="" coords="518,369,695,410"/>
+<area shape="rect" id="node2" href="$classregen_1_1scene_1_1InputProcessor.html" title="regen::scene::InputProcessor\l\&lt; StateNode \&gt;" alt="" coords="6,201,199,242"/>
 </map>

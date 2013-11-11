@@ -24,7 +24,6 @@ var searchData=
   ['ref_5fptr_3c_20regen_3a_3adrawbufferstate_20_3e',['ref_ptr&lt; regen::DrawBufferState &gt;',['../classregen_1_1ref__ptr.html',1,'regen']]],
   ['ref_5fptr_3c_20regen_3a_3aeventdata_20_3e',['ref_ptr&lt; regen::EventData &gt;',['../classregen_1_1ref__ptr.html',1,'regen']]],
   ['ref_5fptr_3c_20regen_3a_3afbo_20_3e',['ref_ptr&lt; regen::FBO &gt;',['../classregen_1_1ref__ptr.html',1,'regen']]],
-  ['ref_5fptr_3c_20regen_3a_3afbostate_20_3e',['ref_ptr&lt; regen::FBOState &gt;',['../classregen_1_1ref__ptr.html',1,'regen']]],
   ['ref_5fptr_3c_20regen_3a_3afeedbackstate_20_3e',['ref_ptr&lt; regen::FeedbackState &gt;',['../classregen_1_1ref__ptr.html',1,'regen']]],
   ['ref_5fptr_3c_20regen_3a_3afilter_3a_3aoutput_20_3e',['ref_ptr&lt; regen::Filter::Output &gt;',['../classregen_1_1ref__ptr.html',1,'regen']]],
   ['ref_5fptr_3c_20regen_3a_3afiltersequence_20_3e',['ref_ptr&lt; regen::FilterSequence &gt;',['../classregen_1_1ref__ptr.html',1,'regen']]],

@@ -15,7 +15,7 @@ var searchData=
   ['velocity',['velocity',['../classregen_1_1Camera.html#a4d84a021f55af653f2b56bbd6c799408',1,'regen::Camera']]],
   ['verbosity',['verbosity',['../classregen_1_1Logging.html#a73ef4e7e8d0739c1005210fe87110554',1,'regen::Logging']]],
   ['version',['version',['../structregen_1_1StateConfig.html#a6572363db8f2a489fee220cda9a2ff58',1,'regen::StateConfig']]],
-  ['videostream',['videoStream',['../classregen_1_1Demuxer.html#a262301344b6e3babb3e500780e7db73a',1,'regen::Demuxer::videoStream()'],['../classregen_1_1VideoStream.html#af5487a9f20c70fb160698a304a68af1b',1,'regen::VideoStream::VideoStream()']]],
+  ['videostream',['VideoStream',['../classregen_1_1VideoStream.html#af5487a9f20c70fb160698a304a68af1b',1,'regen::VideoStream::VideoStream()'],['../classregen_1_1Demuxer.html#a262301344b6e3babb3e500780e7db73a',1,'regen::Demuxer::videoStream()']]],
   ['view',['view',['../classregen_1_1Camera.html#af0d194b54298a58c37aca41a155e51d2',1,'regen::Camera']]],
   ['viewinverse',['viewInverse',['../classregen_1_1Camera.html#a91be1113ab0fb6159e7df5ec54742ee0',1,'regen::Camera']]],
   ['viewport',['viewport',['../classregen_1_1FBO.html#a6ad34dfd1fb7af4b441e865ddf148bdd',1,'regen::FBO::viewport()'],['../classregen_1_1RenderState.html#a4c1109412639d010fe9843bfb5848499',1,'regen::RenderState::viewport()']]],

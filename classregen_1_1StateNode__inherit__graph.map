@@ -1,3 +1,4 @@
 <map id="regen::StateNode" name="regen::StateNode">
-<area shape="rect" id="node2" href="$classregen_1_1RootNode.html" title="Provides some global uniforms and keeps a reference on the render state. " alt="" coords="6,80,127,107"/>
+<area shape="rect" id="node2" href="$classregen_1_1LoopNode.html" title="Adds the possibility to traverse child tree n times. " alt="" coords="5,80,125,107"/>
+<area shape="rect" id="node3" href="$classregen_1_1RootNode.html" title="Provides some global uniforms and keeps a reference on the render state. " alt="" coords="150,80,271,107"/>
 </map>

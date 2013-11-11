@@ -1,4 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classregen_1_1scene_1_1SceneInput.html" title="regen::scene::SceneInput" alt="" coords="5,5,176,32"/>
-<area shape="rect" id="node2" href="$classregen_1_1scene_1_1SceneInputXML.html" title="regen::scene::SceneInputXML" alt="" coords="225,5,423,32"/>
+<area shape="rect" id="node1" href="$classregen_1_1scene_1_1SceneInputNode.html" title="regen::scene::SceneInputNode" alt="" coords="5,12,208,39"/>
+<area shape="rect" id="node2" href="$classregen_1_1scene_1_1SceneInputNodeXML.html" title="regen::scene::SceneInput\lNodeXML" alt="" coords="256,5,427,46"/>
 </map>

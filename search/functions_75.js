@@ -15,7 +15,7 @@ var searchData=
   ['updatefrustum',['updateFrustum',['../classregen_1_1Camera.html#a8d685d27c3eca392b8fed85b726ea119',1,'regen::Camera']]],
   ['updategraphics',['updateGraphics',['../classregen_1_1AnimationManager.html#a10dfebb3fa19c858d29639ff857caf3b',1,'regen::AnimationManager']]],
   ['updatetransforms',['updateTransforms',['../classregen_1_1AnimationNode.html#acebe4f08912305bfbd13b5a6f58a3875',1,'regen::AnimationNode']]],
-  ['updatevao',['updateVAO',['../classregen_1_1Mesh.html#a005ed6bb480f8553adb02d71bcb71ccd',1,'regen::Mesh']]],
+  ['updatevao',['updateVAO',['../classregen_1_1Mesh.html#a005ed6bb480f8553adb02d71bcb71ccd',1,'regen::Mesh::updateVAO(RenderState *rs, const StateConfig &amp;cfg, const ref_ptr&lt; Shader &gt; &amp;shader)'],['../classregen_1_1Mesh.html#a365cfccd49b22bd518da188545ebaaae',1,'regen::Mesh::updateVAO(RenderState *rs)']]],
   ['uploadinputs',['uploadInputs',['../classregen_1_1ShaderInputContainer.html#aad6edea829d41c5fee7698ae9e16a741',1,'regen::ShaderInputContainer']]],
   ['usage',['usage',['../classregen_1_1VBO.html#a82e127bc151c09fb7bb035c3470f8da2',1,'regen::VBO']]],
   ['useanimation',['useAnimation',['../classregen_1_1Animation.html#a2fef6ad1b8b0cb46a56ab9800403a3b4',1,'regen::Animation']]],

@@ -91,6 +91,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classregen_1_1scene_1_1TextureStateProvider-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">regen::scene::TextureStateProvider Class Reference</div>  </div>
@@ -120,10 +121,58 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2e668433ee79f808299d38b76eab267f inherit pub_methods_classregen_1_1scene_1_1InputProcessor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43cc9b33fddef0905af9796f3bd9cbcb inherit pub_methods_classregen_1_1scene_1_1InputProcessor"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1scene_1_1InputProcessor.html#a43cc9b33fddef0905af9796f3bd9cbcb">category</a> ()</td></tr>
 <tr class="separator:a43cc9b33fddef0905af9796f3bd9cbcb inherit pub_methods_classregen_1_1scene_1_1InputProcessor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ad84b4687afcb56f6869c2196cb8fdae4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classregen_1_1Texture.html">Texture</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1scene_1_1TextureStateProvider.html#ad84b4687afcb56f6869c2196cb8fdae4">getTexture</a> (<a class="el" href="classregen_1_1scene_1_1SceneParser.html">SceneParser</a> *parser, <a class="el" href="classregen_1_1scene_1_1SceneInputNode.html">SceneInputNode</a> &amp;input)</td></tr>
+<tr class="separator:ad84b4687afcb56f6869c2196cb8fdae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Processes <a class="el" href="classregen_1_1scene_1_1SceneInput.html">SceneInput</a> and creates <a class="el" href="classregen_1_1TextureState.html" title="A State Object that contains one or more images that all have the same image format. ">TextureState</a>. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ad84b4687afcb56f6869c2196cb8fdae4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classregen_1_1Texture.html">Texture</a> &gt; TextureStateProvider::getTexture </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classregen_1_1scene_1_1SceneParser.html">SceneParser</a> *&#160;</td>
+          <td class="paramname"><em>parser</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classregen_1_1scene_1_1SceneInputNode.html">SceneInputNode</a> &amp;&#160;</td>
+          <td class="paramname"><em>input</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Find texture identified by <a class="el" href="classregen_1_1scene_1_1SceneInputNode.html">SceneInputNode</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parser</td><td>The scene parser. </td></tr>
+    <tr><td class="paramname">input</td><td>The scene input node. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A texture or a null reference. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="acdbf22190fd476f9a45cf382b00dac3d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -182,7 +231,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Nov 7 2013 11:57:35 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 11 2013 20:46:55 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

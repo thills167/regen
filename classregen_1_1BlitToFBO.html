@@ -113,8 +113,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad5d46b23927ceae923406ed5c6698b0c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1BlitToFBO.html#ad5d46b23927ceae923406ed5c6698b0c">BlitToFBO</a> (const <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classregen_1_1FBO.html">FBO</a> &gt; &amp;src, const <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classregen_1_1FBO.html">FBO</a> &gt; &amp;dst, GLenum srcAttachment=GL_COLOR_ATTACHMENT0, GLenum dstAttachment=GL_COLOR_ATTACHMENT0)</td></tr>
-<tr class="separator:ad5d46b23927ceae923406ed5c6698b0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a9d803adbc5b747dac1e875259374ae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1BlitToFBO.html#a5a9d803adbc5b747dac1e875259374ae">BlitToFBO</a> (const <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classregen_1_1FBO.html">FBO</a> &gt; &amp;src, const <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classregen_1_1FBO.html">FBO</a> &gt; &amp;dst, GLenum srcAttachment=GL_COLOR_ATTACHMENT0, GLenum dstAttachment=GL_COLOR_ATTACHMENT0, GLboolean keepRatio=GL_FALSE)</td></tr>
+<tr class="separator:a5a9d803adbc5b747dac1e875259374ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31b50f36f828c5399b8c8c15182b8430"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1BlitToFBO.html#a31b50f36f828c5399b8c8c15182b8430">enable</a> (<a class="el" href="classregen_1_1RenderState.html">RenderState</a> *state)</td></tr>
 <tr class="separator:a31b50f36f828c5399b8c8c15182b8430"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a053a0b488f3feb1bd56bf4949a537c1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1BlitToFBO.html#a053a0b488f3feb1bd56bf4949a537c1c">set_filterMode</a> (GLenum filterMode=GL_LINEAR)</td></tr>
@@ -189,7 +189,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Blits a <a class="el" href="classregen_1_1FBO.html" title="Framebuffer Objects are a mechanism for rendering to images other than the default OpenGL Default Fra...">FBO</a> color attachment to another <a class="el" href="classregen_1_1FBO.html" title="Framebuffer Objects are a mechanism for rendering to images other than the default OpenGL Default Fra...">FBO</a>. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ad5d46b23927ceae923406ed5c6698b0c"></a>
+<a class="anchor" id="a5a9d803adbc5b747dac1e875259374ae"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -215,7 +215,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">GLenum&#160;</td>
-          <td class="paramname"><em>dstAttachment</em> = <code>GL_COLOR_ATTACHMENT0</code>&#160;</td>
+          <td class="paramname"><em>dstAttachment</em> = <code>GL_COLOR_ATTACHMENT0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLboolean&#160;</td>
+          <td class="paramname"><em>keepRatio</em> = <code>GL_FALSE</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -230,6 +236,7 @@ Additional Inherited Members</h2></td></tr>
     <tr><td class="paramname">dst</td><td>Destination <a class="el" href="classregen_1_1FBO.html" title="Framebuffer Objects are a mechanism for rendering to images other than the default OpenGL Default Fra...">FBO</a>. </td></tr>
     <tr><td class="paramname">srcAttachment</td><td>Source color attachment. </td></tr>
     <tr><td class="paramname">dstAttachment</td><td>Destination color attachment. </td></tr>
+    <tr><td class="paramname">keepRatio</td><td>Preserve aspect ratio of input texture. </td></tr>
   </table>
   </dd>
 </dl>
@@ -311,7 +318,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Nov 7 2013 11:57:34 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 11 2013 20:46:54 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

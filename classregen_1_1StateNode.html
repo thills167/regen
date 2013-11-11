@@ -108,7 +108,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classregen_1_1StateNode__inherit__graph.png" border="0" usemap="#regen_1_1StateNode_inherit__map" alt="Inheritance graph"/></div>
 <map name="regen_1_1StateNode_inherit__map" id="regen_1_1StateNode_inherit__map">
-<area shape="rect" id="node2" href="classregen_1_1RootNode.html" title="Provides some global uniforms and keeps a reference on the render state. " alt="" coords="6,80,127,107"/></map>
+<area shape="rect" id="node2" href="classregen_1_1LoopNode.html" title="Adds the possibility to traverse child tree n times. " alt="" coords="5,80,125,107"/><area shape="rect" id="node3" href="classregen_1_1RootNode.html" title="Provides some global uniforms and keeps a reference on the render state. " alt="" coords="150,80,271,107"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -123,10 +123,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac63909dbed2cfb145fa3daa9f60f23d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32690ffc497632ddac51085e916766a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1StateNode.html#a32690ffc497632ddac51085e916766a2">clear</a> ()</td></tr>
 <tr class="separator:a32690ffc497632ddac51085e916766a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70b9b970d811fe9e4b050c7c2c35a8cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1StateNode.html#a70b9b970d811fe9e4b050c7c2c35a8cd">disable</a> (<a class="el" href="classregen_1_1RenderState.html">RenderState</a> *rs)</td></tr>
-<tr class="separator:a70b9b970d811fe9e4b050c7c2c35a8cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1e4aad2288f5e339eeab95bccd32a2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1StateNode.html#ad1e4aad2288f5e339eeab95bccd32a2f">enable</a> (<a class="el" href="classregen_1_1RenderState.html">RenderState</a> *rs)</td></tr>
-<tr class="separator:ad1e4aad2288f5e339eeab95bccd32a2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf07d477dafd85ed30c819d6bc0c39ef"><td class="memItemLeft" align="right" valign="top">GLboolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1StateNode.html#acf07d477dafd85ed30c819d6bc0c39ef">hasParent</a> () const </td></tr>
 <tr class="separator:acf07d477dafd85ed30c819d6bc0c39ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a401903b31e169e8e78b862d09c7898db"><td class="memItemLeft" align="right" valign="top">GLboolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1StateNode.html#a401903b31e169e8e78b862d09c7898db">isHidden</a> () const </td></tr>
@@ -141,6 +137,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9fe2d12c4de38e989e071b6733503b5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8731d2543481b9fc6d3fb3a916844c09"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classregen_1_1State.html">State</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1StateNode.html#a8731d2543481b9fc6d3fb3a916844c09">state</a> () const </td></tr>
 <tr class="separator:a8731d2543481b9fc6d3fb3a916844c09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93851249329ed17293b8508f6ba06536"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1StateNode.html#a93851249329ed17293b8508f6ba06536">traverse</a> (<a class="el" href="classregen_1_1RenderState.html">RenderState</a> *rs)</td></tr>
+<tr class="separator:a93851249329ed17293b8508f6ba06536"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A node that holds a <a class="el" href="classregen_1_1State.html" title="Base class for states. ">State</a>. </p>
@@ -231,56 +229,6 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Removes all children. </p>
-
-</div>
-</div>
-<a class="anchor" id="a70b9b970d811fe9e4b050c7c2c35a8cd"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void regen::StateNode::disable </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classregen_1_1RenderState.html">RenderState</a> *&#160;</td>
-          <td class="paramname"><em>rs</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Disables the associated state. </p>
-
-</div>
-</div>
-<a class="anchor" id="ad1e4aad2288f5e339eeab95bccd32a2f"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void regen::StateNode::enable </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classregen_1_1RenderState.html">RenderState</a> *&#160;</td>
-          <td class="paramname"><em>rs</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Enables the associated state. </p>
 
 </div>
 </div>
@@ -409,6 +357,33 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a93851249329ed17293b8508f6ba06536"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StateNode::traverse </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classregen_1_1RenderState.html">RenderState</a> *&#160;</td>
+          <td class="paramname"><em>rs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Scene graph traversal. </p>
+
+<p>Reimplemented in <a class="el" href="classregen_1_1LoopNode.html#aed89f8dfebe25cc91991956c9d608935">regen::LoopNode</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>states/<a class="el" href="state-node_8h_source.html">state-node.h</a></li>
 <li>states/state-node.cpp</li>
@@ -416,7 +391,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Nov 7 2013 11:57:35 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 11 2013 20:46:54 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

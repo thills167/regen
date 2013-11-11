@@ -113,8 +113,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8f4f2b1e8010ab0b31f58687813e12ca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1BlitToScreen.html#a8f4f2b1e8010ab0b31f58687813e12ca">BlitToScreen</a> (const <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classregen_1_1FBO.html">FBO</a> &gt; &amp;fbo, const <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classregen_1_1ShaderInput2i.html">ShaderInput2i</a> &gt; &amp;viewport, GLenum attachment=GL_COLOR_ATTACHMENT0)</td></tr>
-<tr class="separator:a8f4f2b1e8010ab0b31f58687813e12ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5afabd2be3112379f2518098702cc1c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1BlitToScreen.html#ac5afabd2be3112379f2518098702cc1c">BlitToScreen</a> (const <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classregen_1_1FBO.html">FBO</a> &gt; &amp;fbo, const <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classregen_1_1ShaderInput2i.html">ShaderInput2i</a> &gt; &amp;viewport, GLenum attachment=GL_COLOR_ATTACHMENT0, GLboolean keepRatio=GL_FALSE)</td></tr>
+<tr class="separator:ac5afabd2be3112379f2518098702cc1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c28b1cadb2a61e849da4c5f224bb54f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1BlitToScreen.html#a1c28b1cadb2a61e849da4c5f224bb54f">enable</a> (<a class="el" href="classregen_1_1RenderState.html">RenderState</a> *state)</td></tr>
 <tr class="separator:a1c28b1cadb2a61e849da4c5f224bb54f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba9e1dcb55e098b1b5a2d4f8d6b31143"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1BlitToScreen.html#aba9e1dcb55e098b1b5a2d4f8d6b31143">set_filterMode</a> (GLenum filterMode=GL_LINEAR)</td></tr>
@@ -189,7 +189,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Blits a <a class="el" href="classregen_1_1FBO.html" title="Framebuffer Objects are a mechanism for rendering to images other than the default OpenGL Default Fra...">FBO</a> color attachment to screen. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a8f4f2b1e8010ab0b31f58687813e12ca"></a>
+<a class="anchor" id="ac5afabd2be3112379f2518098702cc1c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -209,7 +209,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">GLenum&#160;</td>
-          <td class="paramname"><em>attachment</em> = <code>GL_COLOR_ATTACHMENT0</code>&#160;</td>
+          <td class="paramname"><em>attachment</em> = <code>GL_COLOR_ATTACHMENT0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLboolean&#160;</td>
+          <td class="paramname"><em>keepRatio</em> = <code>GL_FALSE</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -223,6 +229,7 @@ Additional Inherited Members</h2></td></tr>
     <tr><td class="paramname">fbo</td><td><a class="el" href="classregen_1_1FBO.html" title="Framebuffer Objects are a mechanism for rendering to images other than the default OpenGL Default Fra...">FBO</a> to blit. </td></tr>
     <tr><td class="paramname">viewport</td><td>the screen viewport. </td></tr>
     <tr><td class="paramname">attachment</td><td>color attachment to blit. </td></tr>
+    <tr><td class="paramname">keepRatio</td><td>Preserve aspect ratio of input texture. </td></tr>
   </table>
   </dd>
 </dl>
@@ -306,7 +313,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Nov 7 2013 11:57:34 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 11 2013 20:46:54 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

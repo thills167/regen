@@ -1,4 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classregen_1_1scene_1_1ResourceProvider.html" title="regen::scene::ResourceProvider\l\&lt; MeshVector \&gt;" alt="" coords="6,5,215,46"/>
-<area shape="rect" id="node2" href="$classregen_1_1scene_1_1MeshResource.html" title="regen::scene::MeshResource" alt="" coords="265,12,458,39"/>
+<area shape="rect" id="node1" href="$classregen_1_1scene_1_1ResourceProvider.html" title="regen::scene::ResourceProvider\l\&lt; ShadowMap \&gt;" alt="" coords="6,5,215,46"/>
+<area shape="rect" id="node2" href="$classregen_1_1scene_1_1ShadowMapResource.html" title="regen::scene::ShadowMapResource" alt="" coords="265,12,498,39"/>
 </map>

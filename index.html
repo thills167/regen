@@ -123,8 +123,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <td>-DBUILD_TESTS </td><td>0 </td><td>If set to 1 the test applications will be compiled by <code>all</code> target </td></tr>
 <tr>
 <td>-DBUILD_VIDEO_PLAYER </td><td>0 </td><td>If set to 1 the video player application will be compiled by <code>all</code> target </td></tr>
-<tr>
-<td>-DBUILD_TEXTURE_UPDATER </td><td>0 </td><td>If set to 1 the texture updater application will be compiled by <code>all</code> target </td></tr>
 </table>
 <p>On Windows you might have to set environment variables for the dependency libraries. Following you can find a list of those variables:</p>
 <table class="doxtable">
@@ -146,6 +144,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <td>OPENAL_DIR </td><td>Base path for OpenAL library. </td></tr>
 <tr>
 <td>ALUT_DIR </td><td>Base path for ALut library. </td></tr>
+<tr>
+<td>BULLET_DIR </td><td>Base path for Bullet library. </td></tr>
 </table>
 <h1>Feature List </h1>
 <p>Here you find a brief list of supported features in this library.</p>
@@ -167,6 +167,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li><code>Sky Rendering</code>: Dynamic sky with realistic scattering</li>
 <li><code>Particles</code>: Simple implementations of smoke,rain,snow particles</li>
 <li><code>Volume Rendering</code>: Simple raycasting volume renderer</li>
+<li><code>Scene Graph</code>: Loading scenes from XML resources</li>
 </ul>
 <h1>Dependency List </h1>
 <p>Following you can find a list of libraries that must be installed in order to compile <code>regen</code>.</p>
@@ -194,6 +195,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>download <code>Dev</code> and <code>Shared</code> package from <a href="http://ffmpeg.zeranoe.com/builds/">here</a> on Win. You have to copy the dll manually to binary dir (.dll is not named like .lib).</li>
 </ul>
 </li>
+<li><a href="http://bulletphysics.org">Bullet</a></li>
 </ul>
 <p>In order to compile the test applications you will also need to install the following list of libraries:</p>
 <ul>
@@ -210,7 +212,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Nov 7 2013 11:57:35 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 11 2013 20:46:55 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

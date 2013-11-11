@@ -229,85 +229,85 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    ApplyFunc lockedApplyPtr_;</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="comment">// Counts number of locks.</span></div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    GLint lockCounter_;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="comment">// keep last node for empty stacks</span></div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keyword">typename</span> Stack&lt;ValueType&gt;::Node *lastNode_;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="comment">// use function pointer to avoid some if statements</span></div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    void (*doApply_)(StackType *s, <span class="keyword">const</span> ValueType &amp;v);</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keyword">friend</span> <span class="keywordtype">void</span> applyFilled&lt;StackType,ValueType&gt;(StackType*, <span class="keyword">const</span> ValueType&amp;);</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keyword">friend</span> <span class="keywordtype">void</span> applyInit&lt;StackType,ValueType&gt;(StackType*, <span class="keyword">const</span> ValueType&amp;);</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  };</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keywordtype">void</span> __lockedAtomicValue(T v) {}</div>
-<div class="line"><a name="l00185"></a><span class="lineno"><a class="line" href="classregen_1_1ValueStackAtomic.html">  185</a></span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">class </span><a class="code" href="classregen_1_1ValueStackAtomic.html">ValueStackAtomic</a></div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  : <span class="keyword">public</span> <a class="code" href="classregen_1_1StateStack.html">StateStack</a>&lt;ValueStackAtomic&lt;T&gt;,T,void (*)(T)&gt;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  {</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00193"></a><span class="lineno"><a class="line" href="classregen_1_1ValueStackAtomic.html#a6eda7c2cb0792ed7748b05dd032fcc22">  193</a></span>&#160;    <span class="keyword">typedef</span> void (*<a class="code" href="classregen_1_1ValueStackAtomic.html#a6eda7c2cb0792ed7748b05dd032fcc22">AtomicStateApply</a>)(T v);</div>
-<div class="line"><a name="l00197"></a><span class="lineno"><a class="line" href="classregen_1_1ValueStackAtomic.html#a7e0542d528b8bbc2451153de246a67a9">  197</a></span>&#160;    <a class="code" href="classregen_1_1ValueStackAtomic.html#a7e0542d528b8bbc2451153de246a67a9">ValueStackAtomic</a>(<a class="code" href="classregen_1_1ValueStackAtomic.html#a6eda7c2cb0792ed7748b05dd032fcc22">AtomicStateApply</a> <a class="code" href="classregen_1_1ValueStackAtomic.html#ad95891b8bb7a446c39de0f382c04e4e2">apply</a>)</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    : <a class="code" href="classregen_1_1StateStack.html">StateStack</a>&lt;<a class="code" href="classregen_1_1ValueStackAtomic.html">ValueStackAtomic</a>,T,<a class="code" href="classregen_1_1ValueStackAtomic.html#a6eda7c2cb0792ed7748b05dd032fcc22">AtomicStateApply</a>&gt;(apply, __lockedAtomicValue) {}</div>
-<div class="line"><a name="l00202"></a><span class="lineno"><a class="line" href="classregen_1_1ValueStackAtomic.html#ad95891b8bb7a446c39de0f382c04e4e2">  202</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1ValueStackAtomic.html#ad95891b8bb7a446c39de0f382c04e4e2">apply</a>(<span class="keyword">const</span> T &amp;v) { this-&gt;apply_(v); }</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  };</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keywordtype">void</span> __lockedValue(<span class="keyword">const</span> T &amp;v) {}</div>
-<div class="line"><a name="l00209"></a><span class="lineno"><a class="line" href="classregen_1_1ValueStack.html">  209</a></span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">class </span><a class="code" href="classregen_1_1ValueStack.html">ValueStack</a></div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  : <span class="keyword">public</span> <a class="code" href="classregen_1_1StateStack.html">StateStack</a>&lt;ValueStack&lt;T&gt;,T,void (*)(const T&amp;)&gt;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  {</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00216"></a><span class="lineno"><a class="line" href="classregen_1_1ValueStack.html#a990735f1fec80d808e8c4a63088c6f2c">  216</a></span>&#160;    <a class="code" href="classregen_1_1ValueStack.html#a990735f1fec80d808e8c4a63088c6f2c">ValueStack</a>(<span class="keywordtype">void</span> (*<a class="code" href="classregen_1_1ValueStack.html#a642dc8daedc1c10c74ae7b3c41216226">apply</a>)(<span class="keyword">const</span> T &amp;v))</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    : <a class="code" href="classregen_1_1StateStack.html">StateStack</a>&lt;<a class="code" href="classregen_1_1ValueStack.html">ValueStack</a>,T,void (*)(const T&amp;)&gt;(<a class="code" href="classregen_1_1ValueStack.html#a642dc8daedc1c10c74ae7b3c41216226">apply</a>, __lockedValue) {}</div>
-<div class="line"><a name="l00221"></a><span class="lineno"><a class="line" href="classregen_1_1ValueStack.html#a642dc8daedc1c10c74ae7b3c41216226">  221</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1ValueStack.html#a642dc8daedc1c10c74ae7b3c41216226">apply</a>(<span class="keyword">const</span> T &amp;v) { this-&gt;apply_(v); }</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  };</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keywordtype">void</span> __lockedAtomicParameter(GLenum key, T v) {}</div>
-<div class="line"><a name="l00230"></a><span class="lineno"><a class="line" href="classregen_1_1ParameterStackAtomic.html">  230</a></span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">class </span><a class="code" href="classregen_1_1ParameterStackAtomic.html">ParameterStackAtomic</a></div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;  : <span class="keyword">public</span> <a class="code" href="classregen_1_1StateStack.html">StateStack</a>&lt;ParameterStackAtomic&lt;T&gt;,T,void (*)(GLenum,T)&gt;</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  {</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00238"></a><span class="lineno"><a class="line" href="classregen_1_1ParameterStackAtomic.html#acdd9f1636d08209bd2173e4494e323af">  238</a></span>&#160;    <a class="code" href="classregen_1_1ParameterStackAtomic.html#acdd9f1636d08209bd2173e4494e323af">ParameterStackAtomic</a>(GLenum key, <span class="keywordtype">void</span> (*<a class="code" href="classregen_1_1ParameterStackAtomic.html#a42a6cd0b44d40678d34da47c8943a665">apply</a>)(GLenum,T))</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    : <a class="code" href="classregen_1_1StateStack.html">StateStack</a>&lt;<a class="code" href="classregen_1_1ParameterStackAtomic.html">ParameterStackAtomic</a>,T,void (*)(GLenum,T)&gt;(</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        <a class="code" href="classregen_1_1ParameterStackAtomic.html#a42a6cd0b44d40678d34da47c8943a665">apply</a>, __lockedAtomicParameter), key_(key) {}</div>
-<div class="line"><a name="l00244"></a><span class="lineno"><a class="line" href="classregen_1_1ParameterStackAtomic.html#a42a6cd0b44d40678d34da47c8943a665">  244</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1ParameterStackAtomic.html#a42a6cd0b44d40678d34da47c8943a665">apply</a>(<span class="keyword">const</span> T &amp;v) { this-&gt;apply_(key_,v); }</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    GLenum key_;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  };</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> StackType, <span class="keyword">typename</span> ValueType&gt;</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> applyFilledStamped(StackType *s, <span class="keyword">const</span> ValueType &amp;v)</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;  {</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordflow">if</span>(v!=s-&gt;head_-&gt;v) { s-&gt;apply_(v); }</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;  }</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> StackType, <span class="keyword">typename</span> ValueType&gt;</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> applyFilledStampedi(StackType *s, GLuint i, <span class="keyword">const</span> ValueType &amp;v)</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;  {</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordflow">if</span>(v!=s-&gt;headi_[i]-&gt;v) { s-&gt;applyi_(i,v); }</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  }</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> StackType, <span class="keyword">typename</span> ValueType&gt;</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> applyInitStamped(StackType *s, <span class="keyword">const</span> ValueType &amp;v)</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;  {</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    s-&gt;apply_(v);</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    s-&gt;doApply_ = &amp;applyFilledStamped;</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;  }</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> StackType, <span class="keyword">typename</span> ValueType&gt;</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> applyInitStampedi(StackType *s, GLuint i, <span class="keyword">const</span> ValueType &amp;v)</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  {</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    s-&gt;applyi_(i,v);</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    s-&gt;doApplyi_[i] = &amp;applyFilledStampedi;</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;  }</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keywordtype">void</span> __lockedIndexed(GLuint i, <span class="keyword">const</span> T &amp;v) {}</div>
-<div class="line"><a name="l00282"></a><span class="lineno"><a class="line" href="classregen_1_1IndexedValueStack.html">  282</a></span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> ValueType&gt; <span class="keyword">class </span><a class="code" href="classregen_1_1IndexedValueStack.html">IndexedValueStack</a></div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;  {</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00288"></a><span class="lineno"><a class="line" href="classregen_1_1IndexedValueStack.html#afc5771e09e5e91d867d383c1fd66f3b2">  288</a></span>&#160;    <span class="keyword">typedef</span> void (*<a class="code" href="classregen_1_1IndexedValueStack.html#afc5771e09e5e91d867d383c1fd66f3b2">ApplyValue</a>)(<span class="keyword">const</span> ValueType &amp;v);</div>
-<div class="line"><a name="l00292"></a><span class="lineno"><a class="line" href="classregen_1_1IndexedValueStack.html#a0d96b5a6816220bad7bc91bf5db231ec">  292</a></span>&#160;    <span class="keyword">typedef</span> void (*<a class="code" href="classregen_1_1IndexedValueStack.html#a0d96b5a6816220bad7bc91bf5db231ec">ApplyValueIndexed</a>)(GLuint i, <span class="keyword">const</span> ValueType &amp;v);</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;</div>
-<div class="line"><a name="l00299"></a><span class="lineno"><a class="line" href="classregen_1_1IndexedValueStack.html#a534b5cd05ba0e84c5c3e82cb2c9733ee">  299</a></span>&#160;    <a class="code" href="classregen_1_1IndexedValueStack.html#a534b5cd05ba0e84c5c3e82cb2c9733ee">IndexedValueStack</a>(GLuint numIndices, <a class="code" href="classregen_1_1IndexedValueStack.html#afc5771e09e5e91d867d383c1fd66f3b2">ApplyValue</a> apply, <a class="code" href="classregen_1_1IndexedValueStack.html#a0d96b5a6816220bad7bc91bf5db231ec">ApplyValueIndexed</a> applyi)</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    : numIndices_(numIndices),</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;      head_(new Node(zeroValue_)),</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;      apply_(apply),</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;      applyi_(applyi),</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="comment">// use function pointer to avoid some if statements</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    void (*doApply_)(StackType *s, <span class="keyword">const</span> ValueType &amp;v);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keyword">friend</span> <span class="keywordtype">void</span> applyFilled&lt;StackType,ValueType&gt;(StackType*, <span class="keyword">const</span> ValueType&amp;);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keyword">friend</span> <span class="keywordtype">void</span> applyInit&lt;StackType,ValueType&gt;(StackType*, <span class="keyword">const</span> ValueType&amp;);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  };</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keywordtype">void</span> __lockedAtomicValue(T v) {}</div>
+<div class="line"><a name="l00183"></a><span class="lineno"><a class="line" href="classregen_1_1ValueStackAtomic.html">  183</a></span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">class </span><a class="code" href="classregen_1_1ValueStackAtomic.html">ValueStackAtomic</a></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  : <span class="keyword">public</span> <a class="code" href="classregen_1_1StateStack.html">StateStack</a>&lt;ValueStackAtomic&lt;T&gt;,T,void (*)(T)&gt;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  {</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00191"></a><span class="lineno"><a class="line" href="classregen_1_1ValueStackAtomic.html#a6eda7c2cb0792ed7748b05dd032fcc22">  191</a></span>&#160;    <span class="keyword">typedef</span> void (*<a class="code" href="classregen_1_1ValueStackAtomic.html#a6eda7c2cb0792ed7748b05dd032fcc22">AtomicStateApply</a>)(T v);</div>
+<div class="line"><a name="l00195"></a><span class="lineno"><a class="line" href="classregen_1_1ValueStackAtomic.html#a7e0542d528b8bbc2451153de246a67a9">  195</a></span>&#160;    <a class="code" href="classregen_1_1ValueStackAtomic.html#a7e0542d528b8bbc2451153de246a67a9">ValueStackAtomic</a>(<a class="code" href="classregen_1_1ValueStackAtomic.html#a6eda7c2cb0792ed7748b05dd032fcc22">AtomicStateApply</a> <a class="code" href="classregen_1_1ValueStackAtomic.html#ad95891b8bb7a446c39de0f382c04e4e2">apply</a>)</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    : <a class="code" href="classregen_1_1StateStack.html">StateStack</a>&lt;<a class="code" href="classregen_1_1ValueStackAtomic.html">ValueStackAtomic</a>,T,<a class="code" href="classregen_1_1ValueStackAtomic.html#a6eda7c2cb0792ed7748b05dd032fcc22">AtomicStateApply</a>&gt;(apply, __lockedAtomicValue) {}</div>
+<div class="line"><a name="l00200"></a><span class="lineno"><a class="line" href="classregen_1_1ValueStackAtomic.html#ad95891b8bb7a446c39de0f382c04e4e2">  200</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1ValueStackAtomic.html#ad95891b8bb7a446c39de0f382c04e4e2">apply</a>(<span class="keyword">const</span> T &amp;v) { this-&gt;apply_(v); }</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  };</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keywordtype">void</span> __lockedValue(<span class="keyword">const</span> T &amp;v) {}</div>
+<div class="line"><a name="l00207"></a><span class="lineno"><a class="line" href="classregen_1_1ValueStack.html">  207</a></span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">class </span><a class="code" href="classregen_1_1ValueStack.html">ValueStack</a></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;  : <span class="keyword">public</span> <a class="code" href="classregen_1_1StateStack.html">StateStack</a>&lt;ValueStack&lt;T&gt;,T,void (*)(const T&amp;)&gt;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;  {</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00214"></a><span class="lineno"><a class="line" href="classregen_1_1ValueStack.html#a990735f1fec80d808e8c4a63088c6f2c">  214</a></span>&#160;    <a class="code" href="classregen_1_1ValueStack.html#a990735f1fec80d808e8c4a63088c6f2c">ValueStack</a>(<span class="keywordtype">void</span> (*<a class="code" href="classregen_1_1ValueStack.html#a642dc8daedc1c10c74ae7b3c41216226">apply</a>)(<span class="keyword">const</span> T &amp;v))</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    : <a class="code" href="classregen_1_1StateStack.html">StateStack</a>&lt;<a class="code" href="classregen_1_1ValueStack.html">ValueStack</a>,T,void (*)(const T&amp;)&gt;(<a class="code" href="classregen_1_1ValueStack.html#a642dc8daedc1c10c74ae7b3c41216226">apply</a>, __lockedValue) {}</div>
+<div class="line"><a name="l00219"></a><span class="lineno"><a class="line" href="classregen_1_1ValueStack.html#a642dc8daedc1c10c74ae7b3c41216226">  219</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1ValueStack.html#a642dc8daedc1c10c74ae7b3c41216226">apply</a>(<span class="keyword">const</span> T &amp;v) { this-&gt;apply_(v); }</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  };</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keywordtype">void</span> __lockedAtomicParameter(GLenum key, T v) {}</div>
+<div class="line"><a name="l00228"></a><span class="lineno"><a class="line" href="classregen_1_1ParameterStackAtomic.html">  228</a></span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keyword">class </span><a class="code" href="classregen_1_1ParameterStackAtomic.html">ParameterStackAtomic</a></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  : <span class="keyword">public</span> <a class="code" href="classregen_1_1StateStack.html">StateStack</a>&lt;ParameterStackAtomic&lt;T&gt;,T,void (*)(GLenum,T)&gt;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  {</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00236"></a><span class="lineno"><a class="line" href="classregen_1_1ParameterStackAtomic.html#acdd9f1636d08209bd2173e4494e323af">  236</a></span>&#160;    <a class="code" href="classregen_1_1ParameterStackAtomic.html#acdd9f1636d08209bd2173e4494e323af">ParameterStackAtomic</a>(GLenum key, <span class="keywordtype">void</span> (*<a class="code" href="classregen_1_1ParameterStackAtomic.html#a42a6cd0b44d40678d34da47c8943a665">apply</a>)(GLenum,T))</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    : <a class="code" href="classregen_1_1StateStack.html">StateStack</a>&lt;<a class="code" href="classregen_1_1ParameterStackAtomic.html">ParameterStackAtomic</a>,T,void (*)(GLenum,T)&gt;(</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        <a class="code" href="classregen_1_1ParameterStackAtomic.html#a42a6cd0b44d40678d34da47c8943a665">apply</a>, __lockedAtomicParameter), key_(key) {}</div>
+<div class="line"><a name="l00242"></a><span class="lineno"><a class="line" href="classregen_1_1ParameterStackAtomic.html#a42a6cd0b44d40678d34da47c8943a665">  242</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classregen_1_1ParameterStackAtomic.html#a42a6cd0b44d40678d34da47c8943a665">apply</a>(<span class="keyword">const</span> T &amp;v) { this-&gt;apply_(key_,v); }</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    GLenum key_;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  };</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> StackType, <span class="keyword">typename</span> ValueType&gt;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> applyFilledStamped(StackType *s, <span class="keyword">const</span> ValueType &amp;v)</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  {</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordflow">if</span>(v!=s-&gt;head_-&gt;v) { s-&gt;apply_(v); }</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;  }</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> StackType, <span class="keyword">typename</span> ValueType&gt;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> applyFilledStampedi(StackType *s, GLuint i, <span class="keyword">const</span> ValueType &amp;v)</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;  {</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keywordflow">if</span>(v!=s-&gt;headi_[i]-&gt;v) { s-&gt;applyi_(i,v); }</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;  }</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> StackType, <span class="keyword">typename</span> ValueType&gt;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> applyInitStamped(StackType *s, <span class="keyword">const</span> ValueType &amp;v)</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;  {</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    s-&gt;apply_(v);</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    s-&gt;doApply_ = &amp;applyFilledStamped;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;  }</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> StackType, <span class="keyword">typename</span> ValueType&gt;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> applyInitStampedi(StackType *s, GLuint i, <span class="keyword">const</span> ValueType &amp;v)</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;  {</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    s-&gt;applyi_(i,v);</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    s-&gt;doApplyi_[i] = &amp;applyFilledStampedi;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  }</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; <span class="keywordtype">void</span> __lockedIndexed(GLuint i, <span class="keyword">const</span> T &amp;v) {}</div>
+<div class="line"><a name="l00280"></a><span class="lineno"><a class="line" href="classregen_1_1IndexedValueStack.html">  280</a></span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> ValueType&gt; <span class="keyword">class </span><a class="code" href="classregen_1_1IndexedValueStack.html">IndexedValueStack</a></div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  {</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00286"></a><span class="lineno"><a class="line" href="classregen_1_1IndexedValueStack.html#afc5771e09e5e91d867d383c1fd66f3b2">  286</a></span>&#160;    <span class="keyword">typedef</span> void (*<a class="code" href="classregen_1_1IndexedValueStack.html#afc5771e09e5e91d867d383c1fd66f3b2">ApplyValue</a>)(<span class="keyword">const</span> ValueType &amp;v);</div>
+<div class="line"><a name="l00290"></a><span class="lineno"><a class="line" href="classregen_1_1IndexedValueStack.html#a0d96b5a6816220bad7bc91bf5db231ec">  290</a></span>&#160;    <span class="keyword">typedef</span> void (*<a class="code" href="classregen_1_1IndexedValueStack.html#a0d96b5a6816220bad7bc91bf5db231ec">ApplyValueIndexed</a>)(GLuint i, <span class="keyword">const</span> ValueType &amp;v);</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;</div>
+<div class="line"><a name="l00297"></a><span class="lineno"><a class="line" href="classregen_1_1IndexedValueStack.html#a534b5cd05ba0e84c5c3e82cb2c9733ee">  297</a></span>&#160;    <a class="code" href="classregen_1_1IndexedValueStack.html#a534b5cd05ba0e84c5c3e82cb2c9733ee">IndexedValueStack</a>(GLuint numIndices, <a class="code" href="classregen_1_1IndexedValueStack.html#afc5771e09e5e91d867d383c1fd66f3b2">ApplyValue</a> apply, <a class="code" href="classregen_1_1IndexedValueStack.html#a0d96b5a6816220bad7bc91bf5db231ec">ApplyValueIndexed</a> applyi)</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    : numIndices_(numIndices),</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;      head_(new Node(zeroValue_)),</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;      apply_(apply),</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;      applyi_(applyi),</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;      lockCounter_(0),</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;      lastStampi_(-1),</div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;      isEmpty_(GL_TRUE)</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    {</div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;      head_-&gt;stamp = -1;</div>
@@ -514,120 +514,122 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;</div>
 <div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;  <span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;    <span class="keyword">struct </span>Node {</div>
-<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;      Node() : prev(NULL), next(NULL) {}</div>
-<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;      Node(<span class="keyword">const</span> ValueType &amp;_v) : prev(NULL), next(NULL), v(_v) {}</div>
-<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;      Node(<span class="keyword">const</span> ValueType &amp;_v, Node *_prev)</div>
-<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;      : prev(_prev), next(NULL), v(_v)</div>
-<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;      {</div>
-<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;        _prev-&gt;next = <span class="keyword">this</span>;</div>
-<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;      }</div>
-<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;      Node *prev;</div>
-<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;      Node *next;</div>
-<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;      ValueType v;</div>
-<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;      GLint stamp;</div>
-<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;    };</div>
-<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;</div>
-<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;    <span class="keywordtype">void</span> deleteNodes(Node *n_)</div>
-<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;    {</div>
-<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;      Stack&lt; Node* &gt; s;</div>
-<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;      Node *n=n_;</div>
-<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;      <span class="keywordflow">while</span>(n-&gt;prev) n=n-&gt;prev;</div>
-<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;      <span class="keywordflow">for</span>(; n!=NULL; n=n-&gt;next)</div>
-<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;      { s.push(n); }</div>
-<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;      <span class="keywordflow">while</span>(!s.isEmpty()) {</div>
-<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;        Node *x = s.top();</div>
-<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;        <span class="keyword">delete</span> x;</div>
-<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;        s.pop();</div>
-<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;      }</div>
-<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;    }</div>
-<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;</div>
-<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;    <span class="comment">// Number of indices.</span></div>
-<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;    GLuint numIndices_;</div>
-<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;    <span class="comment">// A stack containing stamped values applied to all indices.</span></div>
-<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;    Node *head_;</div>
-<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;    <span class="comment">// A stack array containing stamped values applied to individual indices.</span></div>
-<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;    Node **headi_;</div>
-<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;    <span class="comment">// Counts number of pushes to any stack and number of pushes to indexed stacks only.</span></div>
-<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;    Vec2ui counter_;</div>
-<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;</div>
-<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;    ValueType zeroValue_;</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;      Node()</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;      : prev(NULL), next(NULL), stamp(-1) {}</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;      Node(<span class="keyword">const</span> ValueType &amp;_v)</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;      : prev(NULL), next(NULL), v(_v), stamp(-1) {}</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;      Node(<span class="keyword">const</span> ValueType &amp;_v, Node *_prev)</div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;      : prev(_prev), next(NULL), v(_v), stamp(-1)</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;      {</div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;        _prev-&gt;next = <span class="keyword">this</span>;</div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;      }</div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;      Node *prev;</div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;      Node *next;</div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;      ValueType v;</div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;      GLint stamp;</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;    };</div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;</div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;    <span class="keywordtype">void</span> deleteNodes(Node *n_)</div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;    {</div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;      Stack&lt; Node* &gt; s;</div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;      Node *n=n_;</div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;      <span class="keywordflow">while</span>(n-&gt;prev) n=n-&gt;prev;</div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;      <span class="keywordflow">for</span>(; n!=NULL; n=n-&gt;next)</div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;      { s.push(n); }</div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;      <span class="keywordflow">while</span>(!s.isEmpty()) {</div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;        Node *x = s.top();</div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;        <span class="keyword">delete</span> x;</div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;        s.pop();</div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;      }</div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;    }</div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;</div>
+<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;    <span class="comment">// Number of indices.</span></div>
+<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;    GLuint numIndices_;</div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;    <span class="comment">// A stack containing stamped values applied to all indices.</span></div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;    Node *head_;</div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;    <span class="comment">// A stack array containing stamped values applied to individual indices.</span></div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;    Node **headi_;</div>
+<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;    <span class="comment">// Counts number of pushes to any stack and number of pushes to indexed stacks only.</span></div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;    Vec2ui counter_;</div>
 <div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;</div>
-<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;    <span class="comment">// Function to apply the value to all indices.</span></div>
-<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;    <a class="code" href="classregen_1_1IndexedValueStack.html#afc5771e09e5e91d867d383c1fd66f3b2">ApplyValue</a> apply_;</div>
-<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;    <span class="comment">// Function to apply the value to a single index.</span></div>
-<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;    <a class="code" href="classregen_1_1IndexedValueStack.html#a0d96b5a6816220bad7bc91bf5db231ec">ApplyValueIndexed</a> applyi_;</div>
-<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;    <span class="comment">// Points to actual apply function when the stack is locked.</span></div>
-<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;    <a class="code" href="classregen_1_1IndexedValueStack.html#afc5771e09e5e91d867d383c1fd66f3b2">ApplyValue</a> lockedApply_;</div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;    ValueType zeroValue_;</div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;</div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;    <span class="comment">// Function to apply the value to all indices.</span></div>
+<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;    <a class="code" href="classregen_1_1IndexedValueStack.html#afc5771e09e5e91d867d383c1fd66f3b2">ApplyValue</a> apply_;</div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;    <span class="comment">// Function to apply the value to a single index.</span></div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;    <a class="code" href="classregen_1_1IndexedValueStack.html#a0d96b5a6816220bad7bc91bf5db231ec">ApplyValueIndexed</a> applyi_;</div>
 <div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;    <span class="comment">// Points to actual apply function when the stack is locked.</span></div>
-<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;    <a class="code" href="classregen_1_1IndexedValueStack.html#a0d96b5a6816220bad7bc91bf5db231ec">ApplyValueIndexed</a> lockedApplyi_;</div>
-<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;</div>
-<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;    <span class="comment">// Counts number of locks.</span></div>
-<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;    GLint lockCounter_;</div>
-<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;</div>
-<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;    GLint lastStampi_;</div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;    <a class="code" href="classregen_1_1IndexedValueStack.html#afc5771e09e5e91d867d383c1fd66f3b2">ApplyValue</a> lockedApply_;</div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;    <span class="comment">// Points to actual apply function when the stack is locked.</span></div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;    <a class="code" href="classregen_1_1IndexedValueStack.html#a0d96b5a6816220bad7bc91bf5db231ec">ApplyValueIndexed</a> lockedApplyi_;</div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;</div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;    <span class="comment">// Counts number of locks.</span></div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;    GLint lockCounter_;</div>
 <div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;</div>
-<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;    GLboolean isEmpty_;</div>
-<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;    GLboolean *isEmptyi_;</div>
-<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;</div>
-<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;    <span class="keyword">typedef</span> void (*DoApplyValue)(<a class="code" href="classregen_1_1IndexedValueStack.html#a534b5cd05ba0e84c5c3e82cb2c9733ee">IndexedValueStack</a>*, <span class="keyword">const</span> ValueType&amp;);</div>
-<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;    <span class="keyword">typedef</span> void (*DoApplyValueIndexed)(<a class="code" href="classregen_1_1IndexedValueStack.html#a534b5cd05ba0e84c5c3e82cb2c9733ee">IndexedValueStack</a>*, GLuint, <span class="keyword">const</span> ValueType&amp;);</div>
-<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;    <span class="comment">// use function pointer to avoid some if statements</span></div>
-<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;    DoApplyValue doApply_;</div>
-<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;    DoApplyValueIndexed *doApplyi_;</div>
-<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;</div>
-<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;    <span class="keyword">friend</span> <span class="keywordtype">void</span> applyInitStamped&lt; IndexedValueStack, ValueType &gt;</div>
-<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;        (<a class="code" href="classregen_1_1IndexedValueStack.html#a534b5cd05ba0e84c5c3e82cb2c9733ee">IndexedValueStack</a>*, <span class="keyword">const</span> ValueType&amp;);</div>
-<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;    <span class="keyword">friend</span> <span class="keywordtype">void</span> applyFilledStamped&lt; IndexedValueStack, ValueType &gt;</div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;    GLint lastStampi_;</div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;</div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;    GLboolean isEmpty_;</div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;    GLboolean *isEmptyi_;</div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;</div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;    <span class="keyword">typedef</span> void (*DoApplyValue)(<a class="code" href="classregen_1_1IndexedValueStack.html#a534b5cd05ba0e84c5c3e82cb2c9733ee">IndexedValueStack</a>*, <span class="keyword">const</span> ValueType&amp;);</div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;    <span class="keyword">typedef</span> void (*DoApplyValueIndexed)(<a class="code" href="classregen_1_1IndexedValueStack.html#a534b5cd05ba0e84c5c3e82cb2c9733ee">IndexedValueStack</a>*, GLuint, <span class="keyword">const</span> ValueType&amp;);</div>
+<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;    <span class="comment">// use function pointer to avoid some if statements</span></div>
+<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;    DoApplyValue doApply_;</div>
+<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;    DoApplyValueIndexed *doApplyi_;</div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;</div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;    <span class="keyword">friend</span> <span class="keywordtype">void</span> applyInitStamped&lt; IndexedValueStack, ValueType &gt;</div>
 <div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;        (<a class="code" href="classregen_1_1IndexedValueStack.html#a534b5cd05ba0e84c5c3e82cb2c9733ee">IndexedValueStack</a>*, <span class="keyword">const</span> ValueType&amp;);</div>
-<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;    <span class="keyword">friend</span> <span class="keywordtype">void</span> applyInitStampedi&lt; IndexedValueStack, ValueType &gt;</div>
-<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;        (<a class="code" href="classregen_1_1IndexedValueStack.html#a534b5cd05ba0e84c5c3e82cb2c9733ee">IndexedValueStack</a>*, GLuint, <span class="keyword">const</span> ValueType&amp;);</div>
-<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;    <span class="keyword">friend</span> <span class="keywordtype">void</span> applyFilledStampedi&lt; IndexedValueStack, ValueType &gt;</div>
+<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;    <span class="keyword">friend</span> <span class="keywordtype">void</span> applyFilledStamped&lt; IndexedValueStack, ValueType &gt;</div>
+<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;        (<a class="code" href="classregen_1_1IndexedValueStack.html#a534b5cd05ba0e84c5c3e82cb2c9733ee">IndexedValueStack</a>*, <span class="keyword">const</span> ValueType&amp;);</div>
+<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;    <span class="keyword">friend</span> <span class="keywordtype">void</span> applyInitStampedi&lt; IndexedValueStack, ValueType &gt;</div>
 <div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;        (<a class="code" href="classregen_1_1IndexedValueStack.html#a534b5cd05ba0e84c5c3e82cb2c9733ee">IndexedValueStack</a>*, GLuint, <span class="keyword">const</span> ValueType&amp;);</div>
-<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;  };</div>
-<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;</div>
-<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* STATE_STACKS_H_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="classregen_1_1ParameterStackAtomic_html"><div class="ttname"><a href="classregen_1_1ParameterStackAtomic.html">regen::ParameterStackAtomic</a></div><div class="ttdoc">State stack with key-value apply function. </div><div class="ttdef"><b>Definition:</b> state-stacks.h:230</div></div>
+<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;    <span class="keyword">friend</span> <span class="keywordtype">void</span> applyFilledStampedi&lt; IndexedValueStack, ValueType &gt;</div>
+<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;        (<a class="code" href="classregen_1_1IndexedValueStack.html#a534b5cd05ba0e84c5c3e82cb2c9733ee">IndexedValueStack</a>*, GLuint, <span class="keyword">const</span> ValueType&amp;);</div>
+<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;  };</div>
+<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;</div>
+<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* STATE_STACKS_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="classregen_1_1ParameterStackAtomic_html"><div class="ttname"><a href="classregen_1_1ParameterStackAtomic.html">regen::ParameterStackAtomic</a></div><div class="ttdoc">State stack with key-value apply function. </div><div class="ttdef"><b>Definition:</b> state-stacks.h:228</div></div>
 <div class="ttc" id="classregen_1_1StateStack_html_afafdcf8b440a60192b6dcd72aec19df7"><div class="ttname"><a href="classregen_1_1StateStack.html#afafdcf8b440a60192b6dcd72aec19df7">regen::StateStack::push</a></div><div class="ttdeci">void push(const ValueType &amp;v)</div><div class="ttdef"><b>Definition:</b> state-stacks.h:81</div></div>
 <div class="ttc" id="classregen_1_1IndexedValueStack_html_a981eada4e23e66259fb9658a1496c9be"><div class="ttname"><a href="classregen_1_1IndexedValueStack.html#a981eada4e23e66259fb9658a1496c9be">regen::IndexedValueStack::pop</a></div><div class="ttdeci">void pop(GLuint index)</div><div class="ttdef"><b>Definition:</b> state-stacks.h:479</div></div>
 <div class="ttc" id="classregen_1_1IndexedValueStack_html_a0e06974b157e030d981c4e23a120a4fb"><div class="ttname"><a href="classregen_1_1IndexedValueStack.html#a0e06974b157e030d981c4e23a120a4fb">regen::IndexedValueStack::globalValue</a></div><div class="ttdeci">const ValueType &amp; globalValue()</div><div class="ttdef"><b>Definition:</b> state-stacks.h:344</div></div>
-<div class="ttc" id="classregen_1_1ParameterStackAtomic_html_a42a6cd0b44d40678d34da47c8943a665"><div class="ttname"><a href="classregen_1_1ParameterStackAtomic.html#a42a6cd0b44d40678d34da47c8943a665">regen::ParameterStackAtomic::apply</a></div><div class="ttdeci">void apply(const T &amp;v)</div><div class="ttdef"><b>Definition:</b> state-stacks.h:244</div></div>
-<div class="ttc" id="classregen_1_1ValueStackAtomic_html"><div class="ttname"><a href="classregen_1_1ValueStackAtomic.html">regen::ValueStackAtomic</a></div><div class="ttdoc">State stack with single argument apply function. </div><div class="ttdef"><b>Definition:</b> state-stacks.h:185</div></div>
+<div class="ttc" id="classregen_1_1ParameterStackAtomic_html_a42a6cd0b44d40678d34da47c8943a665"><div class="ttname"><a href="classregen_1_1ParameterStackAtomic.html#a42a6cd0b44d40678d34da47c8943a665">regen::ParameterStackAtomic::apply</a></div><div class="ttdeci">void apply(const T &amp;v)</div><div class="ttdef"><b>Definition:</b> state-stacks.h:242</div></div>
+<div class="ttc" id="classregen_1_1ValueStackAtomic_html"><div class="ttname"><a href="classregen_1_1ValueStackAtomic.html">regen::ValueStackAtomic</a></div><div class="ttdoc">State stack with single argument apply function. </div><div class="ttdef"><b>Definition:</b> state-stacks.h:183</div></div>
 <div class="ttc" id="classregen_1_1IndexedValueStack_html_a965e229f664e5555f701ebfe39cc2300"><div class="ttname"><a href="classregen_1_1IndexedValueStack.html#a965e229f664e5555f701ebfe39cc2300">regen::IndexedValueStack::lock</a></div><div class="ttdeci">void lock()</div><div class="ttdef"><b>Definition:</b> state-stacks.h:512</div></div>
-<div class="ttc" id="classregen_1_1ParameterStackAtomic_html_acdd9f1636d08209bd2173e4494e323af"><div class="ttname"><a href="classregen_1_1ParameterStackAtomic.html#acdd9f1636d08209bd2173e4494e323af">regen::ParameterStackAtomic::ParameterStackAtomic</a></div><div class="ttdeci">ParameterStackAtomic(GLenum key, void(*apply)(GLenum, T))</div><div class="ttdef"><b>Definition:</b> state-stacks.h:238</div></div>
+<div class="ttc" id="classregen_1_1ParameterStackAtomic_html_acdd9f1636d08209bd2173e4494e323af"><div class="ttname"><a href="classregen_1_1ParameterStackAtomic.html#acdd9f1636d08209bd2173e4494e323af">regen::ParameterStackAtomic::ParameterStackAtomic</a></div><div class="ttdeci">ParameterStackAtomic(GLenum key, void(*apply)(GLenum, T))</div><div class="ttdef"><b>Definition:</b> state-stacks.h:236</div></div>
 <div class="ttc" id="classregen_1_1StateStack_html_af18ca964c8b7078cf8e5293816f5cdbc"><div class="ttname"><a href="classregen_1_1StateStack.html#af18ca964c8b7078cf8e5293816f5cdbc">regen::StateStack::lock</a></div><div class="ttdeci">void lock()</div><div class="ttdef"><b>Definition:</b> state-stacks.h:120</div></div>
-<div class="ttc" id="classregen_1_1IndexedValueStack_html"><div class="ttname"><a href="classregen_1_1IndexedValueStack.html">regen::IndexedValueStack</a></div><div class="ttdoc">State stack with indexed apply function. </div><div class="ttdef"><b>Definition:</b> state-stacks.h:282</div></div>
-<div class="ttc" id="classregen_1_1IndexedValueStack_html_a0d96b5a6816220bad7bc91bf5db231ec"><div class="ttname"><a href="classregen_1_1IndexedValueStack.html#a0d96b5a6816220bad7bc91bf5db231ec">regen::IndexedValueStack::ApplyValueIndexed</a></div><div class="ttdeci">void(* ApplyValueIndexed)(GLuint i, const ValueType &amp;v)</div><div class="ttdef"><b>Definition:</b> state-stacks.h:292</div></div>
-<div class="ttc" id="classregen_1_1ValueStackAtomic_html_a7e0542d528b8bbc2451153de246a67a9"><div class="ttname"><a href="classregen_1_1ValueStackAtomic.html#a7e0542d528b8bbc2451153de246a67a9">regen::ValueStackAtomic::ValueStackAtomic</a></div><div class="ttdeci">ValueStackAtomic(AtomicStateApply apply)</div><div class="ttdef"><b>Definition:</b> state-stacks.h:197</div></div>
-<div class="ttc" id="classregen_1_1ValueStack_html_a990735f1fec80d808e8c4a63088c6f2c"><div class="ttname"><a href="classregen_1_1ValueStack.html#a990735f1fec80d808e8c4a63088c6f2c">regen::ValueStack::ValueStack</a></div><div class="ttdeci">ValueStack(void(*apply)(const T &amp;v))</div><div class="ttdef"><b>Definition:</b> state-stacks.h:216</div></div>
+<div class="ttc" id="classregen_1_1IndexedValueStack_html"><div class="ttname"><a href="classregen_1_1IndexedValueStack.html">regen::IndexedValueStack</a></div><div class="ttdoc">State stack with indexed apply function. </div><div class="ttdef"><b>Definition:</b> state-stacks.h:280</div></div>
+<div class="ttc" id="classregen_1_1IndexedValueStack_html_a0d96b5a6816220bad7bc91bf5db231ec"><div class="ttname"><a href="classregen_1_1IndexedValueStack.html#a0d96b5a6816220bad7bc91bf5db231ec">regen::IndexedValueStack::ApplyValueIndexed</a></div><div class="ttdeci">void(* ApplyValueIndexed)(GLuint i, const ValueType &amp;v)</div><div class="ttdef"><b>Definition:</b> state-stacks.h:290</div></div>
+<div class="ttc" id="classregen_1_1ValueStackAtomic_html_a7e0542d528b8bbc2451153de246a67a9"><div class="ttname"><a href="classregen_1_1ValueStackAtomic.html#a7e0542d528b8bbc2451153de246a67a9">regen::ValueStackAtomic::ValueStackAtomic</a></div><div class="ttdeci">ValueStackAtomic(AtomicStateApply apply)</div><div class="ttdef"><b>Definition:</b> state-stacks.h:195</div></div>
+<div class="ttc" id="classregen_1_1ValueStack_html_a990735f1fec80d808e8c4a63088c6f2c"><div class="ttname"><a href="classregen_1_1ValueStack.html#a990735f1fec80d808e8c4a63088c6f2c">regen::ValueStack::ValueStack</a></div><div class="ttdeci">ValueStack(void(*apply)(const T &amp;v))</div><div class="ttdef"><b>Definition:</b> state-stacks.h:214</div></div>
 <div class="ttc" id="classregen_1_1IndexedValueStack_html_aa694c7ab9fe948b03019b7519e7c3f0f"><div class="ttname"><a href="classregen_1_1IndexedValueStack.html#aa694c7ab9fe948b03019b7519e7c3f0f">regen::IndexedValueStack::push</a></div><div class="ttdeci">void push(GLuint index, const ValueType &amp;v)</div><div class="ttdef"><b>Definition:</b> state-stacks.h:396</div></div>
-<div class="ttc" id="classregen_1_1ValueStackAtomic_html_a6eda7c2cb0792ed7748b05dd032fcc22"><div class="ttname"><a href="classregen_1_1ValueStackAtomic.html#a6eda7c2cb0792ed7748b05dd032fcc22">regen::ValueStackAtomic::AtomicStateApply</a></div><div class="ttdeci">void(* AtomicStateApply)(T v)</div><div class="ttdef"><b>Definition:</b> state-stacks.h:193</div></div>
+<div class="ttc" id="classregen_1_1ValueStackAtomic_html_a6eda7c2cb0792ed7748b05dd032fcc22"><div class="ttname"><a href="classregen_1_1ValueStackAtomic.html#a6eda7c2cb0792ed7748b05dd032fcc22">regen::ValueStackAtomic::AtomicStateApply</a></div><div class="ttdeci">void(* AtomicStateApply)(T v)</div><div class="ttdef"><b>Definition:</b> state-stacks.h:191</div></div>
 <div class="ttc" id="classregen_1_1Stack_html_afcf0015973e77e9483013fd7de02b74c"><div class="ttname"><a href="classregen_1_1Stack.html#afcf0015973e77e9483013fd7de02b74c">regen::Stack::pop</a></div><div class="ttdeci">void pop()</div><div class="ttdef"><b>Definition:</b> stack.h:65</div></div>
-<div class="ttc" id="classregen_1_1ValueStackAtomic_html_ad95891b8bb7a446c39de0f382c04e4e2"><div class="ttname"><a href="classregen_1_1ValueStackAtomic.html#ad95891b8bb7a446c39de0f382c04e4e2">regen::ValueStackAtomic::apply</a></div><div class="ttdeci">void apply(const T &amp;v)</div><div class="ttdef"><b>Definition:</b> state-stacks.h:202</div></div>
+<div class="ttc" id="classregen_1_1ValueStackAtomic_html_ad95891b8bb7a446c39de0f382c04e4e2"><div class="ttname"><a href="classregen_1_1ValueStackAtomic.html#ad95891b8bb7a446c39de0f382c04e4e2">regen::ValueStackAtomic::apply</a></div><div class="ttdeci">void apply(const T &amp;v)</div><div class="ttdef"><b>Definition:</b> state-stacks.h:200</div></div>
 <div class="ttc" id="classregen_1_1StateStack_html_a778104bae4607ded49f8d635c5e6d2c6"><div class="ttname"><a href="classregen_1_1StateStack.html#a778104bae4607ded49f8d635c5e6d2c6">regen::StateStack::isLocked</a></div><div class="ttdeci">GLboolean isLocked() const </div><div class="ttdef"><b>Definition:</b> state-stacks.h:140</div></div>
 <div class="ttc" id="classregen_1_1StateStack_html"><div class="ttname"><a href="classregen_1_1StateStack.html">regen::StateStack</a></div><div class="ttdoc">A stack that keeps track of a state value. </div><div class="ttdef"><b>Definition:</b> state-stacks.h:39</div></div>
 <div class="ttc" id="classregen_1_1StateStack_html_a85d1da75d705f74ced0547095f32afbf"><div class="ttname"><a href="classregen_1_1StateStack.html#a85d1da75d705f74ced0547095f32afbf">regen::StateStack::pop</a></div><div class="ttdeci">void pop()</div><div class="ttdef"><b>Definition:</b> state-stacks.h:105</div></div>
-<div class="ttc" id="classregen_1_1ValueStack_html_a642dc8daedc1c10c74ae7b3c41216226"><div class="ttname"><a href="classregen_1_1ValueStack.html#a642dc8daedc1c10c74ae7b3c41216226">regen::ValueStack::apply</a></div><div class="ttdeci">void apply(const T &amp;v)</div><div class="ttdef"><b>Definition:</b> state-stacks.h:221</div></div>
+<div class="ttc" id="classregen_1_1ValueStack_html_a642dc8daedc1c10c74ae7b3c41216226"><div class="ttname"><a href="classregen_1_1ValueStack.html#a642dc8daedc1c10c74ae7b3c41216226">regen::ValueStack::apply</a></div><div class="ttdeci">void apply(const T &amp;v)</div><div class="ttdef"><b>Definition:</b> state-stacks.h:219</div></div>
 <div class="ttc" id="classregen_1_1Vec2_html_a0846d3aab7a152b70d8b81971559a544"><div class="ttname"><a href="classregen_1_1Vec2.html#a0846d3aab7a152b70d8b81971559a544">regen::Vec2::y</a></div><div class="ttdeci">T y</div><div class="ttdef"><b>Definition:</b> vector.h:29</div></div>
 <div class="ttc" id="classregen_1_1StateStack_html_a958bfb1eef0e9cb2f367d96da9401b79"><div class="ttname"><a href="classregen_1_1StateStack.html#a958bfb1eef0e9cb2f367d96da9401b79">regen::StateStack::unlock</a></div><div class="ttdeci">void unlock()</div><div class="ttdef"><b>Definition:</b> state-stacks.h:129</div></div>
 <div class="ttc" id="classregen_1_1IndexedValueStack_html_ac93aaed646446cde5f8600045fef2373"><div class="ttname"><a href="classregen_1_1IndexedValueStack.html#ac93aaed646446cde5f8600045fef2373">regen::IndexedValueStack::unlock</a></div><div class="ttdeci">void unlock()</div><div class="ttdef"><b>Definition:</b> state-stacks.h:521</div></div>
 <div class="ttc" id="classregen_1_1Vec2_html_a1ead6d63d787672db40cbc17fb5bf1e8"><div class="ttname"><a href="classregen_1_1Vec2.html#a1ead6d63d787672db40cbc17fb5bf1e8">regen::Vec2::x</a></div><div class="ttdeci">T x</div><div class="ttdef"><b>Definition:</b> vector.h:28</div></div>
 <div class="ttc" id="classregen_1_1IndexedValueStack_html_a1a131d367462a09fa0a6ea3c79f04f42"><div class="ttname"><a href="classregen_1_1IndexedValueStack.html#a1a131d367462a09fa0a6ea3c79f04f42">regen::IndexedValueStack::pop</a></div><div class="ttdeci">void pop()</div><div class="ttdef"><b>Definition:</b> state-stacks.h:445</div></div>
 <div class="ttc" id="classregen_1_1IndexedValueStack_html_a790c4f3ce2364770a3ec2cbffb120462"><div class="ttname"><a href="classregen_1_1IndexedValueStack.html#a790c4f3ce2364770a3ec2cbffb120462">regen::IndexedValueStack::push</a></div><div class="ttdeci">void push(const ValueType &amp;v)</div><div class="ttdef"><b>Definition:</b> state-stacks.h:352</div></div>
-<div class="ttc" id="classregen_1_1ValueStack_html"><div class="ttname"><a href="classregen_1_1ValueStack.html">regen::ValueStack</a></div><div class="ttdoc">State stack with single argument apply function. </div><div class="ttdef"><b>Definition:</b> state-stacks.h:209</div></div>
-<div class="ttc" id="classregen_1_1IndexedValueStack_html_a534b5cd05ba0e84c5c3e82cb2c9733ee"><div class="ttname"><a href="classregen_1_1IndexedValueStack.html#a534b5cd05ba0e84c5c3e82cb2c9733ee">regen::IndexedValueStack::IndexedValueStack</a></div><div class="ttdeci">IndexedValueStack(GLuint numIndices, ApplyValue apply, ApplyValueIndexed applyi)</div><div class="ttdef"><b>Definition:</b> state-stacks.h:299</div></div>
+<div class="ttc" id="classregen_1_1ValueStack_html"><div class="ttname"><a href="classregen_1_1ValueStack.html">regen::ValueStack</a></div><div class="ttdoc">State stack with single argument apply function. </div><div class="ttdef"><b>Definition:</b> state-stacks.h:207</div></div>
+<div class="ttc" id="classregen_1_1IndexedValueStack_html_a534b5cd05ba0e84c5c3e82cb2c9733ee"><div class="ttname"><a href="classregen_1_1IndexedValueStack.html#a534b5cd05ba0e84c5c3e82cb2c9733ee">regen::IndexedValueStack::IndexedValueStack</a></div><div class="ttdeci">IndexedValueStack(GLuint numIndices, ApplyValue apply, ApplyValueIndexed applyi)</div><div class="ttdef"><b>Definition:</b> state-stacks.h:297</div></div>
 <div class="ttc" id="classregen_1_1IndexedValueStack_html_a0e18648a7a90563adff8545fde9a96c1"><div class="ttname"><a href="classregen_1_1IndexedValueStack.html#a0e18648a7a90563adff8545fde9a96c1">regen::IndexedValueStack::isLocked</a></div><div class="ttdeci">GLboolean isLocked() const </div><div class="ttdef"><b>Definition:</b> state-stacks.h:532</div></div>
 <div class="ttc" id="classregen_1_1StateStack_html_a18e0a366c767268a9aa1c902736fd8e2"><div class="ttname"><a href="classregen_1_1StateStack.html#a18e0a366c767268a9aa1c902736fd8e2">regen::StateStack::value</a></div><div class="ttdeci">const ValueType &amp; value()</div><div class="ttdef"><b>Definition:</b> state-stacks.h:74</div></div>
 <div class="ttc" id="classregen_1_1StateStack_html_a31a5cdbedd99bf6ac6565dbe90c3a0cf"><div class="ttname"><a href="classregen_1_1StateStack.html#a31a5cdbedd99bf6ac6565dbe90c3a0cf">regen::StateStack::StateStack</a></div><div class="ttdeci">StateStack(ApplyFunc apply, ApplyFunc lockedApply)</div><div class="ttdef"><b>Definition:</b> state-stacks.h:46</div></div>
 <div class="ttc" id="classregen_1_1Stack_html_a4e98cd9e8ec7aeb3419b8a783abd242a"><div class="ttname"><a href="classregen_1_1Stack.html#a4e98cd9e8ec7aeb3419b8a783abd242a">regen::Stack::top</a></div><div class="ttdeci">const T &amp; top() const </div><div class="ttdef"><b>Definition:</b> stack.h:103</div></div>
-<div class="ttc" id="classregen_1_1IndexedValueStack_html_afc5771e09e5e91d867d383c1fd66f3b2"><div class="ttname"><a href="classregen_1_1IndexedValueStack.html#afc5771e09e5e91d867d383c1fd66f3b2">regen::IndexedValueStack::ApplyValue</a></div><div class="ttdeci">void(* ApplyValue)(const ValueType &amp;v)</div><div class="ttdef"><b>Definition:</b> state-stacks.h:288</div></div>
+<div class="ttc" id="classregen_1_1IndexedValueStack_html_afc5771e09e5e91d867d383c1fd66f3b2"><div class="ttname"><a href="classregen_1_1IndexedValueStack.html#afc5771e09e5e91d867d383c1fd66f3b2">regen::IndexedValueStack::ApplyValue</a></div><div class="ttdeci">void(* ApplyValue)(const ValueType &amp;v)</div><div class="ttdef"><b>Definition:</b> state-stacks.h:286</div></div>
 <div class="ttc" id="classregen_1_1Stack_html_a9f4a54fa72d3f804b149b22d1365f90b"><div class="ttname"><a href="classregen_1_1Stack.html#a9f4a54fa72d3f804b149b22d1365f90b">regen::Stack::isEmpty</a></div><div class="ttdeci">bool isEmpty() const </div><div class="ttdef"><b>Definition:</b> stack.h:125</div></div>
 <div class="ttc" id="classregen_1_1Stack_html_a9fbbdae67f873d7eeb765d829c43c4d1"><div class="ttname"><a href="classregen_1_1Stack.html#a9fbbdae67f873d7eeb765d829c43c4d1">regen::Stack::push</a></div><div class="ttdeci">void push(const T &amp;value)</div><div class="ttdef"><b>Definition:</b> stack.h:46</div></div>
 <div class="ttc" id="classregen_1_1Stack_html"><div class="ttname"><a href="classregen_1_1Stack.html">regen::Stack</a></div><div class="ttdoc">A simple stack implementation. </div><div class="ttdef"><b>Definition:</b> stack.h:15</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Nov 7 2013 11:57:34 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 11 2013 20:46:54 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

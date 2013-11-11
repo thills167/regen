@@ -131,10 +131,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a94cca06344789aff7d1a31e8013e408c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46cdf5f09e62645eb47b51a6eecfffcc"><td class="memItemLeft" align="right" valign="top">GLenum&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1FBO.html#a46cdf5f09e62645eb47b51a6eecfffcc">addTexture</a> (const <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classregen_1_1Texture.html">Texture</a> &gt; &amp;tex)</td></tr>
 <tr class="separator:a46cdf5f09e62645eb47b51a6eecfffcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade21f2ba6262dd1383229449927cbe00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1FBO.html#ade21f2ba6262dd1383229449927cbe00">blitCopy</a> (<a class="el" href="classregen_1_1FBO.html">FBO</a> &amp;dst, GLenum readAttachment, GLenum writeAttachment, GLbitfield mask=GL_COLOR_BUFFER_BIT, GLenum filter=GL_NEAREST)</td></tr>
-<tr class="separator:ade21f2ba6262dd1383229449927cbe00"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35bce9fde53694fffb24e8dfaf8da934"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1FBO.html#a35bce9fde53694fffb24e8dfaf8da934">blitCopyToScreen</a> (GLuint screenWidth, GLuint screenHeight, GLenum readAttachment, GLbitfield mask=GL_COLOR_BUFFER_BIT, GLenum filter=GL_NEAREST)</td></tr>
-<tr class="separator:a35bce9fde53694fffb24e8dfaf8da934"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae76bad5180689513e3a06ab29b7a0f2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1FBO.html#ae76bad5180689513e3a06ab29b7a0f2d">blitCopy</a> (<a class="el" href="classregen_1_1FBO.html">FBO</a> &amp;dst, GLenum readAttachment, GLenum writeAttachment, GLbitfield mask=GL_COLOR_BUFFER_BIT, GLenum filter=GL_NEAREST, GLboolean keepRatio=GL_FALSE)</td></tr>
+<tr class="separator:ae76bad5180689513e3a06ab29b7a0f2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06047fa84e6a8e2ae1096f05c6202ec2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1FBO.html#a06047fa84e6a8e2ae1096f05c6202ec2">blitCopyToScreen</a> (GLuint screenWidth, GLuint screenHeight, GLenum readAttachment, GLbitfield mask=GL_COLOR_BUFFER_BIT, GLenum filter=GL_NEAREST, GLboolean keepRatio=GL_FALSE)</td></tr>
+<tr class="separator:a06047fa84e6a8e2ae1096f05c6202ec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a922f7b2b96799cc1bcdbe102167ecf60"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structregen_1_1DrawBuffers.html">DrawBuffers</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1FBO.html#a922f7b2b96799cc1bcdbe102167ecf60">colorBuffers</a> ()</td></tr>
 <tr class="separator:a922f7b2b96799cc1bcdbe102167ecf60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4bff46fb61268f9e30245a78dc8885b1"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="classregen_1_1ref__ptr.html">ref_ptr</a>&lt; <a class="el" href="classregen_1_1Texture.html">Texture</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregen_1_1FBO.html#a4bff46fb61268f9e30245a78dc8885b1">colorTextures</a> ()</td></tr>
@@ -354,7 +354,7 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ade21f2ba6262dd1383229449927cbe00"></a>
+<a class="anchor" id="ae76bad5180689513e3a06ab29b7a0f2d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -386,7 +386,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">GLenum&#160;</td>
-          <td class="paramname"><em>filter</em> = <code>GL_NEAREST</code>&#160;</td>
+          <td class="paramname"><em>filter</em> = <code>GL_NEAREST</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLboolean&#160;</td>
+          <td class="paramname"><em>keepRatio</em> = <code>GL_FALSE</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -399,7 +405,7 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a35bce9fde53694fffb24e8dfaf8da934"></a>
+<a class="anchor" id="a06047fa84e6a8e2ae1096f05c6202ec2"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -431,7 +437,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">GLenum&#160;</td>
-          <td class="paramname"><em>filter</em> = <code>GL_NEAREST</code>&#160;</td>
+          <td class="paramname"><em>filter</em> = <code>GL_NEAREST</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLboolean&#160;</td>
+          <td class="paramname"><em>keepRatio</em> = <code>GL_FALSE</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -976,7 +988,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Nov 7 2013 11:57:34 for regen by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 11 2013 20:46:54 for regen by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

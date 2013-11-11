@@ -24,7 +24,6 @@ var searchData=
   ['init',['init',['../classregen_1_1RootNode.html#a1930bf513a559980ab5b9ca22bbea7c7',1,'regen::RootNode']]],
   ['initavlibrary',['initAVLibrary',['../classregen_1_1Demuxer.html#a98f0ce18786c1eca9893c8964ba9e781',1,'regen::Demuxer']]],
   ['initializeal',['initializeAL',['../classregen_1_1AudioLibrary.html#af96c88d2f1cf4de5a70c169da2362613',1,'regen::AudioLibrary']]],
-  ['initialoperations',['initialOperations',['../classregen_1_1TextureUpdater.html#ac00b463fd0bdc1d72e6033f15c883591',1,'regen::TextureUpdater']]],
   ['inner',['inner',['../classregen_1_1PatchLevelState.html#a4edfdbcbb75c814a51f7679ce4a070d6',1,'regen::PatchLevelState']]],
   ['inner_5f',['inner_',['../structregen_1_1PatchLevels.html#a1683437f8d5e24746364e2df987a1069',1,'regen::PatchLevels']]],
   ['innerlevel',['innerLevel',['../classregen_1_1TesselationState.html#a8bdc3bfdeeb1dc837c00038df279c069',1,'regen::TesselationState']]],

@@ -10,8 +10,9 @@
 <area shape="rect" id="node11" href="$classregen_1_1scene_1_1MaterialStateProvider.html" title="regen::scene::MaterialState\lProvider" alt="" coords="505,487,687,529"/>
 <area shape="rect" id="node12" href="$classregen_1_1scene_1_1StateSequenceNodeProvider.html" title="regen::scene::StateSequence\lNodeProvider" alt="" coords="499,553,693,594"/>
 <area shape="rect" id="node13" href="$classregen_1_1scene_1_1TesselationStateProvider.html" title="regen::scene::Tesselation\lStateProvider" alt="" coords="510,618,682,659"/>
-<area shape="rect" id="node14" href="$classregen_1_1scene_1_1TextureStateProvider.html" title="regen::scene::TextureState\lProvider" alt="" coords="506,683,686,725"/>
-<area shape="rect" id="node15" href="$classregen_1_1scene_1_1ToggleStateProvider.html" title="regen::scene::ToggleState\lProvider" alt="" coords="509,749,683,790"/>
-<area shape="rect" id="node16" href="$classregen_1_1scene_1_1TransformStateProvider.html" title="regen::scene::TransformState\lProvider" alt="" coords="499,814,693,855"/>
-<area shape="rect" id="node2" href="$classregen_1_1scene_1_1InputProcessor.html" title="regen::scene::InputProcessor\l\&lt; State \&gt;" alt="" coords="6,393,199,434"/>
+<area shape="rect" id="node14" href="$classregen_1_1scene_1_1TextureIndexProvider.html" title="regen::scene::TextureIndex\lProvider" alt="" coords="505,683,687,725"/>
+<area shape="rect" id="node15" href="$classregen_1_1scene_1_1TextureStateProvider.html" title="regen::scene::TextureState\lProvider" alt="" coords="506,749,686,790"/>
+<area shape="rect" id="node16" href="$classregen_1_1scene_1_1ToggleStateProvider.html" title="regen::scene::ToggleState\lProvider" alt="" coords="509,814,683,855"/>
+<area shape="rect" id="node17" href="$classregen_1_1scene_1_1TransformStateProvider.html" title="regen::scene::TransformState\lProvider" alt="" coords="499,879,693,921"/>
+<area shape="rect" id="node2" href="$classregen_1_1scene_1_1InputProcessor.html" title="regen::scene::InputProcessor\l\&lt; State \&gt;" alt="" coords="6,422,199,463"/>
 </map>
